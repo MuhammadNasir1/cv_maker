@@ -38,7 +38,7 @@ include('navbar.php');
           <div class="personal-info-form pb-4">
             <h3>Education</h3>
             <div class="form-info">
-              <form>
+            
                 <div id="addeduction">
                   <div class="container">
                     <div class="row">
@@ -111,7 +111,7 @@ include('navbar.php');
               </div>
             </div>
             <!-- ==================Skill-section-End============================ -->
-            </form>
+       
             <div class="form-buttons mt-4">
               <a href="./contact-form.php"><button type="" class="btn btn-danger">Previous</button></a>
 

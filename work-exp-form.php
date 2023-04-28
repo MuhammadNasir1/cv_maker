@@ -35,7 +35,7 @@ include('navbar.php');
           <div class="personal-info-form pb-4">
             <h3>Working Experience</h3>
             <div class="form-info">
-              <form>
+        
                 <div id="addwork">
                   <div class="container">
                     <div class="row">
@@ -81,7 +81,7 @@ include('navbar.php');
                     </div>
                   </div>
                 </div>
-              </form>
+           
               <div class="form-buttons mt-5">
                 <a href="./education-from.php"> <button type="" class="btn btn-danger">Previous</button></a>
 

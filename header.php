@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/cv-form.css">
+  <link rel="stylesheet" href="./css/responsive.css">
   
 
 </head>

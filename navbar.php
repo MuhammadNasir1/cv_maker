@@ -53,8 +53,9 @@
            </ul>
          </div>
        </div>
-       <!-- <a class="user_icon" href="./sign_in.php"> <i class='bx bxs-user'></i></a> -->
-       <a href="./sign_in.php"><button>Sign in</button></a>
+       <a class="user_icon" href="./sign_in.php"> <i class='bx bxs-user'></i></a>
+      
+       <!-- <a href="./sign_in.php"><button>Sign in</button></a> -->
 
 
        <!-- <select class="language-select">

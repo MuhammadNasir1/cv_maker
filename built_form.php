@@ -330,7 +330,7 @@ include('navbar.php');
 
     <!-- ============= personal-information-Form-Start============= -->
     <div class="container">
-      <div class="form-bg mt-4">
+      <div class="form-bg mt-4" style="margin-bottom: 10rem;">
         <div class="container">
           <div class="row">
             <!-- ==============form-start============== -->
@@ -339,7 +339,7 @@ include('navbar.php');
                 <h3>Working Experience</h3>
                 <div class="form-info">
 
-                  <div id="addwork">
+                  <div id="add_work">
                     <div class="container">
                       <div class="row">
                         <!-- ============Company Name============ -->
@@ -377,7 +377,7 @@ include('navbar.php');
                           <div class="input-field mt-5 ">
                             <input type="text" required spellcheck="false">
                             <label>City & Country</label>
-                            <a onclick="addwork()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
+                            <a onclick="addwork()" > <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                           </div>
                         </div>
                         <!-- ============Country============ -->
@@ -388,7 +388,7 @@ include('navbar.php');
                   <div class="form-buttons mt-5">
                     <button type="" class="btn btn-danger  btnPrevious">Previous</button>
 
-                    <button class="btn btn-danger float-end save-btn btnNext">Save & Next</button>
+                    <button class="btn btn-danger float-end save-btn btnNext"> Next</button>
                   </div>
                 </div>
               </div>
@@ -449,7 +449,7 @@ include('navbar.php');
 
     <!-- ============= personal-information-Form-Start============= -->
     <div class="container">
-      <div class="form-bg mt-4">
+      <div class="form-bg mt-4" style="margin-bottom: 10rem;" >
         <div class="container">
           <div class="row">
             <!-- ==============form-start============== -->

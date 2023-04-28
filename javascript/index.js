@@ -128,13 +128,13 @@ function clickrefer() {
 // ===============reference-sec-End=================
 // ===============work-experience-sec-start===============
 
-var contre = 1;
+var cntre = 1;
 function addwork() {
-  contre += 1
+  cntre += 1
   tml = '  <div class="personal-info-form pb-4">\
-  <h3 class="mt-5">Working Experience '+ coutre + '</h3>\
+  <h3 class="mt-5">Working Experience </h3>\
   <div class="form-info">\
-  <div id="addwork">\
+  <div id="add_work">\
   <div class="container">\
     <div class="row">\
       <div class="col-md-6">\
@@ -173,8 +173,8 @@ function addwork() {
   </div >\
 </div > '
 
-  var addwork = document.getElementById('addwork')
-  addwork.innerHTML += tml;
+  var add_work = document.getElementById('add_work')
+  add_work.innerHTML += tml;
 }
 
 // ===============work-experience-sec-End=================

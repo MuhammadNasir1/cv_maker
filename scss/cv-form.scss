@@ -1,0 +1,212 @@
+:root {
+  --primary-color: #C21010;
+  --light-color: #ffffff;
+
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.progres-bar {
+  vertical-align: middle;
+
+  .progress-sec {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & a {
+      text-decoration: none;
+
+      & p {
+        color: rgba(0, 0, 0, 0.544);
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        vertical-align: middle;
+
+        & span {
+          border: 2px solid var(--primary-color);
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 6px;
+          text-align: center;
+          font-size: 12px;
+          font-weight: 700;
+          position: relative;
+
+
+
+        }
+
+        &::after {
+          background: #d5dae1;
+          width: 15px;
+          height: 2px;
+          display: inline-block;
+          content: "";
+          margin: 0 9px;
+          vertical-align: middle
+        }
+
+      }
+    }
+  }
+}
+
+
+
+.personal-info-form {
+  & h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 1rem 0 0 1rem;
+  
+  }
+
+  & .form-buttons {
+    & button {
+      margin-bottom: 1.5rem;
+      background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
+      color: var(--light-color);
+      padding: 6px 16px 6px 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+
+.form-bg {
+  background-color: white;
+  box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+}
+
+.input-field {
+  & img {
+    background: var(--primary-color);
+    padding: 5px;
+    border-radius: 4px;
+    width: 35px;
+    position: absolute;
+    margin-left: 1rem;
+  }
+}
+
+.add-education {
+  & img {
+    background: var(--primary-color);
+    padding: 5px;
+    border-radius: 4px;
+    width: 35px;
+  }
+}
+
+.Form-tip-sec {
+  background-color: whitesmoke;
+
+  & h3 {
+    margin: 1rem 0 0 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  & .text ul {
+
+    & li {
+      font-weight: 500;
+      color: #000000c5;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+
+.input-field {
+  margin-top: 2.2rem;
+  position: relative;
+
+
+  & label {
+    position: absolute;
+    // top: 50%;
+    // left: 15px;
+    // transform: translateY(-50%);
+    // color: #5352527f;
+    // font-size: 19px;
+    // pointer-events: none;
+    transition: 0.3s;
+    font-weight: 500;
+    // top: -12px;
+    // left: 15px;
+    
+    top: -28px;
+    left: 6px;
+    font-size: 16px;
+    padding: 0 2px;
+    background: white;
+    color: var(--primary-color);
+
+
+  }
+
+  & input {
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 0 15px;
+    color: #000000ab;
+    font-weight: 500;
+    border: 1px solid #80808071
+  }
+
+  & input:focus {
+    outline: none;
+    border: 1px solid rgb(128, 128, 128)
+  }
+
+  // & .date-lable {
+
+  //   top: -28px;
+  //   left: 6px;
+  // }
+
+}
+
+// input:focus~label,
+// input:valid~label {
+//   top: -28px;
+//   font-weight: 500;
+//   left: 6px;
+//   font-size: 16px;
+//   padding: 0 2px;
+//   background: white;
+// }
+
+::-webkit-datetime-edit-month-field {
+  text-transform: uppercase;
+  color: #000000ab;
+}
+
+::-webkit-datetime-edit-day-field {
+  text-transform: uppercase;
+  text-transform: uppercase;
+  color: #000000ab;
+}
+
+::-webkit-datetime-edit-year-field {
+  text-transform: uppercase;
+  color: #000000ab;
+}
+

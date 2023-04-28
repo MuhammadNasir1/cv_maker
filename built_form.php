@@ -3,7 +3,7 @@ include('header.php');
 include('navbar.php');
 ?>
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs" style="display: none;">
   <li class="nav-item">
     <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
   </li>
@@ -22,7 +22,6 @@ include('navbar.php');
 <div class="tab-content">
   <!-- ============================1================== -->
   <div class="tab-pane  active" id="home">
-    <!-- <h1>Home</h1> -->
     <!-- ====================contact-page-progrss-bar-start==================== -->
     <div class="container-fluid">
       <div class="progres-bar">
@@ -238,7 +237,7 @@ include('navbar.php');
 
                           <div class="input-field mt-5 ">
                             <input type="text" required spellcheck="false">
-                            <a onclick="clickeduction()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
+                            <a onclick="clickeduction()" > <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                             <label>Feild</label>
                           </div>
                         </div>

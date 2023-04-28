@@ -31,11 +31,11 @@ function showpassword() {
 
 // ===============Education-sec-start===============
 
-var countre = 1;
+var addnum = 1;
 function clickeduction() {
-  countre += 1
-  html = '<div id="addeduction">\
-  <div><h4 class="me-2 ms-2 mt-4">Education <b>'+ countre + '</b></h4></div>\
+  addnum += 1
+  content = '<div id="addeduction">\
+  <div><h4 class="me-2 ms-2 mt-4">Education <b>'+ addnum + '</b></h4></div>\
   <div class="container">\
   <div class="row">\
             <div class="col-md-6">\
@@ -74,7 +74,7 @@ function clickeduction() {
 
 
   var addeduction = document.getElementById('addeduction')
-  addeduction.innerHTML += html;
+  addeduction.innerHTML += content;
 }
 
 // ===============Education-sec-End=================
@@ -98,41 +98,41 @@ function addindd() {
 
 // ===============language-sec-start===============
 
-var countre = 1;
+var countr = 1;
 function clicklanguage() {
-  countre += 1
-  html = '<div class="input-field mt-5">\
+  countr += 1
+  htm = '<div class="input-field mt-5">\
   <input type="text" required spellcheck="false">\
   <label>Language</label>\
 </div>'
 
   var addlanguage = document.getElementById('addlanguage')
-  addlanguage.innerHTML += html;
+  addlanguage.innerHTML += htm;
 }
 
 // ===============language-sec-End=================
 // ===============reference-sec-start===============
 
-var countre = 1;
+var count = 1;
 function clickrefer() {
-  countre += 1
-  html = '<div class="input-field mt-5 ">\
+  count += 1
+  htl = '<div class="input-field mt-5 ">\
   <input style="width:90%" type="text" required spellcheck="false">\
   <label>Reference</label>\
 </div>'
 
   var referadd = document.getElementById('referadd')
-  referadd.innerHTML += html;
+  referadd.innerHTML += htm;
 }
 
 // ===============reference-sec-End=================
 // ===============work-experience-sec-start===============
 
-var countre = 1;
+var contre = 1;
 function addwork() {
-  countre += 1
-  html = '  <div class="personal-info-form pb-4">\
-  <h3 class="mt-5">Working Experience '+ countre + '</h3>\
+  contre += 1
+  tml = '  <div class="personal-info-form pb-4">\
+  <h3 class="mt-5">Working Experience '+ coutre + '</h3>\
   <div class="form-info">\
   <div id="addwork">\
   <div class="container">\
@@ -174,7 +174,7 @@ function addwork() {
 </div > '
 
   var addwork = document.getElementById('addwork')
-  addwork.innerHTML += html;
+  addwork.innerHTML += tml;
 }
 
 // ===============work-experience-sec-End=================

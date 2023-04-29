@@ -36,13 +36,30 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  width: 10px;  
+  width: 10px;
 }
 
-.dropdown:hover .dropdown-menu {
+ .dropdown:hover .dropdown-menu  {
   display: block;
 }
 
+.dropdown-menu {
+  border-top: 5px solid var(--primary-color);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0;
+  width: 14rem;
+  margin-top: 5px;
+ margin-left: 2rem;
+  & .drop-item {
+    font-weight: 600;
+  }
+}
+
+.navbar-nav {
+  @extend %flex-center;
+}
 
 .navbar {
   position: sticky;

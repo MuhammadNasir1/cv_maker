@@ -1,6 +1,6 @@
  <?php
- include ('header.php')
- ?>
+  include('header.php')
+  ?>
  <!-- =================== Navbar-Start =================== -->
  <nav class="navbar navbar-expand-lg ">
    <div class="container-fluid">
@@ -17,6 +17,7 @@
            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              CV
            </a>
+
            <ul class="dropdown-menu">
              <li><a class="dropdown-item" href="#">Build</a></li>
              <li><a class="dropdown-item" href="#">Templete</a></li>
@@ -32,15 +33,17 @@
              <li><a class="dropdown-item" href="#">Templete</a></li>
              <li><a class="dropdown-item" href="#">How to create Resume</a></li>
            </ul>
+
          </li>
          <li class="nav-item dropdown">
            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Others
            </a>
-           <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="#">Write....</a></li>
-           </ul>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">Write....</a></li>
+             </ul>
          </li>
+
        </ul>
        <div class="lan_dropdown">
          <div class="btn-group dropstart">
@@ -57,7 +60,7 @@
          </div>
        </div>
        <a class="user_icon" href="./sign_in.php"> <i class='bx bxs-user'></i></a>
-      
+
        <!-- <a href="./sign_in.php"><button>Sign in</button></a> -->
 
 

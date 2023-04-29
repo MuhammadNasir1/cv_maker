@@ -12,7 +12,7 @@
   --light-color: #ffffff;
 }
 
-footer .social-icon-heading p, .animated-img-ph .images, .animated-img .images, .anim-sec-txt, .fix-bg .txt, .tips-content, .card-body a, .num-bg .downloads-number, .details-box .box-1, .datails-img .image, .header-image .image, .main-heading .heading, nav .lan_dropdown .dropdown-menu p, nav .icon {
+footer .social-icon-heading p, .animated-img-ph .images, .animated-img .images, .anim-sec-txt, .fix-bg .txt, .tips-content, .card-body a, .num-bg .downloads-number, .details-box .box-1, .datails-img .image, .header-image .image, .main-heading .heading, nav .lan_dropdown .dropdown-menu p, nav .icon, .navbar-nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,6 +37,20 @@ body {
 
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+.dropdown-menu {
+  border-top: 5px solid var(--primary-color);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0;
+  width: 14rem;
+  margin-top: 5px;
+  margin-left: 2rem;
+}
+.dropdown-menu .drop-item {
+  font-weight: 600;
 }
 
 .navbar {

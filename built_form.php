@@ -66,28 +66,28 @@ include('navbar.php');
                     <input type="text" class="form-control form-input " placeholder="Enter First Name">
                   </div> -->
                           <div class="input-field mt-5 ">
-                            <input class="ph_inp" type="text" required spellcheck="false">
+                            <input class="ph_inp" type="text" required >
                             <label>First Name</label>
                           </div>
                         </div>
                         <!-- ============Last Name============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5 ">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Last Name</label>
                           </div>
                         </div>
                         <!-- ============Father Name============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Father Name</label>
                           </div>
                         </div>
                         <!-- ============Last Name============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Profession <span>(skill)</span></label>
                           </div>
                         </div>
@@ -95,35 +95,35 @@ include('navbar.php');
                         <!-- ============Contact no============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Personal #</label>
                           </div>
                         </div>
                         <!-- ============Telephone No============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Tel #</label>
                           </div>
                         </div>
                         <!-- ============Email============ -->
                         <div class="col-md-12">
                           <div class="input-field mt-5">
-                            <input class="email_width" type=" email" required spellcheck="false">
+                            <input class="email_width" type=" email" required >
                             <label>Email</label>
                           </div>
                         </div>
                         <!-- ============Contact no============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>City</label>
                           </div>
                         </div>
                         <!-- ============Telephone No============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Country</label>
                           </div>
                         </div>
@@ -208,7 +208,7 @@ include('navbar.php');
                         <!-- ============First Name============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5 ">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Institute Name</label>
                           </div>
                         </div>
@@ -216,7 +216,7 @@ include('navbar.php');
                         <div class="col-md-6">
 
                           <div class="input-field mt-5">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Dagree</label>
                           </div>
                         </div>
@@ -224,14 +224,14 @@ include('navbar.php');
                         <!-- ============Start-Date============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5 ">
-                            <input type="date" required spellcheck="false">
+                            <input type="date" required >
                             <label class="date-lable">Start Date</label>
                           </div>
                         </div>
                         <!-- ============End-Date============ -->
                         <div class="col-md-6 ">
                           <div class="input-field mt-5 ">
-                            <input type="date" required spellcheck="false">
+                            <input type="date" required >
                             <label class="date-lable">End Date</label>
                           </div>
                         </div>
@@ -239,7 +239,7 @@ include('navbar.php');
                         <div class="col-md-12">
 
                           <div class="input-field mt-5 ">
-                            <input style="width:85%" type="text" required spellcheck="false">
+                            <input style="width:85%" type="text" required >
                             <a onclick="clickeduction()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                             <label>Feild</label>
                           </div>
@@ -261,7 +261,7 @@ include('navbar.php');
 
                       <div id="add_iteee" class="mt-5">
                         <div class="input-field" id="myList1">
-                          <input id="skillinput" style="width:85%" type="text" required spellcheck="false">
+                          <input id="skillinput" style="width:85%" type="text" required >
                           <label>Skill 1</label>
                           <a class="input-add " onclick="addindd()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
                         </div>
@@ -348,7 +348,7 @@ include('navbar.php');
                         <!-- ============Company Name============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5 ">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Company Name</label>
                           </div>
                         </div>
@@ -356,21 +356,21 @@ include('navbar.php');
                         <div class="col-md-6">
 
                           <div class="input-field mt-5 ">
-                            <input type="text" required spellcheck="false">
+                            <input type="text" required >
                             <label>Role </label>
                           </div>
                         </div>
                         <!-- ============Start-Date============ -->
                         <div class="col-md-6">
                           <div class="input-field mt-5 ">
-                            <input type="date" required spellcheck="false">
+                            <input type="date" required >
                             <label class="date-lable">Start Date</label>
                           </div>
                         </div>
                         <!-- ============End-Date============ -->
                         <div class="col-md-6 ">
                           <div class="input-field mt-5 ">
-                            <input type="date" required spellcheck="false">
+                            <input type="date" required >
                             <label class="date-lable">End Date</label>
                           </div>
                         </div>
@@ -378,7 +378,7 @@ include('navbar.php');
                         <div class="col-md-12">
 
                           <div class="input-field mt-5 ">
-                            <input style="width: 85%;" type="text" required spellcheck="false">
+                            <input style="width: 85%;" type="text" required >
                             <label>City & Country</label>
                             <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                           </div>
@@ -467,7 +467,7 @@ include('navbar.php');
                       <div class="col-md-12">
                         <div id="addlanguage">
                           <div class="input-field mt-5">
-                            <input style="width:85%" type="text" required spellcheck="false">
+                            <input style="width:85%" type="text" required >
                             <label>Language</label>
                             <a onclick="clicklanguage()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                           </div>
@@ -488,7 +488,7 @@ include('navbar.php');
 
                         <div id="referadd">
                           <div class="input-field mt-5 ">
-                            <input style="width:85%" type="text" required spellcheck="false">
+                            <input style="width:85%" type="text" required >
                             <label>Reference</label>
                             <a onclick="clickrefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                           </div>

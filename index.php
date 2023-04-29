@@ -4,7 +4,7 @@ include('navbar.php')
 ?>
 
 <!-- ================Hero-section-Start ================ -->
-<div class="container-fluid">
+<div class="container-fluid ">
   <div class="main-heading">
     <div class="row">
       <div class="col-lg-6  col-md-7">
@@ -16,7 +16,7 @@ include('navbar.php')
               <span class="wrap"></span>
             </span> For Free
           </h1>
-          <p>Create your CV with different types of templates and color <br>
+          <p>Create your CV with different types of templates and color <span class="heading_br"><br></span>
             combinations and also full customization</p>
           <div>
             <a href="#"> <button>Show template</button></a>
@@ -43,10 +43,10 @@ include('navbar.php')
 
   <!-- =========== heading-Start ============  -->
   <div class="datails-sec">
-    <h3>Create a professional Resume and Cv with <span>100+</span> <br> templates and fully customize the <br> colors and fonts</h3>
+    <h3>Create a professional Resume and Cv with <span>100+</span> <span class="remove"><br></span> templates and fully customize the <span class="remove"><br></span> colors and fonts</h3>
 
     <!-- =========== heading-End =============  -->
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
       <div class="row">
         <div class="col-md-6">
 
@@ -104,7 +104,7 @@ include('navbar.php')
   <div class="fix-bg">
     <div class="txt">
       <h1>"Lorem ipsum dolor sit amet consectetur dolor sit
-        <br> ipsum dolor sit amet consectetur"
+        <span class="remove"><br></span> ipsum dolor sit amet consectetur"
       </h1>
       <a href="#"> <button class="btn mt-3">Create CV</button></a>
     </div>
@@ -130,8 +130,7 @@ include('navbar.php')
           <div class="col-md-3">
             <div class="card card-body">
               <div class="template-img">
-                <a href="#"><button class="">USe This Template</button></a>
-                <img class="imgs img-fluid" src="./image/cv-image-2.png">
+                <img class=" img-fluid" src="./image/cv-image-2.png">
               </div>
             </div>
           </div>
@@ -139,6 +138,7 @@ include('navbar.php')
         <div class="carousel-item">
           <div class="col-md-3">
             <div class="card card-body">
+              <!-- <a href="#"><button class="">USe This Template</button></a> -->
               <img class="img-fluid" src="./image/cv-image.png">
             </div>
           </div>
@@ -239,8 +239,8 @@ include('navbar.php')
       <div class="col-md-6">
         <div class="anim-sec-txt">
           <div>
-            <h1>Create your professional Resume or CV with <br><span>CV Builders</span></h1>
-            <p>Follow step-by-step professional guidance to create <br> a polished cv or resume in minutes.</p>
+            <h1>Create your professional Resume or CV with <span class="remove"><br></span><span>CV Builders</span></h1>
+            <p>Follow step-by-step professional guidance to create <span class="remove"><br></span> a polished cv or resume in minutes.</p>
             <button class="">Create your Cv</button>
           </div>
         </div>
@@ -259,13 +259,7 @@ include('navbar.php')
           </div>
         </div>
       </div>
-
-    </div>
-  </div>
-</div>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
+      <div class="col-12" style="background-color: white ;">
       <div class="animated-img-ph">
         <div class="images img2">
           <img class="img" src="./image/cv-image-2.png" alt="">
@@ -278,6 +272,25 @@ include('navbar.php')
         </div>
       </div>
     </div>
+
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col-12" style="background-color: white ;">
+      <div class="animated-img-ph">
+        <div class="images img2">
+          <img class="img" src="./image/cv-image-2.png" alt="">
+          <img class="img" src="./image/cv-image.png" alt="">
+          <img class="img" src="./image/cv-image-2.png" alt="">
+          <img class="img" src="./image/cv-image.png" alt="">
+          <img class="img" src="./image/cv-image-2.png" alt="">
+          <img class="img" src="./image/cv-image.png" alt="">
+
+        </div>
+      </div>
+    </div> -->
   </div>
 </div>
 <!-- ================ animation-cv-sec-End ======================= -->

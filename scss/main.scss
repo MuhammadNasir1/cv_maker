@@ -39,7 +39,7 @@ body {
   width: 10px;
 }
 
- .dropdown:hover .dropdown-menu  {
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 
@@ -51,7 +51,8 @@ body {
   border-radius: 0;
   width: 14rem;
   margin-top: 5px;
- margin-left: 2rem;
+  margin-left: 2rem;
+
   & .drop-item {
     font-weight: 600;
   }
@@ -250,6 +251,9 @@ nav {
     justify-content: flex-start;
     height: 100%;
     width: 100%;
+     & img{
+     width: 90%;
+    }
   }
 }
 

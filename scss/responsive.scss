@@ -32,7 +32,25 @@
 }
 
 @media (max-width:992px) and (min-width:10px) {
+  .main-heigt{
+    height: 85%;
+   }
+  .main-heading{
+    &  .heading{
+    
+      height: 35rem;
+     }
+    }
+  
+    .header-image {
+      height: 35rem;
+      position: relative;
+  
 
+  
+    }
+  
+  
   // =============== Tips_Sec_start ===============
   .tip-sec-txt {
     width: 80%;
@@ -107,17 +125,34 @@
 }
 
 @media (max-width:768px) and (min-width:10px) {
-  .animated-img{
-   display: none;
+  .input-field  {
+    & input {
+      width: 100%;
+    }
+    & .email_width{
+     width: 100%;
+    }
   }
+  .animated-img {
+    display: none;
+  }
+
   .datails-img {
     display: none;
   }
+
   .animated-img-ph {
     display: block;
   }
 
   // // ================== header-image-start ==================
+  .main-heading{
+  &  .heading{
+  
+    height: 35rem;
+   }
+  }
+
   .header-image {
     height: 35rem;
     position: relative;
@@ -131,7 +166,17 @@
 }
 
 @media (max-width:600px) and (min-width:10px) {
+  .tip-sec-txt {
+    width: 90%;
 
+    & h1{
+     font-size: 20px;
+     }
+
+     & p{
+    font-size: 15px;
+    }
+  }
   .fix-bg .txt h1 {
     line-height: 24px;
     font-size: 20px;
@@ -175,6 +220,9 @@
 
 
 @media (max-width:452px) and (min-width:0px) {
+  .form_progress_txt{
+   display: none;
+  }
 
   .anim-sec-txt {
     & .remove {

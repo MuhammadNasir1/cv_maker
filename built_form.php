@@ -1,7 +1,10 @@
 <?php
-include('header.php');
 include('navbar.php');
 ?>
+<!-- <div class="main-heigt"></span>
+  <div> -->
+<div style="height: 100%;">
+<div class="main-heigt">
 
 <ul class="nav nav-tabs" style="display: none;">
   <li class="nav-item">
@@ -27,16 +30,16 @@ include('navbar.php');
       <div class="progres-bar">
         <div class="progress-sec mt-4">
           <a style="color: black;" href="#">
-            <p class="text-dark"><span style="color:white;     background:#C21010;">1</span> Persanal Information</p>
+            <p class="text-dark"><span style="color:white;     background:#C21010;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
           </a>
           <a href="#">
-            <p><span>2</span> Education/Skill </p>
+            <p><span>2</span> <bdo class="form_progress_txt">Education/Skill</bdo> </p>
           </a>
           <a href="#">
-            <p><span>3</span> Working Experience </p>
+            <p><span>3</span> <bdo class="form_progress_txt">Working Experience</bdo></p>
           </a>
           <a href="#">
-            <p><span>4</span> Languages/Reference </p>
+            <p><span>4</span> <bdo class="form_progress_txt">Languages/Reference </bdo></p>
           </a>
         </div>
       </div>
@@ -59,11 +62,11 @@ include('navbar.php');
                         <!-- ============First Name============ -->
                         <div class="col-md-6">
                           <!-- <div class=" mt-4">
-                        <label for="fname" class="form-label">First Name</label>
-                        <input type="text" class="form-control form-input " placeholder="Enter First Name">
-                      </div> -->
+                    <label for="fname" class="form-label">First Name</label>
+                    <input type="text" class="form-control form-input " placeholder="Enter First Name">
+                  </div> -->
                           <div class="input-field mt-5 ">
-                            <input type="text" required spellcheck="false">
+                            <input class="ph_inp" type="text" required spellcheck="false">
                             <label>First Name</label>
                           </div>
                         </div>
@@ -106,7 +109,7 @@ include('navbar.php');
                         <!-- ============Email============ -->
                         <div class="col-md-12">
                           <div class="input-field mt-5">
-                            <input style="width:95% " type=" email" required spellcheck="false">
+                            <input class="email_width" type=" email" required spellcheck="false">
                             <label>Email</label>
                           </div>
                         </div>
@@ -169,17 +172,17 @@ include('navbar.php');
       <div class="progres-bar">
         <div class="progress-sec mt-4">
           <a style="color: black;" href="#">
-            <p><span style="color:white; border-color:green;     background:green;">1</span> Persanal Information</p>
+            <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
           </a>
           <a style="color: black;" href="#">
-            <p><span style="color:white;     background:#C21010;">2</span> Education/Skills</p>
+            <p><span style="color:white;     background:#C21010;">2</span> <bdo class="form_progress_txt">Education/Skills</bdo></p>
           </a>
 
           <a href="#">
-            <p><span>3</span> Working Experience </p>
+            <p><span>3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
           </a>
           <a href="#">
-            <p><span>4</span> Languages/Reference </p>
+            <p><span>4</span><bdo class="form_progress_txt">Languages/Reference </bdo></p>
           </a>
 
         </div>
@@ -236,8 +239,8 @@ include('navbar.php');
                         <div class="col-md-12">
 
                           <div class="input-field mt-5 ">
-                            <input type="text" required spellcheck="false">
-                            <a onclick="clickeduction()" > <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
+                            <input style="width:85%" type="text" required spellcheck="false">
+                            <a onclick="clickeduction()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                             <label>Feild</label>
                           </div>
                         </div>
@@ -258,7 +261,7 @@ include('navbar.php');
 
                       <div id="add_iteee" class="mt-5">
                         <div class="input-field" id="myList1">
-                          <input id="skillinput" style="width:90%" type="text" required spellcheck="false">
+                          <input id="skillinput" style="width:85%" type="text" required spellcheck="false">
                           <label>Skill 1</label>
                           <a class="input-add " onclick="addindd()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
                         </div>
@@ -312,16 +315,16 @@ include('navbar.php');
       <div class="progres-bar">
         <div class="progress-sec mt-4">
           <a style="color: black;" href="#">
-            <p><span style="color:white; border-color:green;     background:green;">1</span> Persanal Information</p>
+            <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
           </a>
           <a style="color: black;" href="#">
-            <p><span style="color:white; border-color:green;     background:green;">2</span> Education/Skills</p>
+            <p><span style="color:white; border-color:green;     background:green;">2</span><bdo class="form_progress_txt">Education/Skills</bdo> </p>
           </a>
           <a style="color: black;" href="#">
-            <p><span style="color:white;     background:#C21010;">3</span> Working Experience</p>
+            <p><span style="color:white;     background:#C21010;">3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
           </a>
           <a href="#">
-            <p><span>4</span> Languages/Referenc e </p>
+            <p><span>4</span><bdo class="form_progress_txt">Languages/Reference</bdo> </p>
           </a>
         </div>
       </div>
@@ -330,7 +333,7 @@ include('navbar.php');
 
     <!-- ============= personal-information-Form-Start============= -->
     <div class="container">
-      <div class="form-bg mt-4" style="margin-bottom: 10rem;">
+      <div class="form-bg mt-5" style="margin-bottom: 10rem;">
         <div class="container">
           <div class="row">
             <!-- ==============form-start============== -->
@@ -375,9 +378,9 @@ include('navbar.php');
                         <div class="col-md-12">
 
                           <div class="input-field mt-5 ">
-                            <input type="text" required spellcheck="false">
+                            <input style="width: 85%;" type="text" required spellcheck="false">
                             <label>City & Country</label>
-                            <a onclick="addwork()" > <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
+                            <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                           </div>
                         </div>
                         <!-- ============Country============ -->
@@ -427,17 +430,17 @@ include('navbar.php');
       <div class="progres-bar">
         <div class="progress-sec mt-4">
           <a style="color: black;" href="#">
-            <p><span style="color:white; border-color:green;     background:green;">1</span> Persanal Information</p>
+            <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
           </a>
           <a style="color: black;" href="#">
-            <p><span style="color:white; border-color:green;     background:green;">2</span> Education/Skills</p>
+            <p><span style="color:white; border-color:green;     background:green;">2</span> <bdo class="form_progress_txt">Education/Skills</bdo></p>
           </a>
           <a style="color: black;" href="#">
-            <p><span style="color:white; border-color:green;     background:green;">3</span> Working Experience</p>
+            <p><span style="color:white; border-color:green;     background:green;">3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
           </a>
 
           <a style="color: black;" href="#">
-            <p><span style="color:white;     background:#C21010;">4</span> Languages/Reference</p>
+            <p><span style="color:white;     background:#C21010;">4</span> <bdo class="form_progress_txt">Languages/Reference</bdo></p>
           </a>
 
 
@@ -449,7 +452,7 @@ include('navbar.php');
 
     <!-- ============= personal-information-Form-Start============= -->
     <div class="container">
-      <div class="form-bg mt-4" style="margin-bottom: 10rem;" >
+      <div class="form-bg mt-5" style="margin-bottom: 10rem;">
         <div class="container">
           <div class="row">
             <!-- ==============form-start============== -->
@@ -464,7 +467,7 @@ include('navbar.php');
                       <div class="col-md-12">
                         <div id="addlanguage">
                           <div class="input-field mt-5">
-                            <input type="text" required spellcheck="false">
+                            <input style="width:85%" type="text" required spellcheck="false">
                             <label>Language</label>
                             <a onclick="clicklanguage()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                           </div>
@@ -485,7 +488,7 @@ include('navbar.php');
 
                         <div id="referadd">
                           <div class="input-field mt-5 ">
-                            <input style="width:90%" type="text" required spellcheck="false">
+                            <input style="width:85%" type="text" required spellcheck="false">
                             <label>Reference</label>
                             <a onclick="clickrefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                           </div>
@@ -493,12 +496,12 @@ include('navbar.php');
                       </div>
 
                       <!-- <div class="col-12">
-                      <div class=" add-education mt-5 ">
-                        <a href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer"  src="./image/plus-icon.svg" alt=""></a>
+                  <div class=" add-education mt-5 ">
+                    <a href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer"  src="./image/plus-icon.svg" alt=""></a>
 
-                      </div>
+                  </div>
 
-                    </div> -->
+                </div> -->
                     </div>
                   </div>
                   <!-- ==================Skill-section-End============================ -->
@@ -542,41 +545,43 @@ include('navbar.php');
 
   </div>
 </div>
+</div>
 
 <script>
-  $('.btnNext').click(function() {
-    const nextTabLinkEl = $('.nav-tabs .active').closest('li').next('li').find('a')[0];
-    const nextTab = new bootstrap.Tab(nextTabLinkEl);
-    nextTab.show();
-  });
+$('.btnNext').click(function() {
+  const nextTabLinkEl = $('.nav-tabs .active').closest('li').next('li').find('a')[0];
+  const nextTab = new bootstrap.Tab(nextTabLinkEl);
+  nextTab.show();
+});
 
-  $('.btnPrevious').click(function() {
-    const prevTabLinkEl = $('.nav-tabs .active').closest('li').prev('li').find('a')[0];
-    const prevTab = new bootstrap.Tab(prevTabLinkEl);
-    prevTab.show();
-  });
+$('.btnPrevious').click(function() {
+  const prevTabLinkEl = $('.nav-tabs .active').closest('li').prev('li').find('a')[0];
+  const prevTab = new bootstrap.Tab(prevTabLinkEl);
+  prevTab.show();
+});
 </script>
 
 
 <!-- ================ Footer-Start ======================= -->
 
-<footer class="text-center text-lg-start text-white mt-5" style="background-color: black">
-  <section style="background-color: #C21010">
-    <div class=" d-flex justify-content-between pe-3  ps-3">
-      <div class="social-icon-heading">
-        <p>Get connected with us on social networks:</p>
-      </div>
-      <div class="icons pt-1">
-        <a href="#"><i class='bx bxl-facebook'></i></a>
-        <a href="#"><i class='bx bxl-instagram'></i></a>
-        <a href="#"><i class='bx bxl-twitter'></i></a>
-        <a href="#"><i class='bx bxl-google'></i></a>
-      </div>
+<footer class="text-center text-lg-start text-white " style="background-color: black; margin-top:4rem">
+<section style="background-color: #C21010">
+  <div class=" d-flex justify-content-between pe-3  ps-3">
+    <div class="social-icon-heading">
+      <p>Get connected with us on social networks:</p>
     </div>
-  </section>
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2023 Copyright:
-    <a class="text-white" href="https://google.com/">Google.com</a>
+    <div class="icons pt-1">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-google'></i></a>
+    </div>
   </div>
+</section>
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+  © 2023 Copyright:
+  <a class="text-white" href="https://google.com/">Google.com</a>
+</div>
 </footer>
-<!-- ================ Footer-End ======================= -->
+</div>
+  <!-- ================ Footer-End ======================= -->

@@ -11,6 +11,16 @@
   }
 }
 @media (max-width: 992px) and (min-width: 10px) {
+  .main-heigt {
+    height: 85%;
+  }
+  .main-heading .heading {
+    height: 35rem;
+  }
+  .header-image {
+    height: 35rem;
+    position: relative;
+  }
   .tip-sec-txt {
     width: 80%;
   }
@@ -58,6 +68,12 @@
 }
 
 @media (max-width: 768px) and (min-width: 10px) {
+  .input-field input {
+    width: 100%;
+  }
+  .input-field .email_width {
+    width: 100%;
+  }
   .animated-img {
     display: none;
   }
@@ -66,6 +82,9 @@
   }
   .animated-img-ph {
     display: block;
+  }
+  .main-heading .heading {
+    height: 35rem;
   }
   .header-image {
     height: 35rem;
@@ -76,6 +95,15 @@
   }
 }
 @media (max-width: 600px) and (min-width: 10px) {
+  .tip-sec-txt {
+    width: 90%;
+  }
+  .tip-sec-txt h1 {
+    font-size: 20px;
+  }
+  .tip-sec-txt p {
+    font-size: 15px;
+  }
   .fix-bg .txt h1 {
     line-height: 24px;
     font-size: 20px;
@@ -104,6 +132,9 @@
   }
 }
 @media (max-width: 452px) and (min-width: 0px) {
+  .form_progress_txt {
+    display: none;
+  }
   .anim-sec-txt .remove {
     display: none;
   }

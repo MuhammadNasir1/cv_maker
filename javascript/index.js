@@ -101,7 +101,7 @@ function clickeduction() {
   <div class="row">\
             <div class="col-md-6">\
               <div class="input-field mt-5 ">\
-                <input type="text" required spellcheck="false">\
+                <input  type="text" required spellcheck="false">\
                 <label>Institute Name</label>\
               </div>\
             </div>\
@@ -125,7 +125,7 @@ function clickeduction() {
             </div>\
             <div class="col-md-12">\
               <div class="input-field mt-5 ">\
-                <input type="text" required spellcheck="false">\
+                <input style="width: 85%; type="text" required spellcheck="false">\
                 <label>Feild</label>\
               </div>\
             </div>\
@@ -147,7 +147,7 @@ var countre = 1;
 function addindd() {
   countre += 1
   html = '<div class="input-field mt-5 " id="myList' + countre + '">\
-  <input id="skillinput" style="width:90%" type="text" required spellcheck="false">\
+  <input style="width: 85%; id="skillinput" style="width:90%" type="text" required spellcheck="false">\
   <label>Skill '+ countre + '</label>\
   </div>'
 
@@ -163,7 +163,7 @@ var countr = 1;
 function clicklanguage() {
   countr += 1
   htm = '<div class="input-field mt-5">\
-  <input type="text" required spellcheck="false">\
+  <input style="width: 85%; type="text" required spellcheck="false">\
   <label>Language</label>\
 </div>'
 
@@ -178,7 +178,7 @@ var count = 1;
 function clickrefer() {
   count += 1
   htl = '<div class="input-field mt-5 ">\
-  <input style="width:90%" type="text" required spellcheck="false">\
+  <input style="width: 85%; type="text" required spellcheck="false">\
   <label>Reference</label>\
 </div>'
 
@@ -224,7 +224,7 @@ function addwork() {
       </div>\
       <div class="col-md-12">\
         <div class="input-field mt-5 ">\
-          <input type="text" required spellcheck="false">\
+          <input style="width: 85%; type="text" required spellcheck="false">\
           <label>City & Country</label>\
         </div>\
       </div>\

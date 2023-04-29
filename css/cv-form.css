@@ -3,6 +3,13 @@
   --light-color: #ffffff;
 }
 
+.main-heigt2 {
+  height: 100%;
+}
+.main-heigt2 .main-heigt {
+  height: 90%;
+}
+
 .progres-bar {
   vertical-align: middle;
 }
@@ -97,6 +104,9 @@
 .input-field {
   margin-top: 2.2rem;
   position: relative;
+}
+.input-field .email_width {
+  width: 95%;
 }
 .input-field label {
   position: absolute;

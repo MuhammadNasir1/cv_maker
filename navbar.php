@@ -39,9 +39,9 @@
            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Others
            </a>
-             <ul class="dropdown-menu">
-               <li><a class="dropdown-item" href="#">Write....</a></li>
-             </ul>
+           <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="#">Write....</a></li>
+           </ul>
          </li>
 
        </ul>
@@ -60,7 +60,7 @@
          </div>
        </div>
        <a class="user_icon" href="./sign_in.php"> <i class='bx bxs-user'></i></a>
-
+       <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">right offcanvas</button> -->
        <!-- <a href="./sign_in.php"><button>Sign in</button></a> -->
 
 
@@ -74,4 +74,16 @@
      </div>
    </div>
  </nav>
+
+
+
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+   <div class="offcanvas-header">
+     <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+     <button type="button" class="btn-close"   data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   </div>
+   <div class="offcanvas-body" style="width:30rem">
+     ...
+   </div>
+ </div>
  <!-- =================== Navbar-End ===================== -->

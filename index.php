@@ -259,18 +259,18 @@ include('navbar.php')
         </div>
       </div>
       <div class="col-12" style="background-color: white ;">
-      <div class="animated-img-ph">
-        <div class="images img2">
-          <img class="img" src="./image/cv-image-2.png" alt="">
-          <img class="img" src="./image/cv-image.png" alt="">
-          <img class="img" src="./image/cv-image-2.png" alt="">
-          <img class="img" src="./image/cv-image.png" alt="">
-          <img class="img" src="./image/cv-image-2.png" alt="">
-          <img class="img" src="./image/cv-image.png" alt="">
+        <div class="animated-img-ph">
+          <div class="images img2">
+            <img class="img" src="./image/cv-image-2.png" alt="">
+            <img class="img" src="./image/cv-image.png" alt="">
+            <img class="img" src="./image/cv-image-2.png" alt="">
+            <img class="img" src="./image/cv-image.png" alt="">
+            <img class="img" src="./image/cv-image-2.png" alt="">
+            <img class="img" src="./image/cv-image.png" alt="">
 
+          </div>
         </div>
       </div>
-    </div>
 
     </div>
   </div>

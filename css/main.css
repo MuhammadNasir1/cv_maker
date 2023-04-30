@@ -192,7 +192,8 @@ nav .user_icon i {
   width: 100%;
 }
 .datails-img .image img {
-  width: 90%;
+  width: 80%;
+  margin-bottom: 2rem;
 }
 
 .datails-sec {

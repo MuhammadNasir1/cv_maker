@@ -245,14 +245,15 @@ nav {
 .datails-img {
   position: relative;
   height: 34rem;
-
+ 
   & .image {
     @extend %flex-center;
     justify-content: flex-start;
     height: 100%;
     width: 100%;
      & img{
-     width: 90%;
+     width: 80%;
+     margin-bottom: 2rem;
     }
   }
 }

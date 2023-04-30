@@ -1,5 +1,41 @@
 <?php include("header.php") ?>
 
+<?php
+include('db.php');
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+//   $email = $_POST['email'];
+//   $password = md5($_POST['password']);
+
+//   $sql = "SELECT * FROM `login` WHERE email = '$email' AND password = $password";
+//   $result = mysqli_query($conn, $sql);
+//   $row = mysqli_num_rows($result);
+//   if ($row == 1) {
+//     $row = mysqli_fetch_assoc($result);
+//     session_start();
+//     $_SESSION['login'] = true;
+//     header("location: cv_maker/sign_up.php");
+//   } else {
+//     $showError = "Email not match";
+//   }
+// }
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $email = $_POST['email'];
+  $password = md5($_POST['password']);
+  $sql = "SELECT * FROM `login` WHERE email = '$email' AND password = '$password' ";
+
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_num_rows($result);
+  if ($row == 1) {
+    $row = mysqli_fetch_assoc($result);
+    session_start();
+    $_SESSION['login'] = true;
+    header("location:./index.php");
+  } else {
+    $showError = "Phone number not match";
+  }
+}
+?>
+
 <body style="background-color: #ffffff;">
   <!-- ========logo============ -->
   <div class="container-fluid">
@@ -8,7 +44,7 @@
       <div class="col-lg-6">
         <div class="logo">
           <!-- <h3>CRM</h3> -->
-          <img style="width:150px;"  src="./image/Cv-Builder-Logo.svg" alt="">
+          <img style="width:150px;" src="./image/Cv-Builder-Logo.svg" alt="">
         </div>
         <div class="sign-input">
           <div class="sign-txt">
@@ -19,22 +55,21 @@
           <!-- ==========form-start=========== -->
           <div class="form-section">
             <div class="form">
-              <form>
+              <form action="#" method="post">
                 <div class="mb-3">
                   <img class="input-icons" src="./image/email-icons.svg" alt="Email">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                    placeholder="Enter your email address">
+                  <input name="email" type="email" class="form-control" placeholder="Enter your email address">
+                  <span class="" style="margin-left:95%; margin-top:-28px ;  position: absolute;"><?php echo  @$showeror ?></span>
+                  <div style="color:#C21010; letter-spacing:0.3px " class="form-text"><b><?php echo  @$showError ?></b></div>
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
                   <label for="Password" class="form-label">Password</label>
-                  <input type="password" id="pass" class="form-control" id="exampleInputPassword1"
-                    placeholder="Enter your password">
+                  <input id="password"  name="password" type="password" class="form-control" placeholder="Enter your password">
                   <div onclick="showpassword()">
                     <a class="pass-icon" id="pass_hide_icon" href="#"><i class="fa-regular fa-eye-slash"></i></a>
-                    <a style="display: none;" class="pass-icon" id="pass_show_icon" href="#"><i
-                        class="fa-regular fa-eye"></i></a>
+                    <a style="display: none;" class="pass-icon" id="pass_show_icon" href="#"><i class="fa-regular fa-eye"></i></a>
                   </div>
                 </div>
 
@@ -42,7 +77,7 @@
                   <input class="checkbox" type="checkbox" name="" id=""> <span>Rememebr me</span>
                   <a href="./forgot_Password.php">Forgot Password ?</a>
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button name="submit" type="submit" class="btn btn-primary">Login</button>
               </form>
               <!-- =========socail-icons========= -->
               <div class="socail-icons">
@@ -68,6 +103,12 @@
         </div>
       </div>
       <!-- ==========input-section-End==== -->
-      <?php include("Infographic.php") ?>
+      <div class="col-lg-6 col-md-5">
+        <div class="header-image">
+          <div class="image">
+            <img src="./image/cv.svg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
   </div>

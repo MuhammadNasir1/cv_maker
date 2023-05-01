@@ -46,6 +46,7 @@ if (!isset($_SESSION['access_token'])) {
   $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a>';
 }
 
+// echo '<div align="center">' . $login_button . '</div>';
 ?>
 
 <body style="background-color: #ffffff;">
@@ -103,7 +104,7 @@ if (!isset($_SESSION['access_token'])) {
                       <a href="#"><img class="s-icon" src="./image/apple-icon.svg" alt=""></a>
                       <?php
                       echo '<li>
-                      ' . $login_button . '
+                      '. $login_button .'
                       <!-- <a href="#"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a> -->
                     </li>'
                       ?>

@@ -112,6 +112,59 @@ nav .lan_dropdown .dropdown-menu p span {
   margin-left: 12px;
   font-weight: 500;
 }
+nav .user_details_dropdown img {
+  border-radius: 50%;
+  width: 38px;
+  border: 2px solid var(--primary-color);
+}
+nav .user_details_dropdown .dropdown-menu {
+  margin-top: 10rem;
+  width: 20rem;
+}
+nav .user_details_dropdown .dropdown-menu li {
+  width: 50rem;
+  position: relative;
+}
+nav .user_details_dropdown .dropdown-menu li p {
+  margin-top: 10px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+}
+nav .user_details_dropdown .dropdown-menu li p img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  width: 60px;
+  border: 3px solid var(--primary-color);
+}
+nav .user_details_dropdown .dropdown-menu li p .user-name {
+  margin-left: 6px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav .user_details_dropdown .dropdown-menu li p .user-name .email {
+  text-transform: none;
+  font-size: 10px;
+}
+nav .user_details_dropdown .dropdown-menu li p i {
+  font-size: 30px;
+  margin-right: 5px;
+  color: black;
+}
+nav .user_details_dropdown .dropdown-menu li p a {
+  text-decoration: none;
+  text-transform: lowercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: flex-end;
+}
 nav .user_icon i {
   color: black;
   font-size: 30px;

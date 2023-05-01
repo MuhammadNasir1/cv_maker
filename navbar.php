@@ -1,104 +1,162 @@
- <?php
-  include('header.php')
-  ?>
- <!-- =================== Navbar-Start =================== -->
- <nav class="navbar navbar-expand-lg ">
-   <div class="container-fluid">
-     <!-- <a class="navbar-brand" href="#"><b>LOGO</b></a> -->
-     <div class="logo">
-       <img src="./image/Cv-Builder-Logo.svg" alt="">
-     </div>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
-         <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             CV
-           </a>
+<?php
 
-           <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="#">Build</a></li>
-             <li><a class="dropdown-item" href="#">Templete</a></li>
-             <li><a class="dropdown-item" href="#">How to create CV</a></li>
-           </ul>
-         </li>
-         <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Resume
-           </a>
-           <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="#">Build</a></li>
-             <li><a class="dropdown-item" href="#">Templete</a></li>
-             <li><a class="dropdown-item" href="#">How to create Resume</a></li>
-           </ul>
+//index.php
 
-         </li>
-         <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Others
-           </a>
-           <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="#">Write....</a></li>
-           </ul>
-         </li>
+//Include Configuration File
+require 'congfig.php';
+@include('config.php');
 
-       </ul>
-       <div class="lan_dropdown">
-         <div class="btn-group dropstart">
-           <img class="flag_img" src="./image/usa.svg" data-bs-toggle="dropdown" aria-expanded="false">
-
-           <ul class="dropdown-menu">
-             <li>
-               <p><img style="width:25px" src="./image/usa.svg"><span>English</span></p>
-             </li>
-             <li>
-               <p><img style="width:30px" src="./image/sa.svg"><span>Arabic</span></p>
-             </li>
-           </ul>
-         </div>
-       </div>
-       <div class="lan_dropdown">
-         <div class="btn-group dropstart">
-           <!-- <img class="flag_img" src="./image/usa.svg" > -->
-           <i class='bx bxs-user' data-bs-toggle="dropdown" aria-expanded="false"></i>
-           <ul class="dropdown-menu">
-             <li>
-                <h5>username</h5>
-             </li>
-             <li>
-                <h5>email</h5>
-             </li>
-             
-           </ul>
-         </div>
-       </div>
-       <a class="user_icon" href="./sign_in.php"> <i class='bx bxs-user'></i></a>
-       <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">right offcanvas</button> -->
-       <!-- <a href="./sign_in.php"><button>Sign in</button></a> -->
+$login_button = '';
 
 
-       <!-- <select class="language-select">
-          <option selected>English</option>
+if (isset($_GET["code"])) {
 
-          <option value="1" style="background-image: url(./image/Facebook.svg) ;"  >Arabic</option>
-          <option value="2">Spanish</option>
+  $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
 
-        </select> -->
-     </div>
-   </div>
- </nav>
+
+  if (!isset($token['error'])) {
+
+    $google_client->setAccessToken($token['access_token']);
 
 
 
- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-   <div class="offcanvas-header">
-     <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-   </div>
-   <div class="offcanvas-body" style="width:30rem">
-     ...
-   </div>
- </div>
- <!-- =================== Navbar-End ===================== -->
+    $_SESSION['access_token'] = $token['access_token'];
+    $google_service = new Google_Service_Oauth2($google_client);
+
+
+
+    $data = $google_service->userinfo->get();
+
+
+    if (!empty($data['given_name'])) {
+      $_SESSION['user_first_name'] = $data['given_name'];
+    }
+
+    if (!empty($data['family_name'])) {
+      $_SESSION['user_last_name'] = $data['family_name'];
+    }
+
+    if (!empty($data['email'])) {
+      $_SESSION['user_email_address'] = $data['email'];
+    }
+
+    if (!empty($data['gender'])) {
+      $_SESSION['user_gender'] = $data['gender'];
+    }
+
+    if (!empty($data['picture'])) {
+      $_SESSION['user_image'] = $data['picture'];
+    }
+  }
+}
+
+
+if (!isset($_SESSION['access_token'])) {
+
+  $login_button = '<a href="' . $google_client->createAuthUrl() . '">Login With Google</a>';
+}
+
+?>
+<?php
+include('header.php')
+?>
+<!-- =================== Navbar-Start =================== -->
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#"><b>LOGO</b></a> -->
+    <div class="logo">
+      <img src="./image/Cv-Builder-Logo.svg" alt="">
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            CV
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Build</a></li>
+            <li><a class="dropdown-item" href="#">Templete</a></li>
+            <li><a class="dropdown-item" href="#">How to create CV</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Resume
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Build</a></li>
+            <li><a class="dropdown-item" href="#">Templete</a></li>
+            <li><a class="dropdown-item" href="#">How to create Resume</a></li>
+          </ul>
+
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Others
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Write....</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <div class="lan_dropdown">
+        <div class="btn-group dropstart">
+          <img class="flag_img" src="./image/usa.svg" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <ul class="dropdown-menu">
+            <li>
+              <p><img style="width:25px" src="./image/usa.svg"><span>English</span></p>
+            </li>
+            <li>
+              <p><img style="width:30px" src="./image/sa.svg"><span>Arabic</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <?php
+      if ($login_button == '') {
+        echo '<div class="user_details_dropdown">
+        <div class="btn-group dropstart" >
+          <img src="' . $_SESSION["user_image"] . '" alt="" data-bs-toggle="dropdown" aria-expanded="false">
+          <ul class="dropdown-menu"  style="margin-top:40px">
+            <li>
+              <p> <img src="' . $_SESSION["user_image"] . '" alt=""><span class="user-name">' . $_SESSION['user_first_name'] . ' ' . $_SESSION['user_last_name'] . ' <br>
+              <span class="email">' . $_SESSION['user_email_address'] . '</span></span></p>
+            </li>
+            <li>
+              <p><a href="logout.php"><i class="bx bx-log-out"></i> LOGOUT</a></p>
+            </li>
+
+          </ul>
+        </div>
+      </div>';
+      } else {
+        // echo ' <a class="user_icon" href="./sign_in.php"> <i class="bx bxs-user"></i></a>';
+        echo '  <a href="./sign_in.php"><button>Sign in</button></a>';
+      }
+
+      ?>
+
+
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body" style="width:30rem">
+    ...
+  </div>
+</div>
+<!-- =================== Navbar-End ===================== -->

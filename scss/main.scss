@@ -188,20 +188,20 @@ nav {
             }
           }
 
-          & i{
-           font-size: 30px;
-           margin-right: 5px;
-           color: black ;
+          & i {
+            font-size: 30px;
+            margin-right: 5px;
+            color: black;
           }
 
           & a {
-           text-decoration: none;
-           text-transform: lowercase;
-           font-weight: 600;
-           font-size: 1.2rem;
-           color: var(--primary-color);
-           display: flex;
-           align-items: flex-end;
+            text-decoration: none;
+            text-transform: lowercase;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: flex-end;
           }
 
         }

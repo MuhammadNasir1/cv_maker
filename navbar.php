@@ -1,9 +1,6 @@
 <?php
-
-//index.php
-
-//Include Configuration File
 require 'congfig.php';
+@include('db.php');
 @include('config.php');
 
 $login_button = '';
@@ -120,30 +117,34 @@ include('header.php')
       </div>
 
       <?php
-      if ($login_button == '') {
-        echo '<div class="user_details_dropdown">
-        <div class="btn-group dropstart" >
-          <img src="' . $_SESSION["user_image"] . '" alt="" data-bs-toggle="dropdown" aria-expanded="false">
-          <ul class="dropdown-menu"  style="margin-top:40px">
-            <li>
-              <p> <img src="' . $_SESSION["user_image"] . '" alt=""><span class="user-name">' . $_SESSION['user_first_name'] . ' ' . $_SESSION['user_last_name'] . ' <br>
-              <span class="email">' . $_SESSION['user_email_address'] . '</span></span></p>
-            </li>
-            <li>
-              <p><a href="logout.php"><i class="bx bx-log-out"></i> LOGOUT</a></p>
-            </li>
 
-          </ul>
-        </div>
-      </div>';
-      } else {
-        // echo ' <a class="user_icon" href="./sign_in.php"> <i class="bx bxs-user"></i></a>';
-        echo '  <a href="./sign_in.php"><button>Sign in</button></a>';
+
+      if(@!$_SESSION["loginemail"]){
+        if ($login_button == '') {
+          echo '<div class="user_details_dropdown">
+          <div class="btn-group dropstart" >
+            <img src="' . $_SESSION["user_image"] . '" alt="" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul class="dropdown-menu"  style="margin-top:40px">
+              <li>
+                <p> <img src="' . $_SESSION["user_image"] . '" alt=""><span class="user-name">' . $_SESSION['user_first_name'] . ' ' . $_SESSION['user_last_name'] . ' <br>
+                <span class="email">' . $_SESSION['user_email_address'] . '</span></span></p>
+              </li>
+              <li>
+                <p><a href="logout.php"><i class="bx bx-log-out"></i> LOGOUT</a></p>
+              </li>
+  
+            </ul>
+          </div>
+        </div>';
+        } else {
+          // echo ' <a class="user_icon" href="./sign_in.php"> <i class="bx bxs-user"></i></a>';
+          echo '  <a href="./sign_in.php"><button>Sign in</button></a>';
+        }
       }
-
+      echo '<div class="user_details_dropdown">' . @$_SESSION["loginemail"] . '  </div> ';
       ?>
 
-
+    
     </div>
   </div>
 </nav>
@@ -159,4 +160,5 @@ include('header.php')
     ...
   </div>
 </div>
+<script src="./javascript/index.js"></script>
 <!-- =================== Navbar-End ===================== -->

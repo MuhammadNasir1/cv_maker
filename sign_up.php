@@ -12,24 +12,32 @@ if (isset($_REQUEST['submit'])) {
   if ($userRow > 0) {
     $showError = "email already Exists";
     $showeror = "<i style='color:#C21010; font-size:22px' class='bx bxs-error-circle'></i>";
-  }else{
+  } else {
     if (($password == $cpassword)) {
       $hach = md5($password, PASSWORD_DEFAULT);
       $sql = "INSERT INTO `login` ( `email`, `username`, `password`, `cpassword`) VALUES ( '$email', '$username', '$password', '$cpassword')";
       print_r($sql);
       $result = mysqli_query($conn, $sql);
-      if ($result ){
-       echo "data inserted";
+      if ($result) {
+        echo "data inserted";
       }
       header("location: ./index.php");
     } else {
       $passError = "Passwords not matched";
     }
   }
-  
 }
 ?>
+<?php
 
+require 'congfig.php';
+@include('config.php');
+if (!isset($_SESSION['access_token'])) {
+
+  $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a>';
+}
+
+?>
 <?php include("header.php") ?>
 
 <body style="background-color: #ffffff;">
@@ -56,8 +64,8 @@ if (isset($_REQUEST['submit'])) {
                   <img class="input-icons" src="./image/email-icons.svg" alt="Email">
                   <label for="email" class="form-label">Email</label>
                   <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email address">
-                  <span class="" style="margin-left:95%; margin-top:-28px ;  position: absolute;"><?php echo  @$showeror?></span>  
-                  <div style="color:#C21010; letter-spacing:0.3px "  class="form-text"><b><?php echo  @$showError?></b></div>
+                  <span class="" style="margin-left:95%; margin-top:-28px ;  position: absolute;"><?php echo  @$showeror ?></span>
+                  <div style="color:#C21010; letter-spacing:0.3px " class="form-text"><b><?php echo  @$showError ?></b></div>
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/user-icon.svg" alt="Email">
@@ -80,7 +88,7 @@ if (isset($_REQUEST['submit'])) {
                   <div onclick="showpassword()">
                     <a class="pass-icon" id="pass_hide_icon" href="#"><i class="fa-regular fa-eye-slash"></i></a>
                     <a style="display: none;" class="pass-icon" id="pass_show_icon" href="#"><i class="fa-regular fa-eye"></i></a>
-                    <div style="color:#C21010; letter-spacing:0.3px "  class="form-text"><b><?php echo  @$passError?></b></div>
+                    <div style="color:#C21010; letter-spacing:0.3px " class="form-text"><b><?php echo  @$passError ?></b></div>
                   </div>
                 </div>
                 <button name="submit" type="submit" class=" mt-3 btn btn-primary">Register</button>
@@ -99,7 +107,12 @@ if (isset($_REQUEST['submit'])) {
                 <li>
                   <a href="#"><img class="s-icon" src="./image/apple-icon.svg" alt=""></a>
                 <li>
-                  <a href="#"><img class="s-icon" src="./image/google-icon.svg" alt=""></a>
+                  <?php
+                  echo '<li>
+                      ' . @$login_button . '
+                      <!-- <a href="#"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a> -->
+                    </li>'
+                  ?>
                 </li>
                 </li>
               </ul>

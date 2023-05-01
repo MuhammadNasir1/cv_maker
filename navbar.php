@@ -1,6 +1,5 @@
 <?php
 require 'congfig.php';
-@include('db.php');
 @include('config.php');
 
 $login_button = '';

@@ -1,5 +1,6 @@
 <?php
-include('db.php');
+require 'congfig.php';
+@include('config.php');
 
 if (isset($_REQUEST['submit'])) {
   $email = $_POST['email'];
@@ -27,11 +28,8 @@ if (isset($_REQUEST['submit'])) {
     }
   }
 }
-?>
-<?php
 
-require 'congfig.php';
-@include('config.php');
+
 if (!isset($_SESSION['access_token'])) {
 
   $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a>';

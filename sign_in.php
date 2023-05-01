@@ -1,24 +1,27 @@
 <?php
-include('db.php');
-// $_SESSION['login'] = false;
-// if ($_SESSION['login'] = false) {
-//   header('sign_in.php');
-// }
+require 'congfig.php';
+@include('config.php');
 
+$_SESSION['login'];
+$_SESSION['login'] == false;
 if (isset($_REQUEST['submit'])) {
+
   $email = $_POST['email'];
   $password = md5($_POST['password']);
   $sql = "SELECT * FROM `login` WHERE email = '$email' AND password = '$password' ";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_num_rows($result);
-  if ($row == 1) {
+  if ($row == 1 ) {
     $row = mysqli_fetch_assoc($result);
+    echo "<h1>LOGIN WITH EMAIL</h1>";
 
-    session_start();
-    $_SESSION['login'] = true;
+
+      header("location:./index.php");
+ 
+    $_SESSION['login'] == true;
+
     $_SESSION["email"] =  $row['email'];
     $_SESSION["username"] =  $row['username'];
-    header("location:./index.php");
     $_SESSION['loginemail'] = ' 
        <div class="btn-group dropstart">
          <img style="border-color:black" src="./image/user_icon_vecter.svg" alt="user" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,16 +42,10 @@ if (isset($_REQUEST['submit'])) {
   }
 }
 
-
 // echo '<span class="email">' . @$_SESSION['email'] . '</span></span></p>';
 // echo '<span class="email">' . @$_SESSION['username'] . '</span></span></p>'
 
 
-?>
-<?php
-
-require 'congfig.php';
-@include('config.php');
 if (!isset($_SESSION['access_token'])) {
 
   $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a>';

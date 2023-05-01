@@ -1,5 +1,12 @@
 <?php
-
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "cv_maker";
+$conn = mysqli_connect($servername , $username , $password , $database);
+if(!$conn){
+echo "database Error";
+}
 //start session on web page
 session_start();
 
@@ -13,11 +20,12 @@ $google_client = new Google_Client();
 
 //Set the OAuth 2.0 Client ID
 $google_client->setClientId('144851248511-t2grnf0scj5ubuqc712c3q7ed4rq63cp.apps.googleusercontent.com');
+// $google_client->setClientId('144851248511-t2grnf0scj5ubuqc712c3q7ed4rq63cp.apps.googleusercontent.com');
 
 //Set the OAuth 2.0 Client Secret key
 $google_client->setClientSecret('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');
 
-//Set the OAuth 2.0 Redirect URI
+//Set the OAuth 2.0s Redirect URI
 $google_client->setRedirectUri('http://localhost/cv_maker/index.php');
 
 // to get the email and profile 

@@ -11,20 +11,18 @@ if (isset($_REQUEST['submit'])) {
   $result = mysqli_query($conn, $existSql);
   $userRow = mysqli_num_rows($result);
   if ($userRow > 0) {
+    $input_red = 'style="border-color:#C21010"';
     $showError = "email already Exists";
     $showeror = "<i style='color:#C21010; font-size:22px' class='bx bxs-error-circle'></i>";
   } else {
-    if (($password == $cpassword)) {
+    if (($password == $cpassword AND $email)) {
       $hach = md5($password, PASSWORD_DEFAULT);
       $sql = "INSERT INTO `login` ( `email`, `username`, `password`, `cpassword`) VALUES ( '$email', '$username', '$password', '$cpassword')";
-      print_r($sql);
       $result = mysqli_query($conn, $sql);
-      if ($result) {
-        echo "data inserted";
-      }
-      header("location: ./index.php");
+      header("location: ./sign_in.php");
     } else {
       $passError = "Passwords not matched";
+      $input_pass_eror = 'style="border-color:#C21010"';
     }
   }
 }
@@ -61,19 +59,19 @@ if (!isset($_SESSION['access_token'])) {
                 <div class="mb-3   position-relative">
                   <img class="input-icons" src="./image/email-icons.svg" alt="Email">
                   <label for="email" class="form-label">Email</label>
-                  <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email address">
+                  <input <?php  echo @$input_red?> name="email" type="email" class="form-control" id="email" required placeholder="Enter your email address">
                   <span class="" style="margin-left:95%; margin-top:-28px ;  position: absolute;"><?php echo  @$showeror ?></span>
                   <div style="color:#C21010; letter-spacing:0.3px " class="form-text"><b><?php echo  @$showError ?></b></div>
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/user-icon.svg" alt="Email">
                   <label for="username" class="form-label">username</label>
-                  <input name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your user name">
+                  <input required name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your user name">
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
                   <label for="password" class="form-label">Password</label>
-                  <input name="password" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+                  <input required <?php  echo @$input_pass_eror ?>t name="password" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
                   <div onclick="showpassword()">
                     <a class="pass-icon" id="pass_hide_icon" href="#"><i class="fa-regular fa-eye-slash"></i></a>
                     <a style="display: none;" class="pass-icon" id="pass_show_icon" href="#"><i class="fa-regular fa-eye"></i></a>
@@ -81,8 +79,8 @@ if (!isset($_SESSION['access_token'])) {
                 </div>
                 <div class="mb-4 position-relative">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
-                  <label for="password" class="form-label">Password</label>
-                  <input name="cpassword" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+                  <label for="cpassword" class="form-label">Conform Password</label>
+                  <input required <?php  echo @$input_pass_eror ?> name="cpassword" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password again">
                   <div onclick="showpassword()">
                     <a class="pass-icon" id="pass_hide_icon" href="#"><i class="fa-regular fa-eye-slash"></i></a>
                     <a style="display: none;" class="pass-icon" id="pass_show_icon" href="#"><i class="fa-regular fa-eye"></i></a>
@@ -108,7 +106,6 @@ if (!isset($_SESSION['access_token'])) {
                   <?php
                   echo '<li>
                       ' . @$login_button . '
-                      <!-- <a href="#"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a> -->
                     </li>'
                   ?>
                 </li>

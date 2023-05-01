@@ -34,6 +34,7 @@ include('navbar.php')
     </div>
   </div>
 </div>
+
 <!-- ================Hero-section-End ================== -->
 
 <!-- ================datails-section-Start ================== -->

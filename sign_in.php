@@ -1,9 +1,9 @@
 <?php
 include('db.php');
-$_SESSION['login'] = false;
-if ($_SESSION['login'] = false) {
-  header('sign_in.php');
-}
+// $_SESSION['login'] = false;
+// if ($_SESSION['login'] = false) {
+//   header('sign_in.php');
+// }
 
 if (isset($_REQUEST['submit'])) {
   $email = $_POST['email'];

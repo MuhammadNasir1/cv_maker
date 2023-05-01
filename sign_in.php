@@ -35,6 +35,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 ?>
+<?php
+
+require 'congfig.php';
+@include('config.php');
+// echo '<div align="center">' . $login_button . '</div>';
+if (!isset($_SESSION['access_token'])) {
+
+  // $login_button = '<a href="' . $google_client->createAuthUrl() . '">Login With Google</a>';
+  $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a>';
+}
+
+?>
 
 <body style="background-color: #ffffff;">
   <!-- ========logo============ -->
@@ -66,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="mb-3">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
                   <label for="Password" class="form-label">Password</label>
-                  <input id="password"  name="password" type="password" class="form-control" placeholder="Enter your password">
+                  <input id="password" name="password" type="password" class="form-control" placeholder="Enter your password">
                   <div onclick="showpassword()">
                     <a class="pass-icon" id="pass_hide_icon" href="#"><i class="fa-regular fa-eye-slash"></i></a>
                     <a style="display: none;" class="pass-icon" id="pass_show_icon" href="#"><i class="fa-regular fa-eye"></i></a>
@@ -89,9 +101,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </li>
                     <li>
                       <a href="#"><img class="s-icon" src="./image/apple-icon.svg" alt=""></a>
-                    <li>
-                      <a href="#"><img class="s-icon" src="./image/google-icon.svg" alt=""></a>
-                    </li>
+                      <?php
+                      echo '<li>
+                      ' . $login_button . '
+                      <!-- <a href="#"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a> -->
+                    </li>'
+                      ?>
                     </li>
                   </ul>
                 </div>

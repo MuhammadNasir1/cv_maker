@@ -8,9 +8,9 @@ if (isset($_REQUEST['submit'])) {
   $result = mysqli_query($conn, $existemail);
   $allemails = mysqli_num_rows($result);
   if ($allemails == 1) {
-    echo  "email Found <br>"; 
+    // echo  "email Found <br>"; 
     $pin = rand(10000,99999);
-    print_r($pin);
+    // print_r($pin);
     $pinmessage = "Enter your 5 digit code!";
     $pin = "0 0 0 0 0" ;
     $input_num = "number";
@@ -22,8 +22,13 @@ if (isset($_REQUEST['submit'])) {
     $pin = "Enter your email address";
   }
 }
-// $to  = "muhammadnasir.dev@gmail.com";
-// $subject =
+// $to  = "";
+// $subject = "temp text";
+// $message = "Ennter ths number to emial";
+// $from = "";
+// $header = "from: $from";
+
+// mail($to, $subject , $message ,$header);
 ?>
 <?php include("header.php") ?>
 

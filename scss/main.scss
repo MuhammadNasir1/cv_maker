@@ -39,9 +39,9 @@ body {
   width: 10px;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+// .dropdown:hover .dropdown-menu {
+//   display:block;
+// }
 
 .dropdown-menu {
   border-top: 5px solid var(--primary-color);
@@ -58,10 +58,6 @@ body {
   }
 }
 
-.navbar-nav {
-  @extend %flex-center;
-}
-
 .navbar {
   position: sticky;
   top: 0;
@@ -70,12 +66,60 @@ body {
 }
 
 nav {
+  & .navbar-toggler{
+   border: none;
+  padding: 0;
+
+  }
+  & .nav_collapse {
+
+
+    & i {
+      color: var(--primary-color);
+      font-size: 50px;
+    }
+  }
 
   background-color: var(--light-color);
 
   & .logo {
     & img {
       width: 130px;
+    }
+  }
+
+  & .nav_sm_drop {
+
+    & p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 0%;
+
+      & a {
+        font-size: 20px;
+        color: black;
+        width: 100%;
+        font-weight: 500;
+        text-decoration: none;
+
+        & i {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  & .ph_dropdown {
+
+    & a {
+      display: flex;
+      margin-top: 10px;
+      margin-left: 30px;
+      font-size: 18px;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.793);
+      font-weight: 500;
     }
   }
 
@@ -96,7 +140,7 @@ nav {
     }
   }
 
-  & button {
+  & .sign_in_btn {
     background: transparent;
     border: 2px solid var(--primary-color);
     padding: 5px 15px 5px 15px;
@@ -456,7 +500,7 @@ nav {
   }
 }
 
-.card-body {
+.card_body_cv {
   background-color: transparent;
   border: none;
   position: relative;

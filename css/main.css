@@ -12,7 +12,7 @@
   --light-color: #ffffff;
 }
 
-footer .social-icon-heading p, .animated-img-ph .images, .animated-img .images, .anim-sec-txt, .fix-bg .txt, .tips-content, .card-body a, .num-bg .downloads-number, .details-box .box-1, .datails-img .image, .header-image .image, .main-heading .heading, nav .lan_dropdown .dropdown-menu p, nav .icon, .navbar-nav {
+footer .social-icon-heading p, .animated-img-ph .images, .animated-img .images, .anim-sec-txt, .fix-bg .txt, .tips-content, .card_body_cv a, .num-bg .downloads-number, .details-box .box-1, .datails-img .image, .header-image .image, .main-heading .heading, nav .lan_dropdown .dropdown-menu p, nav .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,10 +33,6 @@ body {
 
 ::-webkit-scrollbar-track {
   width: 10px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
 }
 
 .dropdown-menu {
@@ -63,8 +59,41 @@ body {
 nav {
   background-color: var(--light-color);
 }
+nav .navbar-toggler {
+  border: none;
+  padding: 0;
+}
+nav .nav_collapse i {
+  color: var(--primary-color);
+  font-size: 50px;
+}
 nav .logo img {
   width: 130px;
+}
+nav .nav_sm_drop p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0%;
+}
+nav .nav_sm_drop p a {
+  font-size: 20px;
+  color: black;
+  width: 100%;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav_sm_drop p a i {
+  font-size: 30px;
+}
+nav .ph_dropdown a {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.793);
+  font-weight: 500;
 }
 nav .navbar-nav li .nav-link {
   color: black;
@@ -79,7 +108,7 @@ nav .icon {
 nav .icon i {
   color: black;
 }
-nav button {
+nav .sign_in_btn {
   background: transparent;
   border: 2px solid var(--primary-color);
   padding: 5px 15px 5px 15px;
@@ -351,19 +380,19 @@ nav .user_icon i {
     transform: translateX(-25%) !important;
   }
 }
-.card-body {
+.card_body_cv {
   background-color: transparent;
   border: none;
   position: relative;
   width: 100%;
   height: 100%;
 }
-.card-body img {
+.card_body_cv img {
   border: 5px solid var(--primary-color);
   padding: 0.5rem;
   position: relative;
 }
-.card-body a {
+.card_body_cv a {
   position: absolute;
   z-index: 4;
   height: 100%;
@@ -372,10 +401,10 @@ nav .user_icon i {
   opacity: 0;
   transition: all 0.5s;
 }
-.card-body a:hover {
+.card_body_cv a:hover {
   opacity: 100;
 }
-.card-body a button {
+.card_body_cv a button {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
   color: white;

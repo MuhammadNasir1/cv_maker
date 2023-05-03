@@ -4,6 +4,11 @@
   --light-color: #ffffff;
 }
 
+@media (max-width: 2000px) and (min-width: 992px) {
+  .nav_sm_drop {
+    display: none;
+  }
+}
 @media (max-width: 1120px) and (min-width: 10px) {
   .anim-sec-txt h1 {
     font-size: 1.8rem;
@@ -11,6 +16,9 @@
   }
 }
 @media (max-width: 992px) and (min-width: 10px) {
+  .nav-item {
+    display: none;
+  }
   .cv_image_login {
     display: none;
   }

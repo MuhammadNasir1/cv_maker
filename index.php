@@ -20,7 +20,7 @@ include('navbar.php')
             combinations and also full customization</p>
           <div>
             <a href="#"> <button>Show template</button></a>
-            <a href="#"> <button class="cv-btn">Create CV or Resume</button></a>
+            <a href="./built_form.php"> <button class="cv-btn">Create CV or Resume</button></a>
           </div>
         </div>
       </div>
@@ -122,14 +122,14 @@ include('navbar.php')
       <div class="carousel-inner w-100">
         <div class="carousel-item active">
           <div class="col-md-3">
-            <div class="card card-body">
+            <div class="card card-body card_body_cv">
               <img class="img-fluid" src="./image/cv-image.png">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="col-md-3">
-            <div class="card card-body">
+            <div class="card card-body card_body_cv">
               <div class="template-img">
                 <img class=" img-fluid" src="./image/cv-image-2.png">
               </div>
@@ -138,7 +138,7 @@ include('navbar.php')
         </div>
         <div class="carousel-item">
           <div class="col-md-3">
-            <div class="card card-body">
+            <div class="card card-body card_body_cv">
               <!-- <a href="#"><button class="">USe This Template</button></a> -->
               <img class="img-fluid" src="./image/cv-image.png">
             </div>
@@ -146,7 +146,7 @@ include('navbar.php')
         </div>
         <div class="carousel-item">
           <div class="col-md-3">
-            <div class="card card-body">
+            <div class="card card-body card_body_cv">
               <img class="img-fluid" src="./image/cv-image-2.png">
             </div>
           </div>

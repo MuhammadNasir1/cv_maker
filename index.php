@@ -101,10 +101,10 @@ include('navbar.php')
 <!-- ================ datails-section-End ==================== -->
 
 <!-- ================ Fixed-img-Start ==================== -->
-<div class="container-fluid mt-4">
+<div class="container-fluid p-0 mt-4">
   <div class="fix-bg">
     <div class="txt">
-      <h1>"Lorem ipsum dolor sit amet consectetur dolor sit
+      <h1 class="">"Lorem ipsum dolor sit amet consectetur dolor sit
         <span class="remove"><br></span> ipsum dolor sit amet consectetur"
       </h1>
       <a href="#"> <button class="btn mt-3">Create CV</button></a>
@@ -115,7 +115,7 @@ include('navbar.php')
 
 
 <!-- ================ Templates-start ==================== -->
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 p-0">
   <div class="template-heading">
     <h1>Select Your template</h1>
     <div id="myCarousel" class="carousel slide container-fluid" data-bs-ride="carousel">
@@ -166,7 +166,7 @@ include('navbar.php')
 <!-- ================ Template-End ======================- -->
 
 <!-- ================ number-animation-Start==================== -->
-<div class="container-fluid mt-5 mb-5">
+<div class="container-fluid p-0 mt-5 mb-5">
   <div class="num-bg">
     <div class="container">
       <div class="row">

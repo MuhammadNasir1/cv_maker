@@ -417,6 +417,7 @@ nav .user_icon i {
   flex-direction: column;
 }
 .fix-bg .txt h1 {
+  padding: 0 5px 0 5px;
   color: white;
   font-weight: 600;
   text-align: center;

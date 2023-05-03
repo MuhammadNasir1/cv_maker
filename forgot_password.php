@@ -71,7 +71,7 @@ if (isset($_REQUEST['submit'])) {
       </div>
       <!-- ==========input-section-End==== -->
       <div class="col-lg-6 col-md-5">
-        <div class="header-image">
+        <div class="header-image cv_image_login">
           <div class="image">
             <img src="./image/cv.svg" alt="">
           </div>

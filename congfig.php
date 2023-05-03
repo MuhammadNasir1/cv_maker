@@ -27,7 +27,6 @@ $google_client->setClientSecret('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');
 
 //Set the OAuth 2.0s Redirect URI
 $google_client->setRedirectUri('http://localhost/cv_maker/index.php');
-
 // to get the email and profile 
 $google_client->addScope('email');
 

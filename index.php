@@ -1,6 +1,8 @@
 
 <?php
-include('navbar.php')
+include('navbar.php');
+include('header.php');
+
 ?>
 
 <!-- ================Hero-section-Start ================ -->
@@ -152,12 +154,14 @@ include('navbar.php')
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <button style="width:80px" class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+        <span style="color:red;"><i style="font-size:40px" class='bx bx-chevron-left' ></i></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <button style="width: 80px; " class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+        <span style="color:red;"><i style="font-size:40px" class='bx bx-chevron-right' ></i></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>

@@ -78,7 +78,7 @@ include('header.php')
           <div class="collapse ph_dropdown" id="collapseExample">
             <div class="mt-2">
               <a href="#">Create cv</a>
-              <a href="#">Show cv templete</a>
+              <a href="./templete.php">Show cv templete</a>
               <a href="#">How to create CV</a>
             </div>
           </div>
@@ -94,7 +94,7 @@ include('header.php')
           <div class="collapse ph_dropdown" id="collaps">
             <div class="mt-2">
               <a href="#">Create Resume</a>
-              <a href="#">Show resume templete</a>
+              <a href="./templete.php">Show resume templete</a>
               <a href="#">How to create resume</a>
             </div>
           </div>
@@ -108,7 +108,7 @@ include('header.php')
 
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Build</a></li>
-            <li><a class="dropdown-item" href="#">Templete</a></li>
+            <li><a class="dropdown-item" href="./templete.php">Templete</a></li>
             <li><a class="dropdown-item" href="#">How to create CV</a></li>
           </ul>
         </li>
@@ -118,7 +118,7 @@ include('header.php')
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Build</a></li>
-            <li><a class="dropdown-item" href="#">Templete</a></li>
+            <li><a class="dropdown-item" href="./templete.php">Templete</a></li>
             <li><a class="dropdown-item" href="#">How to create Resume</a></li>
           </ul>
 

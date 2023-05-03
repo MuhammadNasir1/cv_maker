@@ -63,10 +63,7 @@ include('header.php')
     <div class="logo">
       <img src="./image/Cv-Builder-Logo.svg" alt="">
     </div>
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    <span class="nav_collapse navbar-toggler"> 
+    <span class="nav_collapse navbar-toggler">
       <i data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class='bx bx-menu'></i>
     </span>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">

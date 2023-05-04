@@ -35,10 +35,9 @@ include('navbar.php')
           <div class="cv_templete_img">
             <div style="width:90%">
               <div class="temp_img">
-                <img src="./image/cv-image-2.png" alt="">
+                <img src="./image/cv-image.png" alt="">
                 <div class="tem_sel_btn">
                   <a href="#">
-                    <h5>Select Templete</h5>
                   </a>
                 </div>
               </div>
@@ -49,8 +48,14 @@ include('navbar.php')
         <!-- ===================cv_templete_Image================== -->
         <div class="col-md-4 col-lg-3">
           <div class="cv_templete_img">
-            <div class="temp_img">
-              <img src="./image/cv-image.png" alt="">
+            <div style="width:90%">
+              <div class="temp_img">
+                <img src="./image/cv-image-2.png" alt="">
+                <div class="tem_sel_btn">
+                  <a href="#">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -58,8 +63,14 @@ include('navbar.php')
         <!-- ===================cv_templete_Image================== -->
         <div class="col-md-4 col-lg-3">
           <div class="cv_templete_img">
-            <div class="temp_img">
-              <img src="./image/cv-image-2.png" alt="">
+            <div style="width:90%">
+              <div class="temp_img">
+                <img src="./image/cv-image.png" alt="">
+                <div class="tem_sel_btn">
+                  <a href="#">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -67,8 +78,14 @@ include('navbar.php')
         <!-- ===================cv_templete_Image================== -->
         <div class="col-md-4 col-lg-3">
           <div class="cv_templete_img">
-            <div class="temp_img">
-              <img src="./image/cv-image.png" alt="">
+            <div style="width:90%">
+              <div class="temp_img">
+                <img src="./image/cv-image-2.png" alt="">
+                <div class="tem_sel_btn">
+                  <a href="#">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,13 +94,89 @@ include('navbar.php')
     </div>
   </div>
   <!-- ==============Cv-templetes-end==================== -->
+  <!-- ==============Resume-templetes-Start================== -->
+  <!-- ==============Resume-templetes-end==================== -->
+  <div class="container-fluid">
+    <div class="row">
+        <!-- ===================cv_templete_Image================== -->
+        <div class="col-md-4 col-lg-3">
+          <div class="cv_templete_img">
+            <div style="width:90%">
+              <div class="temp_img">
+                <img src="./image/cv-image-2.png" alt="">
+                <div class="tem_sel_btn">
+                  <a href="#">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===================cv_templete_Image=================== -->
+        <!-- ===================cv_templete_Image================== -->
+        <div class="col-md-4 col-lg-3">
+          <div class="cv_templete_img">
+            <div style="width:90%">
+              <div class="temp_img">
+                <img src="./image/cv-image.png" alt="">
+                <div class="tem_sel_btn">
+                  <a href="#">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===================cv_templete_Image=================== -->
+          <!-- ===================cv_templete_Image================== -->
+          <div class="col-md-4 col-lg-3">
+          <div class="cv_templete_img">
+            <div style="width:90%">
+              <div class="temp_img">
+                <img src="./image/cv-image-2.png" alt="">
+                <div class="tem_sel_btn">
+                  <a href="#">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===================cv_templete_Image=================== -->
+        <!-- ===================cv_templete_Image================== -->
+        <div class="col-md-4 col-lg-3">
+          <div class="cv_templete_img">
+            <div style="width:90%">
+              <div class="temp_img">
+                <img src="./image/cv-image.png" alt="">
+                <div class="tem_sel_btn">
+                  <a href="#">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===================cv_templete_Image=================== -->
+    </div>
+  </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">2222222</div>
 </div>
-<!-- ==============templetes-navtab-end==================== -->
+<!-- ==============templetes-navtab-end=======s============= -->
+<div class="templete-pagination">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a href="#" class="page-link ">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</div>
 
-
-<!-- ==============Resume-templetes-Start================== -->
-<!-- ==============Resume-templetes-end==================== -->
 
 <?php
 include('footer.php');

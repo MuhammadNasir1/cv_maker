@@ -88,7 +88,7 @@ include('navbar.php')
               </div>
             </div>
           </div>
-        </div>
+        </div>s
         <!-- ===================cv_templete_Image=================== -->
       </div>
     </div>
@@ -160,8 +160,8 @@ include('navbar.php')
         <!-- ===================cv_templete_Image=================== -->
     </div>
   </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">2222222</div>
 </div>
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"></div>
 <!-- ==============templetes-navtab-end=======s============= -->
 <div class="templete-pagination">
   <ul class="pagination justify-content-center">

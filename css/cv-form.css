@@ -471,6 +471,16 @@
   outline: none;
   border: 1px solid #808080;
 }
+.input-field textarea {
+  padding: 10px 15px;
+  color: rgba(0, 0, 0, 0.6705882353);
+  font-weight: 500;
+  border: 1px solid rgba(128, 128, 128, 0.4431372549);
+}
+.input-field .about-us-txt {
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
 
 .image_input {
   border: 1px solid rgba(128, 128, 128, 0.4431372549);

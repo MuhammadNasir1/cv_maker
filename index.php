@@ -202,7 +202,7 @@ include('navbar.php');
 </div>
 <!-- ================ number-animation-End ===================== -->
 
-<!-- ================ Tips-Text-Start ===================== -->
+<!-- ================ Tips-Text-Start ========  ============= -->
 <div class="container-fluid">
   <div class="tips-content">
     <div class="tip-sec-txt">

@@ -59,10 +59,10 @@ include('navbar.php');
                 <!-- ==============form-start============== -->
                 <div class="col-lg-7">
                   <div class="personal-info-form pb-4">
-                  <div style="display:flex;  align-items: center; justify-content: space-between;">
+                    <div style="display:flex;  align-items: center; justify-content: space-between;">
                       <h3>Personal Information</h3>
 
-                      <button  class="toggle-image-form mt-2" onclick="toggleDivs()">Cv without image</button>
+                      <button class="toggle-image-form mt-2" onclick="toggleDivs()">Cv without image</button>
                     </div>
                     <div class="form-info">
                       <form>
@@ -71,11 +71,11 @@ include('navbar.php');
                             <!-- ============First Name============ -->
                             <div class="col-lg-9 col-md-8 col-7">
                               <div class="input-field mt-5 ">
-                                <input style="width: 100%;" type="text" required spellcheck="false" style="">
+                                <input class="w-100" type="text" required spellcheck="false">
                                 <label>First Name</label>
-                                 <!-- ============Last Name============ -->
+                                <!-- ============Last Name============ -->
                                 <div class="input-field mt-5">
-                                  <input style="width: 100%;" type="text" required spellcheck="false">
+                                  <input class="w-100" type="text" required spellcheck="false">
                                   <label>Last Name</label>
                                 </div>
                               </div>
@@ -84,7 +84,7 @@ include('navbar.php');
                             <div class="col-lg-3 col-md-4 col-5">
                               <div class="input-field mt-5 ">
                                 <div class="image_input">
-                                  <label class="" for="files"><i class='bx bxs-user'></i> <img style="height:100%; width:100%; position:absolute;" src="./image/my.pg"></label>
+                                  <label class="" for="files"><i class='bx bxs-user'></i> <img style="height:100%; width:100%; position:absolute;" src=""></label>
                                   <input id="files" style="visibility:hidden;" type="file">
                                 </div>
                               </div>
@@ -92,14 +92,14 @@ include('navbar.php');
                             <!-- ============Father Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input style="width: 100%;" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required spellcheck="false">
                                 <label>Father Name</label>
                               </div>
                             </div>
                             <!-- ============Last Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input style="width: 100%;" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required spellcheck="false">
                                 <label>Profession <span>(skill)</span></label>
                               </div>
                             </div>
@@ -107,45 +107,52 @@ include('navbar.php');
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input style="width: 100%;" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required spellcheck="false">
                                 <label>Personal #</label>
                               </div>
                             </div>
                             <!-- ============Telephone No============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input style="width: 100%;" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required spellcheck="false">
                                 <label>Tel #</label>
                               </div>
                             </div>
                             <!-- ============Email============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <input style="width:100% " type=" email" required spellcheck="false">
+                                <input class="w-100" type=" email " required spellcheck="false">
                                 <label>Email</label>
                               </div>
                             </div>
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input style="width: 100%;" type="text" required spellcheck="false">
+                                <input type="text w-100" required spellcheck="false">
                                 <label>City</label>
                               </div>
                             </div>
                             <!-- ============Telephone No============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input style="width: 100%;" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required spellcheck="false">
                                 <label>Country</label>
                               </div>
                             </div>
-                            <!-- ============Save and Next============ -->
+                            <!-- ============about us ============ -->
+                            <div class="col-md-12">
+                              <div class="input-field mt-5">
+                                <textarea class="email_width form-control w-100" name="" id="" rows="4"> </textarea>
+                                <label>About Us</label>
+                                <div class="form-text about-us-txt">Enter yourself in less than <b>50</b> words</div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </form>
-                      <div class="form-buttons mt-4">
-                        <button class="btn btnNext  float-end save-btn"> Next</button>
-                      </div>
+                        <!-- ============Save and Next============ -->
+                        <div class="form-buttons mt-4">
+                          <button class="btn btnNext  float-end save-btn"> Next</button>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -187,84 +194,90 @@ include('navbar.php');
                     <div style="display:flex;  align-items: center; justify-content: space-between;">
                       <h3>Personal Information</h3>
 
-                      <button  class="toggle-image-form mt-2" onclick="toggleDivs()">Cv with image</button>
+                      <button class="toggle-image-form mt-2" onclick="toggleDivs()">Cv with image</button>
                     </div>
                     <div class="form-info">
-                      <form>
-                        <div class="container">
-                          <div class="row">
-                            <!-- ============First Name============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5 ">
-                                <input class="ph_inp" type="text" required>
-                                <label>First Name</label>
-                              </div>
-                            </div>
-                            <!-- ============Last Name============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5 ">
-                                <input type="text" required>
-                                <label>Last Name</label>
-                              </div>
-                            </div>
-                            <!-- ============Father Name============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Father Name</label>
-                              </div>
-                            </div>
-                            <!-- ============Last Name============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Profession <span>(skill)</span></label>
-                              </div>
-                            </div>
 
-                            <!-- ============Contact no============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Personal #</label>
-                              </div>
+                      <div class="container">
+                        <div class="row">
+                          <!-- ============First Name============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5 ">
+                              <input class="ph_inp" type="text" required>
+                              <label>First Name</label>
                             </div>
-                            <!-- ============Telephone No============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Tel #</label>
-                              </div>
+                          </div>
+                          <!-- ============Last Name============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5 ">
+                              <input type="text" required>
+                              <label>Last Name</label>
                             </div>
-                            <!-- ============Email============ -->
-                            <div class="col-md-12">
-                              <div class="input-field mt-5">
-                                <input class="email_width" type=" email" required>
-                                <label>Email</label>
-                              </div>
+                          </div>
+                          <!-- ============Father Name============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Father Name</label>
                             </div>
-                            <!-- ============Contact no============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>City</label>
-                              </div>
+                          </div>
+                          <!-- ============Last Name============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Profession <span>(skill)</span></label>
                             </div>
-                            <!-- ============Telephone No============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Country</label>
-                              </div>
+                          </div>
+
+                          <!-- ============Contact no============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Personal #</label>
                             </div>
-                            <!-- ============Save and Next============ -->
+                          </div>
+                          <!-- ============Telephone No============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Tel #</label>
+                            </div>
+                          </div>
+                          <!-- ============Email============ -->
+                          <div class="col-md-12">
+                            <div class="input-field mt-5">
+                              <input class="email_width" type=" email" required>
+                              <label>Email</label>
+                            </div>
+                          </div>
+                          <!-- ============Contact no============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>City</label>
+                            </div>
+                          </div>
+                          <!-- ============Telephone No============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Country</label>
+                            </div>
+                          </div>
+                          <!-- ============about us ============ -->
+                          <div class="col-md-12">
+                            <div class="input-field mt-5">
+                              <textarea class="email_width form-control" name="" id="" rows="4"> </textarea>
+                              <label>About Us</label>
+                              <div class="form-text about-us-txt">Enter yourself in less than <b>50</b> words</div>
+                            </div>
                           </div>
                         </div>
-                        <div class="form-buttons mt-4">
-                          <!-- <button type="" class="btn btn-danger">Previous</button> -->
-                          <!-- <a href="./education-from.php"> <button class="btn btnNext  float-end save-btn"> Next</button></a> -->
-                          <button class="btn btnNext  float-end save-btn"> Next</button>
-                        </div>
+                      </div>
+                      <!-- ============Save and Next============ -->
+                      <div class="form-buttons mt-4">
+                        <button class="btn btnNext  float-end save-btn"> Next</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -625,18 +638,9 @@ include('navbar.php');
                             </div>
                           </div>
 
-                          <!-- <div class="col-12">
-                  <div class=" add-education mt-5 ">
-                    <a href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer"  src="./image/plus-icon.svg" alt=""></a>
-
-                  </div>
-
-                </div> -->
                         </div>
                       </div>
                       <!-- ==================Skill-section-End============================ -->
-
-
                       <div class="form-buttons mt-5">
                         <button type="" class="btn btn-danger btnPrevious">Previous</button>
 

@@ -623,6 +623,18 @@
     border: 1px solid #808080
   }
 
+  & textarea {
+    padding: 10px 15px;
+    color: #000000ab;
+    font-weight: 500;
+    border: 1px solid #80808071
+
+    
+  }
+  & .about-us-txt{
+   font-weight: 500;
+   margin-top: 0.3rem;
+   }
 }
 
 .image_input {
@@ -679,12 +691,12 @@
   float: left;
   position: relative;
 
-   color: var(--primary-color);
-   background-color: transparent;
+  color: var(--primary-color);
+  background-color: transparent;
   padding: 8px 10px 8px 10px;
   font-weight: 700;
   border: 2px solid var(--primary-color);
-  float:right;
+  float: right;
   font-size: 12px;
 
 

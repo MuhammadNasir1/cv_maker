@@ -258,7 +258,6 @@ function toggleDivs() {
   if (withoutimg.style.display === "none") {
     withoutimg.style.display = "block";
     withimag.style.display = "none";
-    console.log("clik");
   } else {
     withoutimg.style.display = "none";
     withimag.style.display = "block";

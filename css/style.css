@@ -5,18 +5,18 @@
 }
 
 .sign-input {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   padding: 0px 60px 0px 60px;
 }
 
 .sign-txt .form-heading {
-  line-height: 65px;
+  line-height: 4.0625rem;
 }
 .sign-txt h4 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   margin-bottom: 7px;
   color: var(--primary-color);
 }
@@ -24,7 +24,7 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: var(--dark-color);
 }
@@ -44,7 +44,7 @@
 
 .form .pass-icon {
   position: relative;
-  margin-top: -28px;
+  margin-top: -1.75rem;
   text-decoration: none;
 }
 .form .pass-icon i {
@@ -58,10 +58,10 @@
 }
 .form input :focus {
   outline: none;
-  border-bottom: 2px solid var(--dark-color);
+  border-bottom: 0.125rem solid var(--dark-color);
 }
 .form button {
-  height: 53px;
+  height: 3.3125rem;
   width: 100%;
   background: #c21010;
   background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
@@ -70,7 +70,7 @@
   margin-top: 5px;
   color: var(--light-color);
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   border-color: var(--primary-color);
 }
 .form input {
@@ -101,15 +101,15 @@
 .form label {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #999999;
 }
 .form .check-box {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 .form .check-box .checkbox {
-  height: 15px;
-  width: 15px;
+  height: 0.9375rem;
+  width: 0.9375rem;
 }
 .form .check-box a {
   text-decoration: none;
@@ -124,14 +124,14 @@
 }
 .form .check-box span {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  margin-left: 2px;
+  margin-left: 0.125rem;
   color: #4D4D4D;
 }
 
 .socail-icons {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,7 +141,7 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   color: #B5B5B5;
 }
 .socail-icons .icon ul {
@@ -151,11 +151,11 @@
   padding: 0%;
 }
 .socail-icons li .s-icon {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 .socail-icons li img {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .main-img-div {
@@ -186,8 +186,8 @@
 }
 
 .signup-input {
-  margin-top: 0px;
-  padding: 0px 60px 0px 60px;
+  margin-top: 0rem;
+  padding: 0rem 3.75rem 0rem 3.75rem;
 }
 
 .signup-heading {
@@ -198,8 +198,8 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   color: var(--dark-color);
   align-items: center;
   justify-content: center;
@@ -209,18 +209,18 @@
   text-decoration: none;
   font-weight: 700;
   color: var(--primary-color);
-  margin-left: 6px;
+  margin-left: 0.375rem;
 }
 
 .forgot-page-txt .form-heading {
-  line-height: 65px;
+  line-height: 4.0625rem;
 }
 .forgot-page-txt h4 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
-  margin-bottom: 7px;
+  font-size: 1.875rem;
+  margin-bottom: 0.4375rem;
   color: red;
   color: var(--dark-color);
 }
@@ -228,8 +228,8 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--dark-color);
 }
 .forgot-page-txt h3 a {
@@ -246,98 +246,98 @@
     display: none;
   }
   .form form .check-box {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 }
 @media (max-width: 600px) and (min-width: 0px) {
   .sign-input,
   .signup-input {
-    margin-top: 20px;
-    padding: 0px 20px 0px 20px;
+    margin-top: 1.25rem;
+    padding: 0rem 1.25rem 0rem 1.25rem;
   }
   .form form .check-box {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 }
 @media (max-width: 390px) and (min-width: 310px) {
   .sign-input .signup-input {
-    margin-top: 20px;
-    padding: 0px 20px 0px 20px;
+    margin-top: 1.25rem;
+    padding: 0rem 1.25rem 0rem 1.25rem;
   }
   .form form .check-box {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
   .form form .check-box .checkbox {
-    height: 10px;
-    width: 10px;
+    height: 0.625rem;
+    width: 0.625rem;
   }
   .form form .check-box {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
   .form form .check-box a {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .form form .check-box span {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
-    margin-left: 3px;
+    margin-left: 0.1875rem;
   }
 }
 @media (max-width: 310px) and (min-width: 0px) {
   .sign-input .signup-input {
-    margin-top: 20px;
-    padding: 0px 10px 0px 10px;
+    margin-top: 1.25rem;
+    padding: 0rem 0.625rem 0rem 0.625rem;
   }
   .form form .check-box {
     display: inline;
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
   .form form .check-box .checkbox {
-    height: 10px;
-    width: 10px;
+    height: 0.625rem;
+    width: 0.625rem;
   }
   .form form .check-box {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
   .form form .check-box a {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   .form form .check-box span {
-    font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 400;
     margin-left: 3px;
   }
 }
 @media (max-width: 430px) and (min-width: 0px) {
   .forgot-page-txt h4 {
-    font-size: 22px;
-    margin-bottom: 0px;
+    font-size: 1.375rem;
+    margin-bottom: 0rem;
   }
   .forgot-page-txt h3 {
     font-weight: 500;
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
   }
 }
 @media (max-width: 354px) and (min-width: 0px) {
   .forgot-page-txt h4 {
-    font-size: 22px;
-    margin-bottom: 0px;
+    font-size: 1.375rem;
+    margin-bottom: 0rem;
   }
   .forgot-page-txt h3 {
     font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
   }
 }
 @media (max-width: 332px) and (min-width: 0px) {
   .forgot-page-txt h4 {
-    font-size: 18px;
-    margin-bottom: 0px;
+    font-size: 1.125rem;
+    margin-bottom: 0rem;
   }
   .forgot-page-txt h3 {
     font-weight: 600;
-    font-size: 10px;
-    line-height: 18px;
+    font-size: 0.625rem;
+    line-height: 1.125rem;
   }
 }/*# sourceMappingURL=style.css.map */

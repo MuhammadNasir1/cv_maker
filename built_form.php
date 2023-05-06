@@ -1,7 +1,18 @@
 <?php
 include('navbar.php');
+
+// if(isset($_REQUEST['submit'])){
+
+//   $username = $_POST[''] . $_POST[''];
+//   $fathername = $_POST[''] ;
+//   $profession = $_POST[''] ;
+//   $ph_no = $_POST[''] . $_POST[''];
+//   $email = $_POST[''];
+//   $city_coun = $_POST[''] . $_POST[''];
+//   $about_us = $_POST[''] ;
+// }
 ?>
-<!-- <div class="main-heigt"></span>
+<!-- <div class="m  ain-heigt"></span>
   <div> -->
 <div style="height: 100%;">
   <div class="main-heigt">
@@ -71,11 +82,11 @@ include('navbar.php');
                             <!-- ============First Name============ -->
                             <div class="col-lg-9 col-md-8 col-7">
                               <div class="input-field mt-5 ">
-                                <input class="w-100" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required >
                                 <label>First Name</label>
                                 <!-- ============Last Name============ -->
                                 <div class="input-field mt-5">
-                                  <input class="w-100" type="text" required spellcheck="false">
+                                  <input class="w-100" type="text" required >
                                   <label>Last Name</label>
                                 </div>
                               </div>
@@ -92,14 +103,14 @@ include('navbar.php');
                             <!-- ============Father Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required >
                                 <label>Father Name</label>
                               </div>
                             </div>
                             <!-- ============Last Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required >
                                 <label>Profession <span>(skill)</span></label>
                               </div>
                             </div>
@@ -107,35 +118,35 @@ include('navbar.php');
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required >
                                 <label>Personal #</label>
                               </div>
                             </div>
                             <!-- ============Telephone No============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required >
                                 <label>Tel #</label>
                               </div>
                             </div>
                             <!-- ============Email============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <input class="w-100" type=" email " required spellcheck="false">
+                                <input class="w-100" type=" email " required >
                                 <label>Email</label>
                               </div>
                             </div>
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="text w-100" required spellcheck="false">
+                                <input type="text w-100" required >
                                 <label>City</label>
                               </div>
                             </div>
                             <!-- ============Telephone No============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required spellcheck="false">
+                                <input class="w-100" type="text" required >
                                 <label>Country</label>
                               </div>
                             </div>
@@ -642,9 +653,7 @@ include('navbar.php');
                       </div>
                       <!-- ==================Skill-section-End============================ -->
                       <div class="form-buttons mt-5">
-                        <button type="" class="btn btn-danger btnPrevious">Previous</button>
-
-                        <button type="submit" class="btn btn-danger float-end save-btn">Save </button>
+                        <button type="submit" class="btn btn-danger btnPrevious">Previous</button>                        <button name="submit" type="submit" class="btn btn-danger float-end save-btn">Save </button>
                       </div>
 
                     </div>

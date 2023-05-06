@@ -34,20 +34,20 @@
       & p {
         color: rgba(0, 0, 0, 0.544);
         font-weight: 600;
-        font-size: 12px;
+        font-size: .75rem;
         text-transform: uppercase;
         vertical-align: middle;
 
         & span {
-          border: 2px solid var(--primary-color);
+          border: .125rem solid var(--primary-color);
           border-radius: 50%;
-          width: 20px;
-          height: 20px;
+          width: 1.25rem;
+          height: 1.25rem;
           display: inline-block;
           vertical-align: middle;
-          margin-right: 6px;
+          margin-right: .375rem;
           text-align: center;
-          font-size: 12px;
+          font-size: .75rem;
           font-weight: 700;
           position: relative;
 
@@ -57,11 +57,11 @@
 
         &::after {
           background: #d5dae1;
-          width: 15px;
-          height: 2px;
+          width: .9375rem;
+          height: .125rem;
           display: inline-block;
           content: "";
-          margin: 0 9px;
+          margin: 0 .5625rem;
           vertical-align: middle
         }
 
@@ -85,7 +85,7 @@
       margin-bottom: 1.5rem;
       background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
       color: var(--light-color);
-      padding: 6px 16px 6px 16px;
+      padding: .375rem 1rem .375rem 1rem;
       font-weight: 500;
     }
   }
@@ -94,7 +94,7 @@
 .form-bg {
   background-color: white;
   box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.50);
-  border-radius: 5px;
+  // border-radius: .3125rem;
 }
 
 // .input-field {
@@ -111,9 +111,9 @@
 .add-education {
   & img {
     background: var(--primary-color);
-    padding: 5px;
-    border-radius: 4px;
-    width: 35px;
+    padding: .3125rem;
+    border-radius: .25rem;
+    width: 2.1875rem;
   }
 }
 
@@ -150,10 +150,10 @@
     position: absolute;
     transition: 0.3s;
     font-weight: 500;
-    top: -28px;
-    left: 6px;
-    font-size: 16px;
-    padding: 0 2px;
+    top: -1.75rem;
+    left: .375rem;
+    font-size: 1rem;
+    padding: 0 .125rem;
     background: white;
     color: var(--primary-color);
 
@@ -162,17 +162,241 @@
   & input {
     width: 90%;
     height: 2.5rem;
-    border-radius: 6px;
-    font-size: 16px;
-    padding: 0 15px;
+    border-radius: .375rem;
+    font-size: 1rem;
+    padding: 0 .9375rem;
     color: #000000ab;
     font-weight: 500;
-    border: 1px solid #80808071
+    border: .0625rem solid #80808071
   }
 
   & input:focus {
     outline: none;
-    border: 1px solid #808080
+    border: .0625rem solid #808080
+  }
+
+}
+
+.image_input {
+  border: .0625rem solid #80808071;
+  width: 100%;
+  height: 8rem;
+  float: right;
+  position: relative;
+
+  & label {
+    top: 0;
+    left: 0;
+    position: relative;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    & i {
+      font-size: 4rem;
+    }
+  }
+
+}
+
+::-webkit-datetime-edit-month-field {
+  text-transform: uppercase;
+  color: #000000ab;
+}
+
+::-webkit-datetime-edit-day-field {
+  text-transform: uppercase;
+  text-transform: uppercase;
+  color: #000000ab;
+}
+
+::-webkit-datetime-edit-year-field {
+  text-transform: uppercase;
+  color: #000000ab;
+}
+
+.toggle-image-form {
+  float: right;
+}
+
+:root {
+  --primary-color: #C21010;
+  --light-color: #ffffff;
+
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.main-heigt2 {
+  height: 100%;
+
+  & .main-heigt {
+    height: 90%;
+  }
+}
+
+
+.progres-bar {
+  vertical-align: middle;
+
+  .progress-sec {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & a {
+      text-decoration: none;
+
+      & p {
+        color: rgba(0, 0, 0, 0.544);
+        font-weight: 600;
+        font-size: .75rem;
+        text-transform: uppercase;
+        vertical-align: middle;
+
+        & span {
+          border: .125rem solid var(--primary-color);
+          border-radius: 50%;
+          width: 1.25rem;
+          height: 1.25rem;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: .375rem;
+          text-align: center;
+          font-size: .75rem;
+          font-weight: 700;
+          position: relative;
+
+
+
+        }
+
+        &::after {
+          background: #d5dae1;
+          width: .9375rem;
+          height: .125rem;
+          display: inline-block;
+          content: "";
+          margin: 0 .5625rem;
+          vertical-align: middle
+        }
+
+      }
+    }
+  }
+}
+
+
+
+.personal-info-form {
+  & h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 1rem 0 0 1rem;
+
+  }
+
+  & .form-buttons {
+    & button {
+      margin-bottom: 1.5rem;
+      background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
+      color: var(--light-color);
+      padding: .375rem 1rem .375rem 1rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.form-bg {
+  background-color: white;
+  box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.50);
+  border-radius: .3125rem;
+}
+
+// .input-field {
+//   & img {
+//     background: var(--primary-color);
+//     padding: 5px;
+//     border-radius: 4px;
+//     width: 35px;
+//     position: absolute;
+//     margin-left: 1rem;
+//   }
+// }
+
+.add-education {
+  & img {
+    background: var(--primary-color);
+    padding: .3125rem;
+    border-radius: .25rem;
+    width: 2.1875rem;
+  }
+}
+
+.Form-tip-sec {
+  background-color: whitesmoke;
+
+  & h3 {
+    margin: 1rem 0 0 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  & .text ul {
+
+    & li {
+      font-weight: 500;
+      color: #000000c5;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+
+.input-field {
+  margin-top: 2.2rem;
+  position: relative;
+
+  & .email_width {
+    width: 95%;
+  }
+
+  & label {
+    position: absolute;
+    transition: 0.3s;
+    font-weight: 500;
+    top: -1.75rem;
+    left: .375rem;
+    font-size: 1rem;
+    padding: 0 .125rem;
+    background: white;
+    color: var(--primary-color);
+
+  }
+
+  & input {
+    width: 90%;
+    height: 2.5rem;
+    border-radius: .375rem;
+    font-size: 1rem;
+    padding: 0 .9375rem;
+    color: #000000ab;
+    font-weight: 500;
+    border: .0625rem solid #80808071
+  }
+
+  & input:focus {
+    outline: none;
+    border: .0625rem solid #808080
   }
 
 }
@@ -258,20 +482,20 @@
       & p {
         color: rgba(0, 0, 0, 0.544);
         font-weight: 600;
-        font-size: 12px;
+        font-size: .75rem;
         text-transform: uppercase;
         vertical-align: middle;
 
         & span {
-          border: 2px solid var(--primary-color);
+          border: .125rem solid var(--primary-color);
           border-radius: 50%;
-          width: 20px;
-          height: 20px;
+          width: 1.25rem;
+          height: 1.25rem;
           display: inline-block;
           vertical-align: middle;
-          margin-right: 6px;
+          margin-right: .375rem;
           text-align: center;
-          font-size: 12px;
+          font-size: .75rem;
           font-weight: 700;
           position: relative;
 
@@ -281,11 +505,11 @@
 
         &::after {
           background: #d5dae1;
-          width: 15px;
-          height: 2px;
+          width: .9375rem;
+          height: .125rem;
           display: inline-block;
           content: "";
-          margin: 0 9px;
+          margin: 0 .5625rem;
           vertical-align: middle
         }
 
@@ -309,231 +533,7 @@
       margin-bottom: 1.5rem;
       background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
       color: var(--light-color);
-      padding: 6px 16px 6px 16px;
-      font-weight: 500;
-    }
-  }
-}
-
-.form-bg {
-  background-color: white;
-  box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.50);
-  border-radius: 5px;
-}
-
-// .input-field {
-//   & img {
-//     background: var(--primary-color);
-//     padding: 5px;
-//     border-radius: 4px;
-//     width: 35px;
-//     position: absolute;
-//     margin-left: 1rem;
-//   }
-// }
-
-.add-education {
-  & img {
-    background: var(--primary-color);
-    padding: 5px;
-    border-radius: 4px;
-    width: 35px;
-  }
-}
-
-.Form-tip-sec {
-  background-color: whitesmoke;
-
-  & h3 {
-    margin: 1rem 0 0 1rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-
-  & .text ul {
-
-    & li {
-      font-weight: 500;
-      color: #000000c5;
-      line-height: 1.5rem;
-      margin-top: 1rem;
-    }
-  }
-}
-
-
-.input-field {
-  margin-top: 2.2rem;
-  position: relative;
-
-  & .email_width {
-    width: 95%;
-  }
-
-  & label {
-    position: absolute;
-    transition: 0.3s;
-    font-weight: 500;
-    top: -28px;
-    left: 6px;
-    font-size: 16px;
-    padding: 0 2px;
-    background: white;
-    color: var(--primary-color);
-
-  }
-
-  & input {
-    width: 90%;
-    height: 2.5rem;
-    border-radius: 6px;
-    font-size: 16px;
-    padding: 0 15px;
-    color: #000000ab;
-    font-weight: 500;
-    border: 1px solid #80808071
-  }
-
-  & input:focus {
-    outline: none;
-    border: 1px solid #808080
-  }
-
-}
-
-.image_input {
-  border: 1px solid #80808071;
-  width: 100%;
-  height: 8rem;
-  float: right;
-  position: relative;
-
-  & label {
-    top: 0;
-    left: 0;
-    position: relative;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-
-    & i {
-      font-size: 4rem;
-    }
-  }
-
-}
-
-::-webkit-datetime-edit-month-field {
-  text-transform: uppercase;
-  color: #000000ab;
-}
-
-::-webkit-datetime-edit-day-field {
-  text-transform: uppercase;
-  text-transform: uppercase;
-  color: #000000ab;
-}
-
-::-webkit-datetime-edit-year-field {
-  text-transform: uppercase;
-  color: #000000ab;
-}
-
-.toggle-image-form {
-  float: right;
-}
-
-:root {
-  --primary-color: #C21010;
-  --light-color: #ffffff;
-
-}
-
-%flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.main-heigt2 {
-  height: 100%;
-
-  & .main-heigt {
-    height: 90%;
-  }
-}
-
-
-.progres-bar {
-  vertical-align: middle;
-
-  .progress-sec {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    & a {
-      text-decoration: none;
-
-      & p {
-        color: rgba(0, 0, 0, 0.544);
-        font-weight: 600;
-        font-size: 12px;
-        text-transform: uppercase;
-        vertical-align: middle;
-
-        & span {
-          border: 2px solid var(--primary-color);
-          border-radius: 50%;
-          width: 20px;
-          height: 20px;
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 6px;
-          text-align: center;
-          font-size: 12px;
-          font-weight: 700;
-          position: relative;
-
-
-
-        }
-
-        &::after {
-          background: #d5dae1;
-          width: 15px;
-          height: 2px;
-          display: inline-block;
-          content: "";
-          margin: 0 9px;
-          vertical-align: middle
-        }
-
-      }
-    }
-  }
-}
-
-
-
-.personal-info-form {
-  & h3 {
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin: 1rem 0 0 1rem;
-
-  }
-
-  & .form-buttons {
-    & button {
-      margin-bottom: 1.5rem;
-      background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
-      color: var(--light-color);
-      padding: 6px 16px 6px 16px;
+      padding: .375rem 1rem .375rem 1rem;
       font-weight: 500;
     }
   }
@@ -548,9 +548,9 @@
 .input-field {
   & img {
     background: var(--primary-color);
-    padding: 5px;
-    border-radius: 4px;
-    width: 35px;
+    padding: .3125rem;
+    border-radius: .25rem;
+    width: 2.1875rem;
     position: absolute;
     margin-left: 1rem;
   }
@@ -559,9 +559,9 @@
 .add-education {
   & img {
     background: var(--primary-color);
-    padding: 5px;
-    border-radius: 4px;
-    width: 35px;
+    padding: .3125rem;
+    border-radius: .25rem;
+    width: 2.1875rem;
   }
 }
 
@@ -598,10 +598,10 @@
     position: absolute;
     transition: 0.3s;
     font-weight: 500;
-    top: -28px;
-    left: 6px;
-    font-size: 16px;
-    padding: 0 2px;
+    top: -1.75rem;
+    left: .375rem;
+    font-size: 1rem;
+    padding: 0 .125rem;
     background: white;
     color: var(--primary-color);
 
@@ -610,24 +610,24 @@
   & input {
     width: 90%;
     height: 2.5rem;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: .375rem;
+    font-size: 1rem;
     padding: 0 15px;
     color: #000000ab;
     font-weight: 500;
-    border: 1px solid #80808071
+    border: .0625rem solid #80808071
   }
 
   & input:focus {
     outline: none;
-    border: 1px solid #808080
+    border: .0625rem solid #808080
   }
 
   & textarea {
-    padding: 10px 15px;
+    padding: .625rem .9375rem;
     color: #000000ab;
     font-weight: 500;
-    border: 1px solid #80808071
+    border: .0625rem solid #80808071
 
     
   }
@@ -643,7 +643,7 @@
   height: 8rem;
   float: right;
   position: relative;
-  border-radius: 5px;
+  border-radius: .3125rem;
 
   & label {
     top: 0;
@@ -661,8 +661,8 @@
     }
 
     & img {
-      border: 1px solid #80808071;
-      border-radius: 5px;
+      border: .0625rem solid #80808071;
+      border-radius: .3125rem;
       margin: 0;
       padding: 0;
       background-color: transparent;
@@ -693,11 +693,11 @@
 
   color: var(--primary-color);
   background-color: transparent;
-  padding: 8px 10px 8px 10px;
+  padding: .5rem .625rem .5rem .625rem;
   font-weight: 700;
-  border: 2px solid var(--primary-color);
+  border: .125rem solid var(--primary-color);
   float: right;
-  font-size: 12px;
+  font-size: .75rem;
 
 
 }

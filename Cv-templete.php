@@ -5,6 +5,7 @@ include('db.php');
 $sql = "SELECT * FROM `user` ORDER BY user_id desc";
 $result = mysqli_query($conn, $sql);
 $row = (mysqli_fetch_assoc($result));
+
 ?>
 <!doctype html>
 <html lang="en">

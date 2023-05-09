@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./css/cv-form.css">
   <link rel="stylesheet" href="./css/responsive.css">
   <link rel="stylesheet" href="./css/templete.css">
+  <link rel="stylesheet" href="./css/user_panel.css">
   
 
 </head>

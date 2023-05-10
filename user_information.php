@@ -10,14 +10,14 @@ include('header.php');
   </div>
   <ul class="nav-list m-0 p-0">
     <li>
-      <a href="#">
+      <a href="./userpanel.php">
         <i class="bx bx-grid-alt"></i>
         <span class="link_name">Dashboard</span>
       </a>
       <span class="tooltip">Dashboard</span>
     </li>
     <li>
-      <a href="./user_information.php">
+      <a href="#">
         <i class="bx bx-user"></i>
         <span class="link_name">Your Information</span>
       </a>
@@ -65,33 +65,44 @@ include('header.php');
     </div>
     </div>
   </nav>
-  <!-- ================navbar-End==================== -->
-  <div class="container-fluid mt-4 ">
-    <div class="row g-3">
-      <!-- ================downloads_details_box-Start================ -->
-      <div class="col-md-6">
-        <div class="user_details_box">
-          <div class="content">
-            <h1> DOWNLOADS<br><span>105<span style="color:white;">K</span></span></h1>
-            <div class="icon">
-              <i class='bx bxs-download'></i>
-            </div>
-          </div>
+  <!-- ================navbar-End================== -->
+  <!-- ================heading-start================== -->
+
+  <div class="container-fluid p-0">
+    <div class="user_information_heading">
+      <div class="User_info_heading">
+        <div class="text">
+          <h1>Your Saved Information</h1>
+          <p>Here is Your information.You can Change your information in just oneclick</p>
         </div>
       </div>
-      <!-- ================downloads_details_box-End================== -->
-      <!-- ================Users_details_box-Start================ -->
-      <div class="col-md-6">
-        <div class="user_details_box">
-          <div class="content">
-            <h1>Credits  <br><span>10<span style="color:white; font-weight:500">$</span></span></h1>
-            <div class="icon">
-            <i class='bx bx-dollar' ></i>
+    </div>
+  </div>
+  <!-- ================heading-End==================== -->
+  <div class="container">
+    <div class="info_form">
+      <div class="form_heading">
+        <h1>Personal Information</h1>
+
+        <div class="user_inf_form">
+
+          <!-- =============form_start============== -->
+          <form action="">
+            <div class="container">
+              <div class="row">
+                <!-- ===============first_name=============== -->
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+            <!-- =============form_End================ -->
+          </form>
         </div>
       </div>
-      <!-- ================Users_details_box-End================== -->
     </div>
   </div>
 </section>

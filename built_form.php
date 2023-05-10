@@ -1,19 +1,6 @@
 <?php
 include('navbar.php');
-
-// if(isset($_REQUEST['submit'])){
-
-//   $username = $_POST[''] . $_POST[''];
-//   $fathername = $_POST[''] ;
-//   $profession = $_POST[''] ;
-//   $ph_no = $_POST[''] . $_POST[''];
-//   $email = $_POST[''];
-//   $city_coun = $_POST[''] . $_POST[''];
-//   $about_us = $_POST[''] ;
-// }
 ?>
-<!-- <div class="m  ain-heigt"></span>
-  <div> -->
 <div style="height: 100%;">
   <div class="main-heigt">
 
@@ -412,7 +399,7 @@ include('navbar.php');
                         </div>
                       </form>
                       <!-- ================user-Education-form-End====================== -->
-                    </div>>
+                    </div>
                     </form>
 
                     <div class="personal-info-form mt-5">

@@ -224,14 +224,39 @@ include('navbar.php');
                                 <label>Father Name</label>
                               </div>
                             </div>
-                            <!-- ============Last Name============ -->
+                            <!-- ===============Gender=================== -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5">
+                                <select class="form-select gender-option" aria-label="Default select example">
+                                  <option selected>Male</option>
+                                  <option value="1">Female</option>
+                                  <option value="2">Other</option>
+                                </select>
+                                <label>Gender</label>
+                              </div>
+                            </div>
+
+                            <!-- ============DOB============ -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5">
+                                <input type="date" required>
+                                <label>DOB <span>(date of birth)</span></label>
+                              </div>
+                            </div>
+                            <!-- ============Professional============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
                                 <input type="text" required>
                                 <label>Profession <span>(skill)</span></label>
                               </div>
                             </div>
-
+                            <!-- ============Website============ -->
+                            <div class="col-md-12">
+                              <div class="input-field mt-5">
+                                <input class="email_width" type=" email" required>
+                                <label>Website</label>
+                              </div>
+                            </div>
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
@@ -253,18 +278,19 @@ include('navbar.php');
                                 <label>Email</label>
                               </div>
                             </div>
+                            <!-- ============Telephone No============ -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5">
+                                <!-- <input type="text" required> -->
+                                <label>Country</label>
+                                <?php include("country_dropdown.php") ?>
+                              </div>
+                            </div>
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
                                 <input type="text" required>
                                 <label>City</label>
-                              </div>
-                            </div>
-                            <!-- ============Telephone No============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Country</label>
                               </div>
                             </div>
                             <!-- ============about us ============ -->
@@ -370,7 +396,30 @@ include('navbar.php');
                                   <label>Dagree</label>
                                 </div>
                               </div>
+                              <!-- ============Mark Optaoned============ -->
+                              <div class="col-md-3 col-6 position-relative">
+                                <div style="width:100%" class="input-field mt-5">
+                                  <input type="nmber" required>
+                                  <label>Total Mark</label>
+                                </div>
 
+                                <!-- <p style="position:absolute;color:#C21010;z-index:400;margin-left:82%; margin-top:-2rem">To</p> -->
+                              </div>
+                              <!-- ============Mark Optaoned============ -->
+                              <div class="col-md-3 col-6">
+
+                                <div style="width:100%" class="input-field mt-5">
+                                  <input type="number" required>
+                                  <label>Obtains Mark</label>
+                                </div>
+                              </div>
+                              <!-- ============CGPA============ -->
+                              <div class="col-md-6">
+                                <div class="input-field mt-5 ">
+                                  <input type="number" required>
+                                  <label class="date-lable">CGPA</label>
+                                </div>
+                              </div>
                               <!-- ============Start-Date============ -->
                               <div class="col-md-6">
                                 <div class="input-field mt-5 ">
@@ -418,10 +467,23 @@ include('navbar.php');
                                 <label>Skill 1</label>
                                 <a class="input-add " onclick="addindd()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
                               </div>
+
+
                             </div>
                           </form>
                           <!-- ================user-Skills-form-End  ====================== -->
                           <!-- <p onclick="addindd()" class="btn btn-danger">Add</p> -->
+                        </div>
+                        <div class="col-12">
+                          <div class="mt-3 p-3">
+                            <div class="form-group row">
+                              <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
+                              <input type="range" min="1" max="100" value="50" class="form-control-range range-slider" id="myRange">
+                            </div>
+                            <div class="col-md-3">
+                              <span id="demo">0%</span>
+                            </div>
+                          </div>
                         </div>
                         <!-- ============Skill 2============ -->
 
@@ -617,11 +679,29 @@ include('navbar.php');
               <div class="row">
                 <!-- ==============form-start============== -->
                 <div class="col-lg-7">
-
-
-
-
                   <div class="personal-info-form pb-4">
+                    <!-- ==================hobby-section-Start========================== -->
+
+                      <div class="personal-info-form mt-5">
+                        <h3>Hobbies</h3>
+                      </div>
+                      <div class="container-fluid">
+                        <div class="row">
+
+                          <div class="col-md-12">
+                            <div id="referad">
+                              <div class="input-field mt-5 ">
+                                <input style="width:85%" type="text" required>
+                                <label>Hobby</label>
+                                <a onclick="clicker()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+            
+                    <!-- ================hobby-refernece-End-====================== -->
                     <h3>Languages</h3>
                     <div class="form-info">
 
@@ -716,6 +796,40 @@ include('navbar.php');
       const prevTab = new bootstrap.Tab(prevTabLinkEl);
       prevTab.show();
     });
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+      output.innerHTML = this.value + "%";
+    }
+
+    // ==============country-code============
+    image.pngmobiscroll.setOptions({
+    theme: 'ios',
+    themeVariant: 'light'
+});
+
+var inst = mobiscroll.select('#demo-country-picker', {
+    display: 'anchored',
+    filter: true,
+    itemHeight: 40,
+    renderItem: function (item) {
+        return '<div class="md-country-picker-item">' +
+            '<img class="md-country-picker-flag" src="https://img.mobiscroll.com/demos/flags/' + item.data.value + '.png" />' +
+            item.display + '</div>';
+    }
+});
+
+mobiscroll.util.http.getJson('https://trial.mobiscroll.com/content/countries.json', function (resp) {
+    var countries = [];
+    for (var i = 0; i < resp.length; ++i) {
+        var country = resp[i];
+        countries.push({ text: country.text, value: country.value });
+    }
+    inst.setOptions({ data: countries });
+});
   </script>
 
 

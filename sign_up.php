@@ -65,8 +65,8 @@ if (!isset($_SESSION['access_token'])) {
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/user-icon.svg" alt="Email">
-                  <label for="username" class="form-label">username</label>
-                  <input required name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your user name">
+                  <label for="Fullname" class="form-label">Full name</label>
+                  <input required name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your full name">
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">

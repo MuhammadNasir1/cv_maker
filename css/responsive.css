@@ -85,6 +85,9 @@
   .input-field .email_width {
     width: 100%;
   }
+  .input-field .gender-option {
+    width: 100%;
+  }
   .animated-img {
     display: none;
   }

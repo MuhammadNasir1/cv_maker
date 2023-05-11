@@ -361,13 +361,25 @@
   }
 }
 
-
 .input-field {
   margin-top: 2.2rem;
   position: relative;
 
+
   & .email_width {
     width: 95%;
+  }
+
+  & .gender-option {
+    width: 90%;
+    border: 1px solid #80808071;
+
+    &:focus {
+      box-shadow: none;
+      border: .0625rem solid #808080
+    }
+
+
   }
 
   & label {
@@ -628,13 +640,43 @@
     color: #000000ab;
     font-weight: 500;
     border: .0625rem solid #80808071
-
-    
   }
-  & .about-us-txt{
-   font-weight: 500;
-   margin-top: 0.3rem;
-   }
+
+  & .about-us-txt {
+    font-weight: 500;
+    margin-top: 0.3rem;
+  }
+}
+
+.range-form {
+  width: 400px;
+  margin: auto;
+  padding: 50px;
+}
+
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 95%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--primary-color);
+    cursor: pointer;
+    border-radius: 50%;
+
+
+  }
+
 }
 
 .image_input {

@@ -267,6 +267,14 @@
 .input-field .email_width {
   width: 95%;
 }
+.input-field .gender-option {
+  width: 90%;
+  border: 1px solid rgba(128, 128, 128, 0.4431372549);
+}
+.input-field .gender-option:focus {
+  box-shadow: none;
+  border: 0.0625rem solid #808080;
+}
 .input-field label {
   position: absolute;
   transition: 0.3s;
@@ -479,6 +487,33 @@
 .input-field .about-us-txt {
   font-weight: 500;
   margin-top: 0.3rem;
+}
+
+.range-form {
+  width: 400px;
+  margin: auto;
+  padding: 50px;
+}
+
+.range-slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 95%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  transition: opacity 0.2s;
+}
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--primary-color);
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .image_input {

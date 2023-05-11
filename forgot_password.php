@@ -4,7 +4,7 @@ require 'congfig.php';
 $pin = "Enter your email" ;   
 if (isset($_REQUEST['submit'])) {
   $forgot_email = $_POST['forgot_email'];
-  $existemail = "select * from `login` WHERE email = '$forgot_email' ";
+  $existemail = "select * from `users` WHERE email = '$forgot_email' ";
   $result = mysqli_query($conn, $existemail);
   $allemails = mysqli_num_rows($result);
   if ($allemails == 1) {

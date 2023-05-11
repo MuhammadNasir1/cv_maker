@@ -3,11 +3,12 @@ require 'congfig.php';
 @include('config.php');
 
 if (isset($_REQUEST['submit'])) {
-  $email = $_POST['email'];
   $username = $_POST['username'];
+  $email = $_POST['email'];
+  $phone_no = $_POST['phone_no'];
   $password = md5($_POST['password']);
   $cpassword = md5($_POST['cpassword']);
-  $existSql = "select * from `login` WHERE email = '$email' ";
+  $existSql = "select * from `users` WHERE email = '$email' ";
   $result = mysqli_query($conn, $existSql);
   $userRow = mysqli_num_rows($result);
   if ($userRow > 0) {
@@ -17,7 +18,7 @@ if (isset($_REQUEST['submit'])) {
   } else {
     if (($password == $cpassword and $email)) {
       $hach = md5($password, PASSWORD_DEFAULT);
-      $sql = "INSERT INTO `login` ( `email`, `username`, `password`, `cpassword`) VALUES ( '$email', '$username', '$password', '$cpassword')";
+      $sql = "INSERT INTO `users` (`username`, `email`,  `phone_no`,  `password`, `cpassword`) VALUES ('$username', '$email',  '$phone_no', '$password', '$cpassword')";
       $result = mysqli_query($conn, $sql);
       header("location: ./sign_in.php");
     } else {
@@ -56,6 +57,11 @@ if (!isset($_SESSION['access_token'])) {
           <div class="form-section">
             <div class="form">
               <form action="#" method="post">
+                <div class="mb-3">
+                  <img class="input-icons" src="./image/user-icon.svg" alt="Email">
+                  <label for="Fullname" class="form-label">Full name</label>
+                  <input required name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your full name">
+                </div>
                 <div class="mb-3   position-relative">
                   <img class="input-icons" src="./image/email-icons.svg" alt="Email">
                   <label for="email" class="form-label">Email</label>
@@ -65,11 +71,11 @@ if (!isset($_SESSION['access_token'])) {
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/user-icon.svg" alt="Email">
-                  <label for="Fullname" class="form-label">Full name</label>
-                  <input required name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your full name">
+                  <label for="Fullname" class="form-label">Phone no</label>
+                  <input required name="phone_no" type="number" class="form-control" id="phone_no"  placeholder="Enter your Phone no">
                 </div>
                 <div class="mb-3">
-                  <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
+                  <img class="in  put-icons" src="./image/passsword-icons.svg" alt="Pass">
                   <label for="password" class="form-label">Password</label>
                   <input required <?php echo @$input_pass_eror ?>t name="password" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
                   <div onclick="showpassword()">

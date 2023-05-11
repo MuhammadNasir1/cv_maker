@@ -1,6 +1,11 @@
+
+
+
 <?php
 include('navbar.php');
 ?>
+
+
 <div style="height: 100%;">
   <div class="main-heigt">
 
@@ -43,6 +48,10 @@ include('navbar.php');
           </div>
         </div>
         <!-- ====================contact-page-progrss-bar-End==================== -->
+        <!-- =====================================================================================
+        =====================================================================================
+        =====================================================================================
+        ===================================================================================== -->
 
         <!-- ============= personal-information-Form-Start============= -->
 
@@ -63,97 +72,122 @@ include('navbar.php');
                       <button class="toggle-image-form mt-2" onclick="toggleDivs()">Cv without image</button>
                     </div>
                     <!-- ================user-info-form-start================ -->
-                    <form action="">
-                      <div class="form-info">
-                        <div class="container">
-                          <div class="row">
-                            <!-- ============First Name============ -->
-                            <div class="col-lg-9 col-md-8 col-7">
-                              <div class="input-field mt-5 ">
-                                <input class="w-100" type="text" required>
-                                <label>First Name</label>
-                                <!-- ============Last Name============ -->
-                                <div class="input-field mt-5">
-                                  <input class="w-100" type="text" required>
-                                  <label>Last Name</label>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- ============image============ -->
-                            <div class="col-lg-3 col-md-4 col-5">
-                              <div class="input-field mt-5 ">
-                                <div class="image_input">
-                                  <label class="" for="files"><i class='bx bxs-user'></i> <img style="height:100%; width:100%; position:absolute;" src=""></label>
-                                  <input id="files" style="visibility:hidden;" type="file">
-                                </div>
-                              </div>
-                            </div>
-                            <!-- ============Father Name============ -->
-                            <div class="col-md-6">
+                      <form action="#" method="post">
+                    <div class="form-info">
+                      <div class="container">
+                        <div class="row">
+                          <!-- ============First Name============ -->
+                          <div class="col-lg-9 col-md-8 col-7">
+                            <div class="input-field mt-5 ">
+                              <input class="w-100" type="text" required>
+                              <label>First Name</label>
+                              <!-- ============Last Name============ -->
                               <div class="input-field mt-5">
                                 <input class="w-100" type="text" required>
-                                <label>Father Name</label>
-                              </div>
-                            </div>
-                            <!-- ============Last Name============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
-                                <label>Profession <span>(skill)</span></label>
-                              </div>
-                            </div>
-
-                            <!-- ============Contact no============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
-                                <label>Personal #</label>
-                              </div>
-                            </div>
-                            <!-- ============Telephone No============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
-                                <label>Tel #</label>
-                              </div>
-                            </div>
-                            <!-- ============Email============ -->
-                            <div class="col-md-12">
-                              <div class="input-field mt-5">
-                                <input class="w-100" type=" email " required>
-                                <label>Email</label>
-                              </div>
-                            </div>
-                            <!-- ============Contact no============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text w-100" required>
-                                <label>City</label>
-                              </div>
-                            </div>
-                            <!-- ============Telephone No============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
-                                <label>Country</label>
-                              </div>
-                            </div>
-                            <!-- ============about us ============ -->
-                            <div class="col-md-12">
-                              <div class="input-field mt-5">
-                                <textarea class="email_width form-control w-100" name="" id="" rows="4"> </textarea>
-                                <label>About Us</label>
-                                <div class="form-text about-us-txt">Enter yourself in less than <b>50</b> words</div>
+                                <label>Last Name</label>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <!-- ============Save and Next============ -->
-                        <div class="form-buttons mt-4">
-                          <button class="btn btnNext  float-end save-btn"> Next</button>
+                          <!-- ============image============ -->
+                          <div class="col-lg-3 col-md-4 col-5">
+                            <div class="input-field mt-5 ">
+                              <div class="image_input">
+                                <label class="" for="files"><i class='bx bxs-user'></i> <img style="height:100%; width:100%; position:absolute;" src=""></label>
+                                <input id="files" style="visibility:hidden;" type="file">
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ============Father Name============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input class="w-100" type="text" required>
+                              <label>Father Name</label>
+                            </div>
+                          </div>
+                          <!-- ===============Gender=================== -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <select class="form-select gender-option" aria-label="Default select example">
+                                <option selected>Male</option>
+                                <option value="1">Female</option>
+                                <option value="2">Other</option>
+                              </select>
+                              <label>Gender</label>
+                            </div>
+                          </div>
+
+                          <!-- ============DOB============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="date" required>
+                              <label>DOB <span>(date of birth)</span></label>
+                            </div>
+                          </div>
+                          <!-- ============Professional============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Profession <span>(skill)</span></label>
+                            </div>
+                          </div>
+                          <!-- ============Website============ -->
+                          <div class="col-md-12">
+                            <div class="input-field mt-5">
+                              <input class="email_width" type=" email" required>
+                              <label>Website</label>
+                            </div>
+                          </div>
+                          <!-- ============Contact no============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input class="w-100" type="text" required>
+                              <label>Personal #</label>
+                            </div>
+                          </div>
+                          <!-- ============Telephone No============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input class="w-100" type="text" required>
+                              <label>Tel #</label>
+                            </div>
+                          </div>
+                          <!-- ============Email============ -->
+                          <div class="col-md-12">
+                            <div class="input-field mt-5">
+                              <input class="w-100" type=" email " required>
+                              <label>Email</label>
+                            </div>
+                          </div>
+                          <!-- ============Contact no============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text w-100" required>
+                              <label>City</label>
+                            </div>
+                          </div>
+                          <!-- ============Telephone No============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input class="w-100" type="text" required>
+                              <label>Country</label>
+                            </div>
+                          </div>
+                          <!-- ============about us ============ -->
+                          <div class="col-md-12">
+                            <div class="input-field mt-5">
+                              <textarea class="email_width form-control w-100" name="" id="" rows="4"> </textarea>
+                              <label>About Us</label>
+                              <div class="form-text about-us-txt">Enter yourself in less than <b>50</b> words</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </form>
+                      <!-- ============Save and Next============ -->
+                      <div class="form-buttons mt-4">
+                        <button class="btn btnNext  float-end save-btn"> Next</button>
+                      </div>
+                    </div>
+
                     <!-- ================user-info-form-End================== -->
                   </div>
                 </div>
@@ -180,8 +214,6 @@ include('navbar.php');
 
           </div>
         </div>
-        <!-- ============= personal-information-Form-End============== -->
-
         <!-- ==========================
     ========================
     ====================== -->
@@ -198,121 +230,121 @@ include('navbar.php');
                       <button class="toggle-image-form mt-2" onclick="toggleDivs()">Cv with image</button>
                     </div>
                     <!-- ================user-info-form-Start================== -->
-                    <form action="">
-                      <div class="form-info">
 
-                        <div class="container">
-                          <div class="row">
-                            <!-- ============First Name============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5 ">
-                                <input class="ph_inp" type="text" required>
-                                <label>First Name</label>
-                              </div>
-                            </div>
-                            <!-- ============Last Name============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5 ">
-                                <input type="text" required>
-                                <label>Last Name</label>
-                              </div>
-                            </div>
-                            <!-- ============Father Name============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Father Name</label>
-                              </div>
-                            </div>
-                            <!-- ===============Gender=================== -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <select class="form-select gender-option" aria-label="Default select example">
-                                  <option selected>Male</option>
-                                  <option value="1">Female</option>
-                                  <option value="2">Other</option>
-                                </select>
-                                <label>Gender</label>
-                              </div>
-                            </div>
+                    <div class="form-info">
 
-                            <!-- ============DOB============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="date" required>
-                                <label>DOB <span>(date of birth)</span></label>
-                              </div>
+                      <div class="container">
+                        <div class="row">
+                          <!-- ============First Name============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5 ">
+                              <input class="ph_inp" type="text" required>
+                              <label>First Name</label>
                             </div>
-                            <!-- ============Professional============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Profession <span>(skill)</span></label>
-                              </div>
+                          </div>
+                          <!-- ============Last Name============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5 ">
+                              <input type="text" required>
+                              <label>Last Name</label>
                             </div>
-                            <!-- ============Website============ -->
-                            <div class="col-md-12">
-                              <div class="input-field mt-5">
-                                <input class="email_width" type=" email" required>
-                                <label>Website</label>
-                              </div>
+                          </div>
+                          <!-- ============Father Name============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Father Name</label>
                             </div>
-                            <!-- ============Contact no============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Personal #</label>
-                              </div>
+                          </div>
+                          <!-- ===============Gender=================== -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <select class="form-select gender-option" aria-label="Default select example">
+                                <option selected>Male</option>
+                                <option value="1">Female</option>
+                                <option value="2">Other</option>
+                              </select>
+                              <label>Gender</label>
                             </div>
-                            <!-- ============Telephone No============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>Tel #</label>
-                              </div>
+                          </div>
+
+                          <!-- ============DOB============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="date" required>
+                              <label>DOB <span>(date of birth)</span></label>
                             </div>
-                            <!-- ============Email============ -->
-                            <div class="col-md-12">
-                              <div class="input-field mt-5">
-                                <input class="email_width" type=" email" required>
-                                <label>Email</label>
-                              </div>
+                          </div>
+                          <!-- ============Professional============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Profession <span>(skill)</span></label>
                             </div>
-                            <!-- ============Telephone No============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <!-- <input type="text" required> -->
-                                <label>Country</label>
-                                <?php include("country_dropdown.php") ?>
-                              </div>
+                          </div>
+                          <!-- ============Website============ -->
+                          <div class="col-md-12">
+                            <div class="input-field mt-5">
+                              <input class="email_width" type=" email" required>
+                              <label>Website</label>
                             </div>
-                            <!-- ============Contact no============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input type="text" required>
-                                <label>City</label>
-                              </div>
+                          </div>
+                          <!-- ============Contact no============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Personal #</label>
                             </div>
-                            <!-- ============about us ============ -->
-                            <div class="col-md-12">
-                              <div class="input-field mt-5">
-                                <textarea class="email_width form-control" name="" id="" rows="4"> </textarea>
-                                <label>About Us</label>
-                                <div class="form-text about-us-txt">Enter yourself in less than <b>50</b> words</div>
-                              </div>
+                          </div>
+                          <!-- ============Telephone No============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>Tel #</label>
+                            </div>
+                          </div>
+                          <!-- ============Email============ -->
+                          <div class="col-md-12">
+                            <div class="input-field mt-5">
+                              <input class="email_width" type=" email" required>
+                              <label>Email</label>
+                            </div>
+                          </div>
+                          <!-- ============Telephone No============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <!-- <input type="text" required> -->
+                              <label>Country</label>
+                              <?php include("country_dropdown.php") ?>
+                            </div>
+                          </div>
+                          <!-- ============Contact no============ -->
+                          <div class="col-md-6">
+                            <div class="input-field mt-5">
+                              <input type="text" required>
+                              <label>City</label>
+                            </div>
+                          </div>
+                          <!-- ============about us ============ -->
+                          <div class="col-md-12">
+                            <div class="input-field mt-5">
+                              <textarea class="email_width form-control" name="" id="" rows="4"> </textarea>
+                              <label>About Us</label>
+                              <div class="form-text about-us-txt">Enter yourself in less than <b>50</b> words</div>
                             </div>
                           </div>
                         </div>
-                        <!-- ============Save and Next============ -->
-                        <div class="form-buttons mt-4">
-                          <button class="btn btnNext  float-end save-btn"> Next</button>
-                        </div>
                       </div>
-                    </form>
+                      <!-- ============Save and Next============ -->
+                      <div class="form-buttons mt-4">
+                        <button name="per_submit" type="submit"  class="btn btnNext  float-end save-btn"> Next</button>
+                      </div>
+                    </div>
                     <!-- ================user-info-form-End==================== -->
                   </div>
                 </div>
                 <!-- ==============form-End================ -->
+                </form>
                 <!-- ==============form-tips-sec-start============== -->
                 <div class="col-lg-5" style="  background-color: whitesmoke;">
                   <div class="Form-tip-sec">
@@ -336,10 +368,8 @@ include('navbar.php');
           </div>
         </div>
         <!-- ============= personal-information-Form-End============== -->
-        <!-- <a class="btn btn-primary btnNext">Next</a> -->
-
       </div>
-      <!-- ======================22222============= -->
+
       <div class="tab-pane  fade" id="menu1">
         <!-- ====================contact-page-progrss-bar-start==================== -->
         <div class="container-fluid">
@@ -363,8 +393,10 @@ include('navbar.php');
           </div>
         </div>
         <!-- ====================contact-page-progrss-bar-End==================== -->
-
-        <!-- ============= personal-information-Form-Start============= -->
+        <!-- =====================================================================================
+        =====================================================================================
+        =====================================================================================
+        ===================================================================================== -->
         <div class="container">
           <div class="form-bg mt-4">
             <div class="container">
@@ -377,79 +409,83 @@ include('navbar.php');
                     <div class="form-info">
 
                       <!-- ================user-Education-form-Start==================== -->
-                      <form action="">
-                        <div id="addeduction">
-                          <div class="container">
-                            <div class="row">
-                              <!-- ============institue Name============ -->
-                              <div class="col-md-6">
-                                <div class="input-field mt-5 ">
-                                  <input type="text" required>
-                                  <label>Institute Name</label>
-                                </div>
-                              </div>
-                              <!-- ============Dagree Name============ -->
-                              <div class="col-md-6">
 
-                                <div class="input-field mt-5">
-                                  <input type="text" required>
-                                  <label>Dagree</label>
-                                </div>
+                      <div id="addeduction">
+                        <div class="container">
+                          <div class="row">
+                            <!-- ============institue Name============ -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5 ">
+                                <input type="text" required>
+                                <label>Institute Name</label>
                               </div>
-                              <!-- ============Mark Optaoned============ -->
-                              <div class="col-md-3 col-6 position-relative">
-                                <div style="width:100%" class="input-field mt-5">
-                                  <input type="nmber" required>
-                                  <label>Total Mark</label>
-                                </div>
+                            </div>
+                            <!-- ============Dagree Name============ -->
+                            <div class="col-md-6">
 
-                                <!-- <p style="position:absolute;color:#C21010;z-index:400;margin-left:82%; margin-top:-2rem">To</p> -->
+                              <div class="input-field mt-5">
+                                <input type="text" required>
+                                <label>Dagree</label>
                               </div>
-                              <!-- ============Mark Optaoned============ -->
-                              <div class="col-md-3 col-6">
+                            </div>
+                            <!-- ============Mark Optaoned============ -->
+                            <div class="col-md-3 col-6 position-relative">
+                              <div style="width:100%" class="input-field mt-5">
+                                <input type="nmber" required>
+                                <label>Total Mark</label>
+                              </div>
 
-                                <div style="width:100%" class="input-field mt-5">
-                                  <input type="number" required>
-                                  <label>Obtains Mark</label>
-                                </div>
-                              </div>
-                              <!-- ============CGPA============ -->
-                              <div class="col-md-6">
-                                <div class="input-field mt-5 ">
-                                  <input type="number" required>
-                                  <label class="date-lable">CGPA</label>
-                                </div>
-                              </div>
-                              <!-- ============Start-Date============ -->
-                              <div class="col-md-6">
-                                <div class="input-field mt-5 ">
-                                  <input type="date" required>
-                                  <label class="date-lable">Start Date</label>
-                                </div>
-                              </div>
-                              <!-- ============End-Date============ -->
-                              <div class="col-md-6 ">
-                                <div class="input-field mt-5 ">
-                                  <input type="date" required>
-                                  <label class="date-lable">End Date</label>
-                                </div>
-                              </div>
-                              <!-- ============Feild============ -->
-                              <div class="col-md-12">
+                              <!-- <p style="position:absolute;color:#C21010;z-index:400;margin-left:82%; margin-top:-2rem">To</p> -->
+                            </div>
+                            <!-- ============Mark Optaoned============ -->
+                            <div class="col-md-3 col-6">
 
-                                <div class="input-field mt-5 ">
-                                  <input style="width:85%" type="text" required>
-                                  <a onclick="clickeduction()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
-                                  <label>Feild</label>
-                                </div>
+                              <div style="width:100%" class="input-field mt-5">
+                                <input type="number" required>
+                                <label>Obtains Mark</label>
+                              </div>
+                            </div>
+                            <!-- ============CGPA============ -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5 ">
+                                <input type="number" required>
+                                <label class="date-lable">CGPA</label>
+                              </div>
+                            </div>
+                            <!-- ============Start-Date============ -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5 ">
+                                <input type="date" required>
+                                <label class="date-lable">Start Date</label>
+                              </div>
+                            </div>
+                            <!-- ============End-Date============ -->
+                            <div class="col-md-6 ">
+                              <div class="input-field mt-5 ">
+                                <input type="date" required>
+                                <label class="date-lable">End Date</label>
+                              </div>
+                            </div>
+                            <!-- ============Feild============ -->
+                            <div class="col-md-12">
+
+                              <div class="input-field mt-5 ">
+                                <input style="width:85%" type="text" required>
+                                <a onclick="clickeduction()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
+                                <label>Feild</label>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </form>
+                      </div>
+
                       <!-- ================user-Education-form-End====================== -->
                     </div>
-                    </form>
+                    <!-- =====================================================================================
+      =====================================================================================
+      =====================================================================================
+      ===================================================================================== -->
+
 
                     <div class="personal-info-form mt-5">
                       <h3>Skills</h3>
@@ -460,19 +496,18 @@ include('navbar.php');
                       <div class="row">
                         <div class="col-md-12">
                           <!-- ================user-Skills-form-Start====================== -->
-                          <form action="">
-                            <div id="add_iteee" class="mt-5">
-                              <div class="input-field" id="myList1">
-                                <input id="skillinput" style="width:85%" type="text" required>
-                                <label>Skill 1</label>
-                                <a class="input-add " onclick="addindd()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
-                              </div>
 
-
+                          <div id="add_iteee" class="mt-5">
+                            <div class="input-field" id="myList1">
+                              <input id="skillinput" style="width:85%" type="text" required>
+                              <label>Skill 1</label>
+                              <a class="input-add " onclick="addindd()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
                             </div>
-                          </form>
+
+
+                          </div>
+
                           <!-- ================user-Skills-form-End  ====================== -->
-                          <!-- <p onclick="addindd()" class="btn btn-danger">Add</p> -->
                         </div>
                         <div class="col-12">
                           <div class="mt-3 p-3">
@@ -553,7 +588,10 @@ include('navbar.php');
           <div class="form-bg mt-5" style="margin-bottom: 10rem;">
             <div class="container">
               <div class="row">
-
+                <!-- =====================================================================================
+      =====================================================================================
+      =====================================================================================
+      ===================================================================================== -->
                 <!-- ==============form-start============== -->
                 <div class="col-lg-7">
                   <div class="personal-info-form pb-4">
@@ -561,53 +599,53 @@ include('navbar.php');
                     <div class="form-info">
 
                       <!-- ================user-work-ex-form-Start ====================== -->
-                      <form action="">
-                        <div id="add_work">
-                          <div class="container">
-                            <div class="row">
-                              <!-- ============Company Name============ -->
-                              <div class="col-md-6">
-                                <div class="input-field mt-5 ">
-                                  <input type="text" required>
-                                  <label>Company Name</label>
-                                </div>
-                              </div>
-                              <!-- ============Role============ -->
-                              <div class="col-md-6">
 
-                                <div class="input-field mt-5 ">
-                                  <input type="text" required>
-                                  <label>Role </label>
-                                </div>
+                      <div id="add_work">
+                        <div class="container">
+                          <div class="row">
+                            <!-- ============Company Name============ -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5 ">
+                                <input type="text" required>
+                                <label>Company Name</label>
                               </div>
-                              <!-- ============Start-Date============ -->
-                              <div class="col-md-6">
-                                <div class="input-field mt-5 ">
-                                  <input type="date" required>
-                                  <label class="date-lable">Start Date</label>
-                                </div>
-                              </div>
-                              <!-- ============End-Date============ -->
-                              <div class="col-md-6 ">
-                                <div class="input-field mt-5 ">
-                                  <input type="date" required>
-                                  <label class="date-lable">End Date</label>
-                                </div>
-                              </div>
-                              <!-- ============City============ -->
-                              <div class="col-md-12">
-
-                                <div class="input-field mt-5 ">
-                                  <input style="width: 85%;" type="text" required>
-                                  <label>City & Country</label>
-                                  <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
-                                </div>
-                              </div>
-                              <!-- ============Country============ -->
                             </div>
+                            <!-- ============Role============ -->
+                            <div class="col-md-6">
+
+                              <div class="input-field mt-5 ">
+                                <input type="text" required>
+                                <label>Role </label>
+                              </div>
+                            </div>
+                            <!-- ============Start-Date============ -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5 ">
+                                <input type="date" required>
+                                <label class="date-lable">Start Date</label>
+                              </div>
+                            </div>
+                            <!-- ============End-Date============ -->
+                            <div class="col-md-6 ">
+                              <div class="input-field mt-5 ">
+                                <input type="date" required>
+                                <label class="date-lable">End Date</label>
+                              </div>
+                            </div>
+                            <!-- ============City============ -->
+                            <div class="col-md-12">
+
+                              <div class="input-field mt-5 ">
+                                <input style="width: 85%;" type="text" required>
+                                <label>City & Country</label>
+                                <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
+                              </div>
+                            </div>
+                            <!-- ============Country============ -->
                           </div>
                         </div>
-                      </form>
+                      </div>
+
                       <!-- ================user-work-ex-form-End---====================== -->
 
                       <div class="form-buttons mt-5">
@@ -680,27 +718,34 @@ include('navbar.php');
                 <!-- ==============form-start============== -->
                 <div class="col-lg-7">
                   <div class="personal-info-form pb-4">
+                    <!-- =====================================================================================
+      =====================================================================================
+      =====================================================================================
+      ===================================================================================== -->
                     <!-- ==================hobby-section-Start========================== -->
 
-                      <div class="personal-info-form mt-5">
-                        <h3>Hobbies</h3>
-                      </div>
-                      <div class="container-fluid">
-                        <div class="row">
+                    <div class="personal-info-form mt-5">
+                      <h3>Hobbies</h3>
+                    </div>
+                    <div class="container-fluid">
+                      <div class="row">
 
-                          <div class="col-md-12">
-                            <div id="referad">
-                              <div class="input-field mt-5 ">
-                                <input style="width:85%" type="text" required>
-                                <label>Hobby</label>
-                                <a onclick="clicker()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
-                              </div>
+                        <div class="col-md-12">
+                          <div id="referad">
+                            <div class="input-field mt-5 ">
+                              <input style="width:85%" type="text" required>
+                              <label>Hobby</label>
+                              <a onclick="clicker()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                             </div>
                           </div>
-
                         </div>
+
                       </div>
-            
+                    </div>
+                    <!-- =====================================================================================
+      =====================================================================================
+      =====================================================================================
+      ===================================================================================== -->
                     <!-- ================hobby-refernece-End-====================== -->
                     <h3>Languages</h3>
                     <div class="form-info">
@@ -709,20 +754,24 @@ include('navbar.php');
                         <div class="row">
                           <!-- ============Language Name============ -->
                           <!-- ================user-languages-Start-====================== -->
-                          <form action="">
-                            <div class="col-md-12">
-                              <div id="addlanguage">
-                                <div class="input-field mt-5">
-                                  <input style="width:85%" type="text" required>
-                                  <label>Language</label>
-                                  <a onclick="clicklanguage()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
-                                </div>
+
+                          <div class="col-md-12">
+                            <div id="addlanguage">
+                              <div class="input-field mt-5">
+                                <input style="width:85%" type="text" required>
+                                <label>Language</label>
+                                <a onclick="clicklanguage()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                               </div>
                             </div>
-                          </form>
+                          </div>
+
                           <!-- ================user-languages-End-====================== -->
                         </div>
                       </div>
+                      <!-- =====================================================================================
+      =====================================================================================
+      =====================================================================================
+      ===================================================================================== -->
                       <div class="personal-info-form mt-5">
                         <h3>Reference</h3>
                       </div>
@@ -732,17 +781,17 @@ include('navbar.php');
                       <div class="container-fluid">
                         <div class="row">
                           <!-- ================user-refernece-Start-====================== -->
-                          <form action="">
-                            <div class="col-md-12">
-                              <div id="referadd">
-                                <div class="input-field mt-5 ">
-                                  <input style="width:85%" type="text" required>
-                                  <label>Reference</label>
-                                  <a onclick="clickrefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
-                                </div>
+
+                          <div class="col-md-12">
+                            <div id="referadd">
+                              <div class="input-field mt-5 ">
+                                <input style="width:85%" type="text" required>
+                                <label>Reference</label>
+                                <a onclick="clickrefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                               </div>
                             </div>
-                          </form>
+                          </div>
+
                           <!-- ================user-refernece-End-====================== -->
                         </div>
                       </div>
@@ -798,38 +847,41 @@ include('navbar.php');
     });
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
-    output.innerHTML = slider.value; // Display the default slider value
-
-    // Update the current slider value (each time you drag the slider handle)
+    output.innerHTML = slider.value;
     slider.oninput = function() {
       output.innerHTML = this.value + "%";
     }
 
     // ==============country-code============
     image.pngmobiscroll.setOptions({
-    theme: 'ios',
-    themeVariant: 'light'
-});
+      theme: 'ios',
+      themeVariant: 'light'
+    });
 
-var inst = mobiscroll.select('#demo-country-picker', {
-    display: 'anchored',
-    filter: true,
-    itemHeight: 40,
-    renderItem: function (item) {
+    var inst = mobiscroll.select('#demo-country-picker', {
+      display: 'anchored',
+      filter: true,
+      itemHeight: 40,
+      renderItem: function(item) {
         return '<div class="md-country-picker-item">' +
-            '<img class="md-country-picker-flag" src="https://img.mobiscroll.com/demos/flags/' + item.data.value + '.png" />' +
-            item.display + '</div>';
-    }
-});
+          '<img class="md-country-picker-flag" src="https://img.mobiscroll.com/demos/flags/' + item.data.value + '.png" />' +
+          item.display + '</div>';
+      }
+    });
 
-mobiscroll.util.http.getJson('https://trial.mobiscroll.com/content/countries.json', function (resp) {
-    var countries = [];
-    for (var i = 0; i < resp.length; ++i) {
+    mobiscroll.util.http.getJson('https://trial.mobiscroll.com/content/countries.json', function(resp) {
+      var countries = [];
+      for (var i = 0; i < resp.length; ++i) {
         var country = resp[i];
-        countries.push({ text: country.text, value: country.value });
-    }
-    inst.setOptions({ data: countries });
-});
+        countries.push({
+          text: country.text,
+          value: country.value
+        });
+      }
+      inst.setOptions({
+        data: countries
+      });
+    });
   </script>
 
 

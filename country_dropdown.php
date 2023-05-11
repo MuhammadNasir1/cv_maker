@@ -1,8 +1,4 @@
-<?php
 
-include('header.php');
-
-?>
 <style>
   .wrapper {
     width: 90%;

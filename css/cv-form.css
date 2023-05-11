@@ -572,4 +572,44 @@
   border: 0.125rem solid var(--primary-color);
   float: right;
   font-size: 0.75rem;
+}
+
+.input_info_table {
+  width: 95%;
+  margin-top: 2rem;
+  overflow-y: scroll;
+}
+.input_info_table::-webkit-scrollbar {
+  width: 5px;
+}
+.input_info_table::-webkit-scrollbar-thumb {
+  background-color: rgb(207, 207, 207);
+  border-radius: 0px;
+}
+.input_info_table::-webkit-scrollbar-track {
+  width: 5px;
+}
+.input_info_table table {
+  white-space: nowrap;
+}
+.input_info_table table thead tr {
+  font-size: 1rem;
+}
+.input_info_table table thead tr th {
+  padding: 5px 12px 5px 12px;
+  width: 100%;
+  color: var(--primary-color);
+  white-space: nowrap;
+  font-weight: 600;
+}
+.input_info_table table tbody .table-icon {
+  border-left: none;
+}
+.input_info_table table tbody td {
+  font-weight: 500;
+  padding: 5px 12px 5px 12px;
+}
+.input_info_table table tbody td a i {
+  color: var(--primary-color);
+  letter-spacing: 0.2rem;
 }/*# sourceMappingURL=cv-form.css.map */

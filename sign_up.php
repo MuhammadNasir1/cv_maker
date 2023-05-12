@@ -75,7 +75,7 @@ if (!isset($_SESSION['access_token'])) {
                   <input required name="phone_no" type="number" class="form-control" id="phone_no"  placeholder="Enter your Phone no">
                 </div>
                 <div class="mb-3">
-                  <img class="in  put-icons" src="./image/passsword-icons.svg" alt="Pass">
+                  <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
                   <label for="password" class="form-label">Password</label>
                   <input required <?php echo @$input_pass_eror ?>t name="password" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
                   <div onclick="showpassword()">

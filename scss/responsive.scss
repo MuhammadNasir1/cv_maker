@@ -13,6 +13,9 @@
   justify-content: center;
 
 }
+.wrapper {
+  width: 90%;
+}
 
 // ============== media-quary-Start ==============
 
@@ -20,10 +23,11 @@
 
 @media (max-width:2000px) and (min-width:992px) {
   .nav_sm_drop {
-    display:none;
+    display: none;
 
   }
 }
+
 @media (max-width:1120px) and (min-width:10px) {
   .anim-sec-txt {
     // & .remove {
@@ -39,31 +43,34 @@
 
 @media (max-width:992px) and (min-width:10px) {
 
-  .nav-item{
-   display: none;
+  .nav-item {
+    display: none;
   }
-  .cv_image_login{
-   display: none;
-  }
-  .main-heigt{
-    height: 85%;
-   }
-  .main-heading{
-    &  .heading{
-    
-      height: 35rem;
-     }
-    }
-  
-    .header-image {
-      height: 35rem;
-      position: relative;
-  
 
-  
+  .cv_image_login {
+    display: none;
+  }
+
+  .main-heigt {
+    height: 85%;
+  }
+
+  .main-heading {
+    & .heading {
+
+      height: 35rem;
     }
-  
-  
+  }
+
+  .header-image {
+    height: 35rem;
+    position: relative;
+
+
+
+  }
+
+
   // =============== Tips_Sec_start ===============
   .tip-sec-txt {
     width: 80%;
@@ -138,17 +145,30 @@
 }
 
 @media (max-width:768px) and (min-width:10px) {
-  .input-field  {
+  .wrapper {
+    width: 100%;
+  }
+  .input_info_table {
+    width: 100%
+  }
+  .range-slider {
+    width: 100%;
+  }
+
+  .input-field {
     & input {
       width: 100%;
     }
-    & .email_width{
-     width: 100%;
+
+    & .email_width {
+      width: 100%;
     }
-    & .gender-option{
-     width: 100%;
+
+    & .gender-option {
+      width: 100%;
     }
   }
+
   .animated-img {
     display: none;
   }
@@ -162,11 +182,11 @@
   }
 
   // // ================== header-image-start ==================
-  .main-heading{
-  &  .heading{
-  
-    height: 35rem;
-   }
+  .main-heading {
+    & .heading {
+
+      height: 35rem;
+    }
   }
 
   .header-image {
@@ -185,14 +205,15 @@
   .tip-sec-txt {
     width: 90%;
 
-    & h1{
-     font-size: 20px;
-     }
+    & h1 {
+      font-size: 20px;
+    }
 
-     & p{
-    font-size: 15px;
+    & p {
+      font-size: 15px;
     }
   }
+
   .fix-bg .txt h1 {
     line-height: 24px;
     font-size: 20px;
@@ -236,8 +257,8 @@
 
 
 @media (max-width:452px) and (min-width:0px) {
-  .form_progress_txt{
-   display: none;
+  .form_progress_txt {
+    display: none;
   }
 
   .anim-sec-txt {

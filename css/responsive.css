@@ -4,6 +4,10 @@
   --light-color: #ffffff;
 }
 
+.wrapper {
+  width: 90%;
+}
+
 @media (max-width: 2000px) and (min-width: 992px) {
   .nav_sm_drop {
     display: none;
@@ -79,6 +83,15 @@
 }
 
 @media (max-width: 768px) and (min-width: 10px) {
+  .wrapper {
+    width: 100%;
+  }
+  .input_info_table {
+    width: 100%;
+  }
+  .range-slider {
+    width: 100%;
+  }
   .input-field input {
     width: 100%;
   }

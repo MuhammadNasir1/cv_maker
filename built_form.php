@@ -114,7 +114,7 @@ include('navbar.php');
                             <!-- ===============Gender=================== -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <select class="form-select gender-option" aria-label="Default select example">
+                                <select  class="form-select gender-option w-100" aria-label="Default select example">
                                   <option selected>Male</option>
                                   <option value="1">Female</option>
                                   <option value="2">Other</option>
@@ -126,21 +126,21 @@ include('navbar.php');
                             <!-- ============DOB============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="date" required>
+                                <input  class="w-100" type="date" required>
                                 <label>DOB <span>(date of birth)</span></label>
                               </div>
                             </div>
                             <!-- ============Professional============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="text" required>
+                                <input  class="w-100" type="text" required>
                                 <label>Profession <span>(skill)</span></label>
                               </div>
                             </div>
                             <!-- ============Website============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <input class="email_width" type=" email" required>
+                                <input  class="w-100" class="email_width" type=" email" required>
                                 <label>Website</label>
                               </div>
                             </div>
@@ -165,18 +165,18 @@ include('navbar.php');
                                 <label>Email</label>
                               </div>
                             </div>
+                            <!-- ============Country============ -->
+                            <div class="col-md-6">
+                              <div class="input-field mt-5">
+                                <label>Country</label>
+                                <?php include("country_dropdown.php") ?>
+                              </div>
+                            </div>
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="text w-100" required>
+                                <input  class="w-100" type="text w-100" required>
                                 <label>City</label>
-                              </div>
-                            </div>
-                            <!-- ============Telephone No============ -->
-                            <div class="col-md-6">
-                              <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
-                                <label>Country</label>
                               </div>
                             </div>
                             <!-- ============about us ============ -->
@@ -317,10 +317,9 @@ include('navbar.php');
                                 <label>Email</label>
                               </div>
                             </div>
-                            <!-- ============Telephone No============ -->
+                            <!-- ============Country============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <!-- <input type="text" required> -->
                                 <label>Country</label>
                                 <?php include("country_dropdown.php") ?>
                               </div>
@@ -578,7 +577,6 @@ include('navbar.php');
                         <input id="skill_" style="width:85%" type="text" required>
                         <label>Skill 1</label>
                         <a id="addskill" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
-                        <!-- <a id="addskill" class="input-add " onclick="addindd()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a> -->
                       </div>
 
 
@@ -590,10 +588,8 @@ include('navbar.php');
                     <div class="mt-3 p-3">
                       <div class="form-group row">
                         <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
-                        <input type="range" min="1" max="100" value="0" class="form-control-range range-slider" id="myRange">
-                      </div>
-                      <div class="col-md-3">
-                        <span id="demo">0%</span>
+                        <input class="slider range-slider" name="age_slider" id="age_slider" type="range"  max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
+                        <output>50%</output>
                       </div>
                     </div>
                   </div>
@@ -626,14 +622,14 @@ include('navbar.php');
               <script>
                 function skillsFunction() {
                   var skill_ = document.getElementById("skill_").value;
-                  var myRange = document.getElementById("myRange").value;
+                  var age_slider = document.getElementById("age_slider").value;
                   var table = document.querySelector("#skillTable tbody");
                   var row = table.insertRow(0);
                   var cell1 = row.insertCell(0);
                   var cell2 = row.insertCell(1);
                   var cell3 = row.insertCell(2);
                   cell1.innerHTML = skill_;
-                  cell2.innerHTML = myRange + "%";
+                  cell2.innerHTML = age_slider + "%";
                   cell3.innerHTML = "<a onclick='deleteskills(this)'><i  class='bx bx-trash-alt'></i></a>";
                 }
 
@@ -1199,12 +1195,6 @@ include('navbar.php');
     const prevTab = new bootstrap.Tab(prevTabLinkEl);
     prevTab.show();
   });
-  var slider = document.getElementById("myRange");
-  var output = document.getElementById("demo");
-  output.innerHTML = slider.value;
-  slider.oninput = function() {
-    output.innerHTML = this.value + "%";
-  }
 </script>
 
 

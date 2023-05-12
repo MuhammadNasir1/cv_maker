@@ -1,8 +1,8 @@
 
 <style>
-  .wrapper {
+  /* .wrapper {
     width: 90%;
-  }
+  } */
 
   .select-btn,
   li {

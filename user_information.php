@@ -80,9 +80,9 @@ include('header.php');
   </div>
   <!-- ================heading-End==================== -->
   <div class="container">
-    <div class="info_form">
+    <div class="info_form h-100">
       <div class="form_heading">
-        <h1>Personal Information</h1>
+        <h1 style="color:black">Personal Information</h1>
 
         <div class="user_inf_form">
 
@@ -91,15 +91,257 @@ include('header.php');
             <div class="container">
               <div class="row">
                 <!-- ===============first_name=============== -->
-                <div class="col-md-4">
+                <div class="col-md-4 col-lg-3">
                   <div class="mb-3">
                     <label class="form-label">First Name</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   </div>
                 </div>
+                <!-- ===============last_name=============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Father_name=============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Father Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Gender=============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="input-field   mb-3" style="margin-top: 32px;">
+                    <select class="form-select gender-option w-100 " aria-label="Default select example">
+                      <option selected>Male</option>
+                      <option value="1">Female</option>
+                      <option value="2">Other</option>
+                    </select>
+                    <label>Gender</label>
+                  </div>
+                </div>
+                <!-- ===============Father_name=============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">DOB (date of birth)</label>
+                    <input type="Date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Profession=============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Profession (skill)</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Website=============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Website</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Persoanl #=============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Personal #</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Tel #=============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Tel #</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Email============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Email============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Country</label>
+                    <?php include("country_dropdown.php") ?>
+                  </div>
+                </div>
+                <style>
+                  .wrapper {
+                    width: 100%;
+                  }
+                </style>
+                <!-- ===============City============== -->
+                <div class="col-md-12 col-lg-12">
+                  <div class="mb-3">
+                    <label>About Us</label>
+                    <textarea class="email_width form-control w-100" name="" id="" rows="4"> </textarea>
+                  </div>
+                </div>
+                <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+                <!-- =============form_End================ -->
+                <div class="col-12">
+                  <h1 style="color:black">Education</h1>
+                </div>
+                <!-- ===============Email============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Institute Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Dagree============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Dagree</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Total Marks============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Total Marks</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Obtains Marks============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Obtains Marks</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Start Date============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Start Date</label>
+                    <input type="Date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============End Date============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">End Date</label>
+                    <input type="Date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Feild============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Feild</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+                <div class="col-12">
+                  <h1 style="color: black;">Skills</h1>
+                </div>
+
+                <!-- ===============Skills============== -->
+                <div class=" col-lg-12">
+                  <div class="mb-3">
+                    <label class="form-label">Skills</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Range============== -->
+                <div class=" col-12">
+                  <div class="mb-3 d-flex">
+                    <div class="form-group  h-100 w-100" style="  align-items: center;  justify-content: center;">
+                      <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
+                      <input class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
+                      <output>50%</output>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+                <div class="col-12">
+                  <h1 style="color: black;">Working Experience</h1>
+                </div>
+                <!-- ===============Company Name============== -->
+                <div class=" col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Role============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Role</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============Start Date============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">Start Date</label>
+                    <input type="Date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============End Date============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">End Date</label>
+                    <input type="Date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <!-- ===============City & Country============== -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="mb-3">
+                    <label class="form-label">City & Country</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <div class="col-12">
+              <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+              </div>
+                <div class="col-12">
+                  <h1 style="color: black;">Hobbies</h1>
+                </div>
+
+                <!-- ===============Skills============== -->
+                <div class=" col-lg-12">
+                  <div class="mb-3">
+                    <label class="form-label">Hobby</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+                <div class="col-12">
+                  <h1 style="color: black;">Languages</h1>
+                </div>
+              
+                <!-- ===============Language============== -->
+                <div class=" col-lg-12">
+                  <div class="mb-3">
+                    <label class="form-label">Language</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+                <div class="col-12">
+                  <h1 style="color: black;">References</h1>
+                </div>
+
+                <!-- ===============Reference============== -->
+                <div class=" col-lg-12">
+                  <div class="mb-3">
+                    <label class="form-label">Reference</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                </div>
+                <div class="col-12">
+              <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+              </div>
               </div>
             </div>
-            <!-- =============form_End================ -->
+
           </form>
         </div>
       </div>

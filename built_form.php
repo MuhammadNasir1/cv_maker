@@ -126,21 +126,21 @@ include('navbar.php');
                             <!-- ============DOB============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input  class="w-100" type="date" required>
+                                <input class="w-100" type="date" required>
                                 <label>DOB <span>(date of birth)</span></label>
                               </div>
                             </div>
                             <!-- ============Professional============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input  class="w-100" type="text" required>
+                                <input class="w-100" type="text" required>
                                 <label>Profession <span>(skill)</span></label>
                               </div>
                             </div>
                             <!-- ============Website============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <input  class="w-100" class="email_width" type=" email" required>
+                                <input class="w-100" class="email_width" type=" email" required>
                                 <label>Website</label>
                               </div>
                             </div>
@@ -175,7 +175,7 @@ include('navbar.php');
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input  class="w-100" type="text w-100" required>
+                                <input class="w-100" type="text w-100" required>
                                 <label>City</label>
                               </div>
                             </div>
@@ -588,7 +588,7 @@ include('navbar.php');
                     <div class="mt-3 p-3">
                       <div class="form-group row">
                         <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
-                        <input class="slider range-slider" name="age_slider" id="age_slider" type="range"  max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
+                        <input class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
                         <output>50%</output>
                       </div>
                     </div>

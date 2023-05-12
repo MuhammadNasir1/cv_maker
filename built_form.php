@@ -504,7 +504,7 @@ include('navbar.php');
                     cell5.innerHTML = sdate;
                     cell6.innerHTML = edate;
                     cell7.innerHTML = Feild;
-                    cell8.innerHTML = "<a onclick='myFunction()'><i  class='bx bx-trash-alt'></i></a>";
+                    cell8.innerHTML = "<a onclick='deleteedu(this)'><i  class='bx bx-trash-alt'></i></a>";
                   }
 
                   const submit = document.querySelector('#submitBtn');
@@ -513,8 +513,9 @@ include('navbar.php');
                     doFunction();
                   });
 
-                  function myFunction() {
-                    document.getElementById("mTable").deleteRow(0);
+                  function deleteedu(btn) {
+                    var row = btn.parentNode.parentNode;
+                    row.parentNode.removeChild(row);
                   }
 
                   function educ_table() {
@@ -574,9 +575,10 @@ include('navbar.php');
 
                     <div id="add_iteee" class="mt-5">
                       <div class="input-field" id="myList1">
-                        <input id="skillinput" style="width:85%" type="text" required>
+                        <input id="skill_" style="width:85%" type="text" required>
                         <label>Skill 1</label>
-                        <a class="input-add " onclick="addindd()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
+                        <a id="addskill" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
+                        <!-- <a id="addskill" class="input-add " onclick="addindd()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a> -->
                       </div>
 
 
@@ -588,18 +590,71 @@ include('navbar.php');
                     <div class="mt-3 p-3">
                       <div class="form-group row">
                         <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
-                        <input type="range" min="1" max="100" value="50" class="form-control-range range-slider" id="myRange">
+                        <input type="range" min="1" max="100" value="0" class="form-control-range range-slider" id="myRange">
                       </div>
                       <div class="col-md-3">
                         <span id="demo">0%</span>
                       </div>
                     </div>
                   </div>
-                  <!-- ============Skill 2============ -->
-
-
                 </div>
               </div>
+              <!-- ======================details-table================ -->
+              <div class="container-fluid" id="skills_table_hide" style="display:none;">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="input_info_table">
+                      <table class="table text-center table-responsive table-bordered table-sm " id="skillTable">
+                        <thead>
+                          <tr class="pe-1 ps-1">
+                            <th scope="col">References</th>
+                            <th scope="col">Progress</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ======================details-table-End================ -->
+              <script>
+                function skillsFunction() {
+                  var skill_ = document.getElementById("skill_").value;
+                  var myRange = document.getElementById("myRange").value;
+                  var table = document.querySelector("#skillTable tbody");
+                  var row = table.insertRow(0);
+                  var cell1 = row.insertCell(0);
+                  var cell2 = row.insertCell(1);
+                  var cell3 = row.insertCell(2);
+                  cell1.innerHTML = skill_;
+                  cell2.innerHTML = myRange + "%";
+                  cell3.innerHTML = "<a onclick='deleteskills(this)'><i  class='bx bx-trash-alt'></i></a>";
+                }
+
+                const addskill = document.querySelector('#addskill');
+                addskill.addEventListener('click', event => {
+                  event.preventDefault();
+                  skillsFunction();
+                });
+
+                function deleteskills(bn) {
+                  var row = bn.parentNode.parentNode;
+                  row.parentNode.removeChild(row);
+                }
+
+
+                function hideskill() {
+                  var skills_table_hide = document.getElementById('skills_table_hide');
+                  skills_table_hide.style.display = "block";
+
+                }
+              </script>
               <!-- ==================Skill-section-End============================ -->
 
               <div class="form-buttons mt-4">
@@ -681,7 +736,7 @@ include('navbar.php');
                       <!-- ============Company Name============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input type="text" required>
+                          <input id="com_name" type="text" required>
                           <label>Company Name</label>
                         </div>
                       </div>
@@ -689,21 +744,21 @@ include('navbar.php');
                       <div class="col-md-6">
 
                         <div class="input-field mt-5 ">
-                          <input type="text" required>
+                          <input id="role" type="text" required>
                           <label>Role </label>
                         </div>
                       </div>
                       <!-- ============Start-Date============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input type="date" required>
+                          <input id="start_date" type="date" required>
                           <label class="date-lable">Start Date</label>
                         </div>
                       </div>
                       <!-- ============End-Date============ -->
                       <div class="col-md-6 ">
                         <div class="input-field mt-5 ">
-                          <input type="date" required>
+                          <input id="end_date" type="date" required>
                           <label class="date-lable">End Date</label>
                         </div>
                       </div>
@@ -711,16 +766,84 @@ include('navbar.php');
                       <div class="col-md-12">
 
                         <div class="input-field mt-5 ">
-                          <input style="width: 85%;" type="text" required>
+                          <input id="city_coun" style="width: 85%;" type="text" required>
                           <label>City & Country</label>
-                          <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
+                          <!-- <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a> -->
+                          <a id="smitBtn" onclick="wrk_exp()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                         </div>
                       </div>
                       <!-- ============Country============ -->
                     </div>
                   </div>
                 </div>
+                <!-- ======================details-table================ -->
+                <div class="container-fluid" id="work_table_hide" style="display:none;">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="input_info_table">
+                        <table class="table text-center table-responsive table-bordered table-sm " id="mTable">
+                          <thead>
+                            <tr class="pe-1 ps-1">
+                              <th scope="col">Company Name</th>
+                              <th>Role</th>
+                              <th>Start-date</th>
+                              <th>End-date</th>
+                              <th>City & Country</th>
+                              <th>Actions</th>
+                            </tr>
+                          </thead>
+                          <tbody id="able">
+                            <tr>
+                            </tr>
 
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ======================details-table-End================ -->
+                <script>
+                  function addFunction() {
+                    var com_name = document.getElementById("com_name").value;
+                    var role = document.getElementById("role").value;
+                    var start_date = document.getElementById("start_date").value;
+                    var end_date = document.getElementById("end_date").value;
+                    var city_coun = document.getElementById("city_coun").value;
+                    var table = document.querySelector("#mTable tbody");
+                    var row = table.insertRow(0);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5 = row.insertCell(4);
+                    var cell6 = row.insertCell(5);
+                    cell1.innerHTML = com_name;
+                    cell2.innerHTML = role;
+                    cell3.innerHTML = start_date;
+                    cell4.innerHTML = end_date;
+                    cell5.innerHTML = city_coun;
+                    cell6.innerHTML = "<a onclick='deleteRow(this)'><i  class='bx bx-trash-alt'></i></a>";
+                  }
+
+                  const sumit = document.querySelector('#smitBtn');
+                  sumit.addEventListener('click', event => {
+                    event.preventDefault();
+                    addFunction();
+                  });
+
+                  function deleteRow(bn) {
+                    var row = bn.parentNode.parentNode;
+                    row.parentNode.removeChild(row);
+                  }
+
+
+                  function wrk_exp() {
+                    var work_table_hide = document.getElementById('work_table_hide');
+                    work_table_hide.style.display = "block";
+
+                  }
+                </script>
                 <!-- ================user-work-ex-form-End---====================== -->
 
                 <div class="form-buttons mt-5">
@@ -757,7 +880,6 @@ include('navbar.php');
   <!-- ============= personal-information-Form-End============== -->
 
 </div>
-<!-- ==============4444444444444444444 -->
 <div class="tab-pane  fade" id="menu3">
 
   <!-- ====================contact-page-progrss-bar-start==================== -->
@@ -808,15 +930,68 @@ include('navbar.php');
                   <div class="col-md-12">
                     <div id="referad">
                       <div class="input-field mt-5 ">
-                        <input style="width:85%" type="text" required>
+                        <input id="hobby" style="width:85%" type="text" required>
                         <label>Hobby</label>
-                        <a onclick="clicker()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
+                        <a id="addhobby" onclick="hobby_hide()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                       </div>
                     </div>
                   </div>
 
                 </div>
               </div>
+              <!-- ======================details-table================ -->
+              <div class="container-fluid" id="hobby_table_hide" style="display:none;">
+                <!-- <div class="container-fluid" id="work_table_hide" style="display:none;"> -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="input_info_table">
+                      <table class="table text-center table-responsive table-bordered table-sm " id="hobbyTable">
+                        <thead>
+                          <tr class="pe-1 ps-1">
+                            <th scope="col">Hobbies</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ======================details-table-End================ -->
+              <script>
+                function hobbyFunction() {
+                  var hobby = document.getElementById("hobby").value;
+                  var table = document.querySelector("#hobbyTable tbody");
+                  var row = table.insertRow(0);
+                  var cell1 = row.insertCell(0);
+                  var cell2 = row.insertCell(1);
+                  cell1.innerHTML = hobby;
+                  cell2.innerHTML = "<a onclick='deletehobby(this)'><i  class='bx bx-trash-alt'></i></a>";
+                }
+
+                const addhobby = document.querySelector('#addhobby');
+                addhobby.addEventListener('click', event => {
+                  event.preventDefault();
+                  hobbyFunction();
+                });
+
+                function deletehobby(bn) {
+                  var row = bn.parentNode.parentNode;
+                  row.parentNode.removeChild(row);
+                }
+
+
+                function hobby_hide() {
+                  var hobby_table_hide = document.getElementById('hobby_table_hide');
+                  hobby_table_hide.style.display = "block";
+
+                }
+              </script>
               <!-- =====================================================================================
       =====================================================================================
       =====================================================================================
@@ -831,18 +1006,70 @@ include('navbar.php');
                     <!-- ================user-languages-Start-====================== -->
 
                     <div class="col-md-12">
-                      <div id="addlanguage">
-                        <div class="input-field mt-5">
-                          <input style="width:85%" type="text" required>
-                          <label>Language</label>
-                          <a onclick="clicklanguage()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
-                        </div>
+                      <div class="input-field mt-5">
+                        <input id="langugage" style="width:85%" type="text" required>
+                        <label>Language</label>
+                        <a id="addlanguage" onclick="hide_language()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                       </div>
                     </div>
 
                     <!-- ================user-languages-End-====================== -->
                   </div>
                 </div>
+
+                <!-- ======================details-table================ -->
+                <div class="container-fluid" id="language_table_hide" style="display:none;">
+                  <!-- <div class="container-fluid" id="work_table_hide" style="display:none;"> -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="input_info_table">
+                        <table class="table text-center table-responsive table-bordered table-sm " id="languageTable">
+                          <thead>
+                            <tr class="pe-1 ps-1">
+                              <th scope="col">Languages</th>
+                              <th>Actions</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ======================details-table-End================ -->
+                <script>
+                  function languageFunction() {
+                    var langugage = document.getElementById("langugage").value;
+                    var table = document.querySelector("#languageTable tbody");
+                    var row = table.insertRow(0);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell1.innerHTML = langugage;
+                    cell2.innerHTML = "<a onclick='deletelanguage(this)'><i  class='bx bx-trash-alt'></i></a>";
+                  }
+
+                  const addlanguage = document.querySelector('#addlanguage');
+                  addlanguage.addEventListener('click', event => {
+                    event.preventDefault();
+                    languageFunction();
+                  });
+
+                  function deletelanguage(bn) {
+                    var row = bn.parentNode.parentNode;
+                    row.parentNode.removeChild(row);
+                  }
+
+
+                  function hide_language() {
+                    var language_table_hide = document.getElementById('language_table_hide');
+                    language_table_hide.style.display = "block";
+
+                  }
+                </script>
                 <!-- =====================================================================================
       =====================================================================================
       =====================================================================================
@@ -860,9 +1087,9 @@ include('navbar.php');
                     <div class="col-md-12">
                       <div id="referadd">
                         <div class="input-field mt-5 ">
-                          <input style="width:85%" type="text" required>
+                          <input id="referece" style="width:85%" type="text" required>
                           <label>Reference</label>
-                          <a onclick="clickrefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
+                          <a id="addrefer" onclick="hiderefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                         </div>
                       </div>
                     </div>
@@ -870,6 +1097,58 @@ include('navbar.php');
                     <!-- ================user-refernece-End-====================== -->
                   </div>
                 </div>
+                <!-- ======================details-table================ -->
+                <div class="container-fluid" id="refer_table_hide" style="display:none;">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="input_info_table">
+                        <table class="table text-center table-responsive table-bordered table-sm " id="referTable">
+                          <thead>
+                            <tr class="pe-1 ps-1">
+                              <th scope="col">References</th>
+                              <th>Actions</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ======================details-table-End================ -->
+                <script>
+                  function referFunction() {
+                    var referece = document.getElementById("referece").value;
+                    var table = document.querySelector("#referTable tbody");
+                    var row = table.insertRow(0);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell1.innerHTML = referece;
+                    cell2.innerHTML = "<a onclick='deleterefer(this)'><i  class='bx bx-trash-alt'></i></a>";
+                  }
+
+                  const addrefer = document.querySelector('#addrefer');
+                  addrefer.addEventListener('click', event => {
+                    event.preventDefault();
+                    referFunction();
+                  });
+
+                  function deleterefer(bn) {
+                    var row = bn.parentNode.parentNode;
+                    row.parentNode.removeChild(row);
+                  }
+
+
+                  function hiderefer() {
+                    var refer_table_hide = document.getElementById('refer_table_hide');
+                    refer_table_hide.style.display = "block";
+
+                  }
+                </script>
                 <!-- ==================Skill-section-End============================ -->
                 <div class="form-buttons mt-5">
                   <button type="submit" class="btn btn-danger btnPrevious">Previous</button> <button name="submit" type="submit" class="btn btn-danger float-end save-btn">Save </button>

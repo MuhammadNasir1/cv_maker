@@ -612,4 +612,5 @@
 .input_info_table table tbody td a i {
   color: var(--primary-color);
   letter-spacing: 0.2rem;
+  cursor: pointer;
 }/*# sourceMappingURL=cv-form.css.map */

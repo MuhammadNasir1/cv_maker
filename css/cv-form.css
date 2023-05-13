@@ -518,11 +518,11 @@
 
 .image_input {
   border: 1px solid rgba(128, 128, 128, 0.4431372549);
-  width: 100%;
+  width: 8rem;
   height: 8rem;
   float: right;
   position: relative;
-  border-radius: 0.3125rem;
+  border-radius: 50%;
 }
 .image_input label {
   top: 0;
@@ -539,11 +539,12 @@
   font-size: 4rem;
 }
 .image_input label img {
-  border: 0.0625rem solid rgba(128, 128, 128, 0.4431372549);
+  border: 5px solid var(--primary-color);
   border-radius: 0.3125rem;
   margin: 0;
   padding: 0;
   background-color: transparent;
+  border-radius: 50%;
 }
 
 ::-webkit-datetime-edit-month-field {

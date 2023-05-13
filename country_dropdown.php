@@ -1,9 +1,4 @@
-
 <style>
-  /* .wrapper {
-    width: 90%;
-  } */
-
   .select-btn,
   li {
     display: flex;
@@ -118,8 +113,9 @@
 
 <div class="wrapper">
   <div class="select-btn">
-    <span name="country">Select Country</span>
-    <i class="uil uil-angle-down"></i>
+    <select name="country" id="" style="width: 100%;     background: transparent; border:none">
+      <option  value=""> Select Country </option>
+    </select>
   </div>
   <div class="content">
     <div class="search">
@@ -135,11 +131,11 @@
     selectBtn = wrapper.querySelector(".select-btn"),
     searchInp = wrapper.querySelector("input"),
     options = wrapper.querySelector(".options");
-// =============counry_list-start====================
+  // =============counry_list-start====================
 
-let countries = [
-  "Afghanistan",
-  "Albania",
+  let countries = [
+    "Afghanistan",
+    "Albania",
     "Algeria",
     "Andorra",
     "Angola",
@@ -336,7 +332,7 @@ let countries = [
     "Zambia",
     "Zimbabwe"
   ]
-// =============counry_list-End======================
+  // =============counry_list-End======================
   function addCountry(selectedCountry) {
     options.innerHTML = "";
     countries.forEach(country => {
@@ -351,7 +347,9 @@ let countries = [
     searchInp.value = "";
     addCountry(selectedLi.innerText);
     wrapper.classList.remove("active");
-    selectBtn.firstElementChild.innerText = selectedLi.innerText;
+    const firstOption = selectBtn.querySelector('option');
+    firstOption.innerText = selectedLi.innerText;
+    firstOption.value = selectedLi.innerText;
   }
 
   searchInp.addEventListener("keyup", () => {

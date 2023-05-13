@@ -681,12 +681,13 @@
 
 .image_input {
   border: 1px solid #80808071;
-  width: 100%;
+  width: 8rem;
   height: 8rem;
   float: right;
   position: relative;
-  border-radius: .3125rem;
-
+  // border-radius: .3125rem;
+  border-radius: 50%;
+ 
   & label {
     top: 0;
     left: 0;
@@ -703,11 +704,12 @@
     }
 
     & img {
-      border: .0625rem solid #80808071;
+      border: 5px solid var(--primary-color);
       border-radius: .3125rem;
       margin: 0;
       padding: 0;
       background-color: transparent;
+      border-radius: 50%;
     }
   }
 

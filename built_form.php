@@ -1,9 +1,103 @@
 <?php
 include('db.php');
-if (isset($_REQUEST['per_submit'])) {
+if (isset($_POST['submit'])) {
+  // Personal Information
   $fname = $_POST['fname'];
-  $sql = "NSERT INTO `per_info` (`fname`) VALUES ('$fname')";
-  $result = mysqli_query($conn, $sql);
+  $lname = $_POST['lname'];
+  $father_name = $_POST['father_name'];
+  $gender = $_POST['gender'];
+  $dob = $_POST['dob'];
+  $profession = $_POST['profession'];
+  $website = $_POST['website'];
+  $personal_no = $_POST['personal_no'];
+  $tel_no = $_POST['tel_no'];
+  $email = $_POST['email'];
+  $country = $_POST['country'];
+  $city = $_POST['city'];
+  $about_us = $_POST['about_us'];
+  // Personal Information end
+  // Eduaction
+  $institute_name = $_POST['institute_name'];
+  $degree = $_POST['degree'];
+  $total_marks = $_POST['total_marks'];
+  $ob_marks = $_POST['ob_marks'];
+  $edu_st_date = $_POST['edu_st_date'];
+  $edu_end_date = $_POST['edu_end_date'];
+  $edu_field = $_POST['edu_field'];
+  // Eduaction end
+  // Skill
+  $skill  = $_POST['skill'];
+  $skill_range  = $_POST['skill_range'];
+  // Skill end
+  // Work Experience
+  $company_name  = $_POST['company_name'];
+  $work_role  = $_POST['work_role'];
+  $work_st_date  = $_POST['work_st_date'];
+  $work_end_date  = $_POST['work_end_date'];
+  $work_city_coun  = $_POST['work_city_coun'];
+  // Work Experience
+  // ============================
+  $hobby  = $_POST['hobby'];
+  // ============================
+  $languge  = $_POST['languge'];
+  // ============================
+  $reference  = $_POST['reference'];
+
+  $sql = "
+
+        INSERT INTO `per_info`(`fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`, `country`, `city`, `about_us`) VALUES ('$fname','$lname','$father_name','$gender','$dob','$profession','$website','$personal_no','$tel_no','$email','$country','$city','$about_us');
+
+
+        INSERT INTO `education`(`instutute_name`, `dagree`, `total_marks`, `obtain_marks`,  `deg_st_date`, `deg_end_date`, `field`) VALUES ('$institute_name','$degree','$total_marks','$ob_marks','$edu_st_date','$edu_end_date','$edu_field');
+
+
+ 
+        INSERT INTO `skills`( `skill`, `skill_per`) VALUES ('$skill','$skill_range')
+
+
+        INSERT INTO `work_exp`( `company_name`, `role`, `work_st_data`, `work_end_date`, `city_country`) VALUES ('  $company_name ',' $work_role',' $work_st_date','  $work_end_date','$work_city_coun');
+
+
+
+        INSERT INTO `hobbies`( `hobby`, ) VALUES (' $hobby');
+
+        
+
+        INSERT INTO `languages`(`language`) VALUES (' $languge');
+
+
+        INSERT INTO `user_references`( `user_reference`, ) VALUES (' $reference');
+        
+        ";
+
+        $result = mysqli_multi_query($conn, $sql);
+
+        if($result){
+          ?>
+          <script>
+            swal({
+  title: "Good job!",
+  text: "Data Inseted!",
+  icon: "success",
+  button: "Aww yiss!",
+});
+          </script>
+          <?php
+          }
+          else{
+          ?>
+          <script>
+            swal({
+  title: "Oh Fuck!",
+  text: "An Error Occured!",
+  icon: "danger",
+  button: "Aww Shit!",
+});
+          </script>
+          <?php
+        }
+
+
 }
 ?>
 
@@ -90,7 +184,7 @@ include('navbar.php');
                                 <label>First Name</label>
                                 <!-- ============Last Name============ -->
                                 <div class="input-field mt-5">
-                                  <input class="w-100" type="text" required>
+                                  <input class="lname" class="w-100" type="text" required>
                                   <label>Last Name</label>
                                 </div>
                               </div>
@@ -99,7 +193,7 @@ include('navbar.php');
                             <div class="col-lg-3 col-md-4 col-5">
                               <div class="input-field mt-5 ">
                                 <div class="image_input">
-                                  <label class="" for="files"><i class='bx bxs-user'></i> <img style="height:100%; width:100%; position:absolute;" src=""></label>
+                                  <label name="img" class="" for="files"><i class='bx bxs-user'></i> <img style="height:100%; width:100%; position:absolute;" src=""></label>
                                   <input id="files" style="visibility:hidden;" type="file">
                                 </div>
                               </div>
@@ -107,14 +201,14 @@ include('navbar.php');
                             <!-- ============Father Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
+                                <input name="father_name" class="w-100" type="text" required>
                                 <label>Father Name</label>
                               </div>
                             </div>
                             <!-- ===============Gender=================== -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <select  class="form-select gender-option w-100" aria-label="Default select example">
+                                <select name="gender" class="form-select gender-option w-100" aria-label="Default select example">
                                   <option selected>Male</option>
                                   <option value="1">Female</option>
                                   <option value="2">Other</option>
@@ -126,42 +220,42 @@ include('navbar.php');
                             <!-- ============DOB============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="date" required>
+                                <input name="dob" class="w-100" type="date" required>
                                 <label>DOB <span>(date of birth)</span></label>
                               </div>
                             </div>
                             <!-- ============Professional============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
+                                <input name="profession" class="w-100" type="text" required>
                                 <label>Profession <span>(skill)</span></label>
                               </div>
                             </div>
                             <!-- ============Website============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <input class="w-100" class="email_width" type=" email" required>
+                                <input name="website" class="w-100" class="email_width" type=" email" required>
                                 <label>Website</label>
                               </div>
                             </div>
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
+                                <input name="personal_no" class="w-100" type="text" required>
                                 <label>Personal #</label>
                               </div>
                             </div>
                             <!-- ============Telephone No============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text" required>
+                                <input name="tel_no" class="w-100" type="text" required>
                                 <label>Tel #</label>
                               </div>
                             </div>
                             <!-- ============Email============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <input class="w-100" type=" email " required>
+                                <input name="email" class="w-100" type=" email " required>
                                 <label>Email</label>
                               </div>
                             </div>
@@ -175,14 +269,14 @@ include('navbar.php');
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input class="w-100" type="text w-100" required>
+                                <input name="city" class="w-100" type="text w-100" required>
                                 <label>City</label>
                               </div>
                             </div>
                             <!-- ============about us ============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <textarea class="email_width form-control w-100" name="" id="" rows="4"> </textarea>
+                                <textarea name="about_us" class="email_width form-control w-100" name="" id="" rows="4"> </textarea>
                                 <label>About Us</label>
                                 <div class="form-text about-us-txt">Enter yourself in less than <b>50</b> words</div>
                               </div>
@@ -252,21 +346,21 @@ include('navbar.php');
                             <!-- ============Last Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5 ">
-                                <input type="text" required>
+                                <input name="lname" type="text" required>
                                 <label>Last Name</label>
                               </div>
                             </div>
                             <!-- ============Father Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="text" required>
+                                <input name="father_name" type="text" required>
                                 <label>Father Name</label>
                               </div>
                             </div>
                             <!-- ===============Gender=================== -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <select class="form-select gender-option" aria-label="Default select example">
+                                <select name="gender" class="form-select gender-option" aria-label="Default select example">
                                   <option selected>Male</option>
                                   <option value="1">Female</option>
                                   <option value="2">Other</option>
@@ -278,42 +372,42 @@ include('navbar.php');
                             <!-- ============DOB============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="date" required>
+                                <input name="dob" type="date" required>
                                 <label>DOB <span>(date of birth)</span></label>
                               </div>
                             </div>
                             <!-- ============Professional============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="text" required>
+                                <input name="profession" type="text" required>
                                 <label>Profession <span>(skill)</span></label>
                               </div>
                             </div>
                             <!-- ============Website============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <input class="email_width" type=" email" required>
+                                <input name="website" class="email_width" type=" email" required>
                                 <label>Website</label>
                               </div>
                             </div>
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="text" required>
+                                <input name="personal_no" type="text" required>
                                 <label>Personal #</label>
                               </div>
                             </div>
                             <!-- ============Telephone No============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="text" required>
+                                <input name="tel_no" type="text" required>
                                 <label>Tel #</label>
                               </div>
                             </div>
                             <!-- ============Email============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <input class="email_width" type=" email" required>
+                                <input name="email" class="email_width" type=" email" required>
                                 <label>Email</label>
                               </div>
                             </div>
@@ -327,14 +421,14 @@ include('navbar.php');
                             <!-- ============Contact no============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5">
-                                <input type="text" required>
+                                <input name="city" type="text" required>
                                 <label>City</label>
                               </div>
                             </div>
                             <!-- ============about us ============ -->
                             <div class="col-md-12">
                               <div class="input-field mt-5">
-                                <textarea class="email_width form-control" name="" id="" rows="4"> </textarea>
+                                <textarea name="about_us" class="email_width form-control" id="" rows="4"> </textarea>
                                 <label>About Us</label>
                                 <div class="form-text about-us-txt">Enter yourself in less than <b>50</b> words</div>
                               </div>
@@ -343,7 +437,7 @@ include('navbar.php');
                         </div>
                         <!-- ============Save and Next============ -->
                         <div class="form-buttons mt-4">
-                          <button name="per_submit" type="submit" class="btn btnNext  float-end save-btn"> Next</button>
+                          <button name="submit" type="submit" class="btn btnNext  float-end save-btn"> Next</button>
                         </div>
                       </div>
                       <!-- ================user-info-form-End==================== -->
@@ -407,7 +501,7 @@ include('navbar.php');
     <div class="form-bg mt-4">
       <div class="container">
         <div class="row">
-          <!-- ==============form-start============== -->
+          <!-- ==============form-start============== --> 
           <div class="col-lg-7">
 
             <div class="personal-info-form pb-4">
@@ -422,7 +516,7 @@ include('navbar.php');
                       <!-- ============institue Name============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input id="Institute" type="text" required>
+                          <input name="institute_name" id="Institute" type="text" required>
                           <label>Institute Name</label>
                         </div>
                       </div>
@@ -430,15 +524,15 @@ include('navbar.php');
                       <div class="col-md-6">
 
                         <div class="input-field mt-5">
-                          <input id="Dagree" type="text" required>
-                          <label>Dagree</label>
+                          <input name="degree" id="Dagree" type="text" required>
+                          <label>Degree</label>
                         </div>
                       </div>
                       <!-- ============Total Marks============ -->
                       <div class="col-md-6">
 
                         <div class="input-field mt-5">
-                          <input id="tmarks" type="number" required>
+                          <input class="total_marks" id="tmarks" type="number" required>
                           <label>Total Marks</label>
                         </div>
                       </div>
@@ -446,21 +540,21 @@ include('navbar.php');
                       <div class="col-md-6">
 
                         <div class="input-field mt-5">
-                          <input id="obmarks" type="number" required>
+                          <input name="ob_marks" id="obmarks" type="number" required>
                           <label>Obtains Marks</label>
                         </div>
                       </div>
                       <!-- ============Start-Date============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input id="sdate" type="date" required>
+                          <input name="edu_st_date" id="sdate" type="date" required>
                           <label class="date-lable">Start Date</label>
                         </div>
                       </div>
                       <!-- ============End-Date============ -->
                       <div class="col-md-6 ">
                         <div class="input-field mt-5 ">
-                          <input id="edate" type="date" required>
+                          <input name="edu_end_date" id="edate" type="date" required>
                           <label class="date-lable">End Date</label>
                         </div>
                       </div>
@@ -468,9 +562,9 @@ include('navbar.php');
                       <div class="col-md-12">
 
                         <div class="input-field mt-5 ">
-                          <input id="Feild" style="width:85%" type="text" required>
+                          <input name="edu_field" id="Feild" style="width:85%" type="text" required>
                           <a id="submitBtn" onclick="educ_table()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
-                          <label>Feild</label>
+                          <label>Field</label>
                         </div>
                       </div>
                     </div>
@@ -574,7 +668,7 @@ include('navbar.php');
 
                     <div id="add_iteee" class="mt-5">
                       <div class="input-field" id="myList1">
-                        <input id="skill_" style="width:85%" type="text" required>
+                        <input name="skill" id="skill_" style="width:85%" type="text" required>
                         <label>Skill 1</label>
                         <a id="addskill" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
                       </div>
@@ -588,7 +682,7 @@ include('navbar.php');
                     <div class="mt-3 p-3">
                       <div class="form-group row">
                         <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
-                        <input class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
+                        <input name="skill_range" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
                         <output>50%</output>
                       </div>
                     </div>
@@ -603,7 +697,7 @@ include('navbar.php');
                       <table class="table text-center table-responsive table-bordered table-sm " id="skillTable">
                         <thead>
                           <tr class="pe-1 ps-1">
-                            <th scope="col">References</th>
+                            <th scope="col">Skills</th>
                             <th scope="col">Progress</th>
                             <th>Actions</th>
                           </tr>
@@ -732,7 +826,7 @@ include('navbar.php');
                       <!-- ============Company Name============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input id="com_name" type="text" required>
+                          <input name="company_name" id="com_name" type="text" required>
                           <label>Company Name</label>
                         </div>
                       </div>
@@ -740,21 +834,21 @@ include('navbar.php');
                       <div class="col-md-6">
 
                         <div class="input-field mt-5 ">
-                          <input id="role" type="text" required>
+                          <input name="work_role" id="role" type="text" required>
                           <label>Role </label>
                         </div>
                       </div>
                       <!-- ============Start-Date============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input id="start_date" type="date" required>
+                          <input name="work_st_date" id="start_date" type="date" required>
                           <label class="date-lable">Start Date</label>
                         </div>
                       </div>
                       <!-- ============End-Date============ -->
                       <div class="col-md-6 ">
                         <div class="input-field mt-5 ">
-                          <input id="end_date" type="date" required>
+                          <input name="work_end_date" id="end_date" type="date" required>
                           <label class="date-lable">End Date</label>
                         </div>
                       </div>
@@ -762,7 +856,7 @@ include('navbar.php');
                       <div class="col-md-12">
 
                         <div class="input-field mt-5 ">
-                          <input id="city_coun" style="width: 85%;" type="text" required>
+                          <input name="work_city_coun" id="city_coun" style="width: 85%;" type="text" required>
                           <label>City & Country</label>
                           <!-- <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a> -->
                           <a id="smitBtn" onclick="wrk_exp()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
@@ -926,7 +1020,7 @@ include('navbar.php');
                   <div class="col-md-12">
                     <div id="referad">
                       <div class="input-field mt-5 ">
-                        <input id="hobby" style="width:85%" type="text" required>
+                        <input name="hobby" id="hobby" style="width:85%" type="text" required>
                         <label>Hobby</label>
                         <a id="addhobby" onclick="hobby_hide()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                       </div>
@@ -1003,7 +1097,7 @@ include('navbar.php');
 
                     <div class="col-md-12">
                       <div class="input-field mt-5">
-                        <input id="langugage" style="width:85%" type="text" required>
+                        <input name="languge" id="langugage" style="width:85%" type="text" required>
                         <label>Language</label>
                         <a id="addlanguage" onclick="hide_language()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                       </div>
@@ -1083,7 +1177,7 @@ include('navbar.php');
                     <div class="col-md-12">
                       <div id="referadd">
                         <div class="input-field mt-5 ">
-                          <input id="referece" style="width:85%" type="text" required>
+                          <input name="reference" id="referece" style="width:85%" type="text" required>
                           <label>Reference</label>
                           <a id="addrefer" onclick="hiderefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                         </div>

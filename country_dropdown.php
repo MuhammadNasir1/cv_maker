@@ -118,7 +118,7 @@
 
 <div class="wrapper">
   <div class="select-btn">
-    <span>Select Country</span>
+    <span name="country">Select Country</span>
     <i class="uil uil-angle-down"></i>
   </div>
   <div class="content">

@@ -205,22 +205,22 @@ include('navbar.php');
                             </div>
 
                             <!-- <div class="row" id="withoutimg" style="display:"> -->
-                            
-                              <!-- ============First Name============ -->
-                              <div class="col-md-6" id="withoutimg">
-                                <div class="input-field mt-5 ">
-                                  <input name="fname" class="ph_inp" type="text" required>
-                                  <label>First Name</label>
-                                </div>
-                              </div>
 
-                              <!-- ============Last Name============ -->
-                              <div class="col-md-6" id="withoutimg">
-                                <div class="input-field mt-5 ">
+                            <!-- ============First Name============ -->
+                            <div class="col-md-6" id="withoutimg">
+                              <div class="input-field mt-5 ">
                                 <input name="fname" class="ph_inp" type="text" required>
-                                  <label>First Name</label>
-                                </div>
+                                <label>First Name</label>
                               </div>
+                            </div>
+
+                            <!-- ============Last Name============ -->
+                            <div class="col-md-6" id="withoutimg">
+                              <div class="input-field mt-5 ">
+                                <input name="fname" class="ph_inp" type="text" required>
+                                <label>First Name</label>
+                              </div>
+                            </div>
                             <!-- </div> -->
                             <!-- ============Father Name============ -->
                             <div class="col-md-6">
@@ -470,6 +470,64 @@ include('navbar.php');
                           cell6.innerHTML = edate;
                           cell7.innerHTML = Feild;
                           cell8.innerHTML = "<a onclick='deleteedu(this)'><i  class='bx bx-trash-alt'></i></a>";
+
+                          var educinputcontainer = document.getElementById("educinputcontainer");
+                          // =====================================
+                          var educinpu = document.createElement("input");
+                          educinpu.setAttribute("type", "text");
+                          educinpu.setAttribute("class", "educinpu");
+                          educinpu.setAttribute("name", "institute_name[]");
+                          educinpu.value = Institute;
+                          educinputcontainer.appendChild(educinpu);
+                          // =====================================
+                          // =====================================
+                          var educinpu2 = document.createElement("input");
+                          educinpu2.setAttribute("type", "text");
+                          educinpu2.setAttribute("class", "degree");
+                          educinpu2.setAttribute("name", "degree[]");
+                          educinpu2.value = Dagree;
+                          educinputcontainer.appendChild(educinpu2);
+                          // =====================================
+                          // =====================================
+                          var educinpu3 = document.createElement("input");
+                          educinpu3.setAttribute("type", "text");
+                          educinpu3.setAttribute("class", "total_marks");
+                          educinpu3.setAttribute("name", "total_marks[]");
+                          educinpu3.value = tmarks;
+                          educinputcontainer.appendChild(educinpu3);
+                          // =====================================
+                          // =====================================
+                          var educinpu4 = document.createElement("input");
+                          educinpu4.setAttribute("type", "text");
+                          educinpu4.setAttribute("class", "ob_marks");
+                          educinpu4.setAttribute("name", "ob_marks[]");
+                          educinpu4.value = obmarks;
+                          educinputcontainer.appendChild(educinpu4);
+                          // =====================================
+                          // =====================================
+                          var educinpu5 = document.createElement("input");
+                          educinpu5.setAttribute("type", "text");
+                          educinpu5.setAttribute("class", "sdate");
+                          educinpu5.setAttribute("name", "edu_st_date[]");
+                          educinpu5.value = sdate;
+                          educinputcontainer.appendChild(educinpu5);
+                          // =====================================
+                          // =====================================
+                          var educinpu6 = document.createElement("input");
+                          educinpu6.setAttribute("type", "text");
+                          educinpu6.setAttribute("class", "edate");
+                          educinpu6.setAttribute("name", "edu_end_date[]");
+                          educinpu6.value = edate;
+                          educinputcontainer.appendChild(educinpu6);
+                          // =====================================
+                          // =====================================
+                          var educinpu7 = document.createElement("input");
+                          educinpu7.setAttribute("type", "text");
+                          educinpu7.setAttribute("class", "Feild");
+                          educinpu7.setAttribute("name", "edu_field[]");
+                          educinpu7.value = Feild;
+                          educinputcontainer.appendChild(educinpu7);
+                          // =====================================
                         }
 
                         const submit = document.querySelector('#submitBtn');
@@ -489,6 +547,9 @@ include('navbar.php');
 
                         }
                       </script>
+                      <div id="educinputcontainer">
+
+                      </div>
                       <!-- ================user-Education-form-End====================== -->
                     </div>
                     <!-- ======================details-table================ -->
@@ -597,6 +658,20 @@ include('navbar.php');
                         cell1.innerHTML = skill_;
                         cell2.innerHTML = age_slider + "%";
                         cell3.innerHTML = "<a onclick='deleteskills(this)'><i  class='bx bx-trash-alt'></i></a>";
+
+                        var skillinputcontainer = document.getElementById("skillinputcontainer");
+                        var skillinput = document.createElement("input");
+                        skillinput.setAttribute("type", "text");
+                        skillinput.setAttribute("class", "skillinput");
+                        skillinput.setAttribute("name", "skill[]");
+                        skillinput.value = skill_;
+                        skillinputcontainer.appendChild(skillinput);
+                        var skillinput2 = document.createElement("input");
+                        skillinput2.setAttribute("type", "text");
+                        skillinput2.setAttribute("class", "age_slider");
+                        skillinput2.setAttribute("name", "skill_range[]");
+                        skillinput2.value = age_slider;
+                        skillinputcontainer.appendChild(skillinput2);
                       }
 
                       const addskill = document.querySelector('#addskill');
@@ -617,6 +692,9 @@ include('navbar.php');
 
                       }
                     </script>
+                    <div id="skillinputcontainer">
+
+                    </div>
                     <!-- ==================Skill-section-End============================ -->
 
                     <div class="form-buttons mt-4">
@@ -786,7 +864,48 @@ include('navbar.php');
                           cell4.innerHTML = end_date;
                           cell5.innerHTML = city_coun;
                           cell6.innerHTML = "<a onclick='deleteRow(this)'><i  class='bx bx-trash-alt'></i></a>";
+
+                          var workexinputcontainer = document.getElementById("workexinputcontainer");
+                          var workexinput = document.createElement("input");
+                          workexinput.setAttribute("type", "text");
+                          workexinput.setAttribute("class", "workexinput");
+                          workexinput.setAttribute("name", "company_name[]");
+                          workexinput.value = com_name;
+                          workexinputcontainer.appendChild(workexinput);
+                          // ===============================
+                          var workexinput2 = document.createElement("input");
+                          workexinput2.setAttribute("type", "text");
+                          workexinput2.setAttribute("class", "workexinput");
+                          workexinput.setAttribute("name", "work_role[]");
+                          workexinput2.value = role;
+                          workexinputcontainer.appendChild(workexinput2);
+                          // ===============================================
+                          // ===============================
+                          var workexinput3 = document.createElement("input");
+                          workexinput3.setAttribute("type", "text");
+                          workexinput3.setAttribute("class", "workexinput");
+                          workexinput.setAttribute("name", "work_st_date[]");
+                          workexinput3.value = start_date;
+                          workexinputcontainer.appendChild(workexinput3);
+                          // ===============================================
+                          // ===============================
+                          var workexinput4 = document.createElement("input");
+                          workexinput4.setAttribute("type", "text");
+                          workexinput4.setAttribute("class", "workexinput");
+                          workexinput.setAttribute("name", "work_end_date[]");
+                          workexinput4.value = end_date;
+                          workexinputcontainer.appendChild(workexinput4);
+                          // ===============================================
+                          // ===============================
+                          var workexinput5 = document.createElement("input");
+                          workexinput5.setAttribute("type", "text");
+                          workexinput5.setAttribute("class", "workexinput");
+                          workexinput.setAttribute("name", "work_city_coun[]");
+                          workexinput5.value = city_coun;
+                          workexinputcontainer.appendChild(workexinput5);
+                          // ===============================================
                         }
+
 
                         const sumit = document.querySelector('#smitBtn');
                         sumit.addEventListener('click', event => {
@@ -806,6 +925,10 @@ include('navbar.php');
 
                         }
                       </script>
+                      <div id="workexinputcontainer">
+                        <!-- Input fields will be inserted here dynamically -->
+                      </div>
+
                       <!-- ================user-work-ex-form-End---====================== -->
 
                       <div class="form-buttons mt-5">
@@ -903,7 +1026,6 @@ include('navbar.php');
                     </div>
                     <!-- ======================details-table================ -->
                     <div class="container-fluid" id="hobby_table_hide" style="display:none;">
-                      <!-- <div class="container-fluid" id="work_table_hide" style="display:none;"> -->
                       <div class="row">
                         <div class="col-md-12">
                           <div class="input_info_table">
@@ -934,6 +1056,13 @@ include('navbar.php');
                         var cell2 = row.insertCell(1);
                         cell1.innerHTML = hobby;
                         cell2.innerHTML = "<a onclick='deletehobby(this)'><i  class='bx bx-trash-alt'></i></a>";
+                        var inputFieldsContainer = document.getElementById("inputFieldsContainer");
+                        var inputField = document.createElement("input");
+                        inputField.setAttribute("type", "text");
+                        inputField.setAttribute("class", "hobbyInput");
+                        workexinput.setAttribute("name", "hobby[]");
+                        inputField.value = hobby;
+                        inputFieldsContainer.appendChild(inputField);
                       }
 
                       const addhobby = document.querySelector('#addhobby');
@@ -942,18 +1071,28 @@ include('navbar.php');
                         hobbyFunction();
                       });
 
-                      function deletehobby(bn) {
-                        var row = bn.parentNode.parentNode;
-                        row.parentNode.removeChild(row);
-                      }
-
-
                       function hobby_hide() {
                         var hobby_table_hide = document.getElementById('hobby_table_hide');
                         hobby_table_hide.style.display = "block";
 
                       }
+
+                      function deletehobby(btn) {
+                        var row = btn.parentNode.parentNode;
+                        var hobby = row.cells[0].innerHTML;
+                        var inputFields = document.getElementsByClassName("hobbyInput");
+                        for (var i = 0; i < inputFields.length; i++) {
+                          if (inputFields[i].value === hobby) {
+                            inputFields[i].remove();
+                            break;
+                          }
+                        }
+                        row.parentNode.removeChild(row);
+                      }
                     </script>
+                    <div id="inputFieldsContainer">
+                      <!-- Input fields will be inserted here dynamically -->
+                    </div>
                     <!-- =====================================================================================
       =====================================================================================
       =====================================================================================
@@ -1012,6 +1151,15 @@ include('navbar.php');
                           var cell2 = row.insertCell(1);
                           cell1.innerHTML = langugage;
                           cell2.innerHTML = "<a onclick='deletelanguage(this)'><i  class='bx bx-trash-alt'></i></a>";
+
+
+                          var languageinputcontainer = document.getElementById("languageinputcontainer");
+                          var languageinput = document.createElement("input");
+                          languageinput.setAttribute("type", "text");
+                          languageinput.setAttribute("class", "langugageinput");
+                          workexinput.setAttribute("name", "languge[]");
+                          languageinput.value = langugage;
+                          languageinputcontainer.appendChild(languageinput);
                         }
 
                         const addlanguage = document.querySelector('#addlanguage');
@@ -1022,8 +1170,17 @@ include('navbar.php');
 
                         function deletelanguage(bn) {
                           var row = bn.parentNode.parentNode;
+                          var language = row.cells[0].innerHTML;
+                          var inputFields = document.getElementsByClassName("langugageinput");
+                          for (var i = 0; i < inputFields.length; i++) {
+                            if (inputFields[i].value === language) {
+                              inputFields[i].remove();
+                              break;
+                            }
+                          }
                           row.parentNode.removeChild(row);
                         }
+
 
 
                         function hide_language() {
@@ -1032,6 +1189,10 @@ include('navbar.php');
 
                         }
                       </script>
+
+                      <div id="languageinputcontainer">
+                        <!-- Input fields will be inserted here dynamically -->
+                      </div>
                       <!-- =====================================================================================
       =====================================================================================
       =====================================================================================
@@ -1091,6 +1252,15 @@ include('navbar.php');
                           var cell2 = row.insertCell(1);
                           cell1.innerHTML = referece;
                           cell2.innerHTML = "<a onclick='deleterefer(this)'><i  class='bx bx-trash-alt'></i></a>";
+
+
+                          var refereceinputContainer = document.getElementById("refereceinputContainer");
+                          var refereceinput = document.createElement("input");
+                          refereceinput.setAttribute("type", "text");
+                          refereceinput.setAttribute("class", "refereceinput");
+                          workexinput.setAttribute("name", "reference[]");
+                          refereceinput.value = referece;
+                          refereceinputContainer.appendChild(refereceinput);
                         }
 
                         const addrefer = document.querySelector('#addrefer');
@@ -1101,6 +1271,14 @@ include('navbar.php');
 
                         function deleterefer(bn) {
                           var row = bn.parentNode.parentNode;
+                          var referece = row.cells[0].innerHTML;
+                          var inputFields = document.getElementsByClassName("refereceinput");
+                          for (var i = 0; i < inputFields.length; i++) {
+                            if (inputFields[i].value === referece) {
+                              inputFields[i].remove();
+                              break;
+                            }
+                          }
                           row.parentNode.removeChild(row);
                         }
 
@@ -1111,6 +1289,9 @@ include('navbar.php');
 
                         }
                       </script>
+                      <div id="refereceinputContainer">
+                        <!-- Input fields will be inserted here dynamically -->
+                      </div>
                       <!-- ==================Skill-section-End============================ -->
                       <div class="form-buttons mt-5">
                         <button class="btn btn-danger btnPrevious">Previous</button>

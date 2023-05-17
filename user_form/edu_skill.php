@@ -39,7 +39,7 @@
                             <!-- ============institue Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5 ">
-                                <input name="institute_name" id="Institute" type="text" required>
+                                <input name="institute_name[]" id="Institute" type="text" required>
                                 <label>Institute Name</label>
                               </div>
                             </div>
@@ -47,7 +47,7 @@
                             <div class="col-md-6">
 
                               <div class="input-field mt-5">
-                                <input name="degree" id="Dagree" type="text" required>
+                                <input name="degree[]" id="Dagree" type="text" required>
                                 <label>Degree</label>
                               </div>
                             </div>
@@ -55,7 +55,7 @@
                             <div class="col-md-6">
 
                               <div class="input-field mt-5">
-                                <input name="total_marks" id="tmarks" type="number" required>
+                                <input name="total_marks[]" id="tmarks" type="number" required>
                                 <label>Total Marks</label>
                               </div>
                             </div>
@@ -63,21 +63,21 @@
                             <div class="col-md-6">
 
                               <div class="input-field mt-5">
-                                <input name="ob_marks" id="obmarks" type="number" required>
+                                <input name="ob_marks[]" id="obmarks" type="number" required>
                                 <label>Obtains Marks</label>
                               </div>
                             </div>
                             <!-- ============Start-Date============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-5 ">
-                                <input name="edu_st_date" id="sdate" type="date" required>
+                                <input name="edu_st_date[]" id="sdate" type="date" required>
                                 <label class="date-lable">Start Date</label>
                               </div>
                             </div>
                             <!-- ============End-Date============ -->
                             <div class="col-md-6 ">
                               <div class="input-field mt-5 ">
-                                <input name="edu_end_date" id="edate" type="date" required>
+                                <input name="edu_end_date[]" id="edate" type="date" required>
                                 <label class="date-lable">End Date</label>
                               </div>
                             </div>
@@ -85,7 +85,7 @@
                             <div class="col-md-12">
 
                               <div class="input-field mt-5 ">
-                                <input name="edu_field" id="Feild" style="width:85%" type="text" required>
+                                <input name="edu_field[]" id="Feild" style="width:85%" type="text" required>
                                 <a id="educationbtn" onclick="educ_table()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                                 <label>Field</label>
                               </div>
@@ -109,13 +109,13 @@
                           var Feild = $("#Feild").val();
 
                           $("#education_table").append('<tr id="education_table_id_' + id + '">\
-            <td><input type="text" value="' + Institute + '">' + Institute + ' </td>\
-          <td><input type="text" value="' + Dagree + '">' + Dagree + '</td>\
-          <td><input type="text" value="' + tmarks + '">' + tmarks + '</td>\
-          <td><input type="text" value="' + obmarks + '">' + obmarks + '</td>\
-          <td><input type="text" value="' + sdate + '">' + sdate + '</td>\
-          <td><input type="text" value="' + edate + '">' + edate + '</td>\
-          <td><input type="text" value="' + Feild + '">' + Feild + '</td>\
+            <td><input  name="institute_name[]"  type="text" value="' + Institute + '">' + Institute + ' </td>\
+          <td><input  name="degree[]" type="text" value="' + Dagree + '">' + Dagree + '</td>\
+          <td><input name="total_marks[]"  type="text" value="' + tmarks + '">' + tmarks + '</td>\
+          <td><input name="ob_marks[]"  type="text" value="' + obmarks + '">' + obmarks + '</td>\
+          <td><input name="edu_st_date[]"  type="text" value="' + sdate + '">' + sdate + '</td>\
+          <td><input name="edu_end_date[]"  type="text" value="' + edate + '">' + edate + '</td>\
+          <td><input name="edu_field[]"  type="text" value="' + Feild + '">' + Feild + '</td>\
           <td><a onclick="removeById(`#education_table_id_' + id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
                         });
@@ -176,7 +176,7 @@
 
                           <div id="add_iteee" class="mt-5">
                             <div class="input-field" id="myList1">
-                              <input name="skill" id="skill_" style="width:85%" type="text" required>
+                              <input name="skill[]" id="skill_" style="width:85%" type="text" required>
                               <label>Skill 1</label>
                               <a id="skill_btn" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
                             </div>
@@ -190,7 +190,7 @@
                           <div class="mt-3 p-3">
                             <div class="form-group row">
                               <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
-                              <input name="skill_range" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
+                              <input name="skill_range[]" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
                               <output>50%</output>
                             </div>
                           </div>
@@ -230,8 +230,8 @@
                         var age_slider = $("#age_slider").val();
 
                         $("#skillTable").append('<tr id="product_idN_' + skill_id + '">\
-            <td><input type="text" value="' + skill_ + '">' + skill_ + ' </td>\
-          <td><input type="text" value="' + age_slider + '">' + age_slider + '%' +  '</td>\
+            <td><input name="skill[]" type="text" value="' + skill_ + '">' + skill_ + ' </td>\
+          <td><input name="skill_range[]" type="text" value="' + age_slider + '">' + age_slider + '%' +  '</td>\
           <td>\
             <a onclick="removeById(`#product_idN_' + skill_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a>\
             </td>\

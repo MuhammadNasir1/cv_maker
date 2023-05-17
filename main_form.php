@@ -75,6 +75,7 @@ if (isset($_POST['submit'])) {
   if ($result) {
 ?>
     <script>
+      alert("form sumbit")
       swal({
         title: "Good job!",
         text: "Data Inseted!",
@@ -86,8 +87,9 @@ if (isset($_POST['submit'])) {
   } else {
   ?>
     <script>
+      alert("ih no")
       swal({
-        title: "Oh Fuck!",
+        title: "Oh No!",
         text: "An Error Occured!",
         icon: "danger",
         button: "Aww Shit!",
@@ -182,7 +184,7 @@ include('navbar.php');
                       <div class="col-md-12">
                         <div id="referad">
                           <div class="input-field mt-5 ">
-                            <input name="hobby" id="hobby" style="width:85%" type="text" required>
+                            <input name="hobby[]" id="hobby" style="width:85%" type="text" required>
                             <label>Hobby</label>
                             <a id="addhobby" onclick="hobby_hide()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                           </div>
@@ -222,7 +224,7 @@ include('navbar.php');
 
 
                       $("#hobbytable").append('<tr id="hobby_table_id_' + hobby_id + '">\
-            <td><input type="text" value="' + hobby + '">' + hobby + ' </td>\
+            <td><input name="hobby[]" type="text" value="' + hobby + '">' + hobby + ' </td>\
           <td><a onclick="removehobby(`#hobby_table_id_' + hobby_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
                     });
@@ -245,7 +247,7 @@ include('navbar.php');
 
                         <div class="col-md-12">
                           <div class="input-field mt-5">
-                            <input name="languge" id="langugage" style="width:85%" type="text" required>
+                            <input name="languge[]" id="langugage" style="width:85%" type="text" required>
                             <label>Language</label>
                             <a id="addlanguage" onclick="hide_language()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                           </div>
@@ -287,7 +289,7 @@ include('navbar.php');
 
 
                         $("#languagetable").append('<tr id="hobby_table_id_' + lang_id + '">\
-            <td><input type="text" value="' + langugage + '">' + langugage + ' </td>\
+            <td><input name="languge[]" type="text" value="' + langugage + '">' + langugage + ' </td>\
           <td><a onclick="removelanguage(`#hobby_table_id_' + lang_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
                       })
@@ -313,7 +315,7 @@ include('navbar.php');
                         <div class="col-md-12">
                           <div id="referadd">
                             <div class="input-field mt-5 ">
-                              <input name="reference" id="referece" style="width:85%" type="text" required>
+                              <input name="reference[]" id="referece" style="width:85%" type="text" required>
                               <label>Reference</label>
                               <a id="addrefer" onclick="hiderefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                             </div>
@@ -354,7 +356,7 @@ include('navbar.php');
                         var referece = $("#referece").val();
 
                         $("#refertable").append('<tr id="refer_table_id_' + refer_id + '">\
-            <td><input type="text" value="' + referece + '">' + referece + ' </td>\
+            <td><input name="reference[]" type="text" value="' + referece + '">' + referece + ' </td>\
           <td><a onclick="removerefer(`#refer_table_id_' + refer_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
                       })

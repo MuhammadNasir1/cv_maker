@@ -47,22 +47,24 @@
 
                         <div class="container">
                           <div class="row">
+ <!-- =============================================withimage-form================================== -->
+
                             <!-- ============First Name============ -->
-                            <!-- <div class="row" id="withimag" style="display:none; ">
+                            <div class="row" id="withimag" style="display:none; ">
                               <div class="row">
                                 <div class="col-lg-9 col-md-8 col-7">
                                   <div class="input-field mt-5 ">
-                                    <input name="fname" class="w-100" type="text" required>
-                                    <label>First Name</label> -->
+                                    <input name="fname" class="w-100" type="text" >
+                                    <label>First Name</label>
                             <!-- ============Last Name============ -->
-                            <!-- <div class="input-field mt-5">
-                                      <input name="lname" class="w-100" type="text" required>
+                            <div class="input-field mt-5">
+                                      <input name="lname" class="w-100" type="text" >
                                       <label>Last Name</label>
                                     </div>
                                   </div>
-                                </div> -->
+                                </div>
                             <!-- ============image============ -->
-                            <!-- <div class="col-lg-3 col-md-4 col-5">
+                            <div class="col-lg-3 col-md-4 col-5">
                                   <div class="input-field mt-5 ">
                                     <div class="image_input">
                                       <label name="img" class="" for="files"><i class='bx bxs-user'></i> <img style="height:100%; width:100%; position:absolute; " src=""></label>
@@ -71,8 +73,8 @@
                                   </div>
                                 </div>
                               </div>
-                            </div> -->
-
+                            </div>
+ <!-- =============================================withimage-form================================== -->
                             <!-- ============First Name============ -->
                             <div class="col-md-6" id="withoutimg">
                               <div class="input-field mt-5 ">

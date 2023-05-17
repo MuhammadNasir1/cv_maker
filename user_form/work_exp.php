@@ -40,7 +40,7 @@
                     <!-- ============Company Name============ -->
                     <div class="col-md-6">
                       <div class="input-field mt-5 ">
-                        <input name="company_name" id="com_name" type="text" required>
+                        <input name="company_name[]" id="com_name" type="text" required>
                         <label>Company Name</label>
                       </div>
                     </div>
@@ -48,21 +48,21 @@
                     <div class="col-md-6">
 
                       <div class="input-field mt-5 ">
-                        <input name="work_role" id="role" type="text" required>
+                        <input name="work_role[]" id="role" type="text" required>
                         <label>Role </label>
                       </div>
                     </div>
                     <!-- ============Start-Date============ -->
                     <div class="col-md-6">
                       <div class="input-field mt-5 ">
-                        <input name="work_st_date" id="start_date" type="date" required>
+                        <input name="work_st_date[]" id="start_date" type="date" required>
                         <label class="date-lable">Start Date</label>
                       </div>
                     </div>
                     <!-- ============End-Date============ -->
                     <div class="col-md-6 ">
                       <div class="input-field mt-5 ">
-                        <input name="work_end_date" id="end_date" type="date" required>
+                        <input name="work_end_date[]" id="end_date" type="date" required>
                         <label class="date-lable">End Date</label>
                       </div>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="col-md-12">
 
                       <div class="input-field mt-5 ">
-                        <input name="work_city_coun" id="city_coun" style="width: 85%;" type="text" required>
+                        <input name="work_city_coun[]" id="city_coun" style="width: 85%;" type="text" required>
                         <label>City & Country</label>
                         <!-- <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a> -->
                         <a id="work_btn" onclick="wrk_exp()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
@@ -120,11 +120,11 @@
 
 
                   $("#worl_exptable").append('<tr id="work_table_id_' + work_id + '">\
-    <td><input type="text" value="' + com_name + '">' + com_name + ' </td>\
-  <td><input type="text" value="' + role + '">' + role + '</td>\
-  <td><input type="text" value="' + start_date + '">' + start_date + '</td>\
-  <td><input type="text" value="' + end_date + '">' + end_date + '</td>\
-  <td><input type="text" value="' + city_coun + '">' + city_coun + '</td>\
+    <td><input name="company_name[]" type="text" value="' + com_name + '">' + com_name + ' </td>\
+  <td><input name="work_role[]" type="text" value="' + role + '">' + role + '</td>\
+  <td><input name="work_st_date[]" type="text" value="' + start_date + '">' + start_date + '</td>\
+  <td><input name="work_end_date[]" type="text" value="' + end_date + '">' + end_date + '</td>\
+  <td><input name="work_city_coun[]" type="text" value="' + city_coun + '">' + city_coun + '</td>\
   <td><a onclick="removework(`#work_table_id_' + work_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
   </tr>');
                 });

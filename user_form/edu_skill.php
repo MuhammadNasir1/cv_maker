@@ -265,12 +265,15 @@
                     <h3>TIPS</h3>
                     <div class="text mt-2">
                       <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, elit. Architecto, dolor.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolor.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-                        <li>Lorem ipsum dolor sit amet , adipisicing elit. Architecto, dolor.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolor.</li>
+                        <li>Order: Start with your most recent or highest level of education and work backward chronologically.</li>
+                        <li>Format: Include the name of the institution, degree or qualification earned, field of study, and the dates
+                           of attendance or graduation.</li>
+                        <li>Relevant Information: Highlight any honors, awards, or notable achievements during your academic journey.</li>
+                        <li>Relevant Skills: Tailor your skills section to include those directly related to the job you're applying for. This could include technical skills, software proficiency, languages spoken, or specific industry knowledge.</li>
+                        
+                        <li>Categorize: Organize your skills into categories (e.g., technical skills, interpersonal skills) to provide clarity and ease of reading.</li>
+                        <li>Highlight Strengths: Place the most critical and relevant skills at the beginning of each category to grab the reader's attention.</li>
+                        <li>Use Keywords: Incorporate keywords from the job description to align your skills with the employer's requirements and increase the likelihood of your resume being selected by applicant tracking systems (ATS).</li>
                       </ul>
                     </div>
                   </div>

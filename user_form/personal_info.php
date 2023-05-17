@@ -192,12 +192,15 @@
                       <h3>TIPS</h3>
                       <div class="text mt-2">
                         <ul>
-                          <li>Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-                          <li>Lorem ipsum dolor sit amet consectetur, elit. Architecto, dolor.</li>
-                          <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolor.</li>
-                          <li>Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-                          <li>Lorem ipsum dolor sit amet , adipisicing elit. Architecto, dolor.</li>
-                          <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolor.</li>
+                          <li>Make sure your form has no spelling or any type of  mistakes.</li>
+                          <li>Full Name: Include your full legal name at the top of the document in a larger font size than the rest of the content.</li>
+                          <li>Contact Information: Provide essential contact details such as your phone number, email address, and location (city and state or country).
+                             Avoid sharing unnecessary personal information like your marital status or social security number.</li>
+                          <li>Professional Email Address: Use a simple and professional email address that incorporates your name, 
+                            such as firstname.lastname@email.com</li>
+                          <li>Mailing Address: Unless specifically requested, it's generally not necessary to include your full mailing address. Providing your city 
+                            and state is usually sufficient.Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
+                          <li>Personal Website or Portfolio (optional): If you have a personal website or online portfolio showcasing your work, skills, or achievements, include a link to it.</li>
                         </ul>
                       </div>
                     </div>

@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
 
 
 
-        INSERT INTO `hobbies`( `hobby`) VALUES ('$hobby');
+      
 
         
 
@@ -69,8 +69,14 @@ if (isset($_POST['submit'])) {
         INSERT INTO `user_references`( `user_reference`) VALUES ('$reference');
         
         ";
+  for ($i = 0; $i < count($hobby); $i++) {
 
-  $result = mysqli_multi_query($conn, $sql);
+
+    $sql1 = "  INSERT INTO `hobbies`( `hobby`) VALUES ('" . $hobby[$i] . "')";
+
+    $result = mysqli_query($conn, $sql1);
+  }
+
 
   if ($result) {
 ?>
@@ -384,12 +390,18 @@ include('navbar.php');
                   <h3>TIPS</h3>
                   <div class="text mt-2">
                     <ul>
-                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-                      <li>Lorem ipsum dolor sit amet consectetur, elit. Architecto, dolor.</li>
-                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolor.</li>
-                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-                      <li>Lorem ipsum dolor sit amet , adipisicing elit. Architecto, dolor.</li>
-                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolor.</li>
+                      <li>Select Relevant Hobbies: Choose hobbies that align with the skills or qualities valued
+                        in the job you're applying for. For example, if the position requires teamwork, you can
+                        mention team sports or collaborative hobbies.</li>
+                      <li>Variety: Include a diverse range of hobbies to present a well-rounded personality. This can showcase
+                        your ability to balance work and personal interests effectively.</li>
+                      <li>Showcase Transferable Skills: Highlight hobbies that demonstrate transferable skills such as
+                        leadership, creativity, problem-solving, or organization.</li>
+                      <li>Relevance: Highlight languages that are relevant to the job or industry you're applying for.
+                        If you're bilingual or multilingual, emphasize your language skills as they can be valuable assets.</li>
+                      <li>Include Upon Request: Instead of providing specific references on your CV or resume, simply state "References
+                        available upon request." This keeps your document concise and allows you to provide references when requested by
+                        the employer.</li>
                     </ul>
                   </div>
                 </div>

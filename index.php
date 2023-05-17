@@ -104,10 +104,10 @@ include('navbar.php');
 <div class="container-fluid p-0 mt-4">
   <div class="fix-bg">
     <div class="txt">
-      <h1 class="">"Lorem ipsum dolor sit amet consectetur dolor sit
-        <span class="remove"><br></span> ipsum dolor sit amet consectetur"
+      <h1 class="">"Select your favourite template and create your 
+        <span class="remove"><br></span>professional CV or resume.
       </h1>
-      <a href="#"> <button class="btn mt-3">Create CV</button></a>
+      <a href="#"> <button class="btn mt-3">Create</button></a>
     </div>
   </div>
 </div>
@@ -153,7 +153,7 @@ include('navbar.php');
         </div>
       </div>
       <button style="width:80px" class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+ 
         <span style="color:red;"><i style="font-size:40px" class='bx bx-chevron-left' ></i></span>
         <span class="visually-hidden">Previous</span>
       </button>

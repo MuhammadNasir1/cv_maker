@@ -154,12 +154,9 @@
             <h3>TIPS</h3>
             <div class="text mt-2">
               <ul>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-                <li>Lorem ipsum dolor sit amet consectetur, elit. Architecto, dolor.</li>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolor.</li>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-                <li>Lorem ipsum dolor sit amet , adipisicing elit. Architecto, dolor.</li>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolor.</li>
+                <li>Be Honest: Provide accurate and truthful information about your work experience. Avoid exaggeration or misrepresentation as it can be detrimental to your professional reputation.</li>
+                <li>Use Keywords: Incorporate industry-specific keywords and phrases throughout your work experience section to align your resume with the job description and optimize it for applicant tracking systems (ATS).</li>
+                <li>Reverse Chronological Order: Start with your most recent or current position and work backward chronologically. This format is the most common and helps employers quickly see your recent experience.</li>
               </ul>
             </div>
           </div>

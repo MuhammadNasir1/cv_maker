@@ -1,6 +1,7 @@
 <?php
 include('db.php');
 if (isset($_POST['submit'])) {
+  print_r($_REQUEST);
   // Personal Information
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
@@ -38,6 +39,7 @@ if (isset($_POST['submit'])) {
   // Work Experience
   // ============================
   $hobby  = $_POST['hobby'];
+  //print_r($hobby);
   // ============================
   $languge  = $_POST['languge'];
   // ============================

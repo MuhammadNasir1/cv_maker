@@ -3,6 +3,12 @@
   --light-color: #ffffff;
 }
 
+.image_input label span img, .image_input label span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-heigt2 {
   height: 100%;
 }
@@ -124,28 +130,6 @@
   border: 0.0625rem solid #808080;
 }
 
-.image_input {
-  border: 0.0625rem solid rgba(128, 128, 128, 0.4431372549);
-  width: 100%;
-  height: 8rem;
-  float: right;
-  position: relative;
-}
-.image_input label {
-  top: 0;
-  left: 0;
-  position: relative;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
-.image_input label i {
-  font-size: 4rem;
-}
-
 ::-webkit-datetime-edit-month-field {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.6705882353);
@@ -169,6 +153,12 @@
 :root {
   --primary-color: #C21010;
   --light-color: #ffffff;
+}
+
+.image_input label span img, .image_input label span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-heigt2 {
@@ -301,28 +291,6 @@
   border: 0.0625rem solid #808080;
 }
 
-.image_input {
-  border: 1px solid rgba(128, 128, 128, 0.4431372549);
-  width: 100%;
-  height: 8rem;
-  float: right;
-  position: relative;
-}
-.image_input label {
-  top: 0;
-  left: 0;
-  position: relative;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
-.image_input label i {
-  font-size: 4rem;
-}
-
 ::-webkit-datetime-edit-month-field {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.6705882353);
@@ -346,6 +314,12 @@
 :root {
   --primary-color: #C21010;
   --light-color: #ffffff;
+}
+
+.image_input label span img, .image_input label span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-heigt2 {
@@ -517,12 +491,12 @@
 }
 
 .image_input {
-  border: 1px solid rgba(128, 128, 128, 0.4431372549);
   width: 8rem;
   height: 8rem;
   float: right;
   position: relative;
   border-radius: 50%;
+  border: 5px solid var(--primary-color);
 }
 .image_input label {
   top: 0;
@@ -538,13 +512,20 @@
 .image_input label i {
   font-size: 4rem;
 }
-.image_input label img {
-  border: 5px solid var(--primary-color);
-  border-radius: 0.3125rem;
+.image_input label span {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.image_input label span img {
   margin: 0;
   padding: 0;
-  background-color: transparent;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
+  position: relative;
+  border: 2px solid var(--primary-color);
 }
 
 ::-webkit-datetime-edit-month-field {

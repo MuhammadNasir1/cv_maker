@@ -80,12 +80,10 @@ include('header.php');
   </div>
   <!-- ================heading-End==================== -->
   <div class="container">
-    <div class="info_form h-100">
+    <div class="info_form h-100 mb-5">
       <div class="form_heading">
         <h1 style="color:black">Personal Information</h1>
-
         <div class="user_inf_form">
-
           <!-- =============form_start============== -->
           <form action="">
             <div class="container">
@@ -299,8 +297,8 @@ include('header.php');
                   </div>
                 </div>
                 <div class="col-12">
-              <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
-              </div>
+                  <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+                </div>
                 <div class="col-12">
                   <h1 style="color: black;">Hobbies</h1>
                 </div>
@@ -316,7 +314,7 @@ include('header.php');
                 <div class="col-12">
                   <h1 style="color: black;">Languages</h1>
                 </div>
-              
+
                 <!-- ===============Language============== -->
                 <div class=" col-lg-12">
                   <div class="mb-3">
@@ -337,8 +335,13 @@ include('header.php');
                   </div>
                 </div>
                 <div class="col-12">
-              <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
-              </div>
+                  <div class="w-50 mt-3 mb-3" style="border: 10px double #C21010; margin:auto; "></div>
+                </div>
+                <div class="col-12">
+                  <div class="form-buttons mt-4 ">
+                    <button style="color:white; background:#C21010; padding:8px 16px 8px 16px; border-radius:4px " class=" mb-4 me-3 btn   float-end"> Change</button>
+                  </div>
+                </div>
               </div>
             </div>
 

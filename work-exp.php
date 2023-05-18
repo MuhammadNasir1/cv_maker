@@ -1,4 +1,6 @@
-
+<?php
+include("navbar.php")
+?>
 <!-- ====================contact-page-progrss-bar-start==================== -->
 <div class="container-fluid">
   <div class="progres-bar">
@@ -139,9 +141,9 @@
               <!-- ================user-work-ex-form-End---====================== -->
 
               <div class="form-buttons mt-5">
-                <button type="" class="btn btn-danger  btnPrevious">Previous</button>
+               <a href="./edu_skill.php"> <button type="" class="btn btn-danger  btnPrevious">Previous</button></a>
 
-                <button class="btn btn-danger float-end save-btn btnNext"> Next</button>
+            <a href="./hob_lan_ref.php">    <button class="btn btn-danger float-end save-btn btnNext"> Next</button></a>
               </div>
             </div>
           </div>

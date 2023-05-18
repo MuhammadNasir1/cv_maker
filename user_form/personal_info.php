@@ -232,3 +232,28 @@
       }
     });
   </script>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<!-- Scrollable modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog d-flex align-item-center  justify-content-center " >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Preview</h1>
+        <img src="../image/Cv-Builder-Logo.svg" alt="">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <div class="container">
+         <img style="width:100%; border:5px solid #C21010; padding:20px;" src="http://localhost/cv_maker/image/cv-image.png" alt="">
+         </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,7 @@
-<div class="tab-pane  fade" id="menu1">
+
+<?php
+include("navbar.php");
+?>
         <div class="container-fluid">
           <div class="progres-bar">
             <div class="progress-sec mt-4">
@@ -252,9 +255,9 @@
                     <!-- ==================Skill-section-End============================ -->
 
                     <div class="form-buttons mt-4">
-                      <button type="" class="btn btn-danger btnPrevious">Previous</button>
+                   <a href="./personal_info.php">   <button type="" class="btn btn-danger btnPrevious">Previous</button></a>
 
-                      <button class="btn btn-danger float-end save-btn btnNext">Next</button>
+                  <a href="./work-exp.php">  <button class="btn btn-danger float-end save-btn btnNext">Next</button></a>
                     </div>
                   </div>
                 </div>
@@ -285,4 +288,3 @@
         </div>
 
         <!-- ============= personal-information-Form-End============== -->
-      </div>

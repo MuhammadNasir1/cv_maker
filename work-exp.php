@@ -5,16 +5,16 @@ include("navbar.php")
 <div class="container-fluid">
   <div class="progres-bar">
     <div class="progress-sec mt-4">
-      <a style="color: black;" href="#">
+      <a style="color: black;" href="./personal_info.php">
         <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
       </a>
-      <a style="color: black;" href="#">
+      <a style="color: black;" href="./edu_skill.php">
         <p><span style="color:white; border-color:green;     background:green;">2</span><bdo class="form_progress_txt">Education/Skills</bdo> </p>
       </a>
-      <a style="color: black;" href="#">
+      <a style="color: black;" href="./work-exp.php">
         <p><span style="color:white;     background:#C21010;">3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
       </a>
-      <a href="#">
+      <a href="./hob_lan_ref.php">
         <p><span>4</span><bdo class="form_progress_txt">Languages/Reference</bdo> </p>
       </a>
     </div>
@@ -141,9 +141,9 @@ include("navbar.php")
               <!-- ================user-work-ex-form-End---====================== -->
 
               <div class="form-buttons mt-5">
-               <a href="./edu_skill.php"> <button type="" class="btn btn-danger  btnPrevious">Previous</button></a>
+                <a href="./edu_skill.php"> <button type="" class="btn btn-danger  btnPrevious">Previous</button></a>
 
-            <a href="./hob_lan_ref.php">    <button class="btn btn-danger float-end save-btn btnNext"> Next</button></a>
+                <a href="./hob_lan_ref.php"> <button class="btn btn-danger float-end save-btn btnNext"> Next</button></a>
               </div>
             </div>
           </div>
@@ -170,3 +170,25 @@ include("navbar.php")
 
 <!-- ============= personal-information-Form-End============== -->
 
+<!-- ================ Footer-Start ======================= -->
+
+<footer class="text-center text-lg-start text-white " style="background-color: black; margin-top:8rem">
+  <section style="background-color: #C21010">
+    <div class=" d-flex justify-content-between pe-3  ps-3">
+      <div class="social-icon-heading">
+        <p>Get connected with us on social networks:</p>
+      </div>
+      <div class="icons pt-1">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-google'></i></a>
+      </div>
+    </div>
+  </section>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2023 Copyright:
+    <a class="text-whites" href="https://google.com/">Google.com</a>
+  </div>
+</footer>
+<!-- ================ Footer-End ======================= -->

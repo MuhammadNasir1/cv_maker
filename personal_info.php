@@ -7,16 +7,16 @@ include("navbar.php")
   <div class="container-fluid">
     <div class="progres-bar">
       <div class="progress-sec mt-4">
-        <a style="color: black;" href="#">
+        <a style="color: black;" href="./personal_info.php">
           <p class="text-dark"><span style="color:white;     background:#C21010;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
         </a>
-        <a href="#">
+        <a href="./edu_skill.php">
           <p><span>2</span> <bdo class="form_progress_txt">Education/Skill</bdo> </p>
         </a>
-        <a href="#">
+        <a href="./work-exp.php">
           <p><span>3</span> <bdo class="form_progress_txt">Working Experience</bdo></p>
         </a>
-        <a href="#">
+        <a href="./hob_lan_ref.php">
           <p><span>4</span> <bdo class="form_progress_txt">Languages/Reference </bdo></p>
         </a>
       </div>
@@ -257,7 +257,6 @@ include("navbar.php")
     <a class="text-whites" href="https://google.com/">Google.com</a>
   </div>
 </footer>
-</div>
 <!-- ================ Footer-End ======================= -->
 <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal

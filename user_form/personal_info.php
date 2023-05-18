@@ -214,34 +214,20 @@
       <!-- ============= personal-information-Form-End============== -->
   </div>
   <script>
-    // Get the input element and image preview container
     const imageUpload = document.getElementById('files');
     const imagePreview = document.getElementById('imagePreview');
-
-    // Add an event listener to the file input element
     imageUpload.addEventListener('change', function(event) {
-      // Get the selected file
       const file = event.target.files[0];
-
-      // Check if a file is selected
       if (file) {
-        // Create a FileReader object
         const reader = new FileReader();
-
-        // Set the onload event handler
         reader.onload = function(e) {
-          // Create an image element
           const image = document.createElement('img');
           image.src = e.target.result;
-
-          // Clear the image preview container
           imagePreview.innerHTML = '';
 
-          // Append the image to the preview container
           imagePreview.appendChild(image);
         };
 
-        // Read the selected file as a data URL
         reader.readAsDataURL(file);
       }
     });

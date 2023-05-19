@@ -3,7 +3,7 @@
   --light-color: #ffffff;
 }
 
-.image_input label span img, .image_input label span {
+.image_input label span img, .image_input label span, .Form-tip-sec .preview_btn i, .Form-tip-sec .preview_btn button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +96,21 @@
   line-height: 1.5rem;
   margin-top: 1rem;
 }
+.Form-tip-sec .preview_btn button {
+  padding: 6px 10px 6px 10px;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-left: 1.5rem;
+  margin-bottom: 3rem;
+  margin: 2rem 0rem 3rem 1.5rem;
+}
+.Form-tip-sec .preview_btn i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  flex-direction: column;
+}
 
 .input-field {
   margin-top: 2.2rem;
@@ -155,7 +170,7 @@
   --light-color: #ffffff;
 }
 
-.image_input label span img, .image_input label span {
+.image_input label span img, .image_input label span, .Form-tip-sec .preview_btn button, .Form-tip-sec .preview_btn i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,7 +331,7 @@
   --light-color: #ffffff;
 }
 
-.image_input label span img, .image_input label span {
+.image_input label span img, .image_input label span, .Form-tip-sec .preview_btn button, .Form-tip-sec .preview_btn i {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -151,11 +151,11 @@ include("navbar.php")
 
 
                     $("#worl_exptable").append('<tr id="work_table_id_' + work_id + '">\
-    <td><input name="company_name[]" type="text" value="' + com_name + '">' + com_name + ' </td>\
-  <td><input name="work_role[]" type="text" value="' + role + '">' + role + '</td>\
-  <td><input name="work_st_date[]" type="text" value="' + start_date + '">' + start_date + '</td>\
-  <td><input name="work_end_date[]" type="text" value="' + end_date + '">' + end_date + '</td>\
-  <td><input name="work_city_coun[]" type="text" value="' + city_coun + '">' + city_coun + '</td>\
+    <td><input name="company_name[]" type="hidden" value="' + com_name + '">' + com_name + ' </td>\
+  <td><input name="work_role[]" type="hidden" value="' + role + '">' + role + '</td>\
+  <td><input name="work_st_date[]" type="hidden" value="' + start_date + '">' + start_date + '</td>\
+  <td><input name="work_end_date[]" type="hidden" value="' + end_date + '">' + end_date + '</td>\
+  <td><input name="work_city_coun[]" type="hidden" value="' + city_coun + '">' + city_coun + '</td>\
   <td><a onclick="removework(`#work_table_id_' + work_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
   </tr>');
                   });
@@ -171,7 +171,7 @@ include("navbar.php")
                 <!-- ================user-work-ex-form-End---====================== -->
 
                 <div class="form-buttons mt-5">
-                  <a href="./edu_skill.php"> <button type="" class="btn btn-danger  btnPrevious">Previous</button></a>
+                  <a href="./edu_skill.php"> Previous</a>
 
                   <!-- <a href="./hob_lan_ref.php"> <button class="btn btn-danger float-end save-btn btnNext"> Next</button></a> -->
                   <button name="submit" type="submit" class="btn btn-danger float-end save-btn"> save</button>

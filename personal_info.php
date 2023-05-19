@@ -206,6 +206,9 @@ include("navbar.php")
         <li>Personal Website or Portfolio (optional): If you have a personal website or online portfolio showcasing your work, skills, or achievements, include a link to it.</li>
       </ul>
     </div>
+    <div class="container preview_btn">
+      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class='bx bx-zoom-in'></i>Preview</button>
+    </div>
   </div>
 </div>
 <!-- ==============form-tips-sec-End============== -->
@@ -258,24 +261,21 @@ include("navbar.php")
   </div>
 </footer>
 <!-- ================ Footer-End ======================= -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog d-flex align-item-center  justify-content-center " >
+  <div class="modal-dialog d-flex align-item-center  justify-content-center ">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Preview</h1>
+      <div class="modal-header border-none">
+        <h1 style="font-weight: 700; color:#C21010" class="modal-title fs-5" id="exampleModalLabel">Preview</h1>
         <img src="../image/Cv-Builder-Logo.svg" alt="">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button style="box-shadow: none;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-         <div class="container">
-         <img style="width:100%; border:5px solid #C21010; padding:20px;" src="http://localhost/cv_maker/image/cv-image.png" alt="">
-         </div>
+        <div class="container">
+          <img style="width:100%; border:2px solid black; " src="http://localhost/cv_maker/image/cv-image.png" alt="">
+        </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>

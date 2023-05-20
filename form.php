@@ -7,13 +7,13 @@ if (isset($_REQUEST['submit'])) {
   $fname = $_POST['fname'];
   $skill = $_POST['skill'];
 
-  $image = $_FILES['fileupload']['name'];
-  $tmp_image = $_FILES['fileupload']['tmp_name'];
-  $target_dir = "uploads/";
-  $target_file = $target_dir . basename($image);
-  if (move_uploaded_file($tmp_image, $target_file)) {
-    echo "abcd";
-  } 
+  // $image = $_FILES['fileupload']['name'];
+  // $tmp_image = $_FILES['fileupload']['tmp_name'];
+  // $target_dir = "uploads/";
+  // $target_file = $target_dir . basename($image);
+  // if (move_uploaded_file($tmp_image, $target_file)) {
+  //   echo "abcd";
+  // } 
   $sql = "INSERT INTO `user` (`user_img`, `fname`, `skill`) VALUES ('$image',  '$fname', '$skill');";
   $result = mysqli_query($conn, $sql);
   if ($result) {

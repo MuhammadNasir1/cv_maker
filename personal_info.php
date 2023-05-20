@@ -1,4 +1,39 @@
 <?php
+include('db.php');
+if (isset($_POST['submit'])) {
+  print_r($_REQUEST);
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $father_name = $_POST['father_name'];
+  $gender = $_POST['gender'];
+  $dob = $_POST['dob'];
+  $profession = $_POST['profession'];
+  $website = $_POST['website'];
+  $personal_no = $_POST['personal_no'];
+  $tel_no = $_POST['tel_no'];
+  $email = $_POST['email'];
+  $country = $_POST['country'];
+  $city = $_POST['city'];
+  $about_us = $_POST['about_us'];
+
+  $img = $_FILES['imgupload']['name'];
+  $tmp_image = $_FILES['imgupload']['tmp_name'];
+  $target_dir = "uploads/";
+  $target_file = $target_dir . basename($img);
+  if (move_uploaded_file($tmp_image, $target_file)) {
+    echo "image select";
+  }
+ 
+  $sql = "INSERT INTO `per_info`(`fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`,  `user_img`, `country`, `city`, `about_us`) VALUES ('$fname','$lname','$father_name','$gender','$profession', '$dob','$website','$personal_no','$tel_no','$email', ' $img' , '$country','$city','$about_us')";
+  $result = mysqli_query($conn , $sql);
+  if($result){
+    // header("location: edu_skill.php");
+  }
+}
+
+?>
+
+<?php
 include("navbar.php")
 ?>
 
@@ -23,13 +58,8 @@ include("navbar.php")
     </div>
   </div>
   <!-- ====================contact-page-progrss-bar-End==================== -->
-  <!-- =====================================================================================
-        =====================================================================================
-        =====================================================================================
-        ===================================================================================== -->
-
   <!-- ============= personal-information-Form-Start============= -->
-  <form action="#" method="post">
+  <form action="#" method="post" enctype="multipart/form-data">
 
     <div class="container">
       <div class="form-bg mt-2">
@@ -41,7 +71,7 @@ include("navbar.php")
                 <div style="display:flex;  align-items: center; justify-content: space-between;">
                   <h3>Personal Information</h3>
 
-                  <button class="toggle-image-form mt-2" onclick="toggleDivs()">Cv with image</button>
+                  <button type="button" class="toggle-image-form mt-2" onclick="toggleDivs()">Cv with image</button>
                 </div>
                 <!-- ================user-info-form-Start================== -->
 
@@ -70,7 +100,7 @@ include("navbar.php")
                             <div class="input-field mt-5 ">
                               <div class="image_input">
                                 <label class="" for="files"><i class='bx bxs-user'></i><span id="imagePreview"></span></label>
-                                <input id="files" accept="image/*" style="visibility:hidden;" type="file">
+                                <input name="imgupload" id="files"  style="visibility:hidden;" type="file">
                               </div>
                             </div>
                           </div>
@@ -80,15 +110,15 @@ include("navbar.php")
                       <!-- ============First Name============ -->
                       <div class="col-md-6" id="withoutimg">
                         <div class="input-field mt-5 ">
-                          <input name="fname" class="ph_inp" type="text" required>
+                          <input name="fname" class="ph_inp" type="text" >
                           <label>First Name</label>
                         </div>
                       </div>
 
                       <!-- ============Last Name============ -->
-                      <div class="col-md-6" id="withoutimg">
+                      <div class="col-md-6" id="withoutimg2">
                         <div class="input-field mt-5 ">
-                          <input name="lname" class="ph_inp" type="text" required>
+                          <input name="lname" class="ph_inp" type="text" >
                           <label>Last Name</label>
                         </div>
                       </div>
@@ -178,13 +208,13 @@ include("navbar.php")
                       </div>
                     </div>
                   </div>
+                  <!-- ============Save and Next============ -->
+                  <div class="form-buttons mt-4">
+                    <a href="./edu_skill.php"><button type="submit" name="submit" class="btn  float-end ">Next</button></a>
+                  </div>
+                </div>
   </form>
-  <!-- ============Save and Next============ -->
-  <div class="form-buttons mt-4">
-    <button class="btn  float-end "><a class="h-100 w-100" href="./edu_skill.php">Next</a></button>
-  </div>
-</div>
-<!-- ================user-info-form-End==================== -->
+  <!-- ================user-info-form-End==================== -->
 </div>
 </div>
 <!-- ==============form-End================ -->

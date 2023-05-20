@@ -1,4 +1,42 @@
 <?php
+include('db.php');
+if (isset($_POST['submit'])) {
+  $institute_names = $_POST['institute_name'];
+  $degrees = $_POST['degree'];
+  $total_marks = $_POST['total_marks'];
+  $ob_marks = $_POST['ob_marks'];
+  $edu_st_dates = $_POST['edu_st_date'];
+  $edu_end_dates = $_POST['edu_end_date'];
+  $edu_fields = $_POST['edu_field'];
+  $skills = $_POST['skill'];
+  $skill_ranges = $_POST['skill_range'];
+
+  for ($i = 0; $i < count($institute_names); $i++) {
+    $institute_name = $institute_names[$i];
+    $degree = $degrees[$i];
+    $total_mark = $total_marks[$i];
+    $ob_mark = $ob_marks[$i];
+    $edu_st_date = $edu_st_dates[$i];
+    $edu_end_date = $edu_end_dates[$i];
+    $edu_field = $edu_fields[$i];
+    $skill = $skills[$i];
+    $skill_range = $skill_ranges[$i];
+    $sql = "INSERT INTO `education`(`instutute_name`, `dagree`, `total_marks`, `obtain_marks`,  `deg_st_date`, `deg_end_date`, `field`) VALUES ('$institute_name','$degree','$total_mark','$ob_mark','$edu_st_date','$edu_end_date','$edu_field')";
+    $result = mysqli_query($conn, $sql);
+
+    $sql1 = "INSERT INTO `skills` (`skill`, `skill_per`) VALUES ('$skill', '$skill_range')";
+    $result1 = mysqli_query($conn, $sql1);
+
+    if ($result && $result1) {
+      // echo "Data inserted successfully";
+      header('location: work-exp.php');
+    } else {
+      echo "Error: " . mysqli_error($conn);
+    }
+  }
+}
+?>
+<?php
 include("navbar.php");
 ?>
 <div class="container-fluid">
@@ -21,7 +59,7 @@ include("navbar.php");
     </div>
   </div>
 </div>
-
+<form action="#" method="post">
 <div class="container">
   <div class="form-bg mt-4">
     <div class="container">
@@ -255,9 +293,9 @@ include("navbar.php");
             <!-- ==================Skill-section-End============================ -->
 
             <div class="form-buttons mt-4">
-              <a href="./personal_info.php"> <button type="" class="btn btn-danger btnPrevious">Previous</button></a>
+              <a href="./personal_info.php"> <button type="button" class="btn btn-danger btnPrevious">Previous</button></a>
 
-              <a href="./work-exp.php"> <button class="btn btn-danger float-end save-btn btnNext">Next</button></a>
+              <a href="./work-exp.php"> <button type="submit" name="submit" class="btn btn-danger float-end save-btn btnNext">Next</button></a>
             </div>
           </div>
         </div>
@@ -286,6 +324,7 @@ include("navbar.php");
     </div>
   </div>
 </div>
+</form>
 
 <!-- ============= personal-information-Form-End============== -->
 

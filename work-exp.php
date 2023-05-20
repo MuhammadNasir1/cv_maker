@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
       echo "Data inserted successfully";
+      header("location: hob_lan_ref.php");
     } else {
       echo "Error: " . mysqli_error($conn);
     }
@@ -171,10 +172,10 @@ include("navbar.php")
                 <!-- ================user-work-ex-form-End---====================== -->
 
                 <div class="form-buttons mt-5">
-                  <a href="./edu_skill.php"> Previous</a>
+                  <!-- <a href="./edu_skill.php"> Previous</a> -->
 
-                  <!-- <a href="./hob_lan_ref.php"> <button class="btn btn-danger float-end save-btn btnNext"> Next</button></a> -->
-                  <button name="submit" type="submit" class="btn btn-danger float-end save-btn"> save</button>
+                  <a href="./edu_skill.php"> <button type="button" class="btn btn-danger  save-btn btnNext"> Previous</button></a>
+                  <button name="submit" type="submit" class="btn btn-danger float-end save-btn"> Next</button>
 </form>
 </div>
 </div>

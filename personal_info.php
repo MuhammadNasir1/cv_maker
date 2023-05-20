@@ -1,7 +1,6 @@
 <?php
 include('db.php');
 if (isset($_POST['submit'])) {
-  print_r($_REQUEST);
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
   $father_name = $_POST['father_name'];
@@ -21,13 +20,12 @@ if (isset($_POST['submit'])) {
   $target_dir = "uploads/";
   $target_file = $target_dir . basename($img);
   if (move_uploaded_file($tmp_image, $target_file)) {
-    echo "image select";
   }
  
   $sql = "INSERT INTO `per_info`(`fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`,  `user_img`, `country`, `city`, `about_us`) VALUES ('$fname','$lname','$father_name','$gender','$profession', '$dob','$website','$personal_no','$tel_no','$email', ' $img' , '$country','$city','$about_us')";
   $result = mysqli_query($conn , $sql);
   if($result){
-    // header("location: edu_skill.php");
+    header("location: edu_skill.php");
   }
 }
 

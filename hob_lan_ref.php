@@ -10,13 +10,13 @@ if (isset($_POST['submit'])) {
     $language = $languages[$i];
     $reference = $references[$i];
 
-    $sql1 = "INSERT INTO `languages` (`language`) VALUES ('$language')";
+    $sql1 = "INSERT INTO `languages` (`user_id`,`language`) VALUES ('" . $_SESSION['user_id'] . "','$language')";
     $result1 = mysqli_query($conn, $sql1);
 
-    $sql2 = "INSERT INTO `user_references` (`user_reference`) VALUES ('$reference')";
+    $sql2 = "INSERT INTO `user_references` (`user_id`,`user_reference`) VALUES ('" . $_SESSION['user_id'] . "','$reference')";
     $result2 = mysqli_query($conn, $sql2);
 
-    $sql3 = "INSERT INTO `hobbies` (`hobby`) VALUES ('$hobby')";
+    $sql3 = "INSERT INTO `hobbies` (`user_id`,`hobby`) VALUES ('" . $_SESSION['user_id'] . "','$hobby')";
     $result3 = mysqli_query($conn, $sql3);
 
     if ($result1 && $result2 && $result3) {

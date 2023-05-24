@@ -11,15 +11,15 @@ if (isset($_REQUEST['submit'])) {
   $sql = "SELECT * FROM `users` WHERE email = '$email' AND password = '$password' ";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_num_rows($result);
-  if ($row == 1 ) {
+  if ($row == 1) {
     $row = mysqli_fetch_assoc($result);
     echo "<h1>LOGIN WITH EMAIL</h1>";
 
 
-      header("location:./index.php");
- 
-    $_SESSION['login'] == true;
+    header("location:./index.php");
 
+    $_SESSION['login'] == true;
+    $_SESSION["user_id"] = $row['user_id'];
     $_SESSION["email"] =  $row['email'];
     $_SESSION["username"] =  $row['username'];
     $_SESSION['loginemail'] = ' 
@@ -79,14 +79,14 @@ if (!isset($_SESSION['access_token'])) {
                 <div class="mb-3 position-relative">
                   <img class="input-icons" src="./image/email-icons.svg" alt="Email">
                   <label for="email" class="form-label">Email</label>
-                  <input name="email" type="email" class="form-control" placeholder="Enter your email address" <?php echo @$input_red?>>
+                  <input name="email" type="email" class="form-control" placeholder="Enter your email address" <?php echo @$input_red ?>>
                   <span class="" style="margin-left:95%; margin-top:-28px ;  position: absolute;"><?php echo  @$showeror ?></span>
                   <div style="color:#C21010; letter-spacing:0.3px " class="form-text"><b><?php echo  @$showerror ?></b></div>
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
                   <label for="password" class="form-label">Password</label>
-                  <input <?php echo @$input_red?> name="password" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+                  <input <?php echo @$input_red ?> name="password" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
                   <div onclick="showpassword()">
                     <a class="pass-icon" id="pass_hide_icon" href="#"><i class="fa-regular fa-eye-slash"></i></a>
                     <a style="display: none;" class="pass-icon" id="pass_show_icon" href="#"><i class="fa-regular fa-eye"></i></a>

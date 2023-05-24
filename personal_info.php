@@ -1,5 +1,10 @@
 <?php
+ob_start();
+// echo $_SESSION['user_id'] ;
 include('db.php');
+ob_end_flush();
+
+print_r($_SESSION['user_id']);
 if (isset($_POST['submit'])) {
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
@@ -22,7 +27,10 @@ if (isset($_POST['submit'])) {
   if (move_uploaded_file($tmp_image, $target_file)) {
   }
  
-  $sql = "INSERT INTO `per_info`(`fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`,  `user_img`, `country`, `city`, `about_us`) VALUES ('$fname','$lname','$father_name','$gender','$profession', '$dob','$website','$personal_no','$tel_no','$email', ' $img' , '$country','$city','$about_us')";
+  // $sql = "INSERT INTO `per_info`(`user_id`, `fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`, `user_img`, `country`, `city`, `about_us`) VALUES ('userid', '$fname', '$lname', '$father_name', '$gender', '$profession', '$dob', '$website', '$personal_no', '$tel_no', '$email', '$img', '$country', '$city', '$about_us')";
+$sql = "INSERT INTO `per_info`(`user_id`, `fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`, `user_img`, `country`, `city`, `about_us`) VALUES ('" . $_SESSION['user_id'] . "', '$fname', '$lname', '$father_name', '$gender', '$profession', '$dob', '$website', '$personal_no', '$tel_no', '$email', '$img', '$country', '$city', '$about_us')";
+
+
   $result = mysqli_query($conn , $sql);
   if($result){
     header("location: edu_skill.php");

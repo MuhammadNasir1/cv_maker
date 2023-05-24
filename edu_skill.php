@@ -21,10 +21,10 @@ if (isset($_POST['submit'])) {
     $edu_field = $edu_fields[$i];
     $skill = $skills[$i];
     $skill_range = $skill_ranges[$i];
-    $sql = "INSERT INTO `education`(`instutute_name`, `dagree`, `total_marks`, `obtain_marks`,  `deg_st_date`, `deg_end_date`, `field`) VALUES ('$institute_name','$degree','$total_mark','$ob_mark','$edu_st_date','$edu_end_date','$edu_field')";
+    $sql = "INSERT INTO `education`(`user_id`,`instutute_name`, `dagree`, `total_marks`, `obtain_marks`,  `deg_st_date`, `deg_end_date`, `field`) VALUES ('" . $_SESSION['user_id'] . "', '$institute_name','$degree','$total_mark','$ob_mark','$edu_st_date','$edu_end_date','$edu_field')";
     $result = mysqli_query($conn, $sql);
 
-    $sql1 = "INSERT INTO `skills` (`skill`, `skill_per`) VALUES ('$skill', '$skill_range')";
+    $sql1 = "INSERT INTO `skills` (`user_id`, `skill`, `skill_per`) VALUES ('" . $_SESSION['user_id'] . "','$skill', '$skill_range')";
     $result1 = mysqli_query($conn, $sql1);
 
     if ($result && $result1) {
@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
     }
   }
 }
+
 ?>
 <?php
 include("navbar.php");

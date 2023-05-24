@@ -1,4 +1,3 @@
-
 <?php
 include('navbar.php');
 ?>
@@ -104,7 +103,7 @@ include('navbar.php');
 <div class="container-fluid p-0 mt-4">
   <div class="fix-bg">
     <div class="txt">
-      <h1 class="">"Select your favourite template and create your 
+      <h1 class="">"Select your favourite template and create your
         <span class="remove"><br></span>professional CV or resume.
       </h1>
       <a href="#"> <button class="btn mt-3">Create</button></a>
@@ -153,13 +152,13 @@ include('navbar.php');
         </div>
       </div>
       <button style="width:80px" class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
- 
-        <span style="color:red;"><i style="font-size:40px" class='bx bx-chevron-left' ></i></span>
+
+        <span style="color:red;"><i style="font-size:40px" class='bx bx-chevron-left'></i></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button style="width: 80px; " class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
         <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-        <span style="color:red;"><i style="font-size:40px" class='bx bx-chevron-right' ></i></span>
+        <span style="color:red;"><i style="font-size:40px" class='bx bx-chevron-right'></i></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
@@ -298,29 +297,28 @@ include('navbar.php');
 </div> -->
 <!-- ================ animation-cv-sec-End ======================= -->
 
-<?php 
+<?php
 include('footer.php');
 ?>
 
 
 <script src="./javascript/index.js"></script>
 <script>
-window.addEventListener("scroll", function() {
-  let valueDisplays = document.querySelectorAll(".num");
-  let interval = 3000;
+  window.addEventListener("scroll", function() {
+    let valueDisplays = document.querySelectorAll(".num");
+    let interval = 3000;
 
-  valueDisplays.forEach((valueDisplay) => {
-    let startValue = 0;
-    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-    let duration = Math.floor(interval / endValue);
-    let counter = setInterval(function() {
-      startValue += 1;
-      valueDisplay.textContent = startValue;
-      if (startValue == endValue) {
-        clearInterval(counter);
-      }
-    }, duration);
+    valueDisplays.forEach((valueDisplay) => {
+      let startValue = 0;
+      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval / endValue);
+      let counter = setInterval(function() {
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if (startValue == endValue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
   });
-});
-
 </script>

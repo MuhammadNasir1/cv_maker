@@ -1,7 +1,7 @@
 <?php
 include("db.php");
 //start session on web page
-session_start();
+// session_start();
 
 //config.php
 

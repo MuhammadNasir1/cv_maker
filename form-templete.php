@@ -1,10 +1,11 @@
 <?php
 include('db.php');
-$sql = "SELECT * FROM `per_info` ORDER BY per_info_id desc";
+$sql = "SELECT * FROM `per_info` WHERE user_id = '" . $_SESSION['user_id'] . "'";
+print_r($sql);
+
 $result = mysqli_query($conn, $sql);
 $row = (mysqli_fetch_assoc($result));
 
-$sql1 = "SELECT * FROM `per_info` ORDER BY per_info_id desc"
 ?>
 <!DOCTYPE html>
 <html lang="en">

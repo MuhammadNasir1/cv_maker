@@ -1,7 +1,7 @@
 <?php
+include('db.php');
 require 'congfig.php';
 @include('config.php');
-
 if (isset($_REQUEST['submit'])) {
   $username = $_POST['username'];
   $email = $_POST['email'];
@@ -33,7 +33,6 @@ if (!isset($_SESSION['access_token'])) {
 
   $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a>';
 }
-
 ?>
 <?php include("header.php") ?>
 
@@ -72,7 +71,7 @@ if (!isset($_SESSION['access_token'])) {
                 <div class="mb-3">
                   <img class="input-icons" src="./image/user-icon.svg" alt="Email">
                   <label for="Fullname" class="form-label">Phone no</label>
-                  <input required name="phone_no" type="number" class="form-control" id="phone_no"  placeholder="Enter your Phone no">
+                  <input required name="phone_no" type="number" class="form-control" id="phone_no" placeholder="Enter your Phone no">
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
@@ -110,9 +109,9 @@ if (!isset($_SESSION['access_token'])) {
                   <a href="#"><img class="s-icon" src="./image/apple-icon.svg" alt=""></a>
                 <li>
                   <?php
-                  echo '<li>
-                      ' . @$login_button . '
-                    </li>'
+
+                  print_r($login_button);
+                  
                   ?>
                 </li>
                 </li>

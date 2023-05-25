@@ -9,4 +9,5 @@ if(!$conn){
   echo "database Error";
 }
 session_start();
+error_reporting(error_reporting() & ~E_NOTICE);
 ?>

@@ -1,9 +1,5 @@
 <?php
-ob_start();
-// echo $_SESSION['user_id'] ;
 include('db.php');
-ob_end_flush();
-
 print_r($_SESSION['user_id']);
 if (isset($_POST['submit'])) {
   $fname = $_POST['fname'];
@@ -26,13 +22,13 @@ if (isset($_POST['submit'])) {
   $target_file = $target_dir . basename($img);
   if (move_uploaded_file($tmp_image, $target_file)) {
   }
- 
+
   // $sql = "INSERT INTO `per_info`(`user_id`, `fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`, `user_img`, `country`, `city`, `about_us`) VALUES ('userid', '$fname', '$lname', '$father_name', '$gender', '$profession', '$dob', '$website', '$personal_no', '$tel_no', '$email', '$img', '$country', '$city', '$about_us')";
-$sql = "INSERT INTO `per_info`(`user_id`, `fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`, `user_img`, `country`, `city`, `about_us`) VALUES ('" . $_SESSION['user_id'] . "', '$fname', '$lname', '$father_name', '$gender', '$profession', '$dob', '$website', '$personal_no', '$tel_no', '$email', '$img', '$country', '$city', '$about_us')";
+  $sql = "INSERT INTO `per_info`(`user_id`, `fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`, `user_img`, `country`, `city`, `about_us`) VALUES ('" . $_SESSION['user_id'] . "', '$fname', '$lname', '$father_name', '$gender', '$profession', '$dob', '$website', '$personal_no', '$tel_no', '$email', '$img', '$country', '$city', '$about_us')";
 
 
-  $result = mysqli_query($conn , $sql);
-  if($result){
+  $result = mysqli_query($conn, $sql);
+  if ($result) {
     header("location: edu_skill.php");
   }
 }
@@ -106,7 +102,7 @@ include("navbar.php")
                             <div class="input-field mt-5 ">
                               <div class="image_input">
                                 <label class="" for="files"><i class='bx bxs-user'></i><span id="imagePreview"></span></label>
-                                <input name="imgupload" id="files"  style="visibility:hidden;" type="file">
+                                <input name="imgupload" id="files" style="visibility:hidden;" type="file">
                               </div>
                             </div>
                           </div>
@@ -116,7 +112,7 @@ include("navbar.php")
                       <!-- ============First Name============ -->
                       <div class="col-md-6" id="withoutimg">
                         <div class="input-field mt-5 ">
-                          <input name="fname" class="ph_inp" type="text" >
+                          <input name="fname" class="ph_inp" type="text">
                           <label>First Name</label>
                         </div>
                       </div>
@@ -124,7 +120,7 @@ include("navbar.php")
                       <!-- ============Last Name============ -->
                       <div class="col-md-6" id="withoutimg2">
                         <div class="input-field mt-5 ">
-                          <input name="lname" class="ph_inp" type="text" >
+                          <input name="lname" class="ph_inp" type="text">
                           <label>Last Name</label>
                         </div>
                       </div>

@@ -89,13 +89,14 @@ $result6 = mysqli_query($conn, $sql6);
         border: 2px solid red;
         width: 21cm;
         min-height: 29.7cm;
-
+        font-family: 'Poppins', sans-serif;
     }
 
     .grid-container {
         display: grid;
         grid-template-columns: auto auto auto;
         padding: 10px;
+        font-family: 'Poppins', sans-serif;
     }
 
     .grid-item {
@@ -152,7 +153,9 @@ $result6 = mysqli_query($conn, $sql6);
 </style>
 
 <body>
+  <div id="iframe-container"></div>
     <button onclick="downloadPDF()">Download PDF</button>
+    <div id="selectedImageHtml" style=" font-family: 'Poppins', sans-serif;">
     <div id="myDiv">
         <div class="container" style="margin: auto;">
             <div style="display: grid; grid-template-columns: 30% 70%;">
@@ -289,6 +292,28 @@ $result6 = mysqli_query($conn, $sql6);
             </div>
         </div>
     </div>
+    </div>
+    <div id="iframe-container"></div>
+ 
+<script>
+  // Get the HTML content from the selectedImageHtml div
+  var htmlContent = document.getElementById('selectedImageHtml').innerHTML;
+
+  // Create an iframe element
+  var iframe = document.createElement('iframe');
+
+  // Set the srcdoc attribute of the iframe to the HTML content
+  iframe.srcdoc = htmlContent;
+
+  // Set the attributes for the iframe
+  iframe.width = "50%";
+  iframe.height = "500px";
+//   iframe.frameborder = "0";
+  
+
+  // Append the iframe to the iframe-container div
+  document.getElementById('iframe-container').appendChild(iframe);
+</script>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.min.js"></script>
 <script>
@@ -304,7 +329,7 @@ $result6 = mysqli_query($conn, $sql6);
     doc.fromHTML(divContent, "My PDF Document");
 
     // Save the PDF document
-    doc.save("my-pdf.pdf");
+    doc.save("my- .pdf");
 </script>
 
 </html>

@@ -27,6 +27,8 @@ if (isset($_POST['submit'])) {
   }
 }
 
+$sql_cv = "SELECT * FROM `templetes`";
+$result_cv = mysqli_query($conn, $sql_cv);
 ?>
 
 
@@ -131,6 +133,7 @@ include('header.php');
   <div class="container">
     <div class="row my-5">
       <div class="col-12 mt-5">
+
         <table class="table bg-white rounded shadow-sm  table-hover text-center">
           <thead>
             <tr>
@@ -141,13 +144,19 @@ include('header.php');
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Templte Name</td>
-              <td>Templte Image</td>
-              <td>Templete File</td>
-            </tr>
+            <?php
+              $id =  1;
+            while ($cv_tem = mysqli_fetch_assoc($result_cv)) {
+              $id = $id ++;
 
+            ?>
+              <tr>
+                <th scope="row"><?= $id++ ?></th>
+                <td><?= $cv_tem['templete_name'] ?></td>
+                <td> <img style="height: 70px;" src="<?php echo './uploads/' . $cv_tem['templete_img']; ?>" alt=""></td>
+                <td><?= $cv_tem['templete_file'] ?></td>
+              </tr>
+            <?php } ?>
           </tbody>
         </table>
       </div>
@@ -183,4 +192,3 @@ include('header.php');
     }
   }
 </script>
-

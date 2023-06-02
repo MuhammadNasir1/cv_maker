@@ -30,9 +30,9 @@ $result6 = mysqli_query($conn, $sql6);
 // ============Work-exp-END=============================
 
 
-
+$sql_cv = "SELECT * FROM `templetes`";
+$result_tem = mysqli_query($conn, $sql_cv);
 ?>
-
 
 <?php
 require_once 'vendor/autoload.php'; // Adjust the path to autoload.php based on your project setup
@@ -50,46 +50,27 @@ if (isset($_POST['html'])) {
 
   // Output the PDF as a response
   $mpdf->Output('output.pdf', 'D');
+  $stylesheet = file_get_contents('./uploads/style.css');
+  $tpdf->WriteHTML($stylesheet, 1);
 }
+// if (isset($_POST['html'])) {
+//   $htmlContent = $_POST['html'];
+
+
+
 ?>
 
 <!-- ==============templete-sec-heading================== -->
-<!doctype html>
-<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cv maker</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/cv-form.css">
-  <link rel="stylesheet" href="./css/responsive.css">
-  <link rel="stylesheet" href="./css/templete.css">
-  <link rel="stylesheet" href="./css/user_panel.css">
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-  </link>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-
-  <style>
-    #htmlContainer {
-      /* transform: scale(0.90); */
-      /* transform-origin: top left; */
-      /* width: 100%; */
-    }
-  </style>
-</head>
 <?php
 
+include('header.php');
 include('navbar.php');
 ?>
 <div id="htmlContainer">
   <?php
-  // include './uploads/pdf.php';
-  include './uploads/index.html';
+  include './uploads/pdf.php';
+  // include './uploads/index.html';
   ?>
 </div>
 
@@ -124,79 +105,93 @@ include('navbar.php');
 
 
         <!-- ===================cv_templete_Image================== -->
-        <div class="col-md-4 col-lg-3">
-          <div class="cv_templete_img">
-            <div style="width:90%">
-              <div class="temp_img">
-                <img src="./image/cv-image.png" alt="">
-                <div class="tem_sel_btn">
+
+
+
+        <!-- <input type="text" value="<?php echo htmlspecialchars($htmlContent); ?>"> -->
+
+
+
+        <?php
+
+
+
+        while ($cv = mysqli_fetch_assoc($result_tem)) {
+          $phpFilePath = './uploads/' . $cv['templete_file'];
+          $phpContent = file_get_contents($phpFilePath);
+        ?>
+
+
+          <textarea style="width: 100%; height:20rem" name="" value="<?= $phpContent ?>" id=""></textarea>
+
+          <div class="col-md-4 col-lg-3">
+            <div class="cv_templete_img">
+              <div style="width:90%">
+                <span style="position:absolute"><b><?= $cv['templete_name'] ?> </b></span>
+                <div class="temp_img">
+                  <!-- <img src="./image/cv-image.png"  alt=""> -->
+                  <img src="<?php echo './uploads/' . $cv['templete_img']; ?>" alt="">
                   <a href="#">
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- ===================cv_templete_Image=================== -->
-
-
       </div>
+    <?php } ?>
+    <!-- ===================cv_templete_Image=================== -->
+
+
     </div>
   </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"></div>
-  <!-- ==============templetes-navtab-end=======s============= -->
-  <div class="templete-pagination">
-    <ul class="pagination justify-content-center">
-      <li class="page-item disabled">
-        <a href="#" class="page-link ">Previous</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#">Next</a>
-      </li>
-    </ul>
-  </div>
+</div>
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"></div>
+<!-- ==============templetes-navtab-end=======s============= -->
+<div class="templete-pagination">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a href="#" class="page-link ">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</div>
 
 
-  <script>
-    $(document).ready(function() {
-      $('#downloadBtn').click(function() {
-        var htmlContent = $('#htmlContainer').html();
-        var request = $.ajax({
-          url: '#', // Change the URL to point to generate_pdf.php
-          method: 'POST',
-          data: {
-            html: htmlContent
-          },
-          xhrFields: {
-            responseType: 'blob' // Set the response type as blob
-          }
-        });
+<script>
+  $(document).ready(function() {
+    $('#downloadBtn').click(function() {
+      var htmlContent = $('#htmlContainer').html();
+      var request = $.ajax({
+        url: '#', // Change the URL to point to generate_pdf.php
+        method: 'POST',
+        data: {
+          html: htmlContent
+        },
+        xhrFields: {
+          responseType: 'blob' // Set the response type as blob
+        }
+      });
 
-        request.done(function(data) {
-          // Create a download link for the PDF
-          var blob = new Blob([data]);
-          var link = document.createElement('a');
-          link.href = window.URL.createObjectURL(blob);
-          link.download = 'converted.pdf';
-          link.click();
-        });
+      request.done(function(data) {
+        // Create a download link for the PDF
+        var blob = new Blob([data]);
+        var link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'converted.pdf';
+        link.click();
+      });
 
-        request.fail(function(jqXHR, textStatus) {
-          console.error('Request failed: ' + textStatus);
-        });
+      request.fail(function(jqXHR, textStatus) {
+        console.error('Request failed: ' + textStatus);
       });
     });
-  </script>
-  <?php
-  include('footer.php');
-  ?>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script src="./javascript/index.js"></script>
-  <script src="https://kit.fontawesome.com/c416a2d46a.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  </body>
-
-</html>
+  });
+</script>
+<?php
+include('footer.php');
+?>

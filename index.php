@@ -1,5 +1,6 @@
 <?php
 include('navbar.php');
+include('header.php');
 ?>
 
 <!-- ================Hero-section-Start ================ -->

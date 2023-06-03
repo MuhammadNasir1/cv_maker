@@ -51,7 +51,7 @@ include('navbar.php');
 
 <button onclick="generatePDF()">Download PDF</button>
 
-<script>
+<!-- <script>
   function generatePDF() {
     var table = document.getElementById('table-content').innerHTML;
     
@@ -76,7 +76,43 @@ include('navbar.php');
 
     xhr.send('table=' + encodeURIComponent(table));
   }
+</script> -->
+
+  
+<script>
+  function generatePDF() {
+    var table = document.getElementById('table-content').innerHTML;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'uploads/down.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.responseType = 'blob';
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        var blob = new Blob([xhr.response], { type: 'application/pdf' });
+        var url = window.URL.createObjectURL(blob);
+        
+        // Open the PDF in a new tab for preview
+        var newTab = window.open();
+        newTab.document.body.innerHTML = '<iframe src="' + url + '" width="100%" height="100%"></iframe>';
+        
+        // Optionally, you can also display the PDF in a modal or other UI element instead of a new tab
+        
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'table.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      }
+    };
+
+    xhr.send('table=' + encodeURIComponent(table));
+  }
 </script>
+
 
 <div class="container-fluid p-0 pt-3">
   <div class="templete_heading_img">

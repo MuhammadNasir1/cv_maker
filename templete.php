@@ -43,13 +43,17 @@ $result_tem = mysqli_query($conn, $sql_cv);
 include('header.php');
 include('navbar.php');
 ?>
-<div id="table-content">
+<form action="./uploads/down.php" method="post">
+<button type="submit">DOWNLOAD PDF</button>
+</form>
+<!-- <div id="table-content">
 <?php 
  include('uploads/pdf.php')
 ?>
-</div>
 
-<button onclick="generatePDF()">Download PDF</button>
+</div> -->
+
+<!-- <button onclick="generatePDF()">Download PDF</button> -->
 
 <!-- <script>
   function generatePDF() {
@@ -78,7 +82,7 @@ include('navbar.php');
   }
 </script> -->
 
-  
+<!--   
 <script>
   function generatePDF() {
     var table = document.getElementById('table-content').innerHTML;
@@ -101,7 +105,7 @@ include('navbar.php');
         
         var a = document.createElement('a');
         a.href = url;
-        a.download = 'table.pdf';
+        a.download = 'cv.pdf';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -111,7 +115,7 @@ include('navbar.php');
 
     xhr.send('table=' + encodeURIComponent(table));
   }
-</script>
+</script> -->
 
 
 <div class="container-fluid p-0 pt-3">
@@ -139,7 +143,6 @@ include('navbar.php');
   <!-- ==============CV-templetes-Start================== -->
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
     <div class="container-fluid ">
-      <button id="downloadBtn">Download as PDF</button>
       <div class="row">
 
 

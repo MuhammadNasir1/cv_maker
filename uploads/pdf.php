@@ -13,7 +13,7 @@
   <table class="" style="margin: 0; padding:0%;     border-collapse:separate">
     <thead>
       <td>
-        <img src="./image/my.png" alt="" width="20%">
+        <img src="../image/my.png" alt="f" width="20%">
         <h2> <?= @$row['fname'] ?> <?= @$row['lname'] ?> </h2>
         <div style="font-weight: 800;">
           <i class='bx bxs-home'><?= @$row['city'] ?> <?= @$row['country'] ?></i>

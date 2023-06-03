@@ -34,31 +34,7 @@ $sql_cv = "SELECT * FROM `templetes`";
 $result_tem = mysqli_query($conn, $sql_cv);
 ?>
 
-<?php
-require_once 'vendor/autoload.php'; // Adjust the path to autoload.php based on your project setup
 
-use Mpdf\Mpdf;
-
-if (isset($_POST['html'])) {
-  $htmlContent = $_POST['html'];
-
-  // Create a new instance of mpdf
-  $mpdf = new Mpdf();
-
-  // Load the HTML content
-  $mpdf->WriteHTML($htmlContent);
-
-  // Output the PDF as a response
-  $mpdf->Output('output.pdf', 'D');
-  $stylesheet = file_get_contents('./uploads/style.css');
-  $tpdf->WriteHTML($stylesheet, 1);
-}
-// if (isset($_POST['html'])) {
-//   $htmlContent = $_POST['html'];
-
-
-
-?>
 
 <!-- ==============templete-sec-heading================== -->
 
@@ -67,12 +43,40 @@ if (isset($_POST['html'])) {
 include('header.php');
 include('navbar.php');
 ?>
-<div id="htmlContainer">
-  <?php
-  include './uploads/pdf.php';
-  // include './uploads/index.html';
-  ?>
+<div id="table-content">
+<?php 
+ include('uploads/pdf.php')
+?>
 </div>
+
+<button onclick="generatePDF()">Download PDF</button>
+
+<script>
+  function generatePDF() {
+    var table = document.getElementById('table-content').innerHTML;
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'uploads/down.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.responseType = 'blob';
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        var blob = new Blob([xhr.response], { type: 'application/pdf' });
+        var url = window.URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'table.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      }
+    };
+
+    xhr.send('table=' + encodeURIComponent(table));
+  }
+</script>
 
 <div class="container-fluid p-0 pt-3">
   <div class="templete_heading_img">
@@ -161,7 +165,7 @@ include('navbar.php');
   </ul>
 </div>
 
-
+<!-- 
 <script>
   $(document).ready(function() {
     $('#downloadBtn').click(function() {
@@ -191,7 +195,7 @@ include('navbar.php');
       });
     });
   });
-</script>
+</script> -->
 <?php
 include('footer.php');
 ?>

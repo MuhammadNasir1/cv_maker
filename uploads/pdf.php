@@ -13,7 +13,7 @@
   <table class="" style="margin: 0; padding:0%;     border-collapse:separate">
     <thead>
       <td>
-        <img src="../image/my.png" alt="f" width="20%">
+        <img src='https://yt3.ggpht.com/XEx-UEFwcGELY5UBO-GzFuwpSQ27yM19GgRb9m1Ib6v77XqitWZx5BA4f2x2K2FtR3YU1bkeNA=s88-c-k-c0x00ffffff-no-rj-mo' alt="f" width="20%">
         <h2> <?= @$row['fname'] ?> <?= @$row['lname'] ?> </h2>
         <div style="font-weight: 800;">
           <i class='bx bxs-home'><?= @$row['city'] ?> <?= @$row['country'] ?></i>

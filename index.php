@@ -19,8 +19,8 @@ include('header.php');
           <p>Create your CV with different types of templates and color <span class="heading_br"><br></span>
             combinations and also full customization</p>
           <div>
-            <a href="#"> <button>Show template</button></a>
-            <a href="./built_form.php"> <button class="cv-btn">Create CV or Resume</button></a>
+            <a href="./personal_info.php"> <button>Show template</button></a>
+            <a href="./personal_info.php"> <button class="cv-btn">Create CV or Resume</button></a>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ include('header.php');
       <h1 class="">"Select your favourite template and create your
         <span class="remove"><br></span>professional CV or resume.
       </h1>
-      <a href="#"> <button class="btn mt-3">Create</button></a>
+      <a href="./personal_info.php"> <button class="btn mt-3">Create</button></a>
     </div>
   </div>
 </div>
@@ -117,7 +117,7 @@ include('header.php');
 <!-- ================ Templates-start ==================== -->
 <div class="container-fluid mt-5 p-0">
   <div class="template-heading">
-    <h1>Select Your template</h1>
+    <h1>Our Famous template</h1>
     <div id="myCarousel" class="carousel slide container-fluid" data-bs-ride="carousel">
       <div class="carousel-inner w-100">
         <div class="carousel-item active">
@@ -244,7 +244,7 @@ include('header.php');
           <div>
             <h1>Create your professional Resume or CV with <span class="remove"><br></span><span>CV Builders</span></h1>
             <p>Follow step-by-step professional guidance to create <span class="remove"><br></span> a polished cv or resume in minutes.</p>
-            <button class="">Create your Cv</button>
+          <a href="./personal_info.php"> <button class="">Create your Cv</button></a>
           </div>
         </div>
       </div>
@@ -279,23 +279,6 @@ include('header.php');
     </div>
   </div>
 </div>
-<!-- <div class="container-fluid">
-  <div class="row">
-    <div class="col-12" style="background-color: white ;">
-      <div class="animated-img-ph">
-        <div class="images img2">
-          <img class="img" src="./image/cv-image-2.png" alt="">
-          <img class="img" src="./image/cv-image.png" alt="">
-          <img class="img" src="./image/cv-image-2.png" alt="">
-          <img class="img" src="./image/cv-image.png" alt="">
-          <img class="img" src="./image/cv-image-2.png" alt="">
-          <img class="img" src="./image/cv-image.png" alt="">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <!-- ================ animation-cv-sec-End ======================= -->
 
 <?php
@@ -305,11 +288,18 @@ include('footer.php');
 
 <script src="./javascript/index.js"></script>
 <script>
-  window.addEventListener("scroll", function() {
+ window.addEventListener("scroll", function() {
+  const pixelThreshold = 1500; // Adjust this value to your desired pixel threshold
+
+  if (window.pageYOffset >= pixelThreshold) {
     let valueDisplays = document.querySelectorAll(".num");
     let interval = 3000;
 
     valueDisplays.forEach((valueDisplay) => {
+      if (valueDisplay.getAttribute("data-processed")) {
+        return; // Skip if already processed
+      }
+
       let startValue = 0;
       let endValue = parseInt(valueDisplay.getAttribute("data-val"));
       let duration = Math.floor(interval / endValue);
@@ -320,6 +310,10 @@ include('footer.php');
           clearInterval(counter);
         }
       }, duration);
+
+      valueDisplay.setAttribute("data-processed", "true"); // Mark as processed
     });
-  });
+  }
+});
+
 </script>

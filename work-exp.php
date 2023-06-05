@@ -29,6 +29,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 <?php
+include("header.php");
 include("navbar.php")
 ?>
 <!-- ====================contact-page-progrss-bar-start==================== -->

@@ -31,6 +31,7 @@ if (isset($_POST['submit'])) {
 
 
 <?php
+include("header.php");
 include("navbar.php");
 ?>
 <!-- ====================contact-page-progrss-bar-start==================== -->
@@ -130,7 +131,7 @@ include("navbar.php");
                 }
               </script>
               <!-- ================hobby-refernece-End-====================== -->
-              <h3>Languages</h3>
+              <h3 class="mt-5">Languages</h3>
               <div class="form-info">
 
                 <div class="container">
@@ -152,7 +153,6 @@ include("navbar.php");
 
                 <!-- ======================details-table================ -->
                 <div class="container-fluid" id="language_table_hide" style="display:none;">
-                  <!-- <div class="container-fluid" id="work_table_hide" style="display:none;"> -->
                   <div class="row">
                     <div class="col-md-12">
                       <div class="input_info_table">

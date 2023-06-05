@@ -53,9 +53,6 @@ if (!isset($_SESSION['access_token'])) {
 }
 
 ?>
-<?php
-// include('header.php')
-?>
 <!-- =================== Navbar-Start =================== -->
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
@@ -77,7 +74,7 @@ if (!isset($_SESSION['access_token'])) {
           </p>
           <div class="collapse ph_dropdown" id="collapseExample">
             <div class="mt-2">
-              <a href="#">Create cv</a>
+              <a href="./personal_info.php">Create cv</a>
               <a href="./templete.php">Show cv templete</a>
               <a href="#">How to create CV</a>
             </div>
@@ -93,7 +90,7 @@ if (!isset($_SESSION['access_token'])) {
           </p>
           <div class="collapse ph_dropdown" id="collaps">
             <div class="mt-2">
-              <a href="#">Create Resume</a>
+              <a href="./personal_info.php">Create Resume</a>
               <a href="./templete.php">Show resume templete</a>
               <a href="#">How to create resume</a>
             </div>
@@ -107,7 +104,7 @@ if (!isset($_SESSION['access_token'])) {
           </a>
 
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Build</a></li>
+            <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
             <li><a class="dropdown-item" href="./templete.php">Templete</a></li>
             <li><a class="dropdown-item" href="#">How to create CV</a></li>
           </ul>
@@ -117,7 +114,7 @@ if (!isset($_SESSION['access_token'])) {
             Resume
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Build</a></li>
+            <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
             <li><a class="dropdown-item" href="./templete.php">Templete</a></li>
             <li><a class="dropdown-item" href="#">How to create Resume</a></li>
           </ul>
@@ -128,7 +125,7 @@ if (!isset($_SESSION['access_token'])) {
             Others
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Write....</a></li>
+            <li><a class="dropdown-item" href="./userpanel.php">Setting</a></li>
           </ul>
         </li>
 
@@ -170,7 +167,6 @@ if (!isset($_SESSION['access_token'])) {
           </div>
         </div>';
           } else {
-            // echo ' <a class="user_icon" href="./sign_in.php"> <i class="bx bxs-user"></i></a>';
             echo '  <a href="./sign_in.php" ><button class="sign_in_btn">Sign in</button></a>';
           }
         }

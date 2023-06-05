@@ -123,6 +123,7 @@ nav .language-select {
   margin-left: 5px;
 }
 nav .lan_dropdown {
+  margin-top: 4px;
   margin-right: 1rem;
   color: black;
 }
@@ -296,6 +297,7 @@ nav .user_icon i {
   border: 3px solid var(--primary-color);
   border-left: 10px solid var(--primary-color);
   height: 10rem;
+  transition: all 0.5s;
 }
 .details-box .box-1 i {
   font-size: 4rem;
@@ -309,6 +311,9 @@ nav .user_icon i {
 }
 .details-box .box-1 .text h2 {
   margin-left: 1rem;
+}
+.details-box .box-1:hover {
+  transform: translateY(-10px);
 }
 
 .num-bg {

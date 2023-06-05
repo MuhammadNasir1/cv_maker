@@ -28,7 +28,6 @@ if (isset($_POST['submit'])) {
     $result1 = mysqli_query($conn, $sql1);
 
     if ($result && $result1) {
-      // echo "Data inserted successfully";
       header('location: work-exp.php');
     } else {
       echo "Error: " . mysqli_error($conn);
@@ -38,6 +37,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 <?php
+include("header.php");
 include("navbar.php");
 ?>
 <div class="container-fluid">
@@ -150,13 +150,13 @@ include("navbar.php");
                   var Feild = $("#Feild").val();
 
                   $("#education_table").append('<tr id="education_table_id_' + id + '">\
-            <td><input  name="institute_name[]"  type="text" value="' + Institute + '">' + Institute + ' </td>\
-          <td><input  name="degree[]" type="text" value="' + Dagree + '">' + Dagree + '</td>\
-          <td><input name="total_marks[]"  type="text" value="' + tmarks + '">' + tmarks + '</td>\
-          <td><input name="ob_marks[]"  type="text" value="' + obmarks + '">' + obmarks + '</td>\
-          <td><input name="edu_st_date[]"  type="text" value="' + sdate + '">' + sdate + '</td>\
-          <td><input name="edu_end_date[]"  type="text" value="' + edate + '">' + edate + '</td>\
-          <td><input name="edu_field[]"  type="text" value="' + Feild + '">' + Feild + '</td>\
+            <td><input  name="institute_name[]"  type="hidden" value="' + Institute + '">' + Institute + ' </td>\
+          <td><input  name="degree[]" type="hidden" value="' + Dagree + '">' + Dagree + '</td>\
+          <td><input name="total_marks[]"  type="hidden" value="' + tmarks + '">' + tmarks + '</td>\
+          <td><input name="ob_marks[]"  type="hidden" value="' + obmarks + '">' + obmarks + '</td>\
+          <td><input name="edu_st_date[]"  type="hidden" value="' + sdate + '">' + sdate + '</td>\
+          <td><input name="edu_end_date[]"  type="hidden" value="' + edate + '">' + edate + '</td>\
+          <td><input name="edu_field[]"  type="hidden" value="' + Feild + '">' + Feild + '</td>\
           <td><a onclick="removeById(`#education_table_id_' + id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
                 });

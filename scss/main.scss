@@ -160,6 +160,7 @@ nav {
   }
 
   & .lan_dropdown {
+    margin-top:4px;
     margin-right: 1rem;
     color: black;
 
@@ -393,6 +394,7 @@ nav {
     border-left: 10px solid var(--primary-color);
     height: 10rem;
     @extend %flex-center;
+    transition: all 0.50s;
 
     & i {
       font-size: 4rem;
@@ -409,6 +411,10 @@ nav {
         margin-left: 1rem;
       }
 
+    }
+
+    &:hover{
+    transform: translateY(-10px);
     }
   }
 }

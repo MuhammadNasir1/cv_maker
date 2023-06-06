@@ -34,6 +34,8 @@ include('navbar.php');
     window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
   });
 </script> -->
+
+
 <img src="image1.jpg" class="clickable-image" data-phpfile="pdf.php">
 <img src="image2.jpg" class="clickable-image" data-phpfile="cv_2.php">
 <img src="image3.jpg" class="clickable-image" data-phpfile="php_code3.php">
@@ -88,20 +90,20 @@ include('navbar.php');
         <?php
 
         while ($cv = mysqli_fetch_assoc($result_tem)) {
-          $phpFilePath = './uploads/' . $cv['templete_file'];
-          $phpContent = file_get_contents($phpFilePath);
+          // $phpFilePath = './uploads/' . $cv['templete_file'];
+          // $phpContent = file_get_contents($phpFilePath);
         ?>
-          <textarea style="width: 100%; height:20rem" name="" value="<?= $phpContent ?>" id=""></textarea>
+          <!-- <textarea style="width: 100%; height:20rem" name="" value="<?= $phpContent ?>" id=""></textarea> -->
 
           <div class="col-md-4 col-lg-3">
             <div class="cv_templete_img">
               <div style="width:90%">
                 <span style="position:absolute"><b><?= $cv['templete_name'] ?> </b></span>
-                <div class="temp_img">
-                  <!-- <img src="./image/cv-image.png"  alt=""> -->
-                  <img src="<?php echo './uploads/' . $cv['templete_img']; ?>" alt="">
-                  <a href="#">
-                  </a>
+                <div class="temp_img ">
+
+                  <img src="<?php echo './uploads/temp_img/' . $cv['templete_img']; ?>" class="clickable-image" data-phpfile="pdf.php">
+                  <!-- <a href="#">
+                  </a> -->
                 </div>
               </div>
             </div>

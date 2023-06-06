@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
 
   $templete_img = $_FILES['templete_img']['name'];
   $temp_img = $_FILES['templete_img']['tmp_name'];
-  $target_dir = "uploads/";
+  $target_dir = "uploads/temp_img/";
   $target_file = $target_dir . basename($templete_img);
   if (move_uploaded_file($temp_img, $target_file)) {
   }
@@ -153,7 +153,7 @@ include('header.php');
               <tr>
                 <th scope="row"><?= $id++ ?></th>
                 <td><?= $cv_tem['templete_name'] ?></td>
-                <td> <img style="height: 70px;" src="<?php echo './uploads/' . $cv_tem['templete_img']; ?>" alt=""></td>
+                <td> <img style="height: 70px;" src="<?php echo './uploads/temp_img/' . $cv_tem['templete_img']; ?>" alt=""></td>
                 <td><?= $cv_tem['templete_file'] ?></td>
               </tr>
             <?php } ?>

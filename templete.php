@@ -11,6 +11,51 @@ $result_tem = mysqli_query($conn, $sql_cv);
 include('header.php');
 include('navbar.php');
 ?>
+<!-- <img src="image1.jpg" id="image1" data-phpfile="pdf.php">
+<img src="image2.jpg" id="image2" data-phpfile="pdf2.php">
+<img src="image3.jpg" id="image3" data-phpfile="php_code3.php"> -->
+<!-- <script>
+  var image1 = document.getElementById("image1");
+  var image2 = document.getElementById("image2");
+  var image3 = document.getElementById("image3");
+
+  image1.addEventListener("click", function() {
+    var phpFile = image1.getAttribute("data-phpfile");
+    window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
+  });
+
+  image2.addEventListener("click", function() {
+    var phpFile = image2.getAttribute("data-phpfile");
+    window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
+  });
+
+  image3.addEventListener("click", function() {
+    var phpFile = image3.getAttribute("data-phpfile");
+    window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
+  });
+</script> -->
+<img src="image1.jpg" class="clickable-image" data-phpfile="pdf.php">
+<img src="image2.jpg" class="clickable-image" data-phpfile="pdf2.php">
+<img src="image3.jpg" class="clickable-image" data-phpfile="php_code3.php">
+<script>
+
+  // Get all the image elements with a specific class
+  var images = document.getElementsByClassName("clickable-image");
+
+  // Loop through the images
+  for (var i = 0; i < images.length; i++) {
+    // Add click event listener to each image
+    images[i].addEventListener("click", function() {
+      // Get the PHP file path from the data attribute
+      var phpFile = this.getAttribute("data-phpfile");
+      // Redirect to the next page and pass the PHP file path as a query parameter
+      window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
+    });
+  }
+</script>
+
+
+
 <form action="./uploads/down.php" method="post">
   <button type="submit">DOWNLOAD PDF</button>
 </form>

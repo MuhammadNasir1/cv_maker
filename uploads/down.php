@@ -88,7 +88,13 @@ ob_start();
 
 ?>
 <?php
-include("./pdf.php");
+
+$phpFile = $_GET['phpfile'];
+
+// Include the PHP file
+include($phpFile);
+// print_r($phpFile);
+// include("./pdf.php");
 ?>
 
 <?php

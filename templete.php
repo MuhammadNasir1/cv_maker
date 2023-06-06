@@ -35,10 +35,9 @@ include('navbar.php');
   });
 </script> -->
 <img src="image1.jpg" class="clickable-image" data-phpfile="pdf.php">
-<img src="image2.jpg" class="clickable-image" data-phpfile="pdf2.php">
+<img src="image2.jpg" class="clickable-image" data-phpfile="cv_2.php">
 <img src="image3.jpg" class="clickable-image" data-phpfile="php_code3.php">
 <script>
-
   // Get all the image elements with a specific class
   var images = document.getElementsByClassName("clickable-image");
 

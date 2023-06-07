@@ -92,6 +92,7 @@ include('navbar.php');
     });
   }
 </script>
+<script src="https://kit.fontawesome.com/c416a2d46a.js" crossorigin="anonymous"></script>
 
 <?php
 include('footer.php');

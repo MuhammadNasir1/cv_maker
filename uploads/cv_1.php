@@ -98,11 +98,11 @@
                 <h2><?= ucfirst($row6['company_name']) ?></h2>
                 <p><?= ucfirst($row6['role']) ?> </p>
                 <p><?= @$row6['work_st_data'] ?> <b>TO</b> <?= @$row6['work_end_date'] ?></p>
-                <p><?= ucfirst($row6['city_country']) ?> </p>
+                <p style="float:right"><?= ucfirst($row6['city_country']) ?> </p>
               </div>
 
             <?php } ?>
-        </td>
+  
       </thead>
     </table>
   </div>

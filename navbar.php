@@ -127,7 +127,6 @@ if (!isset($_SESSION['access_token'])) {
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./blog.php">BLog</a></li>
             <li><a class="dropdown-item" href="./userpanel.php">Setting</a></li>
-            <li><a class="dropdown-item" href="./aboutus.php">About Us</a></li>
             <li><a class="dropdown-item" href="./privacypolicy.php">Privacy & Policy </a></li>
           </ul>
         </li>

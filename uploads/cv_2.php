@@ -1,138 +1,183 @@
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+        font-family: 'Poppins', sans-serif;
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+    .exp-bordeer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -7px;
+        border: 1px solid black;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: white;
+    }
+</style>
+<div>
+<table style=" border-collapse:collapse; text-align:left; background-color:#323B4C;">
+    <tbody style="width: 21cm;">
+        <td id="div1" style="width: 7cm !important; word-wrap:break-word;background-color:#323B4C;  display: table-caption;">
+            <div style="width: 100%; word-wrap:break-word;">
+                <div class="img " style=" width:7cm;">
+                    <img style="width: 200px; height:200px; border:2px solid none; border-radius: 50%; margin-left:25px; margin-top:20px" src="https://images.squarespace-cdn.com/content/v1/59e5d996dc2b4a72ea60c9dc/1554833988306-SBDKETYLJ70WFCNJ2IZB/850_9556.jpg?format=1500w" alt="">
+                </div>
+                <div style="margin-left: 15px; margin-top:10px">
+                    <div>
+                        <h1 style="color: white;">Contact</h1>
+                        <hr style="color: white; ">
+                    </div>
+                    <!-- ==================phone-no=================== -->
+                    <div style="margin-left: 10px; line-height:15px; margin-top:15px">
+                        <h4 style="color:white">PHONE</h4>
+                        <h4 style="color:white;font-weight:500">123-3434-4545</h4>
+                    </div>
+                    <!-- ==================phone-no=================== -->
+                    <!-- ==================Email=================== -->
+                    <div style="margin-left: 10px; line-height:15px; margin-top:20px; margin-right:10px">
+                        <h4 style="color:white">Email</h4>
+                        <h4 style="color:white;font-weight:500">muhammadnasir.dev@gmail.com</h4>
+                    </div>
+                    <!-- ==================Email=================== -->
+                    <!-- ==================Adress=================== -->
+                    <div style="margin-left: 10px; line-height:15px; margin-top:20px; margin-right:10px">
+                        <h4 style="color:white">Adress</h4>
+                        <h4 style="color:white;font-weight:500">house 7 block B new yourk USA</h4>
+                    </div>
+                    <!-- ==================Adress=================== -->
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+                </div>
+                <!-- ===================skill-sec===================== -->
+                <div style="margin-left: 15px; margin-top: 15px;">
+                    <div>
+                        <h1 style="color: white;">Skills</h1>
+                        <hr style="color: white; ">
+                    </div>
+                    <div>
+                        <ul style="margin-left: 25px; line-height:20px; margin-top:15px">
+                            <!-- ==================Skill list================== -->
+                            <li style="color:white">
+                                <h4>Web developer</h4>
+                            </li>
+                            <li style="color:white">
+                                <h4>Ui UX</h4>
+                            </li>
+                        </ul>
+                        <!-- ==================Skill list=================== -->
+                    </div>
 
-        th,
-        td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
+                </div>
+                <!-- ===================skill-sec===================== -->
+                <!-- ===================Languages===================== -->
+                <div style="margin-left: 15px; margin-top: 15px;">
+                    <div>
+                        <h1 style="color: white;">Languages</h1>
+                        <hr style="color: white; ">
+                    </div>
+                    <div>
+                        <ul style="margin-left: 25px; line-height:20px; margin-top:15px">
+                            <!-- ==================Languages list================== -->
+                            <li style="color:white">
+                                <h4>English </h4>
+                            </li>
+                            <li style="color:white">
+                                <h4>Hindi</h4>
+                            </li>
+                        </ul>
+                        <!-- ==================Languages list=================== -->
+                    </div>
 
-        th {
-            background-color: #f2f2f2;
-        }
+                </div>
+                <!-- ===================Languages===================== -->
+            </div>
+        </td>
+        <td id="div2" style="width: 14cm; word-wrap:break-word;     vertical-align: top; background-color:white;   ">
+            <div style="margin-left:25px;margin-right:15px; margin-top:30px">
+                <!-- ======================name================== -->
+                <div style="line-height: 16px; letter-spacing:1.5px">
+                    <h1 style="font-weight: 600;">MUHAMMAD NASIR</h1>
+                    <p style="font-weight:500">Web Developer</p>
+                </div>
+                <!-- ======================name================== -->
+                <!-- ======================About us================== -->
+                <div style="margin-top:10px">
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    </style>
+                    <p style="line-height: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod beatae quisquam dignissimos ipsa at esse velit blanditiis eligendi veritatis sapiente vitae enim perferendis porro minus quo, ipsam sint quibusdam fugiat?</p>
+                </div>
+                <!-- ======================About us================== -->
 
 
-<body>
 
 
-        <table>
-            <tr>
-                <th colspan="2">Personal Information</th>
-            </tr>
-            <tr>
-                <td>Name:</td>
-                <td>John Doe</td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td>johndoe@example.com</td>
-            </tr>
-            <tr>
-                <td>Phone:</td>
-                <td>+1 123-456-7890</td>
-            </tr>
-            <tr>
-                <td>Address:</td>
-                <td>123 Main Street, City, State, ZIP</td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <th colspan="2">ABOUT ME</th>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, quia! Quisquam fugit
-                            ullam sunt corporis sit nesciunt, accusamus iure soluta quibusdam sint esse hic
-                            voluptatibus molestias quae praesentium nostrum animi.
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, quia! Quisquam fugit
-                            ullam sunt corporis sit nesciunt, accusamus iure soluta quibusdam sint esse hic
-                            voluptatibus molestias quae praesentium nostrum animi.
-                        </p>
-                    </ul>
-                </td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <th colspan="2">Education</th>
-            </tr>
-            <tr>
-                <td>University:</td>
-                <td>XYZ University</td>
-            </tr>
-            <tr>
-                <td>Degree:</td>
-                <td>Bachelor of Science in Computer Science</td>
-            </tr>
-            <tr>
-                <td>Year:</td>
-                <td>2010-2014</td>
-            </tr>
-        </table>
+                <!-- ======================Experience================== -->
+                <div style="margin-top: 20px;">
+                    <h1>Experience</h1>
+                    <hr style="border-color: black; margin-top:10px">
+                    <div style=" margin-top:18px; ">
+                        <!-- =====================Experience-sec=========================== -->
+                        <div style="border-left: 3px solid #616161;padding-left: 20px;       position: relative; " class="exp-bordeer">
+                            <div style="line-height: 16px;">
+                                <h3 style="margin-top: 18px;">2019 - 2022</h3>
+                                <p>Company Name l 123 Anywhere St., Any City</p>
+                            </div>
+                            <h3 style="font-weight: 600; margin-top:6px">Job position here</h3>
+                            <p style="line-height: 15px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque impedit deserunt iusto at ducimus dignissimos ipsam harum voluptatibus cumque, explicabo facere, molestias fugit et atque, consequuntur asperiores id doloribus vel.</p>
+                        </div>
+                        <!-- =====================Experience-sec=========================== -->
+                    </div>
 
-        <table>
-            <tr>
-                <th colspan="2">Work Experience</th>
-            </tr>
-            <tr>
-                <td>Company:</td>
-                <td>ABC Corporation</td>
-            </tr>
-            <tr>
-                <td>Position:</td>
-                <td>Software Engineer</td>
-            </tr>
-            <tr>
-                <td>Duration:</td>
-                <td>2014-2018</td>
-            </tr>
-        </table>
+                </div>
+                <!-- ======================Experience================== -->
+                <!-- ======================Education================== -->
+                <div style="margin-top: 20px;">
+                    <h1>Education</h1>
+                    <hr style="border-color: black; margin-top:10px">
+                    <div style=" margin-top:18px; ">
+                        <!-- =====================Education-sec=========================== -->
+                        <div style="border-left: 3px solid #616161;padding-left: 20px;       position: relative; " class="exp-bordeer">
+                            <div style="line-height: 20px;">
+                                <h3 style="margin-top: 18px;">2019 - 2022</h3>
+                                <h4 style="font-weight: 600;">IIT (CS)</h4>
+                                <p>collage name Lorem ipsum dolor sit.</p>
+                            </div>
 
-        <table>
-            <tr>
-                <th colspan="2">Skills</th>
-            </tr>
-            <tr>
-                <td>Programming Languages:</td>
-                <td>Java, C++, Python</td>
-            </tr>
-            <tr>
-                <td>Frameworks:</td>
-                <td>Spring, Django</td>
-            </tr>
-            <tr>
-                <td>Database:</td>
-                <td>MySQL, MongoDB</td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <th colspan="2" style="color: blue;">Reference</th>
-            </tr>
-            <tr>
-                <td>Dr Thomas PHD</td>
-                <td>Mr Smith Rodgrazic (Employer)</td>
-            </tr>
-            <tr>
-                <td>Leatuer in Engineering</td>
-                <td>Business Team Leader</td>
-            </tr>
-        </table>
+                        </div>
+                        <!-- =====================Education-sec=========================== -->
+                    </div>
+
+                </div>
+                <!-- ======================Education================== -->
+
+                <!-- ======================Education================== -->
+                <div style="margin-top: 20px;">
+                    <h1>Refernce</h1>
+                    <hr style="border-color: black; margin-top:10px">
+                    <div style=" margin-top:2px; ">
+                        <!-- =====================Education-sec=========================== -->
+                        <div>
+                            <div style="line-height: 20px;">
+                                <h3 style="margin-top: 18px;">Refer Name</h3>
+                                <h4 style="font-weight: 600;">Job position, Company Name</h4>
+
+                                <div style="line-height: 16px; margin-top:10px">
+                                    <h4>PHONE: <span style="font-weight: 500; margin-left:10px">123-4567890</span></h4>
+                                    <h4>Email: <span style="font-weight: 500; margin-left:10px">muhammadnasir.dev@gmail.com</span></h4>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- =====================Education-sec=========================== -->
+                    </div>
+
+                </div>
+                <!-- ======================Education================== -->
+
+            </div>
+        </td>
+
+    </tbody>
+</table>

@@ -3,10 +3,17 @@
             font-family: Arial, sans-serif;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+    .exp-bordeer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -7px;
+        border: 1px solid black;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: white;
+    }
 
         th,
         td {

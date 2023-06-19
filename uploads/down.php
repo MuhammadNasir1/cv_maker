@@ -91,10 +91,8 @@ ob_start();
 
 $phpFile = $_GET['phpfile'];
 
-// Include the PHP file
 include($phpFile);
-// print_r($phpFile);
-// include("./pdf.php");
+
 ?>
 
 <?php

@@ -87,8 +87,8 @@ include('navbar.php');
       // Get the PHP file path from the data attribute
       var phpFile = this.getAttribute("data-phpfile");
       // Redirect to the next page and pass the PHP file path as a query parameter
-      window.location.href = "uploads/mpdf_down.php?phpfile=" + encodeURIComponent(phpFile);
-      // window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
+      // window.location.href = "uploads/mpdf_down.php?phpfile=" + encodeURIComponent(phpFile);
+      window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
 
     });
   }

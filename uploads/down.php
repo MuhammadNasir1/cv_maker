@@ -27,7 +27,10 @@ $result5 = mysqli_query($conn, $sql5);
 // ============	Work-exp-start===========================
 $sql6 = "SELECT * FROM `work_exp` WHERE user_id = '" . $_SESSION['user_id'] . "'";
 $result6 = mysqli_query($conn, $sql6);
+
 // ============Work-exp-END=============================
+$sql7 = "SELECT * FROM `hobbies` WHERE user_id = '" . $_SESSION['user_id'] . "'";
+$result7 = mysqli_query($conn, $sql7);
 
 
 $sql_cv = "SELECT * FROM `templetes`";

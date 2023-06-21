@@ -5,7 +5,6 @@
         padding: 0%;
         font-family: 'Poppins', sans-serif;
 
-
     }
 </style>
 <div>
@@ -73,7 +72,7 @@
                 </div>
                 <div style="width: 21cm;">
                     <ul style="margin-left:20px; ">
-                        <li style="color:#449399; margin-right:50px"> <span style="color:black;font-weight:500;line-height:14px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium cumque veritatis laudantium sint, voluptas unde sit aliquam eius, ullam eaque eos atque sed quo corporis? Vel molestias consequatur nulla aliquid.</span></li>
+                        <li style="color:#449399; margin-right:50px"> <span style="color:black;font-weight:500;line-height:14px"><?= @$row6['city_country'] ?></span></li>
                     </ul>
                 </div>
                 <div style="width: 21cm;">
@@ -100,7 +99,9 @@
     </tr>
     <!-- =====================Education-details================ -->
     <?php
+    $add = 1;
     while ($row5 = mysqli_fetch_assoc($result5)) {
+        $add =  $add++;
     ?>
         <tr>
             <div style="margin-left: 22px;  margin-right:50px">
@@ -111,8 +112,8 @@
                     <h5 style="color:#449399; margin-top:3px "><i><?= @$row5['total_marks'] ?> - <?= @$row5['obtain_marks'] ?></i> </h5>
                 </div>
                 <div style="position:relative">
-                    <ul style="margin-left:20px; margin-right:20px">
-                        <li style="color:#449399;"> <span style="color:black;font-weight:500;line-height:14px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium cumque veritatis laudantium sint, voluptas unde sit aliquam eius, ullam eaque eos atque sed quo corporis? Vel molestias consequatur nulla aliquid.</span></li>
+                    <ul style="margin-left:20px; margin-right:20px; list-style:none;">
+                        <li style="color:#449399;"> <span><b><?= @$add++ ?></b>.</span> <span style="color:black;font-weight:500;line-height:14px"><?= @$row5['field'] ?></span></li>
                     </ul>
                 </div>
 
@@ -134,13 +135,16 @@
     </tr>
     <!-- ======================skils-details====================== -->
     <?php
+    $a = 1;
+
     while ($row3 = mysqli_fetch_assoc($result3)) {
+        $a =  $a++;
     ?>
         <tr>
             <div style="margin-left: 22px;  margin-right:50px; width:21cm">
-                <ul style="margin-left: 30px; margin-top:10px; list-style:decimal">
+                <ul style="margin-left: 30px; margin-top:10px; list-style:none;">
                     <li style="color: #449399; ">
-                        <h3> <span style="font-weight:500; color:black; width:10cm"> <?= ucfirst(@$row3['skill']) ?> <?= @$row3['skill_per'] . '%' ?></span> <span style="color:#449399; position:absolute; margin-left:200px"> ......................</span></h3>
+                        <h3> <span style="font-weight:500; color:black; width:10cm"><span style="color: #449399;"><b><?= @$a++ ?></b>. </span> <?= ucfirst(@$row3['skill']) ?> <?= @$row3['skill_per'] . '%' ?></span> <span style="color:#449399; position:absolute; margin-left:200px"> ......................</span></h3>
                     </li>
 
                 </ul>
@@ -165,13 +169,13 @@
     <?php
     $i = 1;
     while ($row7 = mysqli_fetch_assoc($result7)) {
-        $i = 1 + 1;
+        $i = $i++;
     ?>
         <tr>
             <div style="margin-left: 22px;  margin-right:50px; width:21cm">
-                <ul style="margin-left: 30px; margin-top:10px; list-style:decimal">
+                <ul style="margin-left: 30px; margin-top:10px; list-style:none">
                     <li style="color: #449399; ">
-                        <h3> <span style="font-weight:500; color:black; width:10cm"> <?= ucfirst(@$row7['hobby']) ?></span> <span style="color:#449399; position:absolute; margin-left:200px"> ......................</span></h3>
+                        <h3> <span style="font-weight:500; color:black; width:10cm"><span style="color: #449399; "><b><?= @$i++; ?></b>.</span> <?= ucfirst(@$row7['hobby']) ?></span> <span style="color:#449399; position:absolute; margin-left:200px"> ......................</span></h3>
                     </li>
 
                 </ul>
@@ -192,32 +196,52 @@
             </div>
         </td>
     </tr>
-    <!-- ======================reference-details====================== -->
+    <!-- ======================Language-details====================== -->
 
-    <!-- <tr>
-            <div style="margin-left: 22px;  margin-right:50px; width:21cm">
-                <div>
-                    <h3 style="margin-top: 20px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase"><span style="border-bottom:3px solid #449399 ">Muhammad Nasir</span></h3>
-                    <h5 style="font-weight:600; margin-top:4px">Software Enginerr(SE)</h5>
-                    <h5 style="font-weight:600; margin-top:2px">muhammadnasir.dev@gmal.com</h5>
-                    <h5 style="color:#449399; margin-top:3px "><i>+92 123456789</i></h5>
-                </div>
-            </div>
-        </tr> -->
     <tr>
         <?php
+        $i = 1;
         while ($row2 = mysqli_fetch_assoc($result2)) {
+            $i = $i++;
         ?>
             <div style="margin-left: 22px;  margin-right:50px; width:21cm">
-                <ul style="margin-left: 30px; margin-top:10px; list-style:decimal">
+                <ul style="margin-left: 30px; margin-top:10px; list-style:none">
                     <li style="color: #449399; ">
-                        <h3> <span style="font-weight:500; color:black; width:10cm"> <?= ucfirst(@$row2['language']) ?></span> <span style="color:#449399; position:absolute; margin-left:200px"> ......................</span></h3>
+                        <h3> <span style="font-weight:500; color:black; width:10cm"><span style="color: #449399; "><b><?= @$i++; ?></b>.</span> <?= ucfirst(@$row2['language']) ?></span> <span style="color:#449399; position:absolute; margin-left:200px"> ......................</span></h3>
                     </li>
 
                 </ul>
             </div>
     </tr>
 <?php } ?>
-<!-- =========================reference End============ -->
-</tbody>
+<!-- =========================Language======= -->
+
+<!-- =====================reference================= -->
+<tr>
+    <td>
+        <div style="margin-left: 20px; margin-top:30px;">
+            <!-- =============heading=========== -->
+            <div>
+                <h2 style="text-transform: uppercase; letter-spacing:0.50px"> <img style="background-color:#323B4C; padding:10px; border-radius:50%; width:24px; position:absolute;margin-top:6px" src="./cv_icon/skill.png"> <span style="font-weight:600;margin-left:55px">Reference</span> <span> <img style=" width:350px; margin-top:26px; margin-left:20px;position:absolute" src="./cv_icon/Line 1.png"></span></h2>
+            </div>
+        </div>
+    </td>
+</tr>
+<!-- ======================reference-details====================== -->
+<?php
+while ($row4 = mysqli_fetch_assoc($result4)) {
+?>
+    <tr>
+        <div style="margin-left: 22px;  margin-right:50px; width:21cm">
+            <div style="margin-left: 20px;">
+                <h3 style="margin-top: 20px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase"><span style="border-bottom:3px solid #449399 "><?= ucfirst(@$row4['user_reference']) ?></span></h3>
+                <h5 style="font-weight:600; margin-top:4px">Software Enginerr(SE)</h5>
+                <h5 style="font-weight:600; margin-top:2px">muhammadnasir.dev@gmal.com</h5>
+                <h5 style="color:#449399; margin-top:3px "><i>+92 123456789</i></h5>
+            </div>
+        </div>
+    <?php } ?>
+    </tr>
+    <!-- =========================reference End============ -->
+    </tbody>
     </table>

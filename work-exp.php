@@ -103,8 +103,10 @@ include("navbar.php")
                       <div class="col-md-12">
 
                         <div class="input-field mt-5 ">
-                          <input name="work_city_coun[]" id="city_coun" style="width: 85%;" type="text" required>
-                          <label>City & Country</label>
+                          <!-- <input name="work_city_coun[]" id="city_coun" style="width: 85%;" type="text" required> -->
+                          <!-- <input name="work_city_coun[]" id="city_coun" style="width: 85%;" type="text" required> -->
+                          <textarea  name="work_city_coun[]" id="city_coun" style="width: 85%; border-radius: 5px; height:40px" id="" ></textarea>
+                          <label>Working Details</label>
                           <!-- <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a> -->
                           <a id="work_btn" onclick="wrk_exp()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                         </div>

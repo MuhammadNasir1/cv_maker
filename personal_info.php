@@ -86,11 +86,11 @@ include("navbar.php")
                         <div class="row">
                           <div class="col-lg-9 col-md-8 col-7">
                             <div class="input-field mt-5 ">
-                              <input name="fname" class="w-100" type="text">
+                              <input id="fnamev" name="fname" class="w-100" type="text">
                               <label>First Name</label>
                               <!-- ============Last Name============ -->
                               <div class="input-field mt-5">
-                                <input name="lname" class="w-100" type="text">
+                                <input id="lnamev" name="lname" class="w-100" type="text">
                                 <label>Last Name</label>
                               </div>
                             </div>
@@ -110,7 +110,7 @@ include("navbar.php")
                       <!-- ============First Name============ -->
                       <div class="col-md-6" id="withoutimg">
                         <div class="input-field mt-5 ">
-                          <input name="fname" class="ph_inp" type="text">
+                          <input id="fvalue" name="fname" class="ph_inp" type="text" onkeyup="updateSecondInput()">
                           <label>First Name</label>
                         </div>
                       </div>
@@ -118,7 +118,7 @@ include("navbar.php")
                       <!-- ============Last Name============ -->
                       <div class="col-md-6" id="withoutimg2">
                         <div class="input-field mt-5 ">
-                          <input name="lname" class="ph_inp" type="text">
+                          <input id="lvalue" name="lname" class="ph_inp" type="text" onkeyup="updatenameInput()">
                           <label>Last Name</label>
                         </div>
                       </div>
@@ -236,9 +236,9 @@ include("navbar.php")
         <li>Personal Website or Portfolio (optional): If you have a personal website or online portfolio showcasing your work, skills, or achievements, include a link to it.</li>
       </ul>
     </div>
-    <div class="container preview_btn">
+    <!-- <div class="container preview_btn">
       <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class='bx bx-zoom-in'></i>Preview</button>
-    </div>
+    </div> -->
   </div>
 </div>
 <!-- ==============form-tips-sec-End============== -->
@@ -250,6 +250,18 @@ include("navbar.php")
 <!-- ============= personal-information-Form-End============== -->
 </div>
 <script>
+  function updateSecondInput() {
+    var fnamev = document.getElementById('fvalue');
+    var fnamevalue = document.getElementById('fnamev');
+    fnamevalue.value = fnamev.value;
+  }
+
+  function updatenameInput() {
+    var lvalue = document.getElementById('lvalue');
+    var fnamevalue = document.getElementById('fnamev');
+    lnamev.value = lvalue.value;
+  }
+
   const imageUpload = document.getElementById('files');
   const imagePreview = document.getElementById('imagePreview');
   imageUpload.addEventListener('change', function(event) {

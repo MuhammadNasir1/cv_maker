@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     $result3 = mysqli_query($conn, $sql3);
 
     if ($result1 && $result2 && $result3) {
-      echo "Data inserted successfully";
+      header("location: templete.php");
     } else {
       echo "Error: " . mysqli_error($conn);
     }
@@ -208,7 +208,7 @@ include("navbar.php");
                     <div class="col-md-12">
                       <div id="referadd">
                         <div class="input-field mt-5 ">
-                          <input name="reference[]" id="referece" style="width:85%" type="text" required>
+                          <input name="reference[]" id="referece" style="width:85%" type="text">
                           <label>Reference</label>
                           <a id="addrefer" onclick="hiderefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                         </div>

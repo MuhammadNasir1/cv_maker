@@ -75,7 +75,7 @@ if (!isset($_SESSION['access_token'])) {
           <div class="collapse ph_dropdown" id="collapseExample">
             <div class="mt-2">
               <a href="./personal_info.php">Create cv</a>
-              <a href="./templete.php">Show cv templete</a>
+              <a href="./personal_info.php">Show cv templete</a>
               <a href="#">How to create CV</a>
             </div>
           </div>
@@ -91,7 +91,22 @@ if (!isset($_SESSION['access_token'])) {
           <div class="collapse ph_dropdown" id="collaps">
             <div class="mt-2">
               <a href="./personal_info.php">Create Resume</a>
-              <a href="./templete.php">Show resume templete</a>
+              <a href="./personal_ssinfo.php">Show resume templete</a>
+              <a href="#">How to create resume</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav_sm_drop pe-3 ps-3 pt-4">
+          <p>
+            <a class="" data-bs-toggle="collapse" href="#colla" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Others <span class="float-end"><i class='bx bx-chevron-down'></i></span>
+            </a>
+          </p>
+          <div class="collapse ph_dropdown" id="colla">
+            <div class="mt-2">
+              <a href="./blog.php">blogs</a>
+              <a href="./userpanel.php">Setting</a>
               <a href="#">How to create resume</a>
             </div>
           </div>
@@ -105,7 +120,7 @@ if (!isset($_SESSION['access_token'])) {
 
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
-            <li><a class="dropdown-item" href="./templete.php">Templete</a></li>
+            <li><a class="dropdown-item" href="./personal_info.php">Templete</a></li>
             <li><a class="dropdown-item" href="#">How to create CV</a></li>
           </ul>
         </li>
@@ -115,7 +130,7 @@ if (!isset($_SESSION['access_token'])) {
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
-            <li><a class="dropdown-item" href="./templete.php">Templete</a></li>
+            <li><a class="dropdown-item" href="./personal_info.php">Templete</a></li>
             <li><a class="dropdown-item" href="#">How to create Resume</a></li>
           </ul>
 

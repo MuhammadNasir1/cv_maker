@@ -113,7 +113,7 @@
 
 <div class="wrapper">
   <div class="select-btn">
-    <select name="country" id="" style="width: 100%;     background: transparent; border:none">
+    <select <?= @$per_det['fname'] ?> name="country" id="" style="width: 100%;     background: transparent; border:none">
       <option  value=""> Select Country </option>
     </select>
   </div>

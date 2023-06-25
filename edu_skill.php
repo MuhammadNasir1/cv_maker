@@ -35,6 +35,11 @@ if (isset($_POST['submit'])) {
   }
 }
 
+$id = "SELECT * FROM `users`";
+
+$id_res = mysqli_query($conn, $id);
+$userid = mysqli_fetch_assoc($id_res);
+
 ?>
 <?php
 include("header.php");
@@ -296,7 +301,7 @@ include("navbar.php");
               <!-- ==================Skill-section-End============================ -->
 
               <div class="form-buttons mt-4">
-                <a href="./personal_info.php"> <button type="button" class="btn btn-danger btnPrevious">Previous</button></a>
+                <a href="./personal_info.php?edit=<?=  $_SESSION['user_id'] ?>"> <button type="button" class="btn btn-danger btnPrevious">Previous</button></a>
 
                 <a href="./work-exp.php"> <button type="submit" name="submit" class="btn btn-danger float-end save-btn btnNext">Next</button></a>
               </div>

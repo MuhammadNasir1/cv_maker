@@ -1,4 +1,7 @@
 <?php
+
+
+
 include('db.php');
 if (isset($_POST['submit'])) {
   $institute_names = $_POST['institute_name'];
@@ -40,8 +43,38 @@ $id = "SELECT * FROM `users`";
 $id_res = mysqli_query($conn, $id);
 $userid = mysqli_fetch_assoc($id_res);
 
+if (@$_REQUEST['edited']) {
+  $educ = "SELECT * FROM `education`  WHERE user_id = '" . $_SESSION['user_id'] . "'";
+  $educ = "SELECT * FROM `education`  WHERE user_id = '" . $_SESSION['user_id'] . "'";
+  $edu_res = mysqli_query($conn, $educ);
+  // $use_del = mysqli_fetch_assoc($edu_res);
+
+  $skill_da =  "SELECT * FROM `skills`  WHERE user_id = '" . $_SESSION['user_id'] . "'";
+  $skill_res = mysqli_query($conn,   $skill_da);
+
+  $tbody = '<div class="container-fluid">';
+  $skill_table = '<div class="container-fluid" >';
+} else {
+  $tbody = '<div id="educ_table_hide" class="container-fluid" style="display:none">';
+  $skill_table = '<div class="container-fluid" id="skills_table_hide" style="display:none;">';
+}
+
+
+if (@$_REQUEST['del']) {
+  $del_id = $_REQUEST['del'];
+  $sql = "DELETE FROM `education` WHERE edu_id = '$del_id'";
+
+  $del_table = mysqli_query($conn, $sql);
+
+  if ($del_table) {
+    header("location: ./edu_skill.php?edited={$_SESSION['user_id']}");
+
+  }
+}
 ?>
+
 <?php
+
 include("header.php");
 include("navbar.php");
 ?>
@@ -66,6 +99,7 @@ include("navbar.php");
   </div>
 </div>
 <form action="#" method="post">
+  <input type="text" name="del_id" value="<?= @$use_del['user_id'] ?>">
   <div class="container">
     <div class="form-bg mt-4">
       <div class="container">
@@ -178,159 +212,219 @@ include("navbar.php");
                 <!-- ================user-Education-form-End====================== -->
               </div>
               <!-- ======================details-table================ -->
-              <div id="educ_table_hide" class="container-fluid" style="display:none">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="input_info_table">
-                      <table class="table text-center table-bordered table-sm table-responsive" id="myTable">
-                        <thead>
-                          <tr>
-                            <!-- <th scope="col">#</th> -->
-                            <th scope="col">Institute Name</th>
-                            <th scope="col">Dagree</th>
-                            <th scope="col">Total Marks</th>
-                            <th scope="col">Obtains Marks</th>
-                            <th scope="col">Start-date</th>
-                            <th scope="col">End-date</th>
-                            <th scope="col">Feild</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
+              <!-- <div id="educ_table_hide" class="container-fluid" style="display:none"> -->
+              <?php echo @$tbody ?>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="input_info_table">
+                    <table class="table text-center table-bordered table-sm table-responsive" id="myTable">
+                      <thead>
+                        <tr>
+                          <!-- <th scope="col">#</th> -->
+                          <th scope="col">Institute Name</th>
+                          <th scope="col">Dagree</th>
+                          <th scope="col">Total Marks</th>
+                          <th scope="col">Obtains Marks</th>
+                          <th scope="col">Start-date</th>
+                          <th scope="col">End-date</th>
+                          <th scope="col">Feild</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <?php
+
+                      if (@$_REQUEST['edited']) {
+                        while (@$educ_det = mysqli_fetch_assoc($edu_res)) {
+                      ?>
+
+
+                          <tbody id="education_table">
+                            <tr>
+                              <td><?= @$educ_det['instutute_name'] ?></td>
+                              <td><?= @$educ_det['instutute_name'] ?></td>
+                              <td><?= @$educ_det['dagree'] ?></td>
+                              <td><?= @$educ_det['total_marks'] ?></td>
+                              <td><?= @$educ_det['deg_st_date'] ?></td>
+                              <td><?= @$educ_det['deg_end_date'] ?></td>
+                              <td><?= @$educ_det['field'] ?></td>
+                              <td>
+                                <a href="edu_skill.php?del=<?= $educ_det['edu_id'] ?>"><i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;" class="bx bx-trash-alt"></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        <?php
+
+                        }
+                      } else {
+                        ?>
                         <tbody id="education_table">
 
 
                         </tbody>
-                      </table>
-                    </div>
+
+                      <?php
+                      }
+
+
+                      ?>
+
+                    </table>
                   </div>
                 </div>
               </div>
-              <!-- ======================details-table-End================ -->
+            </div>
+            <!-- ======================details-table-End================ -->
 
-              <!-- =====================================================================================
+            <!-- =====================================================================================
       =====================================================================================
       =====================================================================================
       ===================================================================================== -->
 
 
-              <div class="personal-info-form mt-5">
-                <h3>Skills</h3>
-              </div>
-              <!-- ==================Skill-section-Start========================== -->
-              <!-- ============Skill 1============ -->
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-12">
-                    <!-- ================user-Skills-form-Start====================== -->
+            <div class="personal-info-form mt-5">
+              <h3>Skills</h3>
+            </div>
+            <!-- ==================Skill-section-Start========================== -->
+            <!-- ============Skill 1============ -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- ================user-Skills-form-Start====================== -->
 
-                    <div id="add_iteee" class="mt-5">
-                      <div class="input-field" id="myList1">
-                        <input name="skill[]" id="skill_" style="width:85%" type="text" required>
-                        <label>Skill 1</label>
-                        <a id="skill_btn" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
-                      </div>
-
-
+                  <div id="add_iteee" class="mt-5">
+                    <div class="input-field" id="myList1">
+                      <input name="skill[]" id="skill_" style="width:85%" type="text" required>
+                      <label>Skill 1</label>
+                      <a id="skill_btn" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
                     </div>
 
-                    <!-- ================user-Skills-form-End  ====================== -->
+
                   </div>
-                  <div class="col-12">
-                    <div class="mt-3 p-3">
-                      <div class="form-group row">
-                        <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
-                        <input name="skill_range[]" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
-                        <output>50%</output>
-                      </div>
+
+                  <!-- ================user-Skills-form-End  ====================== -->
+                </div>
+                <div class="col-12">
+                  <div class="mt-3 p-3">
+                    <div class="form-group row">
+                      <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
+                      <input name="skill_range[]" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
+                      <output>50%</output>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- ======================details-table================ -->
-              <div class="container-fluid" id="skills_table_hide" style="display:none;">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="input_info_table">
-                      <table class="table text-center table-responsive table-bordered table-sm ">
-                        <thead>
-                          <tr class="pe-1 ps-1">
-                            <th scope="col">Skills</th>
-                            <th scope="col">Progress</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
+            </div>
+            <!-- ======================details-table================ -->
+            <!-- <div class="container-fluid" id="skills_table_hide" style="display:none;"> -->
+            <?php
+            echo "$skill_table"
+            ?>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="input_info_table">
+                  <table class="table text-center table-responsive table-bordered table-sm ">
+                    <thead>
+                      <tr class="pe-1 ps-1">
+                        <th scope="col">Skills</th>
+                        <th scope="col">Progress</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <?php
+                    if (@$_REQUEST['edited']) {
+                      while (@$skill_det = mysqli_fetch_assoc($skill_res)) {
+                    ?>
                         <tbody id="skillTable">
-
-
+                          <tr>
+                            <td><?= $skill_det['skill'] ?></td>
+                            <td><?= $skill_det['skill_per'] ?></td>
+                            <td>
+                              <a><i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;" class="bx bx-trash-alt"></i></a>
+                            </td>
+                          </tr>
                         </tbody>
-                      </table>
-                    </div>
-                  </div>
+
+                      <?php
+                      }
+                    } else {
+
+                      ?>
+                      <tbody id="skillTable">
+
+                      </tbody>
+                    <?php
+                    }
+
+                    ?>
+                  </table>
                 </div>
               </div>
-              <!-- ======================details-table-End================ -->
-              <script>
-                function removeId(elementId) {
-                  $(elementId).remove();
-                }
-                $("#skill_btn").on('click', function(event) {
-                  var skill_id = Math.floor(Math.random() * 999999) + 1;
-                  var skill_ = $("#skill_").val();
-                  var age_slider = $("#age_slider").val();
+            </div>
+          </div>
+          <!-- ======================details-table-End================ -->
+          <script>
+            function removeId(elementId) {
+              $(elementId).remove();
+            }
+            $("#skill_btn").on('click', function(event) {
+              var skill_id = Math.floor(Math.random() * 999999) + 1;
+              var skill_ = $("#skill_").val();
+              var age_slider = $("#age_slider").val();
 
-                  $("#skillTable").append('<tr id="product_idN_' + skill_id + '">\
+              $("#skillTable").append('<tr id="product_idN_' + skill_id + '">\
             <td><input name="skill[]" type="hidden" value="' + skill_ + '">' + skill_ + ' </td>\
           <td><input name="skill_range[]" type="hidden" value="' + age_slider + '">' + age_slider + '%' + '</td>\
           <td>\
             <a onclick="removeById(`#product_idN_' + skill_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a>\
             </td>\
           </tr>');
-                });
+            });
 
 
 
-                function hideskill() {
-                  var skills_table_hide = document.getElementById('skills_table_hide');
-                  skills_table_hide.style.display = "block";
+            function hideskill() {
+              var skills_table_hide = document.getElementById('skills_table_hide');
+              skills_table_hide.style.display = "block";
 
-                }
-              </script>
-              <div id="skillinputcontainer">
+            }
+          </script>
+          <div id="skillinputcontainer">
 
-              </div>
-              <!-- ==================Skill-section-End============================ -->
-
-              <div class="form-buttons mt-4">
-                <a href="./personal_info.php?edit=<?=  $_SESSION['user_id'] ?>"> <button type="button" class="btn btn-danger btnPrevious">Previous</button></a>
-
-                <a href="./work-exp.php"> <button type="submit" name="submit" class="btn btn-danger float-end save-btn btnNext">Next</button></a>
-              </div>
-            </div>
           </div>
-          <!-- ==============form-End================ -->
-          <!-- ==============form-tips-sec-start============== -->
-          <div class="col-lg-5" style=" background-color: whitesmoke;">
-            <div class="Form-tip-sec">
-              <h3>TIPS</h3>
-              <div class="text mt-2">
-                <ul>
-                  <li>Order: Start with your most recent or highest level of education and work backward chronologically.</li>
-                  <li>Format: Include the name of the institution, degree or qualification earned, field of study, and the dates
-                    of attendance or graduation.</li>
-                  <li>Relevant Information: Highlight any honors, awards, or notable achievements during your academic journey.</li>
-                  <li>Relevant Skills: Tailor your skills section to include those directly related to the job you're applying for. This could include technical skills, software proficiency, languages spoken, or specific industry knowledge.</li>
+          <!-- ==================Skill-section-End============================ -->
 
-                  <li>Categorize: Organize your skills into categories (e.g., technical skills, interpersonal skills) to provide clarity and ease of reading.</li>
-                  <li>Highlight Strengths: Place the most critical and relevant skills at the beginning of each category to grab the reader's attention.</li>
-                  <li>Use Keywords: Incorporate keywords from the job description to align your skills with the employer's requirements and increase the likelihood of your resume being selected by applicant tracking systems (ATS).</li>
-                </ul>
-              </div>
-            </div>
+          <div class="form-buttons mt-4">
+            <a href="./personal_info.php?edit=<?= $_SESSION['user_id'] ?>"> <button type="button" class="btn btn-danger btnPrevious">Previous</button></a>
+
+            <a href="./work-exp.php"> <button type="submit" name="submit" class="btn btn-danger float-end save-btn btnNext">Next</button></a>
           </div>
-          <!-- ==============form-tips-sec-End============== -->
         </div>
       </div>
+      <!-- ==============form-End================ -->
+      <!-- ==============form-tips-sec-start============== -->
+      <div class="col-lg-5" style=" background-color: whitesmoke;">
+        <div class="Form-tip-sec">
+          <h3>TIPS</h3>
+          <div class="text mt-2">
+            <ul>
+              <li>Order: Start with your most recent or highest level of education and work backward chronologically.</li>
+              <li>Format: Include the name of the institution, degree or qualification earned, field of study, and the dates
+                of attendance or graduation.</li>
+              <li>Relevant Information: Highlight any honors, awards, or notable achievements during your academic journey.</li>
+              <li>Relevant Skills: Tailor your skills section to include those directly related to the job you're applying for. This could include technical skills, software proficiency, languages spoken, or specific industry knowledge.</li>
+
+              <li>Categorize: Organize your skills into categories (e.g., technical skills, interpersonal skills) to provide clarity and ease of reading.</li>
+              <li>Highlight Strengths: Place the most critical and relevant skills at the beginning of each category to grab the reader's attention.</li>
+              <li>Use Keywords: Incorporate keywords from the job description to align your skills with the employer's requirements and increase the likelihood of your resume being selected by applicant tracking systems (ATS).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- ==============form-tips-sec-End============== -->
     </div>
+  </div>
+  </div>
   </div>
 </form>
 

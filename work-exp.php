@@ -176,8 +176,7 @@ include("navbar.php")
 
                 <div class="form-buttons mt-5">
                   <!-- <a href="./edu_skill.php"> Previous</a> -->
-
-                  <a href="./edu_skill.php"> <button type="button" class="btn btn-danger  save-btn btnNext"> Previous</button></a>
+                  <a href="./edu_skill.php?edited=<?= $_SESSION['user_id'] ?>"> <button type="button" class="btn btn-danger  save-btn btnNext"> Previous</button></a>
                   <button name="submit" type="submit" class="btn btn-danger float-end save-btn"> Next</button>
 </form>
 </div>

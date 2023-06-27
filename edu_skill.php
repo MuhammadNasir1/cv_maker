@@ -68,7 +68,17 @@ if (@$_REQUEST['del']) {
 
   if ($del_table) {
     header("location: ./edu_skill.php?edited={$_SESSION['user_id']}");
+  }
+}
 
+if (@$_REQUEST['del_skill']) {
+  $delte = $_REQUEST['del_skill'];
+  $sql_del = "DELETE FROM `skills` WHERE skill_id = '$delte'";
+  $del_skill = mysqli_query($conn, $sql_del);
+  print_r($delte);
+
+  if ($sql_del) {
+    header("location: ./edu_skill.php?edited={$_SESSION['user_id']}");
   }
 }
 ?>
@@ -99,7 +109,7 @@ include("navbar.php");
   </div>
 </div>
 <form action="#" method="post">
-  <input type="text" name="del_id" value="<?= @$use_del['user_id'] ?>">
+  <input type="hidden" name="del_id" value="<?= @$use_del['user_id'] ?>">
   <div class="container">
     <div class="form-bg mt-4">
       <div class="container">
@@ -340,7 +350,7 @@ include("navbar.php");
                             <td><?= $skill_det['skill'] ?></td>
                             <td><?= $skill_det['skill_per'] ?></td>
                             <td>
-                              <a><i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;" class="bx bx-trash-alt"></i></a>
+                              <a href="edu_skill.php?del_skill=<?= @$skill_det['skill_id'] ?>"><i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;" class="bx bx-trash-alt"></i></a>
                             </td>
                           </tr>
                         </tbody>
@@ -449,7 +459,7 @@ include("navbar.php");
   </section>
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
     © 2023 Copyright:
-    <a class="text-whites" href="https://google.com/">Google.com</a>
+    <a class="text-white" href="https://thewebconcept.com/">thewebconcept.com</a>
   </div>
 </footer>
 <!-- ================ Footer-End ======================= -->

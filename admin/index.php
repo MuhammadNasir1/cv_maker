@@ -1,8 +1,6 @@
 <?php
-include('header.php');
+include('../header.php');
 ?>
-<link rel="stylesheet" href="./css/user_panel.css">
-
 <!-- ================sidebar-Start============== -->
 <div class="sidebar">
   <div class="logo_details">
@@ -12,18 +10,18 @@ include('header.php');
   </div>
   <ul class="nav-list m-0 p-0">
     <li>
-      <a href="#">
+      <a href="./index.php">
         <i class="bx bx-grid-alt"></i>
         <span class="link_name">Dashboard</span>
       </a>
       <span class="tooltip">Dashboard</span>
     </li>
     <li>
-      <a href="./user_information.php">
-        <i class="bx bx-user"></i>
-        <span class="link_name">Your Information</span>
+      <a href="./add_templete.php">
+        <i class="bx bx-pencil"></i>
+        <span class="link_name">Add Templete</span>
       </a>
-      <span class="tooltip">Your Information</span>
+      <span class="tooltip">Add Templete</span>
     </li>
     <li>
       <a href="#">
@@ -95,6 +93,33 @@ include('header.php');
       </div>
       <!-- ================Users_details_box-End================== -->
     </div>
+    <div class="row my-5">
+    <h3 class="fs-4 mb-3">User Details</h3>
+    <div class="col">
+      <table class="table bg-white rounded shadow-sm  table-hover">
+        <thead>
+          <tr>
+            <th scope="col" width="50">#</th>
+            <th scope="col">USER </th>
+            <th scope="col">User</th>
+            <th scope="col">User</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Harry</td>
+            <td>Jonny</td>
+            <td>peter</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+</div>
   </div>
 </section>
 
@@ -123,3 +148,4 @@ include('header.php');
     }
   }
 </script>
+  

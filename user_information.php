@@ -1,6 +1,7 @@
 <?php
 include('header.php');
 ?>
+<link rel="stylesheet" href="./css/user_panel.css">
 <!-- ================sidebar-Start============== -->
 <div class="sidebar">
   <div class="logo_details">

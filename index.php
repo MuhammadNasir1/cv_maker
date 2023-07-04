@@ -278,7 +278,7 @@ include('header.php');
             } else {
 
             ?>
-          <a href="./sign_up.php"> <button class="">Create your Cv</button></a>
+              <a href="./sign_up.php"> <button class="">Create your Cv</button></a>
             <?php
             }
             ?>
@@ -352,4 +352,44 @@ include('footer.php');
       });
     }
   });
+</script>
+
+<?php
+if (@$_SESSION["loginemail"]) {
+?>
+  <button style="display: none;"></button>
+<?php
+} else {
+?>
+  <button style="display: none;" id="myButton" type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
+<?php
+}
+?>
+
+
+<!-- Modal -->
+<div class="modal sign_in_modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+
+      <div class="modal-body ">
+        <h1 style=" cursor: pointer;" class="float-end text-gray" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-x'></i></h1>
+        <h2 class="mt-4">SIGN UP <span style="color:black" ;>Free</span></h2>
+        <p class="mt-2">Sign in or Sign up now and create your professional CV or Resume in an easy way.</p>
+        <center><a href="./sign_in.php "><button>SIGN IN</button></a></center>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function autoClickButton() {
+    var button = document.getElementById('myButton');
+    setTimeout(function() {
+      button.click();
+    }, 6000);
+  }
+
+  window.addEventListener('load', autoClickButton);
 </script>

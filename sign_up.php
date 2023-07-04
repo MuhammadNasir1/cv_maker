@@ -1,3 +1,4 @@
+<?php include("header.php") ?>
 <?php
 include('db.php');
 require 'congfig.php';
@@ -20,7 +21,22 @@ if (isset($_REQUEST['submit'])) {
       $hach = md5($password, PASSWORD_DEFAULT);
       $sql = "INSERT INTO `users` (`username`, `email`,  `phone_no`,  `password`, `cpassword`) VALUES ('$username', '$email',  '$phone_no', '$password', '$cpassword')";
       $result = mysqli_query($conn, $sql);
-      header("location: ./sign_in.php");
+
+?>
+      <script>
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Thank You for Registration successful',
+          showConfirmButton: false,
+          timer: 1500
+        }).then(function() {
+          window.location.href = "./sign_in.php";
+        });
+      </script>
+
+<?php
+
     } else {
       $passError = "Passwords not matched";
       $input_pass_eror = 'style="border-color:#C21010"';
@@ -34,7 +50,7 @@ if (!isset($_SESSION['access_token'])) {
   $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img class="s-icon" src="./image/google-icon.svg" alt="" ></a>';
 }
 ?>
-<?php include("header.php") ?>
+
 
 <body style="background-color: #ffffff;">
   <!-- ========logo============ -->
@@ -111,6 +127,7 @@ if (!isset($_SESSION['access_token'])) {
                   <?php
 
                   print_r($login_button);
+
                   ?>
                 </li>
                 </li>

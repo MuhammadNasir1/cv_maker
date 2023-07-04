@@ -1,3 +1,4 @@
+<?php include("header.php") ?>
 <?php
 require 'congfig.php';
 @include('config.php');
@@ -13,12 +14,7 @@ if (isset($_REQUEST['submit'])) {
   $row = mysqli_num_rows($result);
   if ($row == 1) {
     $row = mysqli_fetch_assoc($result);
-    echo "<h1>LOGIN WITH EMAIL</h1>";
-
-
-    header("location:./index.php");
-
-    $_SESSION['login'] == true;
+    @$_SESSION['login'] == true;
     $_SESSION["user_id"] = $row['user_id'];
     $_SESSION["email"] =  $row['email'];
     $_SESSION["username"] =  $row['username'];
@@ -37,6 +33,21 @@ if (isset($_REQUEST['submit'])) {
          </ul>
        
      </div>';
+
+?>
+    <script>
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Thank You for Sign in',
+        showConfirmButton: false,
+        timer: 1500
+      }).then(function() {
+        window.location.href = "./index.php";
+      });
+    </script>
+
+<?php
   } else {
     $input_red = 'style="border-color:#C21010"';
     $showerror = "Email  not match";
@@ -54,7 +65,7 @@ if (!isset($_SESSION['access_token'])) {
 }
 
 ?>
-<?php include("header.php") ?>
+
 
 <body style="background-color: #ffffff;">
   <!-- ========logo============ -->

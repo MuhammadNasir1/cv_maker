@@ -12,15 +12,28 @@ include('header.php');
           <h2>We will deliver a professional</h2>
           <!-- <h1><span class="txt-anim"></span> for Free</h1> -->
           <h1>
-            <span href="" class="typewrite" data-period="2000" data-type='[ "CV", "Resume" ]'>
+            <span class="typewrite" data-period="2000" data-type='[ "CV", "Resume" ]'>
               <span class="wrap"></span>
             </span> For Free
           </h1>
           <p>Create your CV with different types of templates and color <span class="heading_br"><br></span>
             combinations and also full customization</p>
           <div>
-            <a href="./personal_info.php"> <button>Show template</button></a>
-            <a href="./personal_info.php"> <button class="cv-btn">Create CV or Resume</button></a>
+            <?php
+
+
+            if (@$_SESSION["loginemail"]) {
+            ?>
+              <a href="./personal_info.php"> <button>Show template</button></a>
+              <a href="./personal_info.php"> <button class="cv-btn">Create CV or Resume</button></a>
+            <?php
+            } else {
+            ?>
+              <a href="./sign_up.php"> <button>Show template</button></a>
+              <a href="./sign_up.php"> <button class="cv-btn">Create CV or Resume</button></a>
+            <?php
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -44,7 +57,7 @@ include('header.php');
 
   <!-- =========== heading-Start ============  -->
   <div class="datails-sec">
-    <h3>Create a professional Resume and Cv with <span>100+</span> <span class="remove"><br></span> templates and fully customize the <span class="remove"><br></span> colors and fonts</h3>
+    <h3>Create a professional Resume and CV with <span>100+</span> <span class="remove"><br></span> templates and fully customize the <span class="remove"><br></span> colors and fonts</h3>
 
     <!-- =========== heading-End =============  -->
     <div class="container-fluid mt-5">
@@ -105,9 +118,20 @@ include('header.php');
   <div class="fix-bg">
     <div class="txt">
       <h1 class="">"Select your favourite template and create your
-        <span class="remove"><br></span>professional CV or resume.
+        <span class="remove"><br></span>professional CV or Resume.
       </h1>
-      <a href="./personal_info.php"> <button class="btn mt-3">Create</button></a>
+      <?php
+      if (@$_SESSION["loginemail"]) {
+      ?>
+        <a href="./personal_info.php"> <button class="btn mt-3">Create</button></a>
+
+      <?php
+      } else {
+      ?>
+        <a href="./sign_up.php"> <button class="btn mt-3">Create</button></a>
+      <?php
+      }
+      ?>
     </div>
   </div>
 </div>
@@ -206,7 +230,7 @@ include('header.php');
 <div class="container-fluid">
   <div class="tips-content">
     <div class="tip-sec-txt">
-      <h1>Tips to create a professional <br> <span> resume or Cv </span></h1>
+      <h1>Tips to create a professional <br> <span> Resume or CV </span></h1>
       <p>Use <span style="color:#C21010">premium</span> template for free with a lot of color schemes</p>
       <div class="list">
         <ul>
@@ -244,7 +268,20 @@ include('header.php');
           <div>
             <h1>Create your professional Resume or CV with <span class="remove"><br></span><span>CV Builders</span></h1>
             <p>Follow step-by-step professional guidance to create <span class="remove"><br></span> a polished cv or resume in minutes.</p>
-          <a href="./personal_info.php"> <button class="">Create your Cv</button></a>
+
+            <?php
+            if (@$_SESSION["loginemail"]) {
+            ?>
+              <a href="./personal_info.php"> <button class="">Create your Cv</button></a>
+
+            <?php
+            } else {
+
+            ?>
+          <a href="./sign_up.php"> <button class="">Create your Cv</button></a>
+            <?php
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -288,32 +325,31 @@ include('footer.php');
 
 <script src="./javascript/index.js"></script>
 <script>
- window.addEventListener("scroll", function() {
-  const pixelThreshold = 1500; // Adjust this value to your desired pixel threshold
+  window.addEventListener("scroll", function() {
+    const pixelThreshold = 1500; // Adjust this value to your desired pixel threshold
 
-  if (window.pageYOffset >= pixelThreshold) {
-    let valueDisplays = document.querySelectorAll(".num");
-    let interval = 3000;
+    if (window.pageYOffset >= pixelThreshold) {
+      let valueDisplays = document.querySelectorAll(".num");
+      let interval = 3000;
 
-    valueDisplays.forEach((valueDisplay) => {
-      if (valueDisplay.getAttribute("data-processed")) {
-        return; // Skip if already processed
-      }
-
-      let startValue = 0;
-      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-      let duration = Math.floor(interval / endValue);
-      let counter = setInterval(function() {
-        startValue += 1;
-        valueDisplay.textContent = startValue;
-        if (startValue == endValue) {
-          clearInterval(counter);
+      valueDisplays.forEach((valueDisplay) => {
+        if (valueDisplay.getAttribute("data-processed")) {
+          return; // Skip if already processed
         }
-      }, duration);
 
-      valueDisplay.setAttribute("data-processed", "true"); // Mark as processed
-    });
-  }
-});
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function() {
+          startValue += 1;
+          valueDisplay.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
 
+        valueDisplay.setAttribute("data-processed", "true"); // Mark as processed
+      });
+    }
+  });
 </script>

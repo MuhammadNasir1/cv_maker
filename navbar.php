@@ -43,6 +43,10 @@ if (isset($_GET["code"])) {
     if (!empty($data['picture'])) {
       $_SESSION['user_image'] = $data['picture'];
     }
+
+    if (!empty($data['id'])) {
+      $_SESSION['google_id'] = $data['id'];
+    }
   }
 }
 

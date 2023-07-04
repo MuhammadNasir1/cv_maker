@@ -111,7 +111,6 @@ if (!isset($_SESSION['access_token'])) {
                   <?php
 
                   print_r($login_button);
-                  
                   ?>
                 </li>
                 </li>

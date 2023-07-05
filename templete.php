@@ -41,60 +41,84 @@ include('navbar.php');
         <!-- ===================cv_templete_Image================== -->
         <?php
         $a = 1;
+        $id = 1;
+        $ib = 1;
         while ($cv = mysqli_fetch_assoc($result_tem)) {
           $a = $a++;
+          $id = $id++;
+          $ib = $ib++;
         ?>
-
-          <div class="col-md-4 col-lg-3">
-            <div class="cv_templete_img">
-              <div style="width:90%">
-                <span style="position:absolute"><b><?= $cv['templete_name'] ?> </b></span>
-                <div class="temp_img ">
-                  <img src="<?php echo './uploads/temp_img/' . $cv['templete_img']; ?>" class="clickable-image" data-phpfile="cv_<?= $a++ ?>.php">
-                </div>
+          <div class="modal fade view_img-modal" id="staticBackdrop<?= $id++ ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                
+                <div class="modal-body">
+                  <h1 style=" cursor: pointer;" class="float-end text-gray" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-x'></i></h1>
+                  <div>
+                    <img src="<?php echo './uploads/temp_img/' . $cv['templete_img']; ?>" ">
               </div>
             </div>
+
           </div>
-        <?php } ?>
+        </div>
       </div>
-      <!-- ===================cv_templete_Image=================== -->
-    </div>
-  </div>
-</div>
-<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"></div>
-<!-- ==============templetes-navtab-end=======s============= -->
-<div class="templete-pagination">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a href="#" class="page-link ">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</div>
-<script>
-  // Get all the image elements with a specific class
-  var images = document.getElementsByClassName("clickable-image");
+          <div class=" col-md-4 col-lg-3">
+                    <div class="cv_templete_img">
+                      <div style="width:90%">
+                        <span style="position:absolute"><b><?= $cv['templete_name'] ?> </b></span>
+                        <div class="temp_img ">
+                          <img src="<?php echo './uploads/temp_img/' . $cv['templete_img']; ?>" ">
+                  <div class=" select-templte">
 
-  // Loop through the images
-  for (var i = 0; i < images.length; i++) {
-    // Add click event listener to each image
-    images[i].addEventListener("click", function() {
-      // Get the PHP file path from the data attribute
-      var phpFile = this.getAttribute("data-phpfile");
-      // Redirect to the next page and pass the PHP file path as a query parameter
-      // window.location.href = "uploads/mpdf_down.php?phpfile=" + encodeURIComponent(phpFile);
-      window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
+                          <button data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $ib++ ?>">View</button>
+                          <button class="clickable-image" data-phpfile="cv_<?= $a++ ?>.php">Select</button>
 
-    });
-  }
-</script>
-<script src="https://kit.fontawesome.com/c416a2d46a.js" crossorigin="anonymous"></script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-<?php
-include('footer.php');
-?>
+              <?php } ?>
+              </div>
+              <!-- ===================cv_templete_Image=================== -->
+            </div>
+          </div>
+      </div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"></div>
+      <!-- ==============templetes-navtab-end=======s============= -->
+      <div class="templete-pagination mt-5">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a href="#" class="page-link ">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        var images = document.getElementsByClassName("clickable-image");
+
+        for (var i = 0; i < images.length; i++) {
+          images[i].addEventListener("click", function() {
+            var phpFile = this.getAttribute("data-phpfile");
+            window.location.href = "uploads/down.php?phpfile=" + encodeURIComponent(phpFile);
+
+          });
+        }
+      </script>
+      <script src="https://kit.fontawesome.com/c416a2d46a.js" crossorigin="anonymous"></script>
+
+      <?php
+      include('footer.php');
+      ?>
+
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary">
+        Launch static backdrop modal
+      </button>

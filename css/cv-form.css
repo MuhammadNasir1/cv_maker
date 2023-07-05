@@ -413,6 +413,16 @@
   margin-left: 1rem;
 }
 
+.input-add img {
+  background: var(--primary-color);
+  padding: 0.3125rem;
+  border-radius: 0.25rem;
+  width: 2.1875rem;
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: -5px;
+}
+
 .add-education img {
   background: var(--primary-color);
   padding: 0.3125rem;

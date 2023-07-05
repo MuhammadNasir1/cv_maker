@@ -304,11 +304,11 @@ include("navbar.php");
 
                   <div id="add_iteee" class="mt-5">
                     <div class="input-field" id="myList1">
-                      <input name="skill[]" id="skill_" style="width:85%" type="text" required>
+                      <input name="skill[]" id="skill_" style="width:95%" type="text" required>
                       <label>Skill 1</label>
-                      <a id="skill_btn" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
+                      <!-- <a id="skill_btn" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a> -->
                     </div>
-
+                  
 
                   </div>
 
@@ -317,9 +317,14 @@ include("navbar.php");
                 <div class="col-12">
                   <div class="mt-3 p-3">
                     <div class="form-group row">
-                      <label style="color:#C21010; font-weight:500;" for="formControlRange">Skill Progress</label>
-                      <input name="skill_range[]" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
-                      <output>50%</output>
+                   <div>
+                    
+                   <label style="color:#C21010; font-weight:500; position:relative" for="formControlRange">Skill Progress</label>
+                      <input name="skill_range[]" style="width: 88%; position:relative" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
+                      <output style="position: absolute; margin-top: 30px; margin-left: -38px;"  ><b>50%</b></output>
+                      <a id="skill_btn" class="input-add" onclick="hideskill()"><img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
+                   </div>
+                      
                     </div>
                   </div>
                 </div>

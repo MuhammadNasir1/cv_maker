@@ -51,7 +51,7 @@ include('navbar.php');
           <div class="modal fade view_img-modal" id="staticBackdrop<?= $id++ ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
-                
+
                 <div class="modal-body">
                   <h1 style=" cursor: pointer;" class="float-end text-gray" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-x'></i></h1>
                   <div>

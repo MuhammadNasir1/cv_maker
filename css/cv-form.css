@@ -620,4 +620,17 @@
   color: var(--primary-color);
   letter-spacing: 0.2rem;
   cursor: pointer;
+}
+
+.tips_modal .modal-body h2 {
+  font-weight: 600;
+  text-align: center;
+  color: var(--primary-color);
+}
+.tips_modal .modal-body p {
+  text-align: center;
+  font-weight: 600;
+}
+.tips_modal .modal-body .input-img img {
+  width: 100%;
 }/*# sourceMappingURL=cv-form.css.map */

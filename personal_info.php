@@ -230,7 +230,7 @@ include("navbar.php")
                       <div class="col-md-12">
                         <div class="input-field mt-5">
                           <textarea name="about_us" class="email_width form-control" rows="4"><?= @$per_det['about_us'] ?> </textarea>
-                          <label>About</label>
+                          <label>About Us</label>
                           <div class="form-text about-us-txt">Enter yourself in less than <b>30</b> words</div>
                         </div>
                       </div>

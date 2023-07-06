@@ -301,4 +301,10 @@
 .info_form .user_inf_form form label {
   font-weight: 600;
   color: var(--primary-color);
+}
+
+.info-panel {
+  border: 2px solid red;
+  width: 100%;
+  height: 200px;
 }/*# sourceMappingURL=user_panel.css.map */

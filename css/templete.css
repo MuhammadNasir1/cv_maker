@@ -82,7 +82,7 @@
   transition: all 0.5s;
 }
 .cv_templete_img .select-templte button {
-  border: 2px solid black;
+  border: none;
   width: 40%;
   color: white;
   padding: 4px 12px;
@@ -115,4 +115,19 @@
   padding: 10px;
   width: 100%;
   border: 2px solid black;
+}
+
+.edit-details-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.edit-details-btn button {
+  background: #c21010;
+  background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%);
+  color: white;
+  font-weight: 600;
+  border-radius: 0;
+  border: none;
+  padding: 8px 20px;
 }/*# sourceMappingURL=templete.css.map */

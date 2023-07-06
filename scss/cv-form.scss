@@ -588,6 +588,7 @@
     margin-left: 1rem;
   }
 }
+
 .input-add {
   & img {
     background: var(--primary-color);
@@ -840,6 +841,27 @@
         }
 
       }
+    }
+  }
+}
+
+
+.tips_modal {
+
+  & .modal-body {
+    & h2 {
+      font-weight: 600;
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    & p {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    & .input-img img {
+      width: 100%;
     }
   }
 }

@@ -129,7 +129,7 @@ include("navbar.php");
                       <!-- ============institue Name============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input name="institute_name[]" id="Institute" type="text" required>
+                          <input class="rem_value" name="institute_name[]" id="Institute" type="text" required>
                           <label>Institute Name</label>
                         </div>
                       </div>
@@ -308,7 +308,7 @@ include("navbar.php");
                       <label>Skill 1</label>
                       <!-- <a id="skill_btn" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a> -->
                     </div>
-                  
+
 
                   </div>
 
@@ -317,14 +317,14 @@ include("navbar.php");
                 <div class="col-12">
                   <div class="mt-3 p-3">
                     <div class="form-group row">
-                   <div>
-                    
-                   <label style="color:#C21010; font-weight:500; position:relative" for="formControlRange">Skill Progress</label>
-                      <input name="skill_range[]" style="width: 88%; position:relative" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
-                      <output style="position: absolute; margin-top: 30px; margin-left: -38px;"  ><b>50%</b></output>
-                      <a id="skill_btn" class="input-add" onclick="hideskill()"><img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
-                   </div>
-                      
+                      <div>
+
+                        <label style="color:#C21010; font-weight:500; position:relative" for="formControlRange">Skill Progress</label>
+                        <input name="skill_range[]" style="width: 88%; position:relative" class="slider range-slider" name="age_slider" id="age_slider" type="range" max="100" min="0" oninput="this.nextElementSibling.value = this.value+'%'">
+                        <output style="position: absolute; margin-top: 30px; margin-left: -38px;"><b>50%</b></output>
+                        <a id="skill_btn" class="input-add" onclick="hideskill()"><img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -468,3 +468,45 @@ include("navbar.php");
   </div>
 </footer>
 <!-- ================ Footer-End ======================= -->
+
+
+<!-- Modal -->
+<button style="display:none" id="myButton" type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#tipsbuttom">This is</button>
+<div class="modal tips_modal fade" id="tipsbuttom" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-body ">
+        <h1 style=" cursor: pointer;" class="float-end text-gray" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-x'></i></h1>
+        <h2 class="mt-4">FREE <span style="color:black" ;>TIPS</span></h2>
+        <p>Make sure you click on this plus button. If you don't click this button your information cannot be saved</p>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-8">
+              <div class="input-img">
+                <img class="mt-5" src="./image/tips-input.svg" alt="">
+
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="input-img">
+                <img src="./image/tips_plus.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function autoClickButton() {
+    var button = document.getElementById('myButton');
+    setTimeout(function() {
+      button.click();
+    }, 4000);
+  }
+
+  window.addEventListener('load', autoClickButton);
+</script>

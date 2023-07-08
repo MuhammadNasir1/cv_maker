@@ -90,7 +90,7 @@ include("navbar.php")
                       <!-- ============Company Name============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input name="company_name[]" id="com_name" type="text" required>
+                          <input name="" id="com_name" type="text" required>
                           <label>Company Name</label>
                         </div>
                       </div>
@@ -98,21 +98,21 @@ include("navbar.php")
                       <div class="col-md-6">
 
                         <div class="input-field mt-5 ">
-                          <input name="work_role[]" id="role" type="text" required>
+                          <input name="" id="role" type="text" required>
                           <label>Role </label>
                         </div>
                       </div>
                       <!-- ============Start-Date============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input name="work_st_date[]" id="start_date" type="date" required>
+                          <input name="" id="start_date" type="date" required>
                           <label class="date-lable">Start Date</label>
                         </div>
                       </div>
                       <!-- ============End-Date============ -->
                       <div class="col-md-6 ">
                         <div class="input-field mt-5 ">
-                          <input name="work_end_date[]" id="end_date" type="date" required>
+                          <input name="" id="end_date" type="date" required>
                           <label class="date-lable">End Date</label>
                         </div>
                       </div>
@@ -120,7 +120,6 @@ include("navbar.php")
                       <div class="col-md-12">
 
                         <div class="input-field mt-5 ">
-                          <!-- <input name="work_city_coun[]" id="city_coun" style="width: 85%;" type="text" required> -->
                           <!-- <input name="work_city_coun[]" id="city_coun" style="width: 85%;" type="text" required> -->
                           <textarea name="work_city_coun[]" id="city_coun" style="width: 85%; border-radius: 5px; height:40px" id=""></textarea>
                           <label>Working Details</label>
@@ -273,3 +272,45 @@ include("navbar.php")
   </div>
 </footer>
 <!-- ================ Footer-End ======================= -->
+
+
+<!-- Modal -->
+<button style="display:none" id="myButton" type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#tipsbuttom">This is</button>
+<div class="modal tips_modal fade" id="tipsbuttom" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-body ">
+        <h1 style=" cursor: pointer;" class="float-end text-gray" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-x'></i></h1>
+        <h2 class="mt-4">FREE <span style="color:black" ;>TIPS</span></h2>
+        <p>Make sure you click on this plus button. If you don't click this button your information cannot be saved</p>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-8">
+              <div class="input-img">
+                <img class="mt-5" src="./image/tips-input.svg" alt="">
+
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="input-img">
+                <img src="./image/tips_plus.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function autoClickButton() {
+    var button = document.getElementById('myButton');
+    setTimeout(function() {
+      button.click();
+    }, 4000);
+  }
+
+  window.addEventListener('load', autoClickButton);
+</script>

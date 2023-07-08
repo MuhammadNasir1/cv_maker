@@ -56,7 +56,7 @@
           <h6 class="text-uppercase fw-bold">Useful links</h6>
           <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 80px; background-color:#C21010 ; height: 5px" />
           <p>
-            <a href="./userpanel.php" class="text-white">Settings</a>
+            <a href="./users/" class="text-white">Settings</a>
           </p>
           <p>
             <a href="./privacypolicy.php" class="text-white">Privacy & Policy</a>

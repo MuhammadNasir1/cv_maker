@@ -110,7 +110,7 @@ if (!isset($_SESSION['access_token'])) {
           <div class="collapse ph_dropdown" id="colla">
             <div class="mt-2">
               <a href="./blog.php">blogs</a>
-              <a href="./userpanel.php">Setting</a>
+              <a href="./users/">Setting</a>
               <a href="#">How to create resume</a>
             </div>
           </div>
@@ -145,7 +145,7 @@ if (!isset($_SESSION['access_token'])) {
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./blog.php">BLog</a></li>
-            <li><a class="dropdown-item" href="./userpanel.php">Setting</a></li>
+            <li><a class="dropdown-item" href="./users/">Setting</a></li>
             <li><a class="dropdown-item" href="./privacypolicy.php">Privacy & Policy </a></li>
           </ul>
         </li>

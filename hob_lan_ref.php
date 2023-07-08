@@ -78,7 +78,7 @@ include("navbar.php");
                   <div class="col-md-12">
                     <div id="referad">
                       <div class="input-field mt-5 ">
-                        <input name="hobby[]" id="hobby" style="width:85%" type="text" required>
+                        <input name="" id="hobby" style="width:85%" type="text" required>
                         <label>Hobby</label>
                         <a id="addhobby" onclick="hobby_hide()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                       </div>
@@ -141,7 +141,7 @@ include("navbar.php");
 
                     <div class="col-md-12">
                       <div class="input-field mt-5">
-                        <input name="languge[]" id="langugage" style="width:85%" type="text" required>
+                        <input name="" id="langugage" style="width:85%" type="text" required>
                         <label>Language</label>
                         <a id="addlanguage" onclick="hide_language()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                       </div>
@@ -208,7 +208,7 @@ include("navbar.php");
                     <div class="col-md-12">
                       <div id="referadd">
                         <div class="input-field mt-5 ">
-                          <input name="reference[]" id="referece" style="width:85%" type="text">
+                          <input name="" id="referece" style="width:85%" type="text">
                           <label>Reference</label>
                           <a id="addrefer" onclick="hiderefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                         </div>
@@ -342,3 +342,45 @@ include("navbar.php");
   </div>
 </footer>
 <!-- ================ Footer-End ======================= -->
+
+
+<!-- Modal -->
+<button style="display:none" id="myButton" type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#tipsbuttom">This is</button>
+<div class="modal tips_modal fade" id="tipsbuttom" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-body ">
+        <h1 style=" cursor: pointer;" class="float-end text-gray" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-x'></i></h1>
+        <h2 class="mt-4">FREE <span style="color:black" ;>TIPS</span></h2>
+        <p>Make sure you click on this plus button. If you don't click this button your information cannot be saved</p>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-8">
+              <div class="input-img">
+                <img class="mt-5" src="./image/tips-input.svg" alt="">
+
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="input-img">
+                <img src="./image/tips_plus.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function autoClickButton() {
+    var button = document.getElementById('myButton');
+    setTimeout(function() {
+      button.click();
+    }, 4000);
+  }
+
+  window.addEventListener('load', autoClickButton);
+</script>

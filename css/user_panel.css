@@ -304,7 +304,51 @@
 }
 
 .info-panel {
-  border: 2px solid red;
   width: 100%;
-  height: 200px;
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.337);
+}
+.info-panel .table-heading {
+  padding: 15px;
+}
+.info-panel .table-heading h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: rgba(24, 24, 24, 0.792);
+}
+.info-panel .table-heading .table-sec {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.info-panel .table-heading .table-sec thead th {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 20px;
+}
+.info-panel .table-heading .table-sec tbody td {
+  font-weight: 600;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid rgb(18, 18, 18);
+}
+
+.user-form label {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+  color: var(--primary-color);
+}
+.user-form input,
+.user-form textarea {
+  font-weight: 600;
+  color: rgb(27, 27, 27);
+}
+
+.modal_foter .update_btn {
+  background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
+  color: white;
+  font-weight: 600;
 }/*# sourceMappingURL=user_panel.css.map */

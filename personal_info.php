@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
   if (!empty($_REQUEST['upd_id'])) {
     $upd_id = $_REQUEST['upd_id'];
 
-    
+
     $sql = "UPDATE `per_info` SET `fname`='$fname',`lname`='$lname',`father_name`='$father_name',`gender`='$gender',`profession`='$profession',`dob`='$dob',`website`='$website',`per_no`= '$personal_no',`tel_no`='$tel_no',`email`='$email' , `country`='$country',`city`='$city',`about_us`='$about_us' WHERE user_id =  $upd_id";
     // $sql = "UPDATE `per_info` SET `fname`='$fname',`lname`='$lname',`father_name`='$father_name',`gender`='$gender',`profession`='$profession',`dob`='$dob',`website`='$website',`per_no`= '$personal_no',`tel_no`='$tel_no',`email`='$email',`user_img`='[value-13]',`country`='$country',`city`='$city',`about_us`='$about_us' WHERE 1";
   } else {

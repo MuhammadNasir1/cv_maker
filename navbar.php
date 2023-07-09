@@ -200,5 +200,4 @@ if (!isset($_SESSION['access_token'])) {
   </div>
 </nav>
 
-<script src="./javascript/index.js"></script>
 <!-- =================== Navbar-End ===================== -->

@@ -323,10 +323,29 @@ include('footer.php');
 ?>
 
 
-<script src="./javascript/index.js"></script>
 <script>
+  
+// ================index-page-cv-templete==========
+$(".carousel .carousel-item").each(function () {
+  var minPerSlide = 4;
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(":first");
+  }
+  next.children(":first-child").clone().appendTo($(this));
+
+  for (var i = 0; i < minPerSlide; i++) {
+    next = next.next();
+    if (!next.length) {
+      next = $(this).siblings(":first");
+    }
+    next.children(":first-child").clone().appendTo($(this));
+  }
+});
+
   window.addEventListener("scroll", function() {
     const pixelThreshold = 1500; // Adjust this value to your desired pixel threshold
+    // const pixelThreshold = 1500; // Adjust this value to your desired pixel threshold
 
     if (window.pageYOffset >= pixelThreshold) {
       let valueDisplays = document.querySelectorAll(".num");

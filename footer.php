@@ -31,7 +31,7 @@
           <h6 class="text-uppercase fw-bold">CV Making</h6>
           <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 80px; background-color:#C21010 ; height: 5px" />
           <p>
-          Create your CV in some simple steps. Just write your information,  choose your favourite template and download it in pdf.
+            Create your CV in some simple steps. Just write your information, choose your favourite template and download it in pdf.
           </p>
         </div>
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -56,7 +56,18 @@
           <h6 class="text-uppercase fw-bold">Useful links</h6>
           <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 80px; background-color:#C21010 ; height: 5px" />
           <p>
-            <a href="./users/" class="text-white">Settings</a>
+            <?php
+            if (@$_SESSION["loginemail"]) {
+            ?>
+              <a href="./users/" class="text-white">Settings</a>
+
+            <?php
+            } else {
+            ?>
+              <a href="./sign_up.php" class="text-white">Settings</a>
+            <?php
+
+            } ?>
           </p>
           <p>
             <a href="./privacypolicy.php" class="text-white">Privacy & Policy</a>
@@ -75,7 +86,7 @@
     </div>
   </section>
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2023 Copyright:
+    © 2023 Copyright:The Product By
     <a class="text-white" href="https://thewebconcept.com/" target="_blank">thewebconcept.com</a>
   </div>
 </footer>

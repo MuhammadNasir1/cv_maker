@@ -94,7 +94,7 @@ include("navbar.php")
                 <div style="display:flex;  align-items: center; justify-content: space-between;">
                   <h3>Personal Information</h3>
 
-                  <button type="button" class="toggle-image-form mt-2" onclick="toggleDivs()">Cv with image</button>
+                  <!-- <button type="button" class="toggle-image-form mt-2" onclick="toggleDivs()">Cv with image</button> -->
                 </div>
                 <!-- ================user-info-form-Start================== -->
 
@@ -105,7 +105,7 @@ include("navbar.php")
                       <!-- =============================================withimage-form================================== -->
 
                       <!-- ============First Name============ -->
-                      <div class="row" id="withimag" style="display:none; ">
+                      <div class="row" id="withimag" >
                         <div class="row">
                           <div class="col-lg-9 col-md-8 col-7">
                             <div class="input-field mt-5 ">
@@ -132,22 +132,20 @@ include("navbar.php")
                         </div>
                       </div>
                       <!-- =============================================withimage-form================================== -->
-                      <!-- ============First Name============ -->
-                      <div class="col-md-6" id="withoutimg">
+                      <!-- <div class="col-md-6" id="withoutimg">
                         <div class="input-field mt-5 ">
                           <input id="fvalue" name="fname" class="ph_inp" type="text" onkeyup="updateSecondInput()" value="<?= @$per_det['fname'] ?>">
                           <label>First Name</label>
                         </div>
                       </div>
 
-                      <!-- ============Last Name============ -->
+
                       <div class="col-md-6" id="withoutimg2">
                         <div class="input-field mt-5 ">
                           <input id="lvalue" name="lname" class="ph_inp" type="text" onkeyup="updatenameInput()" value="<?= @$per_det['lname'] ?>">
                           <label>Last Name</label>
                         </div>
-                      </div>
-                      <!-- </div> -->
+                      </div>  -->
                       <!-- ============Father Name============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5">
@@ -278,17 +276,17 @@ include("navbar.php")
 <!-- ============= personal-information-Form-End============== -->
 </div>
 <script>
-  function updateSecondInput() {
-    var fnamev = document.getElementById('fvalue');
-    var fnamevalue = document.getElementById('fnamev');
-    fnamevalue.value = fnamev.value;
-  }
+    // function updateSecondInput() {
+    //   var fnamev = document.getElementById('fvalue');
+    //   var fnamevalue = document.getElementById('fnamev');
+    //   fnamevalue.value = fnamev.value;
+    // }
 
-  function updatenameInput() {
-    var lvalue = document.getElementById('lvalue');
-    var fnamevalue = document.getElementById('fnamev');
-    lnamev.value = lvalue.value;
-  }
+    // function updatenameInput() {
+    //   var lvalue = document.getElementById('lvalue');
+    //   var fnamevalue = document.getElementById('fnamev');
+    //   lnamev.value = lvalue.value;
+    // }
 
   const imageUpload = document.getElementById('files');
   const imagePreview = document.getElementById('imagePreview');
@@ -326,7 +324,7 @@ include("navbar.php")
     </div>
   </section>
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2023 Copyright:
+    © 2023 Copyright:The Product By
     <a class="text-white" href="https://thewebconcept.com/">thewebconcept.com</a>
   </div>
 </footer>

@@ -78,9 +78,24 @@ if (!isset($_SESSION['access_token'])) {
           </p>
           <div class="collapse ph_dropdown" id="collapseExample">
             <div class="mt-2">
-              <a href="./personal_info.php">Create cv</a>
-              <a href="./personal_info.php">Show cv templete</a>
-              <a href="#">How to create CV</a>
+              <?php
+              if (@$_SESSION["loginemail"]) {
+              ?>
+                <a href="./personal_info.php">Create cv</a>
+                <a href="./personal_info.php">Show cv templete</a>
+                <a href="#">How to create CV</a>
+              <?php
+              } else {
+
+              ?>
+                <a href="./sign_up.php">Create cv</a>
+                <a href="./sign_up.php">Show cv templete</a>
+                <a href="#">How to create CV</a>
+
+              <?php
+
+              }
+              ?>
             </div>
           </div>
         </div>
@@ -94,9 +109,28 @@ if (!isset($_SESSION['access_token'])) {
           </p>
           <div class="collapse ph_dropdown" id="collaps">
             <div class="mt-2">
-              <a href="./personal_info.php">Create Resume</a>
-              <a href="./personal_ssinfo.php">Show resume templete</a>
-              <a href="#">How to create resume</a>
+              <?php
+              if (@$_SESSION["loginemail"]) {
+              ?>
+                <a href="./personal_info.php">Create Resume</a>
+                <a href="./personal_ssinfo.php">Show resume templete</a>
+                <a href="#">How to create resume</a>
+
+
+              <?php
+
+              } else {
+              ?>
+
+                <a href="./sign_up.php">Create Resume</a>
+                <a href="./sign_up.php">Show resume templete</a>
+                <a href="#">How to create resume</a>
+
+              <?php
+
+              }
+
+              ?>
             </div>
           </div>
         </div>
@@ -109,9 +143,26 @@ if (!isset($_SESSION['access_token'])) {
           </p>
           <div class="collapse ph_dropdown" id="colla">
             <div class="mt-2">
-              <a href="./blog.php">blogs</a>
-              <a href="./users/">Setting</a>
-              <a href="#">How to create resume</a>
+              <?php
+              if (@$_SESSION["loginemail"]) {
+              ?>
+                <a href="./blog.php">blogs</a>
+                <a href="./users/">Setting</a>
+                <a href="#">How to create resume</a>
+
+              <?php
+
+              } else {
+              ?>
+
+                <a href="./blog.php">blogs</a>
+                <a href="./sign_up.php">Setting</a>
+                <a href="#">How to create resume</a>
+              <?php
+
+              }
+              ?>
+
             </div>
           </div>
         </div>
@@ -121,33 +172,79 @@ if (!isset($_SESSION['access_token'])) {
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             CV
           </a>
+          <?php
+          if (@$_SESSION["loginemail"]) {
+          ?>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
+              <li><a class="dropdown-item" href="./personal_info.php">Templete</a></li>
+              <li><a class="dropdown-item" href="#">How to create CV</a></li>
+            </ul>
+          <?php
 
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
-            <li><a class="dropdown-item" href="./personal_info.php">Templete</a></li>
-            <li><a class="dropdown-item" href="#">How to create CV</a></li>
-          </ul>
+          } else {
+          ?>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./sign_up.php">Create</a></li>
+              <li><a class="dropdown-item" href="./sign_up.php">Templete</a></li>
+              <li><a class="dropdown-item" href="#">How to create CV</a></li>
+            </ul>
+          <?php
+          }
+          ?>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Resume
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
-            <li><a class="dropdown-item" href="./personal_info.php">Templete</a></li>
-            <li><a class="dropdown-item" href="#">How to create Resume</a></li>
-          </ul>
+          <?php
+          if (@$_SESSION["loginemail"]) {
+          ?>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
+              <li><a class="dropdown-item" href="./personal_info.php">Templete</a></li>
+              <li><a class="dropdown-item" href="#">How to create Resume</a></li>
+            </ul>
+          <?php
+
+          } else {
+          ?>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./sign_up.php">Create</a></li>
+              <li><a class="dropdown-item" href="./sign_up.php">Templete</a></li>
+              <li><a class="dropdown-item" href="#">How to create Resume</a></li>
+            </ul>
+
+          <?php
+          }
+          ?>
 
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Others
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./blog.php">BLog</a></li>
-            <li><a class="dropdown-item" href="./users/">Setting</a></li>
-            <li><a class="dropdown-item" href="./privacypolicy.php">Privacy & Policy </a></li>
-          </ul>
+          <?php
+          if (@$_SESSION["loginemail"]) {
+          ?>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./blog.php">BLog</a></li>
+              <li><a class="dropdown-item" href="./users/">Setting</a></li>
+              <li><a class="dropdown-item" href="./privacypolicy.php">Privacy & Policy </a></li>
+            </ul>
+          <?php
+
+          } else {
+          ?>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./blog.php">BLog</a></li>
+              <li><a class="dropdown-item" href="./sign_up.php">Setting</a></li>
+              <li><a class="dropdown-item" href="./privacypolicy.php">Privacy & Policy </a></li>
+            </ul>
+
+          <?php
+          }
+          ?>
         </li>
 
       </ul>

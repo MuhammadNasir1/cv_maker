@@ -409,11 +409,14 @@
   }
 }
 
-.modal_foter {
 
-  & .update_btn {
-    background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
+
+.update_btn {
+  background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
+  color: white;
+  font-weight: 600;
+
+  &:hover {
     color: white;
-    font-weight: 600;
   }
 }

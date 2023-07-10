@@ -190,14 +190,14 @@ include("navbar.php")
                       <div class="col-md-6">
                         <div class="input-field mt-5">
                           <input name="personal_no" type="text" required value="<?= @$per_det['per_no'] ?>">
-                          <label>Personal #</label>
+                          <label>Personal No</label>
                         </div>
                       </div>
                       <!-- ============Telephone No============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5">
                           <input name="tel_no" type="text" required value="<?= @$per_det['tel_no'] ?>">
-                          <label>Tel #</label>
+                          <label>Tel No</label>
                         </div>
                       </div>
                       <!-- ============Email============ -->

@@ -347,8 +347,11 @@
   color: rgb(27, 27, 27);
 }
 
-.modal_foter .update_btn {
+.update_btn {
   background: linear-gradient(63deg, #c21010 0%, #a73232 80%);
   color: white;
   font-weight: 600;
+}
+.update_btn:hover {
+  color: white;
 }/*# sourceMappingURL=user_panel.css.map */

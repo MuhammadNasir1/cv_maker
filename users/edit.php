@@ -18,7 +18,7 @@ if (@$_REQUEST['del']) {
         showConfirmButton: false,
         timer: 1500
       }).then(function() {
-        window.location.href = "./info.php";
+        window.location.href = "./userinfo.php";
       });
     </script>
   <?php
@@ -37,8 +37,13 @@ if (isset($_POST['upt_perinfo'])) {
   $email = $_POST['email'];
   $country = $_POST['country'];
   $city = $_POST['city'];
-  $about_us = $_POST['about_us'];
-  $sql = "UPDATE `per_info` SET `fname`='$fname',`lname`='$lname',`father_name`='$father_name',`gender`='$gender',`profession`='$profession',`dob`='$dob',`website`='$website',`per_no`='$personal_no',`tel_no`='$tel_no',`email`='$email',`country`='$country',`city`='$city',`about_us`='$about_us' WHERE  user_id =  1";
+  $about_u = $_POST['about_u'];
+
+
+  if (!empty($_REQUEST['upd_id'])) {
+    $upd_id = $_REQUEST['upd_id'];
+    $sql = "UPDATE `per_info` SET `fname`='$fname',`lname`='$lname',`father_name`='$father_name',`gender`='$gender',`profession`='$profession',`dob`='$dob',`website`='$website',`per_no`='$personal_no',`tel_no`='$tel_no',`email`='$email',`country`='$country',`city`='$city',`about_us`= '$about_u' WHERE  user_id =  $upd_id";
+  }
   $result = mysqli_query($conn, $sql);
   if ($result) {
   ?>
@@ -50,7 +55,7 @@ if (isset($_POST['upt_perinfo'])) {
         showConfirmButton: false,
         timer: 1500
       }).then(function() {
-        window.location.href = "./info.php";
+        window.location.href = "./userinfo.php";
       });
     </script>
   <?php
@@ -76,7 +81,7 @@ if (@$_REQUEST['del_edu']) {
         showConfirmButton: false,
         timer: 1500
       }).then(function() {
-        window.location.href = "./info.php";
+        window.location.href = "./userinfo.php";
       });
     </script>
   <?php
@@ -102,7 +107,7 @@ if (@$_REQUEST['del_skill']) {
         showConfirmButton: false,
         timer: 1500
       }).then(function() {
-        window.location.href = "./info.php";
+        window.location.href = "./userinfo.php";
       });
     </script>
   <?php
@@ -128,7 +133,7 @@ if (@$_REQUEST['del_work_exo']) {
         showConfirmButton: false,
         timer: 1500
       }).then(function() {
-        window.location.href = "./info.php";
+        window.location.href = "./userinfo.php";
       });
     </script>
   <?php
@@ -153,7 +158,7 @@ if (@$_REQUEST['hob_del']) {
         showConfirmButton: false,
         timer: 1500
       }).then(function() {
-        window.location.href = "./info.php";
+        window.location.href = "./userinfo.php";
       });
     </script>
   <?php
@@ -180,10 +185,10 @@ if (@$_REQUEST['lan_del']) {
         showConfirmButton: false,
         timer: 1500
       }).then(function() {
-        window.location.href = "./info.php";
+        window.location.href = "./userinfo.php";
       });
     </script>
-<?php
+  <?php
   }
 }
 
@@ -207,7 +212,7 @@ if (@$_REQUEST['ref_del']) {
         showConfirmButton: false,
         timer: 1500
       }).then(function() {
-        window.location.href = "./info.php";
+        window.location.href = "./userinfo.php";
       });
     </script>
 <?php

@@ -66,6 +66,42 @@ if (isset($_POST['upt_perinfo'])) {
 $edu_sql = "SELECT * FROM `education`  WHERE user_id = '" . $_SESSION['user_id'] . "'";
 $edu_res =  mysqli_query($conn, $edu_sql);
 
+
+if (isset($_POST['edu_ids'])) {
+  $institute_names = $_POST['institute_name'];
+  $degrees = $_POST['degree'];
+  $total_marks = $_POST['total_marks'];
+  $ob_marks = $_POST['ob_marks'];
+  $edu_st_dates = $_POST['edu_st_date'];
+  $edu_end_dates = $_POST['edu_end_date'];
+  $edu_fields = $_POST['edu_field'];
+  
+  for ($i = 0; $i < count($institute_names); $i++) {
+    $edit_education = $_POST['edit_edu'][$i] ?? '';
+    $institute_name = $institute_names[$i] ?? '';
+    $degree = $degrees[$i] ?? '';
+    $total_marks = $total_marks[$i] ?? '';
+    $ob_marks = $ob_marks[$i] ?? '';
+    $edu_st_date = $edu_st_dates[$i] ?? '';
+    $edu_end_date = $edu_end_dates[$i] ?? '';
+    $edu_field = $edu_fields[$i] ?? '';
+    
+    if (!empty($edit_education) && !empty($institute_name) && !empty($degree) && !empty($total_marks) && !empty($ob_marks) && !empty($edu_st_date) && !empty($edu_end_date) && !empty($edu_field)) {
+      $edu_sql = "UPDATE `education` SET `instutute_name`='$institute_name', `dagree`='$degree', `total_marks`='$total_marks', `obtain_marks`='$ob_marks', `deg_st_date`='$edu_st_date', `deg_end_date`='$edu_end_date', `field`='$edu_field' WHERE edu_id = $edit_education";
+      
+      print_r($edu_sql);
+      $edu_result = mysqli_query($conn, $edu_sql);
+      
+      if ($edu_result) {
+        echo "Success: Education record updated successfully";
+      } else {
+        echo "Error: Failed to update education record";
+      }
+    }
+  }
+}
+
+
 if (@$_REQUEST['del_edu']) {
   @$del_edu = $_REQUEST['del_edu'];
   @$del_education = "DELETE FROM `education` WHERE edu_id = '$del_edu'";

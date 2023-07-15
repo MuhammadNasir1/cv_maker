@@ -173,23 +173,23 @@ include("./edit.php");
                 <textarea class="form-control" style="height:150px" name="about_u"><?= $per_info['about_us'] ?></textarea>
                 <div class="form-text mt-2" style="font-weight: 600;">Enter yourself in less than <b>30</b> words</div>
               </div>
-            </div>
+            </div>  
             <div class="row">
               <div class="col-12">
                 <button type="submit" name="upt_perinfo" class="btn update_btn float-end"><i class="bx bxs-pencil"></i> Update</button>
               </div>
             </div>
             <?php
-            $a = 1;
+            // $a = 1;
 
             while ($edu_data = mysqli_fetch_assoc($edu_res)) {
-              $a = $a++;
+              // $a = $a++;
 
             ?>
 
               <div class="row mt-5">
 
-                <h3>Education <b><?= $a++ ?></b></h3>
+                <h3>Education <b><?= @$a++ ?></b></h3>
                 <div class="col-md-3">
                   <div class="mt-3">
                     <label class="form-label">Institute Name<b></b> </b></label>
@@ -241,12 +241,10 @@ include("./edit.php");
                 </div>
               </div>
               <input name="edit_edu[]" type="text" value="<?= $edu_data['edu_id'] ?>">
-              <!-- <input name="edit_edu" type="text" value="<?= $edu_data['edu_id'] ?>"> -->
               <div class="row">
                 <div class="col-12">
                  <button   name="edu_ids" class="btn update_btn float-end ms-2"><i class="bx bxs-pencil"></i> Update</button>
                   <a href="./userinfo.php?del_edu=<?= $edu_data['edu_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
-                  <!-- <a href="./userinfo.php?edit_id=<?= $edu_data['edu_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> Update</button></a> -->
                 </div>
               </div>
             <?php

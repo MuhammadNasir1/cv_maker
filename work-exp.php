@@ -15,7 +15,6 @@ if (isset($_POST['submit'])) {
     $work_city_coun = $work_city_countries[$i];
 
     $sql = "INSERT INTO `work_exp` (`user_id` ,`company_name`, `role`, `work_st_data`, `work_end_date`, `city_country`) VALUES ('" . $_SESSION['user_id'] . "','$company_name', '$work_role', '$work_st_date', '$work_end_date', '$work_city_coun')";
-
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -90,7 +89,7 @@ include("navbar.php")
                       <!-- ============Company Name============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input name="" id="com_name" type="text" required>
+                          <input name="" id="com_name" type="text" >
                           <label>Company Name</label>
                         </div>
                       </div>
@@ -98,21 +97,21 @@ include("navbar.php")
                       <div class="col-md-6">
 
                         <div class="input-field mt-5 ">
-                          <input name="" id="role" type="text" required>
+                          <input name="" id="role" type="text" >
                           <label>Role </label>
                         </div>
                       </div>
                       <!-- ============Start-Date============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input name="" id="start_date" type="date" required>
+                          <input name="" id="start_date" type="date" >
                           <label class="date-lable">Start Date</label>
                         </div>
                       </div>
                       <!-- ============End-Date============ -->
                       <div class="col-md-6 ">
                         <div class="input-field mt-5 ">
-                          <input name="" id="end_date" type="date" required>
+                          <input name="" id="end_date" type="date" >
                           <label class="date-lable">End Date</label>
                         </div>
                       </div>
@@ -121,7 +120,7 @@ include("navbar.php")
 
                         <div class="input-field mt-5 ">
                           <!-- <input name="work_city_coun[]" id="city_coun" style="width: 85%;" type="text" required> -->
-                          <textarea name="work_city_coun[]" id="city_coun" style="width: 85%; border-radius: 5px; height:40px" id=""></textarea>
+                          <textarea  id="city_coun" style="width: 85%; border-radius: 5px; height:40px" id=""></textarea>
                           <label>Working Details</label>
                           <!-- <a onclick="addwork()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a> -->
                           <a id="work_btn" onclick="wrk_exp()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Work" class="float-end" src="./image/plus-icon.svg" alt=""></a>
@@ -208,6 +207,8 @@ include("navbar.php")
   <td><input name="work_city_coun[]" type="hidden" value="' + city_coun + '">' + city_coun + '</td>\
   <td><a onclick="removework(`#work_table_id_' + work_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
   </tr>');
+                  var form = $("form")[0];
+                  form.reset();
                 });
 
 

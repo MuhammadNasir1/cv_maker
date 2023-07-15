@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
     // $sql = "UPDATE `per_info` SET `fname`='$fname',`lname`='$lname',`father_name`='$father_name',`gender`='$gender',`profession`='$profession',`dob`='$dob',`website`='$website',`per_no`= '$personal_no',`tel_no`='$tel_no',`email`='$email',`user_img`='[value-13]',`country`='$country',`city`='$city',`about_us`='$about_us' WHERE 1";
   } else {
     $sql = "INSERT INTO `per_info`(`user_id`, `fname`, `lname`, `father_name`, `gender`, `profession`, `dob`, `website`, `per_no`, `tel_no`, `email`, `user_img`, `country`, `city`, `about_us`) VALUES ('" . $_SESSION['user_id'] . "', '$fname', '$lname', '$father_name', '$gender', '$profession', '$dob', '$website', '$personal_no', '$tel_no', '$email', '$img', '$country', '$city', '$about_us')";
-  } 
+  }
 
 
   $result = mysqli_query($conn, $sql);
@@ -105,7 +105,7 @@ include("navbar.php")
                       <!-- =============================================withimage-form================================== -->
 
                       <!-- ============First Name============ -->
-                      <div class="row" id="withimag" >
+                      <div class="row" id="withimag">
                         <div class="row">
                           <div class="col-lg-9 col-md-8 col-7">
                             <div class="input-field mt-5 ">
@@ -276,17 +276,17 @@ include("navbar.php")
 <!-- ============= personal-information-Form-End============== -->
 </div>
 <script>
-    // function updateSecondInput() {
-    //   var fnamev = document.getElementById('fvalue');
-    //   var fnamevalue = document.getElementById('fnamev');
-    //   fnamevalue.value = fnamev.value;
-    // }
+  // function updateSecondInput() {
+  //   var fnamev = document.getElementById('fvalue');
+  //   var fnamevalue = document.getElementById('fnamev');
+  //   fnamevalue.value = fnamev.value;
+  // }
 
-    // function updatenameInput() {
-    //   var lvalue = document.getElementById('lvalue');
-    //   var fnamevalue = document.getElementById('fnamev');
-    //   lnamev.value = lvalue.value;
-    // }
+  // function updatenameInput() {
+  //   var lvalue = document.getElementById('lvalue');
+  //   var fnamevalue = document.getElementById('fnamev');
+  //   lnamev.value = lvalue.value;
+  // }
 
   const imageUpload = document.getElementById('files');
   const imagePreview = document.getElementById('imagePreview');

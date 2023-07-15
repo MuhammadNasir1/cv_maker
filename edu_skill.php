@@ -129,7 +129,7 @@ include("navbar.php");
                       <!-- ============institue Name============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input class="rem_value" name="" id="Institute" type="text">
+                          <input class="rem_value hide" name="" id="Institute" type="text">
                           <label>Institute Name</label>
                         </div>
                       </div>
@@ -137,7 +137,7 @@ include("navbar.php");
                       <div class="col-md-6">
 
                         <div class="input-field mt-5">
-                          <input name="" id="Dagree" type="text">
+                          <input name="" class="hide" id="Dagree" type="text">
                           <label>Degree</label>
                         </div>
                       </div>
@@ -145,7 +145,7 @@ include("navbar.php");
                       <div class="col-md-6">
 
                         <div class="input-field mt-5">
-                          <input name="" id="tmarks" type="number">
+                          <input name="" class="hide" id="tmarks" type="number">
                           <label>Total Marks</label>
                         </div>
                       </div>
@@ -153,21 +153,21 @@ include("navbar.php");
                       <div class="col-md-6">
 
                         <div class="input-field mt-5">
-                          <input name="" id="obmarks" type="number">
+                          <input name="" class="hide" id="obmarks" type="number">
                           <label>Obtains Marks</label>
                         </div>
                       </div>
                       <!-- ============Start-Date============ -->
                       <div class="col-md-6">
                         <div class="input-field mt-5 ">
-                          <input name="" id="sdate" type="date">
+                          <input name="" class="hide" id="sdate" type="date">
                           <label class="date-lable">Start Date</label>
                         </div>
                       </div>
                       <!-- ============End-Date============ -->
                       <div class="col-md-6 ">
                         <div class="input-field mt-5 ">
-                          <input id="edate" type="date" required>
+                          <input id="edate" class="hide" type="date" >
                           <label class="date-lable">End Date</label>
                         </div>
                       </div>
@@ -176,7 +176,7 @@ include("navbar.php");
 
                         <div class="input-field mt-5 ">
                           <!-- <input name="edu_field[]" id="Feild" style="width:85%" type="text" required> -->
-                          <textarea name="" id="Feild" style="width: 85%; border-radius: 5px; height:40px" id=""></textarea>
+                          <textarea name="" class="hide" id="Feild" style="width: 85%; border-radius: 5px; height:40px" id=""></textarea>
 
                           <a id="educationbtn" onclick="educ_table()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Education" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                           <label>Education Details</label>
@@ -210,6 +210,8 @@ include("navbar.php");
           <td><input name="edu_field[]"  type="hidden" value="' + Feild + '">' + Feild + '</td>\
           <td><a onclick="removeById(`#education_table_id_' + id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
+                    var form = $("form")[0];
+                    form.reset();
                   });
 
                   function educ_table() {
@@ -304,7 +306,7 @@ include("navbar.php");
 
                   <div id="add_iteee" class="mt-5">
                     <div class="input-field" id="myList1">
-                      <input name="" id="skill_" style="width:95%" type="text" required>
+                      <input name="" id="skill_" style="width:95%" type="text" >
                       <label>Skill 1</label>
                       <!-- <a id="skill_btn" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a> -->
                     </div>
@@ -394,6 +396,8 @@ include("navbar.php");
             <a onclick="removeById(`#product_idN_' + skill_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a>\
             </td>\
           </tr>');
+              var form = $("form")[0];
+              form.reset();
             });
 
 

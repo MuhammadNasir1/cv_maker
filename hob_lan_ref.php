@@ -78,7 +78,7 @@ include("navbar.php");
                   <div class="col-md-12">
                     <div id="referad">
                       <div class="input-field mt-5 ">
-                        <input name="" id="hobby" style="width:85%" type="text" required>
+                        <input name="" id="hobby" style="width:85%" type="text" >
                         <label>Hobby</label>
                         <a id="addhobby" onclick="hobby_hide()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                       </div>
@@ -121,6 +121,10 @@ include("navbar.php");
             <td><input name="hobby[]" type="hidden" value="' + hobby + '">' + hobby + ' </td>\
           <td><a onclick="removehobby(`#hobby_table_id_' + hobby_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
+                  var form = $("form")[0];
+                  form.reset();
+
+
                 });
 
 
@@ -141,7 +145,7 @@ include("navbar.php");
 
                     <div class="col-md-12">
                       <div class="input-field mt-5">
-                        <input name="" id="langugage" style="width:85%" type="text" required>
+                        <input name="" id="langugage" style="width:85%" type="text" >
                         <label>Language</label>
                         <a id="addlanguage" onclick="hide_language()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                       </div>
@@ -185,6 +189,8 @@ include("navbar.php");
             <td><input name="languge[]" type="hidden" value="' + langugage + '">' + langugage + ' </td>\
           <td><a onclick="removelanguage(`#hobby_table_id_' + lang_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
+                    var form = $("form")[0];
+                    form.reset();
                   })
 
 
@@ -210,7 +216,7 @@ include("navbar.php");
                         <div class="input-field mt-5 ">
                           <input name="" id="referece" style="width:85%" type="text">
                           <label>Reference</label>
-                          <a id="addrefer" onclick="hiderefer()" href="#"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
+                          <a id="addrefer" onclick="hiderefer()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                         </div>
                       </div>
                     </div>
@@ -252,6 +258,8 @@ include("navbar.php");
             <td><input name="reference[]" type="hidden" value="' + referece + '">' + referece + ' </td>\
           <td><a onclick="removerefer(`#refer_table_id_' + refer_id + '`)"<i style="color: #C21010;letter-spacing: 0.2rem;cursor: pointer; text-decoration: none;"class="bx bx-trash-alt"></i></a></td>\
           </tr>');
+                    var form = $("form")[0];
+                    form.reset();
                   })
 
                   function hiderefer() {

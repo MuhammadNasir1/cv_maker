@@ -23,7 +23,7 @@ include('navbar.php');
   </div>
 </div>
 <div class="mt-4 edit-details-btn container-fluid  ">
- <a href="user_information.php" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Edit Details</span></button></a>
+  <a href="./users/userinfo.php" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Edit Details</span></button></a>
 </div>
 <!-- ==============CV-templetes-Start================== -->
 <div class="container-fluid mt-5">
@@ -55,7 +55,7 @@ include('navbar.php');
         </div>
       </div>
           <div class=" col-md-4 col-lg-3">
-                <div class="cv_templete_img">
+                <div class="cv_templete_img mt-4">
                   <div style="width:90%">
                     <span style="position:absolute"><b><?= $cv['templete_name'] ?> </b></span>
                     <div class="temp_img ">

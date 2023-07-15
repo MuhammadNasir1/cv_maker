@@ -113,126 +113,126 @@
   <?php
 
   while ($row6 = mysqli_fetch_assoc($result6)) {
-  ?>>
-  <tr>
-    <div style="margin-left: 22px;">
-      <!-- =============company name================= -->
-      <div>
-        <h2 style="margin-top: 20px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase"><span style="border-bottom:3px solid #183042 "><?= ucfirst($row6['company_name']) ?></span></h2>
-        <h4 style="font-weight:600; margin-top:4px"><?= ucfirst($row6['role']) ?> </h4>
-        <h4 style="color:#183042; margin-top:3px "><i><?= @$row6['work_st_data'] ?> - <?= @$row6['work_end_date'] ?></i>5</h4>
+  ?>
+    <tr>
+      <div style="margin-left: 22px;">
+        <!-- =============company name================= -->
+        <div>
+          <h2 style="margin-top: 20px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase"><span style="border-bottom:3px solid #183042 "><?= ucfirst($row6['company_name']) ?></span></h2>
+          <h4 style="font-weight:600; margin-top:4px"><?= ucfirst($row6['role']) ?> </h4>
+          <h4 style="color:#183042; margin-top:3px "><i><?= @$row6['work_st_data'] ?> - <?= @$row6['work_end_date'] ?></i>5</h4>
+        </div>
+        <div style="width: 21cm;">
+          <ul style="margin-left:20px; ">
+            <li style="color:#183042; margin-right:50px"> <span style="color:black;font-weight:500;line-height:14px"><?= @$row6['city_country'] ?></span></li>
+          </ul>
+        </div>
+        <div style="width: 21cm;">
+
+        </div>
       </div>
-      <div style="width: 21cm;">
-        <ul style="margin-left:20px; ">
-          <li style="color:#183042; margin-right:50px"> <span style="color:black;font-weight:500;line-height:14px"><?= @$row6['city_country'] ?></span></li>
+    </tr>
+
+  <?php } ?>
+
+  <!-- ========================Skill-start==================== -->
+  <tr>
+    <td>
+      <div style="margin-left: 20px; margin-top:30px;">
+        <!-- =============heading=========== -->
+        <div>
+          <h1 style="text-transform: uppercase; letter-spacing:0.50px; color:#656771"><span style="font-weight:600; border-bottom:4px solid #868A97">Skills</span>
+          </h1>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <!-- =====================work-exp-details================ -->
+  <!-- ======================skils-details====================== -->
+  <?php
+  $a = 1;
+  while ($row3 = mysqli_fetch_assoc($result3)) {
+    @$a = $i + 1;
+  ?>
+    <tr>
+      <div style="margin-left: 22px;  margin-right:50px; width:21cm">
+        <ul style="margin-left: 30px; margin-top:10px; list-style:none">
+          <li style="color: #183042; ">
+            <h3><span style="color:#2F5D80; font-weight:600"><i> <?= $a ?></i>-</span> <span style="font-weight:600; color:black; width:10cm"> <?= ucfirst(@$row3['skill']) ?> <?= @$row3['skill_per'] . '%' ?></span> <span style="color:#183042; position:absolute; margin-left:150px"> >>>>>>>>>>>>>>>>>>>>>>>></span></h3>
+          </li>
+
         </ul>
       </div>
-      <div style="width: 21cm;">
+    </tr>
+  <?php } ?>
 
-      </div>
-    </div>
-  </tr>
+  <!-- =========================skill End============ -->
 
-<?php } ?>
 
-<!-- ========================Skill-start==================== -->
-<tr>
-  <td>
-    <div style="margin-left: 20px; margin-top:30px;">
-      <!-- =============heading=========== -->
-      <div>
-        <h1 style="text-transform: uppercase; letter-spacing:0.50px; color:#656771"><span style="font-weight:600; border-bottom:4px solid #868A97">Skills</span>
-        </h1>
-      </div>
-    </div>
-  </td>
-</tr>
-<!-- =====================work-exp-details================ -->
-<!-- ======================skils-details====================== -->
-<?php
-$a = 1;
-while ($row3 = mysqli_fetch_assoc($result3)) {
-  @$a = $i + 1;
-?>
+  <!-- ========================hobby-start==================== -->
   <tr>
-    <div style="margin-left: 22px;  margin-right:50px; width:21cm">
-      <ul style="margin-left: 30px; margin-top:10px; list-style:none">
-        <li style="color: #183042; ">
-          <h3><span style="color:#2F5D80; font-weight:600"><i> <?= $a ?></i>-</span> <span style="font-weight:600; color:black; width:10cm"> <?= ucfirst(@$row3['skill']) ?> <?= @$row3['skill_per'] . '%' ?></span> <span style="color:#183042; position:absolute; margin-left:150px"> >>>>>>>>>>>>>>>>>>>>>>>></span></h3>
-        </li>
-
-      </ul>
-    </div>
-  </tr>
-<?php } ?>
-
-<!-- =========================skill End============ -->
-
-
-<!-- ========================hobby-start==================== -->
-<tr>
-  <td>
-    <div style="margin-left: 20px; margin-top:30px;">
-      <!-- =============heading=========== -->
-      <div>
-        <h1 style="text-transform: uppercase; letter-spacing:0.50px; color:#656771"><span style="font-weight:600; border-bottom:4px solid #868A97">Hobbies</span>
-        </h1>
+    <td>
+      <div style="margin-left: 20px; margin-top:30px;">
+        <!-- =============heading=========== -->
+        <div>
+          <h1 style="text-transform: uppercase; letter-spacing:0.50px; color:#656771"><span style="font-weight:600; border-bottom:4px solid #868A97">Hobbies</span>
+          </h1>
+        </div>
       </div>
-    </div>
-  </td>
-</tr>
-<!-- =====================hobby-details================ -->
-<!-- ======================hobby-details====================== -->
-<?php
-$i = 0;
-while ($row7 = mysqli_fetch_assoc($result7)) {
-  $i = $i + 1;
-?>
-  <tr>
-    <div style="margin-left: 22px;  margin-right:50px; width:21cm">
-      <ul style="margin-left: 30px; margin-top:10px; list-style:none">
-        <li style="color: #183042; ">
-          <h3><span style="color:#2F5D80; font-weight:600"><i> <?= $i ?></i>-</span> <span style="font-weight:600; color:black; width:10cm"> <?= ucfirst(@$row7['hobby']) ?></span> <span style="color:#183042; position:absolute; margin-left:150px"> >>>>>>>>>>>>>>>>>>>>>>>></span></h3>
-        </li>
-
-      </ul>
-    </div>
+    </td>
   </tr>
-<?php } ?>
+  <!-- =====================hobby-details================ -->
+  <!-- ======================hobby-details====================== -->
+  <?php
+  $i = 0;
+  while ($row7 = mysqli_fetch_assoc($result7)) {
+    $i = $i + 1;
+  ?>
+    <tr>
+      <div style="margin-left: 22px;  margin-right:50px; width:21cm">
+        <ul style="margin-left: 30px; margin-top:10px; list-style:none">
+          <li style="color: #183042; ">
+            <h3><span style="color:#2F5D80; font-weight:600"><i> <?= $i ?></i>-</span> <span style="font-weight:600; color:black; width:10cm"> <?= ucfirst(@$row7['hobby']) ?></span> <span style="color:#183042; position:absolute; margin-left:150px"> >>>>>>>>>>>>>>>>>>>>>>>></span></h3>
+          </li>
 
-<!-- =========================hobby End============ -->
-
-
-<!-- ========================REFERCENCE-start==================== -->
-<tr>
-  <td>
-    <div style="margin-left: 20px; margin-top:30px;">
-      <!-- =============heading=========== -->
-      <div>
-        <h1 style="text-transform: uppercase; letter-spacing:0.50px; color:#656771"><span style="font-weight:600; border-bottom:4px solid #868A97">Reference</span>
-        </h1>
+        </ul>
       </div>
-    </div>
-  </td>
-</tr>
-<!-- =====================Reference-details================ -->
-<!-- ======================Hobby-details====================== -->
-<?php
-$i = 0;
-while ($row4 = mysqli_fetch_assoc($result4)) {
-  $i = $i + 1;
-?>
+    </tr>
+  <?php } ?>
+
+  <!-- =========================hobby End============ -->
+
+
+  <!-- ========================REFERCENCE-start==================== -->
   <tr>
-    <div style="margin-left: 22px;  margin-right:50px; width:21cm">
-      <ul style="margin-left: 30px; margin-top:10px; list-style:none">
-        <li style="color: #183042; ">
-          <h3><span style="color:#2F5D80; font-weight:600"><i> <?= $i ?></i>-</span> <span style="font-weight:600; color:black; width:10cm"> <?= ucfirst(@$row4['user_reference']) ?></span> <span style="color:#183042; position:absolute; margin-left:150px"> >>>>>>>>>>>>>>>>>>>>>>>></span></h3>
-        </li>
-
-      </ul>
-    </div>
+    <td>
+      <div style="margin-left: 20px; margin-top:30px;">
+        <!-- =============heading=========== -->
+        <div>
+          <h1 style="text-transform: uppercase; letter-spacing:0.50px; color:#656771"><span style="font-weight:600; border-bottom:4px solid #868A97">Language</span>
+          </h1>
+        </div>
+      </div>
+    </td>
   </tr>
-<?php } ?>
+  <!-- =====================Reference-details================ -->
+  <!-- ======================Hobby-details====================== -->
+  <?php
+  $i = 1;
+  while ($row2 = mysqli_fetch_assoc($result2)) {
+    $i = $i++;
+  ?>
+    <tr>
+      <div style="margin-left: 22px;  margin-right:50px; width:21cm">
+        <ul style="margin-left: 30px; margin-top:10px; list-style:none">
+          <li style="color: #183042; ">
+            <h3><span style="color:#2F5D80; font-weight:600"><i> <?= $i ?></i>-</span> <span style="font-weight:600; color:black; width:10cm"> <?= ucfirst(@$row2['language']) ?></span> <span style="color:#183042; position:absolute; margin-left:150px"> >>>>>>>>>>>>>>>>>>>>>>>></span></h3>
+          </li>
 
-<!-- =========================Hobby End============ -->
+        </ul>
+      </div>
+    </tr>
+  <?php } ?>
+
+  <!-- =========================Hobby End============ -->
 </table>

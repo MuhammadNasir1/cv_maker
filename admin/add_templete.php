@@ -1,5 +1,9 @@
 <?php
-
+include('../db.php');
+if ($_SESSION['loginadmin']) {
+} else {
+  header("Location: login.php");
+}
 include("../db.php");
 if (isset($_POST['submit'])) {
   $templete_name = $_POST['templete_name'];
@@ -85,10 +89,12 @@ include('../header.php');
       </a>
       <span class="tooltip">Settings</span>
     </li>
-    <li class="profile">
+    <a href="../logout.php">
+      <li class="profile">
 
-      <i class="bx bx-log-out" id="log_out"></i>
-    </li>
+        <i class="bx bx-log-out" id="log_out"></i>
+      </li>
+    </a>
   </ul>
 </div>
 <!-- ================sidebar-End================ -->

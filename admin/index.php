@@ -1,4 +1,12 @@
 <?php
+include('../db.php');
+if ($_SESSION['loginadmin']) {
+} else {
+  header("Location: login.php");
+
+}
+
+
 include('../header.php');
 ?>
 <!-- ================sidebar-Start============== -->
@@ -45,10 +53,12 @@ include('../header.php');
       </a>
       <span class="tooltip">Settings</span>
     </li>
+    <a href="../logout.php">
     <li class="profile">
 
-      <i class="bx bx-log-out" id="log_out"></i>
-    </li>
+<i class="bx bx-log-out" id="log_out"></i>
+</li>
+    </a>
   </ul>
 </div>
 <!-- ================sidebar-End================ -->
@@ -84,9 +94,9 @@ include('../header.php');
       <div class="col-md-6">
         <div class="user_details_box">
           <div class="content">
-            <h1>Credits  <br><span>10<span style="color:white; font-weight:500">$</span></span></h1>
+            <h1>Credits <br><span>10<span style="color:white; font-weight:500">$</span></span></h1>
             <div class="icon">
-            <i class='bx bx-dollar' ></i>
+              <i class='bx bx-dollar'></i>
             </div>
           </div>
         </div>
@@ -94,32 +104,32 @@ include('../header.php');
       <!-- ================Users_details_box-End================== -->
     </div>
     <div class="row my-5">
-    <h3 class="fs-4 mb-3">User Details</h3>
-    <div class="col">
-      <table class="table bg-white rounded shadow-sm  table-hover">
-        <thead>
-          <tr>
-            <th scope="col" width="50">#</th>
-            <th scope="col">USER </th>
-            <th scope="col">User</th>
-            <th scope="col">User</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Harry</td>
-            <td>Jonny</td>
-            <td>peter</td>
-          </tr>
+      <h3 class="fs-4 mb-3">User Details</h3>
+      <div class="col">
+        <table class="table bg-white rounded shadow-sm  table-hover">
+          <thead>
+            <tr>
+              <th scope="col" width="50">#</th>
+              <th scope="col">USER </th>
+              <th scope="col">User</th>
+              <th scope="col">User</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Harry</td>
+              <td>Jonny</td>
+              <td>peter</td>
+            </tr>
 
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
 
-</div>
-</div>
+  </div>
+  </div>
   </div>
 </section>
 
@@ -148,4 +158,3 @@ include('../header.php');
     }
   }
 </script>
-  

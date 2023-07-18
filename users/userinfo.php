@@ -240,7 +240,7 @@ include("./edit.php");
                   </div>
                 </div>
               </div>
-              <input name="edit_edu[]" type="text" value="<?= $edu_data['edu_id'] ?>">
+              <input name="edit_edu[]" type="hidden" value="<?= $edu_data['edu_id'] ?>">
               <div class="row">
                 <div class="col-12">
                  <button   name="edu_ids" class="btn update_btn float-end ms-2"><i class="bx bxs-pencil"></i> Update</button>

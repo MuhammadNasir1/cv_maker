@@ -166,18 +166,56 @@
 
 }
 
-.edit-details-btn{
+.edit-details-btn {
   display: flex;
   align-items: center;
   justify-content: flex-end;
- & button{
-  background: #c21010;
-  background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%);
-  color: white;
-  font-weight: 600;
-  border-radius: 0;
-  border: none;
-  padding: 8px 20px;
+
+  & button {
+    background: #c21010;
+    background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%);
+    color: white;
+    font-weight: 600;
+    border-radius: 0;
+    border: none;
+    padding: 8px 20px;
+  }
+
 }
 
+#info_tab {
+
+  & .modal-body {
+
+
+
+
+
+    & .info-modal-form {
+      & label {
+        font-weight: 500;
+        color: var(--primary-color);
+        margin-bottom: 2px;
+
+      }
+
+    }
+  }
+
+
+}
+
+.info-modal-scroll {
+  height: 80vh;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+.modal-lg {
+  --bs-modal-width: 60vw;
+  grid-template-columns: 2% 96% 2%;
 }

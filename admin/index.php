@@ -3,7 +3,6 @@ include('../db.php');
 if ($_SESSION['loginadmin']) {
 } else {
   header("Location: login.php");
-
 }
 
 
@@ -13,7 +12,7 @@ include('../header.php');
 <div class="sidebar">
   <div class="logo_details">
     <i class="bx bxl-audible icon"></i>
-    <div class="logo_name">Cv Maker</div>
+    <div class="logo_name">Cv builders</div>
     <i class="bx bx-menu" id="btn"></i>
   </div>
   <ul class="nav-list m-0 p-0">
@@ -54,10 +53,10 @@ include('../header.php');
       <span class="tooltip">Settings</span>
     </li>
     <a href="../logout.php">
-    <li class="profile">
+      <li class="profile">
 
-<i class="bx bx-log-out" id="log_out"></i>
-</li>
+        <i class="bx bx-log-out" id="log_out"></i>
+      </li>
     </a>
   </ul>
 </div>

@@ -130,4 +130,29 @@
   border-radius: 0;
   border: none;
   padding: 8px 20px;
+}
+
+#info_tab .modal-body .toptabs-content {
+  width: 80%;
+}
+#info_tab .modal-body .toptabs-content::-webkit-scrollbar {
+  display: none;
+}
+#info_tab .modal-body .info-modal-form label {
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 2px;
+}
+
+.info-modal-scroll {
+  height: 80vh;
+  overflow-y: scroll;
+}
+.info-modal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-lg {
+  --bs-modal-width: 60vw;
+  grid-template-columns: 2% 96% 2%;
 }/*# sourceMappingURL=templete.css.map */

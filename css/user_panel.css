@@ -14,7 +14,7 @@
   width: 78px;
   padding: 6px 14px;
   z-index: 99;
-  background-color: #212121;
+  background-color: #000000;
   transition: all 0.5s ease;
   position: fixed;
   top: 0;
@@ -120,7 +120,7 @@
   width: 100%;
   align-items: center;
   text-decoration: none;
-  background-color: #212121;
+  background-color: black;
   position: relative;
   transition: all 0.5s ease;
   z-index: 12;

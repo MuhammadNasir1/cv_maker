@@ -22,7 +22,7 @@ include("./edit.php");
       <span class="tooltip">Dashboard</span>
     </li>
     <li>
-      <a href="./user_information.php">
+      <a href="./userinfo.php">
         <i class="bx bx-user"></i>
         <span class="link_name">Your Information</span>
       </a>

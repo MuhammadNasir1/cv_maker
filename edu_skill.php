@@ -146,7 +146,7 @@ include("navbar.php");
 
                         <div class="input-field mt-5">
                           <input name="" class="hide" id="tmarks" type="number">
-                          <label>Total Marks</label>
+                          <label>Total Marks / CGPA</label>
                         </div>
                       </div>
                       <!-- ============Obtains Marks============ -->
@@ -154,7 +154,7 @@ include("navbar.php");
 
                         <div class="input-field mt-5">
                           <input name="" class="hide" id="obmarks" type="number">
-                          <label>Obtains Marks</label>
+                          <label>Obtains Marks / CGPA</label>
                         </div>
                       </div>
                       <!-- ============Start-Date============ -->

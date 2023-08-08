@@ -545,28 +545,90 @@ if (@$_REQUEST['ref_del']) {
 
                   </div>
                 </div>
-                <div class="col-1023">
-                  <div class="info-modal-form">
-                    <form action="#" method="post">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-12">
-                            <h3 class="text-center  " style="color:black; font-weight:600"> <span class="btnPrevious" style="cursor: pointer;   ">Education </span><span style="color:#000000a4; font-size:12px; cursor: pointer; " class="btnNext"> <i class="fa-solid fa-angle-right" style="color:#C21010;"></i> Skills</span></h3>
+                <?php
+
+
+                while ($edu_data = mysqli_fetch_assoc($edu_res)) {
+
+
+                ?>
+                  <div class="col-1023">
+                    <div class="info-modal-form">
+                      <form action="#" method="post">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-12">
+                              <h3 class="text-center  " style="color:black; font-weight:600"> <span class="btnPrevious" style="cursor: pointer;   ">Education </span><span style="color:#000000a4; font-size:12px; cursor: pointer; " class="btnNext"> <i class="fa-solid fa-angle-right" style="color:#C21010;"></i> Skills</span></h3>
+                            </div>
+
+                            <div class="col-md-6">
+                              <div class="mt-4">
+                                <label class="form-label">Institute Name<b></b> </b></label>
+                                <input class="form-control" name="institute_name[]" type="text" value="<?= $edu_data['instutute_name'] ?>">
+                              </div>
+                            </div>
+                            <!-- ==================Dagree===================== -->
+                            <div class="col-md-6">
+                              <div class="mt-3">
+                                <label class="form-label">Degree</label>
+                                <input class="form-control" name="degree[]" type="text" value="<?= $edu_data['dagree'] ?>">
+                              </div>
+                            </div>
+                            <!-- ===================Total Marks==================== -->
+                            <div class="col-md-6">
+                              <div class="mt-3">
+                                <label class="form-label">Total Marks</label>
+                                <input class="form-control" name="total_marks[]" type="number" value="<?= $edu_data['total_marks'] ?>">
+                              </div>
+                            </div>
+                            <!-- ===================Obtains Marks==================== -->
+                            <div class="col-md-6">
+                              <div class="mt-3">
+                                <label class="form-label">Obtains Marks</label>
+                                <input class="form-control" name="ob_marks[]" type="number" value="<?= $edu_data['obtain_marks'] ?>">
+                              </div>
+                            </div>
+                            <!-- ===================Start Date==================== -->
+                            <div class="col-md-6">
+                              <div class="mt-3">
+                                <label class="form-label">Start Date</label>
+                                <input class="form-control" name="edu_st_date[]" type="date" value="<?= $edu_data['deg_st_date'] ?>">
+                              </div>
+                            </div>
+                            <!-- ===================Start Date==================== -->
+                            <div class="col-md-6">
+                              <div class="mt-3">
+                                <label class="form-label">End Date</label>
+                                <input class="form-control" name="edu_end_date[]" type="date" value="<?= $edu_data['deg_end_date'] ?>">
+                              </div>
+                            </div>
+                            <!-- ===================Start Date==================== -->
+                            <div class="col-md-12">
+                              <div class="mt-4">
+                                <label class="form-label">Education Details</label>
+                                <textarea class="form-control" name="edu_field[]" id="" style="height:150px"><?= $edu_data['field'] ?></textarea>
+                                <div class="form-text mt-2" style="font-weight: 600;">Enter yourself in less than <b>30</b> words</div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <button style="background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%)" class="btn text-white float-end">Delete</button>
+                            </div>
+
                           </div>
-
-
                         </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
-                </div>
-                <div class="right-tab">
-                  <div style="margin-top:36vh; position:fixed;">
-                    <i style="font-size:28px; float:right; margin-left:10px;  color:#C21010;" class="fa-solid fa-angles-right  btnNext"></i>
+                  <div class="right-tab">
+                    <div style="margin-top:36vh; position:fixed;">
+                      <i style="font-size:28px; float:right; margin-left:10px;  color:#C21010;" class="fa-solid fa-angles-right  btnNext"></i>
+                    </div>
                   </div>
-                </div>
               </div>
             </div>
+          <?php
+                }
+          ?>
           </div>
           <!-- ===================Education-End=================== -->
 
@@ -590,8 +652,33 @@ if (@$_REQUEST['ref_del']) {
                           <div class="col-12">
                             <h3 class="text-center  " style="color:black; font-weight:600"> <span class="btnPrevious" style="cursor: pointer;   ">Skills </span><span style="color:#000000a4; font-size:12px; cursor: pointer; " class="btnNext"> <i class="fa-solid fa-angle-right" style="color:#C21010;"></i> Work Experience </span></h3>
                           </div>
+                          <?php
 
+                          while ($skill_data = mysqli_fetch_assoc($skill_res)) {
 
+                          ?>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="mt-3">
+                                    <label class="form-label">Skill</label>
+                                    <input class="form-control " name="text" type="text" value="<?= @$skill_data['skill'] ?>">
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="mt-3">
+                                    <label class="form-label">Skill Progress</label>
+                                    <input class="form-control" name="number" type="number" value="<?= @$skill_data['skill_per'] ?>">
+                                  </div>
+                                </div>
+
+                                <div class="col-12 mt-3">
+                                  <button style="background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%)" class="btn text-white float-end">Delete</button>
+                                </div>
+                              </div>
+                            </div>
+                          <?php    }
+                          ?>
                         </div>
                       </div>
                     </form>
@@ -628,8 +715,51 @@ if (@$_REQUEST['ref_del']) {
                           <div class="col-12">
                             <h3 class="text-center  " style="color:black; font-weight:600"> <span class="btnPrevious" style="cursor: pointer;   ">Work Experience </span><span style="color:#000000a4; font-size:12px; cursor: pointer; " class="btnNext"> <i class="fa-solid fa-angle-right" style="color:#C21010;"></i> Hobbies </span></h3>
                           </div>
+                          <?php
+
+                          while ($work_data = mysqli_fetch_assoc($work_exp_res)) {
 
 
+                          ?>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="mt-3">
+                                  <label class="form-label">Company Name</label>
+                                  <input class="form-control" name="text" type="text" value="<?= @$work_data['company_name'] ?>">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="mt-3">
+                                  <label class="form-label">Role</label>
+                                  <input class="form-control" name="text" type="text" value="<?= @$work_data['role'] ?>">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="mt-3">
+                                  <label class="form-label">Start Date</label>
+                                  <input class="form-control" name="date" type="date" value="<?= @$work_data['work_st_data'] ?>">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="mt-3">
+                                  <label class="form-label">End Date</label>
+                                  <input class="form-control" name="date" type="date" value="<?= @$work_data['work_end_date'] ?>">
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="mt-4">
+                                  <label class="form-3">Working Details</label>
+                                  <textarea class="form-control" name="about_us" id="" style="height:150px"><?= $work_data['city_country'] ?></textarea>
+                                  <div class="form-text mt-2" style="font-weight: 600;">Enter yourself in less than <b>30</b> words</div>
+                                </div>
+                              </div>
+                              <div class="col-12 mt-3 mb-4">
+                                <button style="background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%)" class="btn text-white float-end">Delete</button>
+                              </div>
+                            </div>
+                          <?php
+                          }
+                          ?>
                         </div>
                       </div>
                     </form>
@@ -665,8 +795,26 @@ if (@$_REQUEST['ref_del']) {
                           <div class="col-12">
                             <h3 class="text-center  " style="color:black; font-weight:600"> <span class="btnPrevious" style="cursor: pointer;   ">Hobbies </span><span style="color:#000000a4; font-size:12px; cursor: pointer; " class="btnNext"> <i class="fa-solid fa-angle-right" style="color:#C21010;"></i> Language </span></h3>
                           </div>
+                        </div>
+                        <div class="row">
+                          <?php
+
+                          while ($hobbies_data = mysqli_fetch_assoc($hobbies_res)) {
 
 
+                          ?>
+                            <div class="col-md-6">
+                              <div class="mt-3 position-relative">
+                                <label class="form-label">Hobbies </label>
+                                <input class="form-control" name="date" type="text" value="<?= @$hobbies_data['hobby'] ?>">
+                               <a > <span style="position:absolute;     margin-left: 92%;top: 34px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                                <!-- <button style="background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%)" class="btn text-white float-end mt-3">Delete</button> -->
+                              </div>
+                            </div>
+
+                          <?php
+                          }
+                          ?>
                         </div>
                       </div>
                     </form>
@@ -688,7 +836,7 @@ if (@$_REQUEST['ref_del']) {
 
           <!-- =======================Language============================= -->
           <div class="tab-pane " id="langugage">
-          <div class="container-fluid p-0">
+            <div class="container-fluid p-0">
               <div class="" style="display:grid;  grid-template-columns: 5% 90% 5%;">
                 <div class="left-tab">
                   <div style="margin-top:36vh; position:fixed;">
@@ -705,7 +853,26 @@ if (@$_REQUEST['ref_del']) {
                             <h3 class="text-center  " style="color:black; font-weight:600"> <span class="btnPrevious" style="cursor: pointer;   ">Language </span><span style="color:#000000a4; font-size:12px; cursor: pointer; " class="btnNext"> <i class="fa-solid fa-angle-right" style="color:#C21010;"></i> Reference </span></h3>
                           </div>
 
+                        </div>
+                        <div class="row">
+                          <?php
 
+                          while ($language_data = mysqli_fetch_assoc($language_res)) {
+
+
+                          ?>
+                            <div class="col-md-6">
+                              <div class="mt-3 position-relative ">
+                                <label class="form-label">Language </label>
+                                <input class="form-control" name="date" type="text" value="<?= @$language_data['language'] ?>">
+                                <a > <span style="position:absolute;     margin-left: 92%;top: 34px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                                <!-- <button style="background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%)" class="btn text-white float-end mt-3">Delete</button> -->
+                              </div>
+                            </div>
+
+                          <?php
+                          }
+                          ?>
                         </div>
                       </div>
                     </form>
@@ -728,7 +895,7 @@ if (@$_REQUEST['ref_del']) {
           <!-- =======================reference============================= -->
           <div class="tab-pane " id="reference">
 
-          <div class="container-fluid p-0">
+            <div class="container-fluid p-0">
               <div class="" style="display:grid;  grid-template-columns: 5% 90% 5%;">
                 <div class="left-tab">
                   <div style="margin-top:36vh; position:fixed;">
@@ -742,34 +909,54 @@ if (@$_REQUEST['ref_del']) {
                       <div class="container">
                         <div class="row">
                           <div class="col-12">
-                          <h3 class="text-center  " style="color:black; font-weight:600"> <span class="btnPrevious" style="cursor: pointer;   ">Reference </span><span style="color:#000000a4; font-size:12px; cursor: pointer; " class="btnNext"> <i class="fa-solid fa-angle-right" style="color:#C21010;"></i> ......... </span></h3>
+                            <h3 class="text-center  " style="color:black; font-weight:600"> <span class="btnPrevious" style="cursor: pointer;   ">Reference </span><span style="color:#000000a4; font-size:12px; cursor: pointer; " class="btnNext"> <i class="fa-solid fa-angle-right" style="color:#C21010;"></i> ......... </span></h3>
                           </div>
 
 
                         </div>
-                      </div>
+                        <div class="row">
+                          <?php
+
+                          while ($reference_data = mysqli_fetch_assoc($reference_res)) {
+
+
+                          ?>
+                            <div class="col-md-6">
+                              <div class="mt-3 position-relative">
+                                <label class="form-label">Reference </label>
+                                <input class="form-control" name="date" type="text" value="<?= @$reference_data['user_reference'] ?>">
+                                <a ><span style="position:absolute;     margin-left: 92%;top: 34px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                                <!-- <button style="background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%)" class="btn text-white float-end mt-3">Delete</button> -->
+                              </div>
+                            </div>
+
+                          <?php
+                          }
+                          ?>
+                        </div>
                     </form>
                   </div>
                 </div>
-                <div class="right-tab">
-                  <div style="margin-top:36vh; position:fixed;">
-                    <i style="font-size:28px; margin-left:10px; float:right; color:#C21010;" class="fa-solid fa-angles-right  btnNext"></i>
-                  </div>
+              </div>
+              <div class="right-tab">
+                <div style="margin-top:36vh; position:fixed;">
+                  <i style="font-size:28px; margin-left:10px; float:right; color:#C21010;" class="fa-solid fa-angles-right  btnNext"></i>
                 </div>
               </div>
             </div>
           </div>
-          <!-- ========================reference============================ -->
-
-
-
-        
-
-
         </div>
+        <!-- ========================reference============================ -->
+
+
+
+
+
+
       </div>
     </div>
   </div>
+</div>
 </div>
 <script>
   $('.btnNext').click(function() {

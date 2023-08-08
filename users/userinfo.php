@@ -173,17 +173,17 @@ include("./edit.php");
                 <textarea class="form-control" style="height:150px" name="about_u"><?= $per_info['about_us'] ?></textarea>
                 <div class="form-text mt-2" style="font-weight: 600;">Enter yourself in less than <b>30</b> words</div>
               </div>
-            </div>  
+            </div>
             <div class="row">
               <div class="col-12">
                 <button type="submit" name="upt_perinfo" class="btn update_btn float-end"><i class="bx bxs-pencil"></i> Update</button>
               </div>
             </div>
             <?php
-            // $a = 1;
+
 
             while ($edu_data = mysqli_fetch_assoc($edu_res)) {
-              // $a = $a++;
+
 
             ?>
 
@@ -243,7 +243,7 @@ include("./edit.php");
               <input name="edit_edu[]" type="hidden" value="<?= $edu_data['edu_id'] ?>">
               <div class="row">
                 <div class="col-12">
-                 <button   name="edu_ids" class="btn update_btn float-end ms-2"><i class="bx bxs-pencil"></i> Update</button>
+                  <button name="edu_ids" class="btn update_btn float-end ms-2"><i class="bx bxs-pencil"></i> Update</button>
                   <a href="./userinfo.php?del_edu=<?= $edu_data['edu_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
                 </div>
               </div>

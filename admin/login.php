@@ -29,9 +29,7 @@ include('../header.php');
 
 ?>
 <style>
-  body {
-    /* background: #000 */
-  }
+
 
   .card {
     border: none;

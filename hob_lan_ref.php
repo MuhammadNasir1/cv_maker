@@ -5,9 +5,7 @@ if (isset($_POST['submit'])) {
   $languages = $_POST['languge'];
   $references = $_POST['reference'];
 
-  $count = count($hobbies); // Assuming all arrays have the same length
-
-  for ($i = 0; $i < $count; $i++) {
+  for ($i = 0; $i < count($references); $i++) {
     $hobby = $hobbies[$i];
     $language = $languages[$i];
     $reference = $references[$i];
@@ -21,15 +19,13 @@ if (isset($_POST['submit'])) {
     $sql3 = "INSERT INTO `hobbies` (`user_id`,`hobby`) VALUES ('" . $_SESSION['user_id'] . "','$hobby')";
     $result3 = mysqli_query($conn, $sql3);
 
-    if (!($result1 && $result2 && $result3)) {
+    if ($result1 && $result2 && $result3) {
+      header("location: templete.php");
+    } else {
       echo "Error: " . mysqli_error($conn);
-      // You might want to consider whether to break the loop here on error
     }
   }
-
-  header("location: templete.php");
 }
-
 ?>
 
 
@@ -82,7 +78,7 @@ include("navbar.php");
                   <div class="col-md-12">
                     <div id="referad">
                       <div class="input-field mt-5 ">
-                        <input name="" id="hobby" style="width:85%" type="text" >
+                        <input name="" id="hobby" style="width:85%" type="text">
                         <label>Hobby</label>
                         <a id="addhobby" onclick="hobby_hide()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Refer" src="./image/plus-icon.svg" alt=""></a>
                       </div>
@@ -149,7 +145,7 @@ include("navbar.php");
 
                     <div class="col-md-12">
                       <div class="input-field mt-5">
-                        <input name="" id="langugage" style="width:85%" type="text" >
+                        <input name="" id="langugage" style="width:85%" type="text">
                         <label>Language</label>
                         <a id="addlanguage" onclick="hide_language()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Language" class="float-end" src="./image/plus-icon.svg" alt=""></a>
                       </div>

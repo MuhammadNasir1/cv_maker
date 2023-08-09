@@ -144,3 +144,6 @@ include('navbar.php');
   include('footer.php');
   ?>
 </div>
+<?php
+include('footer_links.php');
+?>

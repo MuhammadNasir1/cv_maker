@@ -271,6 +271,7 @@ include("./edit.php");
                     <input class="form-control" name="number" type="number" value="<?= @$skill_data['skill_per'] ?>">
                   </div>
                 </div>
+                </div>
                 <!-- =======================Skill-End==================== -->
               </div>
               <div class="row mt-3">
@@ -421,3 +422,7 @@ include("./edit.php");
     }
   }
 </script>
+
+<?php
+include('footer_links.php');
+?>

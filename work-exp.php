@@ -315,3 +315,7 @@ include("navbar.php")
 
   window.addEventListener('load', autoClickButton);
 </script>
+
+<?php
+include('footer_links.php');
+?>

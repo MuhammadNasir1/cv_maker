@@ -192,3 +192,7 @@ include('header.php');
     }
   }
 </script>
+
+<?php
+include('footer_links.php');
+?>

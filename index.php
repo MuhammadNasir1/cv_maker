@@ -1,23 +1,19 @@
-<script>
+<!-- <script>
   window.addEventListener('load', function() {
     setTimeout(function() {
       window.scrollTo(0, 0);
     }, 0);
   });
-</script>
+</script> -->
+
+
 
 <?php
-include('loader.php');
-?>
-
-<?php
-include('navbar.php');
 include('header.php');
+include('navbar.php');
 
 ?>
 
-<body onload="loadfunction()">
-  <div id="main">
     <!-- ================Hero-section-Start ================ -->
     <div class="container-fluid ">
       <div class="main-heading">
@@ -426,15 +422,7 @@ include('header.php');
 
     window.addEventListener('load', autoClickButton);
   </script>
-</body>
-<script>
-  var preloader = document.getElementById('loader');
-  var main_div = document.getElementById('main');
 
-  function loadfunction() {
-    main_div.style.display = 'block'
-    preloader.style.display = 'none'
-  }
-</script>
-
-</html>
+<?php
+    include('footer_links.php');
+    ?>

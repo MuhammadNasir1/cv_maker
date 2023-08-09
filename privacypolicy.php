@@ -62,3 +62,8 @@ include('navbar.php');
 <?php
 include('footer.php');
 ?>
+
+<?php
+include('footer_links.php');
+?>
+

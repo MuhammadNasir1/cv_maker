@@ -145,3 +145,7 @@ if (!isset($_SESSION['access_token'])) {
       </div>
     </div>
   </div>
+
+  <?php
+include('footer_links.php');
+?>

@@ -79,3 +79,6 @@ if (isset($_REQUEST['submit'])) {
       </div>
     </div>
   </div>
+  <?php
+include('footer_links.php');
+?>

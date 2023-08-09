@@ -5,7 +5,9 @@ if (isset($_POST['submit'])) {
   $languages = $_POST['languge'];
   $references = $_POST['reference'];
 
-  for ($i = 0; $i < count($hobbies); $i++) {
+  $count = count($hobbies); // Assuming all arrays have the same length
+
+  for ($i = 0; $i < $count; $i++) {
     $hobby = $hobbies[$i];
     $language = $languages[$i];
     $reference = $references[$i];
@@ -19,13 +21,15 @@ if (isset($_POST['submit'])) {
     $sql3 = "INSERT INTO `hobbies` (`user_id`,`hobby`) VALUES ('" . $_SESSION['user_id'] . "','$hobby')";
     $result3 = mysqli_query($conn, $sql3);
 
-    if ($result1 && $result2 && $result3) {
-      header("location: templete.php");
-    } else {
+    if (!($result1 && $result2 && $result3)) {
       echo "Error: " . mysqli_error($conn);
+      // You might want to consider whether to break the loop here on error
     }
   }
+
+  header("location: templete.php");
 }
+
 ?>
 
 
@@ -392,3 +396,6 @@ include("navbar.php");
 
   window.addEventListener('load', autoClickButton);
 </script>
+<?php
+include('footer_links.php');
+?>

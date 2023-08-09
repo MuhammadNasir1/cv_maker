@@ -234,7 +234,7 @@ if (@$_REQUEST['lan_del']) {
         window.location.href = "./userinfo.php";
       });
     </script>
-  <?php
+<?php
   }
 }
 
@@ -243,29 +243,29 @@ if (@$_REQUEST['lan_del']) {
 $reference_sql = "SELECT * FROM `user_references`  WHERE user_id = '" . $_SESSION['user_id'] . "'";
 $reference_res = mysqli_query($conn, $reference_sql);
 
-if (@$_REQUEST['ref_del']) {
-  $del_ref = $_REQUEST['ref_del'];
-  $del_reference = "DELETE FROM `user_references` WHERE ref_id = '$del_ref'";
-  $del_ref_table = mysqli_query($conn, $del_reference);
-  if ($del_ref_table) {
 
-  ?>
-    <script>
-      Swal.fire({
-        position: 'center',
-        icon: 'error',
-        title: 'Your Details Was Delete',
-        showConfirmButton: false,
-        timer: 1500
-      }).then(function() {
-        window.location.href = "./userinfo.php";
-      });
-    </script>
-<?php
+if (isset($_POST["action"])) {
+  if ($_POST["action"] == "delete_ref") {
+    delete_ref();
   }
 }
 
+function delete_ref()
+{
+  global $conn;
+  $ref_id  = $_POST["ref_id"];
+
+  $del_refere = "DELETE FROM user_references WHERE ref_id = $ref_id";
+  $del_refere_res = mysqli_query($conn, $del_refere);
+
+  if ($del_refere_res) {
+    echo 1;
+  } else {
+    echo 0;
+  }
+}
 ?>
+
 
 <!-- ==============templete-sec-heading================== -->
 
@@ -865,7 +865,7 @@ if (@$_REQUEST['ref_del']) {
                               <div class="mt-3 position-relative ">
                                 <label class="form-label">Language </label>
                                 <input class="form-control" name="date" type="text" value="<?= @$language_data['language'] ?>">
-                                <a > <span style="position:absolute;     margin-left: 92%;top: 34px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                                <a> <span style="position:absolute;     margin-left: 92%;top: 34px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
                                 <!-- <button style="background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%)" class="btn text-white float-end mt-3">Delete</button> -->
                               </div>
                             </div>
@@ -921,11 +921,11 @@ if (@$_REQUEST['ref_del']) {
 
 
                           ?>
-                            <div class="col-md-6">
+                            <div class="col-md-6" id="del_refere">
                               <div class="mt-3 position-relative">
                                 <label class="form-label">Reference </label>
                                 <input class="form-control" name="date" type="text" value="<?= @$reference_data['user_reference'] ?>">
-                                <a ><span style="position:absolute;     margin-left: 92%;top: 34px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                                <a onclick="delete_refer(<?= $reference_data['ref_id'] ?>);"><span style="position:absolute;     margin-left: 92%;top: 34px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
                                 <!-- <button style="background: linear-gradient(168deg, #c21010 0%, #4c0d0d 80%)" class="btn text-white float-end mt-3">Delete</button> -->
                               </div>
                             </div>
@@ -959,6 +959,33 @@ if (@$_REQUEST['ref_del']) {
 </div>
 </div>
 <script>
+  function delete_refer(ref_id) {
+    $(document).ready(function() {
+      $.ajax({
+        url: '#', // Replace with the actual URL of your PHP script
+        type: 'post',
+        data: {
+          ref_id: ref_id,
+          action: "delete_ref",
+        },
+        success: function(response) {
+          console.log("Response from server:", response);
+
+          if (response == 1) {
+            alert("Data Deleted Successfully");
+            $('#' + ref_id).remove(); // Remove the element with the matching ID
+          } else if (response == 0) {
+            alert("Data Cannot Be Deleted");
+          }
+        },
+        error: function(xhr, status, error) {
+          console.error("AJAX Error:", error);
+        }
+      });
+    });
+  }
+
+
   $('.btnNext').click(function() {
     const nextTabLinkEl = $('.nav-tabs .active').closest('li').next('li').find('a')[0];
     const nextTab = new bootstrap.Tab(nextTabLinkEl);
@@ -973,4 +1000,7 @@ if (@$_REQUEST['ref_del']) {
 </script>
 <?php
 include('footer.php');
+?>
+<?php
+include('footer_links.php');
 ?>

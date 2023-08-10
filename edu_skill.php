@@ -21,22 +21,56 @@ if (isset($_POST['submit'])) {
     $ob_mark = $ob_marks[$i];
     $edu_st_date = $edu_st_dates[$i];
     $edu_end_date = $edu_end_dates[$i];
-    $edu_field = $edu_fields[$i];
-    $skill = $skills[$i];
-    $skill_range = $skill_ranges[$i];
+    $edu_field = $edu_fields[$i];;
     $sql = "INSERT INTO `education`(`user_id`,`instutute_name`, `dagree`, `total_marks`, `obtain_marks`,  `deg_st_date`, `deg_end_date`, `field`) VALUES ('" . $_SESSION['user_id'] . "', '$institute_name','$degree','$total_mark','$ob_mark','$edu_st_date','$edu_end_date','$edu_field')";
     $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+      header('location: work-exp.php');
+    } else {
+      echo "Error: " . mysqli_error($conn);
+    }
+  }
+
+  for ($i = 0; $i < count($skills); $i++) {
+    $skill = $skills[$i];
+    $skill_range = $skill_ranges[$i];
+
 
     $sql1 = "INSERT INTO `skills` (`user_id`, `skill`, `skill_per`) VALUES ('" . $_SESSION['user_id'] . "','$skill', '$skill_range')";
     $result1 = mysqli_query($conn, $sql1);
 
-    if ($result && $result1) {
+    if ($result1) {
       header('location: work-exp.php');
     } else {
       echo "Error: " . mysqli_error($conn);
     }
   }
 }
+
+//   for ($i = 0; $i < count($institute_names); $i++) {
+//     $institute_name = $institute_names[$i];
+//     $degree = $degrees[$i];
+//     $total_mark = $total_marks[$i];
+//     $ob_mark = $ob_marks[$i];
+//     $edu_st_date = $edu_st_dates[$i];
+//     $edu_end_date = $edu_end_dates[$i];
+//     $edu_field = $edu_fields[$i];
+//     $skill = $skills[$i];
+//     $skill_range = $skill_ranges[$i];
+//     $sql = "INSERT INTO `education`(`user_id`,`instutute_name`, `dagree`, `total_marks`, `obtain_marks`,  `deg_st_date`, `deg_end_date`, `field`) VALUES ('" . $_SESSION['user_id'] . "', '$institute_name','$degree','$total_mark','$ob_mark','$edu_st_date','$edu_end_date','$edu_field')";
+//     $result = mysqli_query($conn, $sql);
+
+//     $sql1 = "INSERT INTO `skills` (`user_id`, `skill`, `skill_per`) VALUES ('" . $_SESSION['user_id'] . "','$skill', '$skill_range')";
+//     $result1 = mysqli_query($conn, $sql1);
+
+//     if ($result && $result1) {
+//       header('location: work-exp.php');
+//     } else {
+//       echo "Error: " . mysqli_error($conn);
+//     }
+//   }
+// }
 
 $id = "SELECT * FROM `users`";
 
@@ -167,7 +201,7 @@ include("navbar.php");
                       <!-- ============End-Date============ -->
                       <div class="col-md-6 ">
                         <div class="input-field mt-5 ">
-                          <input id="edate" class="hide" type="date" >
+                          <input id="edate" class="hide" type="date">
                           <label class="date-lable">End Date</label>
                         </div>
                       </div>
@@ -306,7 +340,7 @@ include("navbar.php");
 
                   <div id="add_iteee" class="mt-5">
                     <div class="input-field" id="myList1">
-                      <input name="" id="skill_" style="width:95%" type="text" >
+                      <input name="" id="skill_" style="width:95%" type="text">
                       <label>Skill 1</label>
                       <!-- <a id="skill_btn" class="input-add " onclick="hideskill()"> <img data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Skill" src="./image/plus-icon.svg" alt=""></a> -->
                     </div>

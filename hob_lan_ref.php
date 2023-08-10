@@ -6,26 +6,66 @@ if (isset($_POST['submit'])) {
   $references = $_POST['reference'];
 
   for ($i = 0; $i < count($references); $i++) {
-    $hobby = $hobbies[$i];
-    $language = $languages[$i];
     $reference = $references[$i];
-
-    $sql1 = "INSERT INTO `languages` (`user_id`,`language`) VALUES ('" . $_SESSION['user_id'] . "','$language')";
-    $result1 = mysqli_query($conn, $sql1);
 
     $sql2 = "INSERT INTO `user_references` (`user_id`,`user_reference`) VALUES ('" . $_SESSION['user_id'] . "','$reference')";
     $result2 = mysqli_query($conn, $sql2);
 
+    if ($result2) {
+      header("location: templete.php");
+    } else {
+      echo "Error: " . mysqli_error($conn);
+    }
+  }
+
+  for ($i = 0; $i < count($languages); $i++) {
+    $hobby = $hobbies[$i];
+    $language = $languages[$i];
+
+    $sql1 = "INSERT INTO `languages` (`user_id`,`language`) VALUES ('" . $_SESSION['user_id'] . "','$language')";
+    $result1 = mysqli_query($conn, $sql1);;
+
+    if ($result1) {
+      header("location: templete.php");
+    } else {
+      echo "Error: " . mysqli_error($conn);
+    }
+  }
+  for ($i = 0; $i < count($hobbies); $i++) {
+    $hobby = $hobbies[$i];
+
     $sql3 = "INSERT INTO `hobbies` (`user_id`,`hobby`) VALUES ('" . $_SESSION['user_id'] . "','$hobby')";
     $result3 = mysqli_query($conn, $sql3);
 
-    if ($result1 && $result2 && $result3) {
+    if ($result3) {
       header("location: templete.php");
     } else {
       echo "Error: " . mysqli_error($conn);
     }
   }
 }
+
+//   for ($i = 0; $i < count($references); $i++) {
+//     $hobby = $hobbies[$i];
+//     $language = $la nguages[$i];
+//     $reference = $references[$i];
+
+//     $sql1 = "INSERT INTO `languages` (`user_id`,`language`) VALUES ('" . $_SESSION['user_id'] . "','$language')";
+//     $result1 = mysqli_query($conn, $sql1);
+
+//     $sql2 = "INSERT INTO `user_references` (`user_id`,`user_reference`) VALUES ('" . $_SESSION['user_id'] . "','$reference')";
+//     $result2 = mysqli_query($conn, $sql2);
+
+//     $sql3 = "INSERT INTO `hobbies` (`user_id`,`hobby`) VALUES ('" . $_SESSION['user_id'] . "','$hobby')";
+//     $result3 = mysqli_query($conn, $sql3);
+
+//     if ($result1 && $result2 && $result3) {
+//       header("location: templete.php");
+//     } else {
+//       echo "Error: " . mysqli_error($conn);
+//     }
+//   }
+// }
 ?>
 
 

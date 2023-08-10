@@ -243,8 +243,8 @@ include("./edit.php");
               <input name="edit_edu[]" type="hidden" value="<?= $edu_data['edu_id'] ?>">
               <div class="row">
                 <div class="col-12">
-                  <button name="edu_ids" class="btn update_btn float-end ms-2"><i class="bx bxs-pencil"></i> Update</button>
-                  <a href="./userinfo.php?del_edu=<?= $edu_data['edu_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
+                  <!-- <button name="edu_ids" class="btn update_btn float-end ms-2"><i class="bx bxs-pencil"></i> Update</button> -->
+                  <a  href="./userinfo.php?del_edu=<?= $edu_data['edu_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
                 </div>
               </div>
             <?php
@@ -276,7 +276,7 @@ include("./edit.php");
               </div>
               <div class="row mt-3">
                 <div class="col-12">
-                  <a href="./userinfo.php?del_skill=<?= $skill_data['skill_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
+                  <a href="./userinfo.php?del_skill=<?= $skill_data['skill_id'] ?>" class="text-decoration-none ms-3"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
                 </div>
               </div>
             <?php    }
@@ -330,7 +330,7 @@ include("./edit.php");
             }
             ?>
             <div class="row">
-              <!-- <h3>Hobbies</h3> -->
+              <h3 class="mt-5">Hobbies</h3>
               <?php
               $hob = 1;
               while ($hobbies_data = mysqli_fetch_assoc($hobbies_res)) {
@@ -338,10 +338,11 @@ include("./edit.php");
 
               ?>
                 <div class="col-md-4">
-                  <div class="mt-3 ">
+                  <div class="mt-3 " style="position:relative">
                     <label class="form-label">Hobbies <b><?= $hob++ ?></b></label>
                     <input class="form-control" name="date" type="text" value="<?= @$hobbies_data['hobby'] ?>">
-                    <div> <a href="./userinfo.php?hob_del=<?= $hobbies_data['hobbies_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div>
+                    <a href="./userinfo.php?hob_del=<?= $hobbies_data['hobbies_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                    <!-- <div> <a href="./userinfo.php?hob_del=<?= $hobbies_data['hobbies_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
                   </div>
                 </div>
               <?php
@@ -350,7 +351,7 @@ include("./edit.php");
             </div>
 
             <div class="row">
-              <!-- <h3>Languages</h3> -->
+              <h3 class="mt-5">Languages</h3>
               <?php
 
               $lan = 1;
@@ -359,10 +360,11 @@ include("./edit.php");
 
               ?>
                 <div class="col-md-4">
-                  <div class="mt-3 ">
+                  <div class="mt-3 position-relative">
                     <label class="form-label">Language <b><?= $lan++ ?></b></label>
                     <input class="form-control" name="date" type="text" value="<?= @$language_data['language'] ?>">
-                    <div> <a href="./userinfo.php?lan_del=<?= $language_data['lang_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div>
+                    <a href="./userinfo.php?lan_del=<?= $language_data['lang_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                    <!-- <div> <a href="./userinfo.php?lan_del=<?= $language_data['lang_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
                   </div>
                 </div>
               <?php
@@ -371,7 +373,7 @@ include("./edit.php");
             </div>
             <!-- ===================== -->
             <div class="row">
-              <!-- <h3>References</h3> -->
+              <h3 class="mt-5">References</h3>
               <?php
               $ref = 1;
               while ($reference_data = mysqli_fetch_assoc($reference_res)) {
@@ -379,10 +381,11 @@ include("./edit.php");
 
               ?>
                 <div class="col-md-4">
-                  <div class="mt-3 ">
+                  <div class="mt-3 position-relative ">
                     <label class="form-label">Reference <b><?= $ref++ ?></b></label>
                     <input class="form-control" name="date" type="text" value="<?= @$reference_data['user_reference'] ?>">
-                    <div> <a href="./userinfo.php?ref_del=<?= $reference_data['ref_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div>
+                    <a href="./userinfo.php?hob_del=ref_del=<?= $reference_data['ref_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                    <!-- <div> <a href="./userinfo.php?" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
                   </div>
                 </div>
               <?php
@@ -424,5 +427,5 @@ include("./edit.php");
 </script>
 
 <?php
-include('footer_links.php');
+include('../footer_links.php');
 ?>

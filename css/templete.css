@@ -132,12 +132,6 @@
   padding: 8px 20px;
 }
 
-#info_tab .modal-body .toptabs-content {
-  width: 80%;
-}
-#info_tab .modal-body .toptabs-content::-webkit-scrollbar {
-  display: none;
-}
 #info_tab .modal-body .info-modal-form label {
   font-weight: 500;
   color: var(--primary-color);

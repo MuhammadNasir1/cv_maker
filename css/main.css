@@ -12,6 +12,16 @@
   --light-color: #ffffff;
 }
 
+::-moz-selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 footer .social-icon-heading p, .animated-img-ph .images, .animated-img .images, .anim-sec-txt, .fix-bg .txt, .tips-content, .card_body_cv a, .num-bg .downloads-number, .details-box .box-1, .datails-img .image, .header-image .image, .main-heading .heading, nav .lan_dropdown .dropdown-menu p, nav .icon {
   display: flex;
   align-items: center;

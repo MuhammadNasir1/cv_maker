@@ -79,7 +79,7 @@ if (isset($_POST['edu_ids'])) {
   $edu_st_dates = $_POST['edu_st_date'];
   $edu_end_dates = $_POST['edu_end_date'];
   $edu_fields = $_POST['edu_field'];
-  
+
   for ($i = 0; $i < count($institute_names); $i++) {
     $edit_education = $_POST['edit_edu'][$i] ?? '';
     $institute_name = $institute_names[$i] ?? '';
@@ -89,13 +89,13 @@ if (isset($_POST['edu_ids'])) {
     $edu_st_date = $edu_st_dates[$i] ?? '';
     $edu_end_date = $edu_end_dates[$i] ?? '';
     $edu_field = $edu_fields[$i] ?? '';
-    
+
     if (!empty($edit_education) && !empty($institute_name) && !empty($degree) && !empty($total_marks) && !empty($ob_marks) && !empty($edu_st_date) && !empty($edu_end_date) && !empty($edu_field)) {
       $edu_sql = "UPDATE `education` SET `instutute_name`='$institute_name', `dagree`='$degree', `total_marks`='$total_marks', `obtain_marks`='$ob_marks', `deg_st_date`='$edu_st_date', `deg_end_date`='$edu_end_date', `field`='$edu_field' WHERE edu_id = $edit_education";
-      
+
       print_r($edu_sql);
       $edu_result = mysqli_query($conn, $edu_sql);
-      
+
       if ($edu_result) {
         echo "Success: Education record updated successfully";
       } else {
@@ -441,7 +441,7 @@ if (@$_REQUEST['ref_del']) {
               <div class="row">
                 <div class="col-12">
                   <!-- <button name="edu_ids" class="btn update_btn float-end ms-2"><i class="bx bxs-pencil"></i> Update</button> -->
-                  <a  href="./user_information.php?del_edu=<?= $edu_data['edu_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
+                  <a href="./user_information.php?del_edu=<?= $edu_data['edu_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
                 </div>
               </div>
             <?php
@@ -468,130 +468,130 @@ if (@$_REQUEST['ref_del']) {
                     <input class="form-control" name="number" type="number" value="<?= @$skill_data['skill_per'] ?>">
                   </div>
                 </div>
-                </div>
-                <!-- =======================Skill-End==================== -->
               </div>
-              <div class="row mt-3">
-                <div class="col-12">
-                  <a href="./user_information.php?del_skill=<?= $skill_data['skill_id'] ?>" class="text-decoration-none ms-3"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
-                </div>
-              </div>
-            <?php    }
-            ?>
-            <?php
-            $b = 1;
-            while ($work_data = mysqli_fetch_assoc($work_exp_res)) {
-              $b = $b++;
-
-            ?>
-              <div class="row mt-5">
-                <h3>Working Experience <?= $b++ ?></h3>
-                <div class="col-md-3">
-                  <div class="mt-3">
-                    <label class="form-label">Company Name</label>
-                    <input class="form-control" name="text" type="text" value="<?= @$work_data['company_name'] ?>">
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="mt-3">
-                    <label class="form-label">Role</label>
-                    <input class="form-control" name="text" type="text" value="<?= @$work_data['role'] ?>">
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="mt-3">
-                    <label class="form-label">Start Date</label>
-                    <input class="form-control" name="date" type="date" value="<?= @$work_data['work_st_data'] ?>">
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="mt-3">
-                    <label class="form-label">End Date</label>
-                    <input class="form-control" name="date" type="date" value="<?= @$work_data['work_end_date'] ?>">
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="mt-4">
-                    <label class="form-3">Working Details</label>
-                    <textarea class="form-control" name="about_us" id="" style="height:150px"><?= $work_data['city_country'] ?></textarea>
-                    <div class="form-text mt-2" style="font-weight: 600;">Enter yourself in less than <b>30</b> words</div>
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-12">
-                  <a href="./user_information.php?del_work_exo=<?= $work_data['work_exp_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
-                </div>
-              </div>
-            <?php
-            }
-            ?>
-            <div class="row">
-              <h3 class="mt-5">Hobbies</h3>
-              <?php
-              $hob = 1;
-              while ($hobbies_data = mysqli_fetch_assoc($hobbies_res)) {
-                $hob = $hob++;
-
-              ?>
-                <div class="col-md-4">
-                  <div class="mt-3 " style="position:relative">
-                    <label class="form-label">Hobbies <b><?= $hob++ ?></b></label>
-                    <input class="form-control" name="date" type="text" value="<?= @$hobbies_data['hobby'] ?>">
-                    <a href="./user_information.php?hob_del=<?= $hobbies_data['hobbies_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
-                    <!-- <div> <a href="./user_information.php?hob_del=<?= $hobbies_data['hobbies_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
-                  </div>
-                </div>
-              <?php
-              }
-              ?>
-            </div>
-
-            <div class="row">
-              <h3 class="mt-5">Languages</h3>
-              <?php
-
-              $lan = 1;
-              while ($language_data = mysqli_fetch_assoc($language_res)) {
-                $lan = $lan++;
-
-              ?>
-                <div class="col-md-4">
-                  <div class="mt-3 position-relative">
-                    <label class="form-label">Language <b><?= $lan++ ?></b></label>
-                    <input class="form-control" name="date" type="text" value="<?= @$language_data['language'] ?>">
-                    <a href="./user_information.php?lan_del=<?= $language_data['lang_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
-                    <!-- <div> <a href="./user_information.php?lan_del=<?= $language_data['lang_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
-                  </div>
-                </div>
-              <?php
-              }
-              ?>
-            </div>
-            <!-- ===================== -->
-            <div class="row">
-              <h3 class="mt-5">References</h3>
-              <?php
-              $ref = 1;
-              while ($reference_data = mysqli_fetch_assoc($reference_res)) {
-                $ref = $ref++;
-
-              ?>
-                <div class="col-md-4">
-                  <div class="mt-3 position-relative ">
-                    <label class="form-label">Reference <b><?= $ref++ ?></b></label>
-                    <input class="form-control" name="date" type="text" value="<?= @$reference_data['user_reference'] ?>">
-                    <a href="./user_information.php?hob_del=ref_del=<?= $reference_data['ref_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
-                    <!-- <div> <a href="./user_information.php?" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
-                  </div>
-                </div>
-              <?php
-              }
-              ?>
+              <!-- =======================Skill-End==================== -->
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <a href="./user_information.php?del_skill=<?= $skill_data['skill_id'] ?>" class="text-decoration-none ms-3"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
             </div>
           </div>
+        <?php    }
+        ?>
+        <?php
+        $b = 1;
+        while ($work_data = mysqli_fetch_assoc($work_exp_res)) {
+          $b = $b++;
+
+        ?>
+          <div class="row mt-5">
+            <h3>Working Experience <?= $b++ ?></h3>
+            <div class="col-md-3">
+              <div class="mt-3">
+                <label class="form-label">Company Name</label>
+                <input class="form-control" name="text" type="text" value="<?= @$work_data['company_name'] ?>">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="mt-3">
+                <label class="form-label">Role</label>
+                <input class="form-control" name="text" type="text" value="<?= @$work_data['role'] ?>">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="mt-3">
+                <label class="form-label">Start Date</label>
+                <input class="form-control" name="date" type="date" value="<?= @$work_data['work_st_data'] ?>">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="mt-3">
+                <label class="form-label">End Date</label>
+                <input class="form-control" name="date" type="date" value="<?= @$work_data['work_end_date'] ?>">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mt-4">
+                <label class="form-3">Working Details</label>
+                <textarea class="form-control" name="about_us" id="" style="height:150px"><?= $work_data['city_country'] ?></textarea>
+                <div class="form-text mt-2" style="font-weight: 600;">Enter yourself in less than <b>30</b> words</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <a href="./user_information.php?del_work_exo=<?= $work_data['work_exp_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end"><i class="bx bxs-trash-alt"></i> DELETE</button></a>
+            </div>
+          </div>
+        <?php
+        }
+        ?>
+        <div class="row">
+          <h3 class="mt-5">Hobbies</h3>
+          <?php
+          $hob = 1;
+          while ($hobbies_data = mysqli_fetch_assoc($hobbies_res)) {
+            $hob = $hob++;
+
+          ?>
+            <div class="col-md-4">
+              <div class="mt-3 " style="position:relative">
+                <label class="form-label">Hobbies <b><?= $hob++ ?></b></label>
+                <input class="form-control" name="date" type="text" value="<?= @$hobbies_data['hobby'] ?>">
+                <a href="./user_information.php?hob_del=<?= $hobbies_data['hobbies_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                <!-- <div> <a href="./user_information.php?hob_del=<?= $hobbies_data['hobbies_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
+              </div>
+            </div>
+          <?php
+          }
+          ?>
+        </div>
+
+        <div class="row">
+          <h3 class="mt-5">Languages</h3>
+          <?php
+
+          $lan = 1;
+          while ($language_data = mysqli_fetch_assoc($language_res)) {
+            $lan = $lan++;
+
+          ?>
+            <div class="col-md-4">
+              <div class="mt-3 position-relative">
+                <label class="form-label">Language <b><?= $lan++ ?></b></label>
+                <input class="form-control" name="date" type="text" value="<?= @$language_data['language'] ?>">
+                <a href="./user_information.php?lan_del=<?= $language_data['lang_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                <!-- <div> <a href="./user_information.php?lan_del=<?= $language_data['lang_id'] ?>" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
+              </div>
+            </div>
+          <?php
+          }
+          ?>
+        </div>
+        <!-- ===================== -->
+        <div class="row">
+          <h3 class="mt-5">References</h3>
+          <?php
+          $ref = 1;
+          while ($reference_data = mysqli_fetch_assoc($reference_res)) {
+            $ref = $ref++;
+
+          ?>
+            <div class="col-md-4">
+              <div class="mt-3 position-relative ">
+                <label class="form-label">Reference <b><?= $ref++ ?></b></label>
+                <input class="form-control" name="date" type="text" value="<?= @$reference_data['user_reference'] ?>">
+                <a href="./user_information.php?hob_del=ref_del=<?= $reference_data['ref_id'] ?>"> <span style="position:absolute; margin-left: 94%;top: 38px;"><i class="fa-solid fa-trash" style="color:#c21010"> </i></span></a>
+                <!-- <div> <a href="./user_information.php?" class="text-decoration-none"><button type="button" class="btn update_btn float-end mt-3 "><i class="bx bxs-trash-alt"></i> DELETE</button></a></div> -->
+              </div>
+            </div>
+          <?php
+          }
+          ?>
+        </div>
         </div>
       </div>
+    </div>
     </div>
 
   </form>

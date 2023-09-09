@@ -24,7 +24,7 @@ $result_tem = mysqli_query($conn, $sql_cv);
   </div>
 </div>
 <div class="mt-4 edit-details-btn container-fluid  ">
-  <a href="./users/userinfo.php" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Edit Details</span></button></a>
+  <a href="./user_information.php" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Edit Details</span></button></a>
 </div>
 <!-- ==============CV-templetes-Start================== -->
 <div class="container-fluid mt-5">

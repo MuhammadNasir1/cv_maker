@@ -343,7 +343,7 @@
 }
 .user-form input,
 .user-form textarea {
-  font-weight: 600;
+  font-weight: 500;
   color: rgb(27, 27, 27);
 }
 
@@ -362,4 +362,25 @@
 
 .user-section textarea {
   font-weight: 500;
+}
+
+.main-box {
+  box-shadow: 0px 0px 100px 10px rgba(0, 0, 0, 0.11);
+  background-color: white;
+}
+
+.main-box .top-heading {
+  display: flex;
+  justify-content: center;
+}
+.main-box .top-heading h4 {
+  color: white;
+  background-color: var(--primary-color);
+  padding: 10px 30px;
+  border-radius: 30px;
+  text-align: center;
+  width: 40%;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }/*# sourceMappingURL=user_panel.css.map */
